@@ -1,0 +1,789 @@
+================================================================================
+ORAL LINK — CLINIC INFORMATION RAG KNOWLEDGE BASE
+Chatbot Knowledge File for Patient Queries
+Source: orallink.health (fetched June 2026)
+Company: Oral Link Pte Ltd, Singapore
+================================================================================
+
+DESIGN NOTES FOR THIS FILE
+---------------------------
+- Each section between "--- CHUNK ---" dividers is one self-contained retrieval unit.
+- [HUMAN HANDOFF] flags mark topics that require human staff intervention.
+  When triggered, the chatbot should always surface OralLink's contact details:
+    Phone:  +65 8098 6800
+    Email:  info@orallink.health
+    Web:    https://orallink.health/#contact-us
+- Attach [CHUNK ID], [TOPIC], and [KEYWORDS] as metadata fields at ingestion.
+- All chunks are fully self-contained — no cross-references to other documents.
+
+================================================================================
+--- CHUNK 001 ---
+[CHUNK ID]   orallink-about-company
+[TOPIC]      What is Oral Link — company overview, mission, and background
+[DOMAIN]     OralLink clinic information
+[KEYWORDS]   what is oral link, about oral link, oral link company, who is oral link, oral link Singapore, oral link mission, AI dental Singapore, oral link overview
+[TRIGGERS]
+  - What is Oral Link?
+  - Who are you?
+  - Tell me about Oral Link
+  - What does Oral Link do?
+  - Is Oral Link a dental clinic?
+  - Where is Oral Link based?
+
+CONTENT:
+
+Oral Link (company name: Oral Link Pte Ltd) is a Singapore-based health technology company specialising in AI-powered dental screening. It is not a dental clinic itself — it is a digital health platform that connects patients with a network of trusted partner dental clinics.
+
+MISSION:
+Oral Link's mission is to enhance oral health across Singapore through innovative, patient-focused technology. The company uses AI-powered solutions to make oral healthcare accessible, affordable, and efficient for everyone — including seniors, individuals with limited mobility, and populations who do not regularly visit a dentist.
+
+WHAT ORAL LINK PROVIDES:
+Oral Link provides an AI dental screening service that allows patients to take photos of their own teeth using a smartphone, receive an AI-generated risk report within hours, and then connect with a partner dental clinic for follow-up treatment. The service is designed to detect oral health issues early — before they become expensive or painful — and to bridge the gap between patients and professional care.
+
+CONTEXT — THE PROBLEM ORAL LINK ADDRESSES:
+50 percent of children in Singapore have cavities by kindergarten. Three in four adults have untreated gum disease or tooth decay. Most dental check-ups in Singapore happen only during emergencies. Oral diseases cost US$710 billion globally each year and Singapore's costs are rising. Oral Link was founded to address these gaps through preventive, technology-driven care.
+
+COMPANY DETAILS:
+- Founded and operating in Singapore
+- Website: https://orallink.health
+- Phone: +65 8098 6800
+- Email: info@orallink.health
+
+--- END CHUNK 001 ---
+
+================================================================================
+--- CHUNK 002 ---
+[CHUNK ID]   orallink-how-it-works
+[TOPIC]      How the Oral Link AI screening service works — 4-step process
+[DOMAIN]     OralLink clinic information
+[KEYWORDS]   how oral link works, oral link steps, how to use oral link, oral link process, oral link screening steps, snap submit scan report, how to get screening
+[TRIGGERS]
+  - How does Oral Link work?
+  - What is the process for getting screened?
+  - How do I use the Oral Link service?
+  - How do I take photos for the screening?
+  - What happens after I submit my photos?
+  - How long does it take to get my report?
+
+CONTENT:
+
+Oral Link's dental screening service works in four steps.
+
+STEP 1 — SNAP AND SUBMIT:
+Visit the Oral Link platform and take 5 photos of your teeth using your own smartphone. The platform provides guided instructions so you know exactly which angles to capture. No special equipment is needed — just your phone.
+
+STEP 2 — AI SCREENING:
+Once you submit your photos, Oral Link's AI instantly analyses the images and generates a personalised dental risk report. The AI is capable of detecting conditions including dental cavities, gum inflammation, gum recession, plaque build-up, and cracked teeth.
+
+STEP 3 — RECEIVE YOUR REPORT:
+You receive a clear report with findings and treatment guidance. The report highlights potential concerns — from cavities and gum issues to early warning signs of more serious conditions — and is accessible from your device. Reports are typically returned within hours (the service targets a 10-minute report turnaround for standard cases).
+
+STEP 4 — COMPLETE CARE:
+Using the report, you choose a trusted partner dental clinic from the Oral Link network and book an appointment for in-person assessment and treatment. The attending dentist reviews the AI findings, performs a clinical examination, and finalises a personalised treatment plan.
+
+WHAT THE REPORT DOES AND DOES NOT DO:
+The AI report is a screening tool — it flags areas of concern and risk levels. It is not a clinical diagnosis. Final diagnosis and any treatment decisions are made by a qualified dentist during the in-person visit. The report helps patients and dentists prioritise attention efficiently.
+
+[HUMAN HANDOFF — PROCESS QUESTIONS]
+If a patient has questions about how to access the platform, how to take the photos correctly, or what to do with their report, they should contact Oral Link directly:
+  Phone: +65 8098 6800
+  Email: info@orallink.health
+  Web form: https://orallink.health/#contact-us
+
+--- END CHUNK 002 ---
+
+================================================================================
+--- CHUNK 003 ---
+[CHUNK ID]   orallink-what-ai-detects
+[TOPIC]      What conditions Oral Link's AI screening can detect
+[DOMAIN]     OralLink clinic information
+[KEYWORDS]   what does oral link detect, AI dental conditions, cavities detected, gum disease screening, plaque scan, cracked tooth AI, oral link findings, what can AI see teeth
+[TRIGGERS]
+  - What can Oral Link detect?
+  - Does Oral Link detect cavities?
+  - Can it see gum disease?
+  - What dental problems will the AI find?
+  - Can the AI detect cracked teeth?
+  - What conditions does the screening cover?
+
+CONTENT:
+
+Oral Link's AI screening is designed to detect the following dental conditions from smartphone photos:
+
+DENTAL CAVITIES (TOOTH DECAY):
+The AI analyses tooth surfaces for signs of decay — dark spots, shadows between teeth, and surface breakdown that indicate cavities. Early-stage cavities that a patient might not yet feel pain from can be flagged for attention.
+
+GUM INFLAMMATION (GINGIVITIS):
+Signs of inflamed, swollen, or reddened gum tissue are identified. Gum inflammation is the early, reversible stage of gum disease and is extremely common — affecting roughly half of all adults at any given time.
+
+GUM RECESSION:
+The AI can identify areas where the gum line has pulled back from the teeth, exposing root surfaces. Gum recession is a sign of either aggressive brushing or advancing gum disease, and catching it early matters because receded tissue does not grow back on its own.
+
+PLAQUE BUILD-UP:
+Visible plaque accumulation along the gum line and between teeth is flagged. Plaque that is not removed hardens into calculus (tartar) and is the root cause of both cavities and gum disease.
+
+CRACKED TOOTH:
+The AI flags visual signs of tooth fracture or cracking, which can lead to sensitivity, pain, and structural failure if left untreated.
+
+LIMITATIONS:
+The AI screening analyses external photos only. It cannot detect:
+- Cavities between teeth that are only visible on X-ray
+- Conditions below the gum line that require clinical probing
+- Issues inside the tooth structure (e.g. abscesses that aren't yet visible)
+- Any condition that requires tactile or clinical examination by a dentist
+
+The AI report is a screening and risk-flagging tool, not a substitute for a full clinical examination. All findings should be reviewed by a dentist in person.
+
+[HUMAN HANDOFF — CLINICAL INTERPRETATION]
+If a patient has questions about what their specific report findings mean, or whether a symptom they are experiencing is serious, they should speak to a dentist. To find a partner clinic:
+  Phone: +65 8098 6800
+  Email: info@orallink.health
+
+--- END CHUNK 003 ---
+
+================================================================================
+--- CHUNK 004 ---
+[CHUNK ID]   orallink-report-explained
+[TOPIC]      Understanding the Oral Link screening report — what it contains and how to read it
+[DOMAIN]     OralLink clinic information
+[KEYWORDS]   oral link report, what is in the report, how to read oral link report, risk report dental, findings report, treatment guidance report, AI report explained
+[TRIGGERS]
+  - What is in my Oral Link report?
+  - How do I read my report?
+  - What does the report show?
+  - What does the risk level in my report mean?
+  - My report flagged something — what should I do?
+  - I got my report — what is next?
+
+CONTENT:
+
+WHAT THE ORAL LINK REPORT CONTAINS:
+The Oral Link AI report provides a structured summary of dental findings based on the photos you submitted. It typically includes:
+
+- A list of detected or suspected conditions (e.g. cavities, plaque, gum recession)
+- A risk level or severity classification for each finding
+- Clear treatment guidance explaining what action is recommended
+- Image-based results — the specific photos and regions the AI flagged
+
+The report is designed to be patient-friendly: findings are explained in plain language so you can understand your oral health status without needing to interpret clinical terminology.
+
+HOW TO USE YOUR REPORT:
+The report is a starting point for your dental journey, not an endpoint. Here is what to do with your findings:
+
+If the report shows LOW RISK findings: Continue your current oral hygiene routine. Consider booking a routine dental check-up within 6 to 12 months if you have not had one recently.
+
+If the report shows MODERATE findings: Book an appointment with a partner dental clinic soon. Moderate findings — such as moderate plaque, early gum inflammation, or early signs of cavities — are treatable and reversible if addressed promptly. Delaying increases the risk of progression.
+
+If the report shows ADVANCED or HIGH RISK findings: Book a dental appointment as soon as possible. Advanced findings such as significant gum recession, multiple cavities, or suspected cracked teeth need in-person clinical assessment and treatment. Do not wait.
+
+If you have PAIN, SWELLING, or BLEEDING that is not improving: Do not rely on the AI report — contact a dentist directly or visit a dental clinic promptly. These are symptoms that require clinical evaluation, not just a screening report.
+
+WHAT THE REPORT DOES NOT DO:
+The report does not provide a binding diagnosis. It does not replace an in-person dental examination. The final diagnosis, treatment decision, and any clinical work are performed by a qualified dentist at a partner clinic.
+
+[HUMAN HANDOFF — REPORT QUERIES]
+If you do not understand your report, cannot access it, or have a specific clinical question about a finding:
+  Phone: +65 8098 6800
+  Email: info@orallink.health
+  Web: https://orallink.health/#contact-us
+
+--- END CHUNK 004 ---
+
+================================================================================
+--- CHUNK 005 ---
+[CHUNK ID]   orallink-clinic-network
+[TOPIC]      Oral Link's partner dental clinic network — finding a clinic after screening
+[DOMAIN]     OralLink clinic information
+[KEYWORDS]   oral link clinic network, partner clinics, find dental clinic oral link, oral link recommended clinic, which clinic after screening, clinic referral oral link, oral link dentist
+[TRIGGERS]
+  - Which clinics does Oral Link work with?
+  - How do I find a clinic after my screening?
+  - Does Oral Link refer me to a dentist?
+  - Where can I get treated after my report?
+  - Is there a discount at partner clinics?
+  - How do I book a clinic appointment through Oral Link?
+
+CONTENT:
+
+ORAL LINK'S CLINIC NETWORK:
+After receiving your AI screening report, Oral Link connects you with a network of trusted partner dental clinics in Singapore. The network is designed to ensure that patients can go from screening to treatment with minimal friction — typically within two weeks of receiving their report.
+
+KNOWN PARTNER CLINICS:
+Oral Link has a formal partnership with Elite Dental Group Singapore Pte Ltd as a featured partner clinic for tele-dentistry appointments. Additional partner clinics are listed on Oral Link's interactive clinic network map at: https://orallink.health (see the "Find a Dental Clinic" map on the homepage).
+
+DISCOUNT AT PARTNER CLINICS:
+Oral Link states that patients receive discounts with onboarded partner clinics. Specific discount amounts vary by clinic and are confirmed at the time of booking.
+
+HOW TO FIND A CLINIC:
+The Oral Link website includes a Google Maps-based clinic locator showing the full network of partner clinics across Singapore. Visit https://orallink.health and use the "Find a Dental Clinic" feature to locate the nearest participating clinic.
+
+WHAT HAPPENS AT THE CLINIC APPOINTMENT:
+At your partner clinic appointment, the attending dentist will:
+1. Review your Oral Link AI report and the flagged images
+2. Perform a full in-person clinical examination
+3. Take any additional X-rays or assessments needed
+4. Finalise a personalised treatment plan based on both the AI findings and the clinical examination
+5. Discuss treatment options, costs, and timing with you
+
+[HUMAN HANDOFF — CLINIC REFERRAL AND BOOKING]
+For help finding a specific clinic, booking an appointment, or questions about pricing and discounts at partner clinics, contact Oral Link directly:
+  Phone: +65 8098 6800
+  Email: info@orallink.health
+  Web form: https://orallink.health/#contact-us
+
+--- END CHUNK 005 ---
+
+================================================================================
+--- CHUNK 006 ---
+[CHUNK ID]   orallink-who-it-is-for-patients
+[TOPIC]      Who the Oral Link service is for — patient eligibility and use cases
+[DOMAIN]     OralLink clinic information
+[KEYWORDS]   who can use oral link, oral link for seniors, oral link elderly, oral link for adults, oral link screening eligibility, who is oral link for, oral link patient types
+[TRIGGERS]
+  - Who is Oral Link for?
+  - Can elderly people use Oral Link?
+  - Is Oral Link suitable for me?
+  - Can I use Oral Link if I have not seen a dentist in years?
+  - Can children use Oral Link?
+  - I have limited mobility — can I still get screened?
+
+CONTENT:
+
+ORAL LINK IS DESIGNED FOR:
+
+Adults who do not visit a dentist regularly: Oral Link is specifically aimed at the large proportion of Singapore adults who only go to the dentist when they have pain or a problem. The screening allows them to get an early assessment from home and take preventive action before problems escalate.
+
+Seniors and elderly individuals: Oral Link places particular emphasis on seniors and older adults. Oral health programs are largely absent from nursing homes and elderly care settings in Singapore, and Oral Link's at-home screening model addresses this gap. The service was used at Chin Swee Active Aging Center in April 2025, where 68 patients were screened.
+
+Individuals with limited mobility: Because the screening only requires a smartphone and the ability to take 5 photos, it is suitable for people who find it difficult to travel to a dental clinic for a routine check-up.
+
+People who want peace of mind between dental visits: Even if you see a dentist regularly, Oral Link's screening can provide an early-warning check between professional appointments.
+
+People who have had dental concerns flagged but not acted on: If you have been told in the past that you have early gum disease, plaque build-up, or a cavity and have not followed up, Oral Link provides a structured way to reassess and then connect with a clinic.
+
+IS ORAL LINK SUITABLE FOR CHILDREN?
+Oral Link's primary focus is adults and seniors. For children's dental care, the standard recommendation in Singapore is the School Dental Service for primary school children, and private or polyclinic dental services otherwise. Contact Oral Link to ask about any specific programmes for children.
+
+WHAT ORAL LINK DOES NOT REPLACE:
+Oral Link's screening does not replace regular professional dental check-ups, clinical examinations, or treatment. It is a preventive and early-detection tool, not a substitute for going to the dentist.
+
+[HUMAN HANDOFF — ELIGIBILITY AND SPECIFIC CASES]
+For questions about whether the service is appropriate for a specific medical situation, age group, or mobility condition:
+  Phone: +65 8098 6800
+  Email: info@orallink.health
+
+--- END CHUNK 006 ---
+
+================================================================================
+--- CHUNK 007 ---
+[CHUNK ID]   orallink-b2b-partners
+[TOPIC]      Oral Link's B2B partnerships — who Oral Link works with as partners
+[DOMAIN]     OralLink clinic information
+[KEYWORDS]   oral link B2B, oral link corporate, oral link government, oral link telehealth partner, oral link private clinics, oral link corporate health, partner with oral link, oral link business
+[TRIGGERS]
+  - Does Oral Link work with companies?
+  - Can my organisation partner with Oral Link?
+  - Does Oral Link have corporate health programmes?
+  - Can a telehealth platform integrate Oral Link?
+  - Does Oral Link work with the government?
+  - How does Oral Link work with clinics?
+
+CONTENT:
+
+Oral Link operates a B2B (business-to-business) model in addition to direct patient services. The platform is described as "built for B2B" with a "plug-and-play setup with zero friction."
+
+TYPES OF ORGANISATIONS ORAL LINK WORKS WITH:
+
+Telehealth platforms: Oral Link integrates its AI dental scanning capability into telehealth applications. A confirmed example is Mobile-health Network Solutions (MaNaDr platform), which signed an MOU with Oral Link in May 2025 to add AI-enabled dental scans to their telemedicine app. The partnership allows patients to perform guided dental scans through the MaNaDr app and receive AI-generated reports within 24 hours.
+
+Private dental clinics: Private clinics can join the Oral Link partner network to receive patient referrals from the screening service. Partner clinics are listed on the Oral Link clinic finder map.
+
+Government programmes: Oral Link works with government-funded health and community programmes. The April 2025 screening event at Chin Swee Active Aging Center (68 patients screened, approximately 47 percent booked a clinic appointment) is an example of a government-linked community health programme.
+
+Corporate health programmes: Oral Link offers screening services for corporate wellness programmes, allowing employers to include dental screening in employee health benefits.
+
+B2B COMMERCIAL MODEL:
+Oral Link uses per-report pricing for B2B clients, which makes it cost-efficient to screen large populations without hardware investment. Scans are reviewed and reports returned within hours, keeping the partner's care flow uninterrupted.
+
+KEY B2B VALUE PROPOSITIONS:
+- Accurate: Detects issues more reliably than traditional paper checklists
+- Connected: Direct referrals to the Oral Link clinic network
+- Integrated: Plug-and-play setup with no special hardware required
+- Cost-saving: Preventive care avoids expensive late-stage treatments
+- Fast: From scan to clinic in under two weeks; 10-minute report turnaround
+
+[HUMAN HANDOFF — B2B ENQUIRIES]
+All B2B partnership, corporate programme, and integration enquiries require human follow-up:
+  Phone: +65 8098 6800
+  Email: info@orallink.health
+  Web form: https://orallink.health/#contact-us
+
+--- END CHUNK 007 ---
+
+================================================================================
+--- CHUNK 008 ---
+[CHUNK ID]   orallink-event-track-record
+[TOPIC]      Oral Link's track record — screening events and real-world outcomes
+[DOMAIN]     OralLink clinic information
+[KEYWORDS]   oral link results, oral link track record, oral link event, chin swee aging center, oral link screening outcomes, oral link conversion rate, oral link community screening
+[TRIGGERS]
+  - Has Oral Link done any screenings?
+  - How many people has Oral Link screened?
+  - What were the results of the Oral Link screening?
+  - Has Oral Link worked with any community centres?
+  - What is Oral Link's success rate?
+  - Is Oral Link proven to work?
+
+CONTENT:
+
+CHIN SWEE ACTIVE AGING CENTER — APRIL 15, 2025:
+Oral Link conducted a community dental screening event at the Chin Swee Active Aging Center on 15 April 2025. Key outcomes:
+- 68 patients were screened using the Oral Link AI platform
+- Approximately 47 percent of screened patients booked an appointment at a dental clinic following their report
+- Approximately 31 percent of screened patients received actual dental treatment
+
+Oral Link describes this as an "unprecedented conversion rate for dental treatment," noting that converting nearly one-third of a screened community population to active treatment significantly exceeds typical outcomes from awareness campaigns or traditional community dental programmes.
+
+COMPARISON WITH TRADITIONAL APPROACHES:
+Oral Link positions its service against two alternative approaches: traditional "other preventive services" using trained technicians (which have limited AI-powered detection, no clear patient flow, and slow turnaround of up to 10 months), and the "I go to the dentist when I can" approach (no early detection, no guided experience, variable clinic availability). Oral Link's model offers AI-powered detection, a clear care pathway, and a 10-minute report with clinic treatment typically within two weeks.
+
+--- END CHUNK 008 ---
+
+================================================================================
+--- CHUNK 009 ---
+[CHUNK ID]   orallink-oral-systemic-health-link
+[TOPIC]      Why oral health matters for your overall health — the oral-systemic link
+[DOMAIN]     OralLink clinic information — health education
+[KEYWORDS]   oral health and heart, gum disease and diabetes, oral health and brain, mouth and lungs, oral health pregnancy, gum disease systemic, why oral health matters, oral health overall health
+[TRIGGERS]
+  - Why does oral health matter?
+  - Can gum disease affect my heart?
+  - Does oral health affect diabetes?
+  - Can bad teeth cause other health problems?
+  - Is there a link between mouth health and overall health?
+  - Does gum disease affect the brain?
+
+CONTENT:
+
+Oral health is directly connected to overall body health. Poor oral health — particularly untreated gum disease — is linked to a wide range of serious systemic conditions. This is why dental screening and preventive care matters beyond just keeping your teeth.
+
+HEART AND BLOOD HEALTH:
+Gum disease increases the risk of heart attacks and strokes. Bacteria from infected gum tissue can enter the bloodstream, trigger inflammation in blood vessels, and contribute to the formation of arterial plaques. People with periodontitis (advanced gum disease) have a significantly higher risk of cardiovascular events.
+
+LUNG HEALTH:
+Poor oral hygiene can cause respiratory infections including pneumonia. Bacteria from the mouth can be inhaled into the lungs — particularly in elderly or hospitalised patients — causing or worsening lung infections.
+
+DIABETES CONTROL:
+Gum disease makes it harder to control blood sugar levels. The relationship works in both directions: high blood sugar impairs the body's ability to fight gum infection, and gum infection in turn makes blood sugar harder to manage. Improving gum health can meaningfully improve diabetes control.
+
+PREGNANCY RISKS:
+Gum infections are linked to premature births and low birth-weight babies. Pregnant women with untreated periodontal disease have a higher risk of adverse pregnancy outcomes. Dental care during pregnancy is safe and important.
+
+BRAIN AND MEMORY:
+Chronic gum disease is associated with an increased risk of Alzheimer's disease and memory loss. Research suggests that bacteria associated with periodontal disease (Porphyromonas gingivalis) can enter the brain and contribute to neuroinflammation.
+
+CHRONIC INFLAMMATION AND ARTHRITIS:
+Conditions such as rheumatoid arthritis are linked to gum disease. Chronic oral inflammation contributes to systemic inflammatory burden, which can worsen autoimmune and inflammatory conditions.
+
+HEART INFECTION RISK (ENDOCARDITIS):
+Bacteria from the mouth can cause endocarditis — a serious infection of the inner lining of the heart chambers. This is particularly relevant for people with heart valve conditions or previous heart surgery.
+
+PRACTICAL IMPLICATION:
+Treating gum disease and maintaining good oral hygiene is not just about your teeth — it can directly lower your risk of serious systemic illness. Oral Link's early detection service is one practical way to catch oral disease before it reaches the stage where these systemic risks escalate.
+
+[HUMAN HANDOFF — SPECIFIC HEALTH CONCERNS]
+If a patient has a medical condition (diabetes, heart disease, pregnancy) and wants specific advice about how it interacts with their oral health:
+  Consult your medical doctor for the systemic condition.
+  Consult a dentist at an Oral Link partner clinic for the dental aspect.
+  Contact Oral Link to find a suitable partner clinic: +65 8098 6800 | info@orallink.health
+
+--- END CHUNK 009 ---
+
+================================================================================
+--- CHUNK 010 ---
+[CHUNK ID]   orallink-contact-and-support
+[TOPIC]      How to contact Oral Link — all contact channels and what each is used for
+[DOMAIN]     OralLink clinic information
+[KEYWORDS]   oral link contact, oral link phone number, oral link email, oral link support, how to reach oral link, oral link helpline, oral link customer service, contact oral link
+[TRIGGERS]
+  - How do I contact Oral Link?
+  - What is Oral Link's phone number?
+  - What is Oral Link's email address?
+  - How do I get help from Oral Link?
+  - I have a question — who do I contact?
+  - How do I send a message to Oral Link?
+  - Is there a helpline?
+
+CONTENT:
+
+ORAL LINK CONTACT DETAILS:
+
+Phone: +65 8098 6800
+  Use for: urgent queries, B2B enquiries, clinic booking assistance, questions about your report, general enquiries. Lines are managed by the Oral Link team.
+
+Email: info@orallink.health
+  Use for: detailed enquiries, partnership discussions, corporate programme enquiries, sending documents or screenshots of your report, non-urgent support.
+
+Web contact form: https://orallink.health/#contact-us
+  Use for: general enquiries submitted via the Oral Link website. Fill in your name, age, email, and message and submit the form.
+
+Social media:
+  - Instagram: available via the Oral Link website
+  - LinkedIn: Oral Link Pte Ltd (accessible via the Oral Link website)
+  - Facebook and Twitter: listed on the Oral Link website
+
+WHAT TO EXPECT WHEN YOU CONTACT ORAL LINK:
+The Oral Link team handles enquiries about the screening service, report interpretation questions, clinic referrals, and B2B partnerships. For clinical questions about your dental health specifically, the team will connect you with a partner dentist.
+
+RESPONSE TIMES:
+AI screening reports are returned within hours of submission. For enquiries submitted by phone or email during business hours, the team aims to respond promptly. Specific response time commitments are confirmed at the time of contact.
+
+--- END CHUNK 010 ---
+
+================================================================================
+--- CHUNK 011 ---
+[CHUNK ID]   orallink-human-handoff-master
+[TOPIC]      Situations that require human assistance — when to contact Oral Link or a dentist
+[DOMAIN]     OralLink clinic information — escalation guide
+[KEYWORDS]   when to call oral link, need human help, dental emergency, cannot access report, want to speak to someone, escalate to dentist, urgent dental, pain swelling bleeding, oral link cannot answer
+[TRIGGERS]
+  - I need to speak to a real person
+  - I have a dental emergency
+  - My gums are bleeding and it won't stop
+  - I am in pain — what do I do?
+  - I cannot access my report
+  - I need to change my appointment
+  - The chatbot cannot help me
+  - I have a complaint
+  - I need urgent dental care
+
+CONTENT:
+
+Some situations cannot and should not be handled by a chatbot. The following require direct human contact — either with Oral Link staff or with a dental clinic.
+
+CONTACT ORAL LINK DIRECTLY FOR:
+- Questions about accessing the screening platform or submitting photos
+- Questions about your specific AI report findings
+- Help booking or changing a clinic appointment
+- Clinic recommendations near your location
+- Pricing, discount, or billing questions
+- B2B or corporate partnership enquiries
+- Technical issues with the platform
+- Complaints or feedback
+
+  ORAL LINK CONTACT:
+  Phone: +65 8098 6800
+  Email: info@orallink.health
+  Web: https://orallink.health/#contact-us
+
+GO DIRECTLY TO A DENTAL CLINIC OR EMERGENCY DENTAL SERVICE FOR:
+- Tooth pain that is severe, throbbing, or has persisted for more than 24 to 48 hours
+- Visible swelling in the gum, jaw, or face
+- Gums that are bleeding heavily and will not stop
+- A tooth that has been knocked out or broken due to injury
+- A swollen pimple-like bump on the gum (possible dental abscess)
+- Signs of infection: fever alongside dental pain, pus, or persistent foul taste
+- A persistent ulcer or sore in the mouth that has not healed in two weeks
+- Any numbness or unexplained lump in the mouth or jaw
+
+These are not screening questions — they are clinical situations that require in-person dental assessment, and in some cases urgent or emergency care.
+
+FOR DENTAL EMERGENCIES IN SINGAPORE:
+- Most private dental clinics offer urgent or same-day appointments for acute pain.
+- Polyclinics (NHG, SingHealth, NUHS clusters) accept walk-in dental patients for acute issues during operating hours.
+- Singapore General Hospital (SGH) Dental Centre: open for dental emergencies.
+- National Dental Centre Singapore (NDCS): accepts urgent referrals.
+- Nearest restructured hospital with dental services: Alexandra Hospital, Changi General Hospital, Khoo Teck Puat Hospital, KK Women's and Children's Hospital, Ng Teng Fong General Hospital, Sengkang General Hospital, Tan Tock Seng Hospital.
+
+FOR MEDICAL EMERGENCIES:
+Call 995 (Singapore Emergency Ambulance) immediately if swelling is spreading rapidly to the throat or neck, breathing or swallowing is affected, or you feel seriously unwell alongside dental symptoms.
+
+IF YOU ARE UNSURE WHETHER YOUR SITUATION IS URGENT:
+Contact Oral Link at +65 8098 6800 or info@orallink.health and they will advise you on the appropriate next step.
+
+--- END CHUNK 011 ---
+
+================================================================================
+--- CHUNK 012 ---
+[CHUNK ID]   orallink-dental-issues-overview
+[TOPIC]      Common dental issues detected by Oral Link — patient overview
+[DOMAIN]     OralLink clinic information — health education
+[KEYWORDS]   dental cavities, gum inflammation, gum recession, plaque, cracked tooth, common dental problems, what is a cavity, what is gum disease, dental issue explained
+[TRIGGERS]
+  - What is a dental cavity?
+  - What is gum inflammation?
+  - What is gum recession?
+  - What is plaque?
+  - What is a cracked tooth?
+  - What dental problems can Oral Link find?
+  - What common dental issues should I know about?
+
+CONTENT:
+
+Oral Link's AI screening focuses on five common dental conditions. Here is a plain-language explanation of each.
+
+DENTAL CAVITIES (TOOTH DECAY):
+A cavity is a hole that forms in a tooth when plaque bacteria produce acid that dissolves the tooth's enamel. Cavities start small and painless, but if left untreated they grow deeper — eventually reaching the nerve inside the tooth, causing pain and requiring more complex treatment like a root canal or extraction. Early-stage cavities can often be treated with a simple filling; advanced cavities may require a crown or root canal.
+
+GUM INFLAMMATION (GINGIVITIS):
+Gingivitis is inflammation of the gum tissue caused by plaque build-up along the gum line. Signs include red, swollen, or tender gums, and gums that bleed when you brush or floss. Gingivitis is the early, reversible stage of gum disease — it can be fully resolved with improved brushing, interdental cleaning, and a professional clean. If left untreated it can progress to periodontitis, which causes permanent damage to the bone supporting the teeth.
+
+GUM RECESSION:
+Gum recession occurs when the gum tissue pulls back from the tooth, exposing the root surface below. This can be caused by aggressive brushing, gum disease, or genetic factors. Exposed root surfaces are more sensitive and more vulnerable to decay. Recession is not reversible on its own — tissue that has receded does not grow back — but progression can be stopped with correct technique and treatment. In significant cases, a gum graft can restore lost tissue.
+
+PLAQUE BUILD-UP:
+Plaque is a soft, sticky film of bacteria that continuously forms on tooth surfaces. If not removed by brushing and interdental cleaning within 24 to 72 hours, it hardens into calculus (tartar), which cannot be removed by brushing and requires professional scaling. Plaque and calculus are the root cause of both tooth decay and gum disease.
+
+CRACKED TOOTH:
+A cracked tooth can range from a hairline fracture causing occasional sensitivity to a full fracture running through the tooth. Cracks can be caused by teeth grinding (bruxism), biting on hard foods, or large existing fillings that weaken the tooth structure. A cracked tooth may require a crown to protect it; if the crack extends into the pulp (nerve), root canal treatment may be needed before the crown.
+
+[HUMAN HANDOFF — CLINICAL QUESTIONS ABOUT SPECIFIC CONDITIONS]
+If you have been told by the AI report or by a dentist that you have one of these conditions and want specific advice on treatment options and costs, contact Oral Link to be connected with a partner dentist:
+  Phone: +65 8098 6800
+  Email: info@orallink.health
+
+--- END CHUNK 012 ---
+
+================================================================================
+--- CHUNK 013 ---
+[CHUNK ID]   orallink-ai-accuracy-and-technology
+[TOPIC]      How accurate is Oral Link's AI — technology and reliability
+[DOMAIN]     OralLink clinic information
+[KEYWORDS]   oral link accuracy, AI dental accuracy, how accurate is oral link, oral link technology, AI detection reliability, oral link vs dentist, is oral link reliable, dental AI detection
+[TRIGGERS]
+  - How accurate is Oral Link's AI?
+  - Is the AI as good as a dentist?
+  - Can I trust the Oral Link report?
+  - How does the AI know what it is looking at?
+  - What technology does Oral Link use?
+  - Is AI dental screening reliable?
+
+CONTENT:
+
+ORAL LINK'S STATED ACCURACY:
+Oral Link states that its AI "detects issues better than traditional checklists" and offers accuracy comparable to or better than trained non-clinical technicians performing traditional preventive screenings.
+
+AI DENTAL SCREENING — GENERAL CAPABILITY:
+Modern AI-enabled dental scan systems are capable of human-level accuracy in detecting common conditions — including cavities, periodontal disease, root fractures, and early warning signs of more serious conditions — from images. This is the basis on which Oral Link's service was formally partnered with the MaNaDr telemedicine platform (Nasdaq-listed Mobile-health Network Solutions) in May 2025.
+
+WHAT "ACCURATE" MEANS IN CONTEXT:
+The AI report is a screening tool — its job is to flag areas of concern and risk levels so that the right patients reach the right clinical attention. Like any screening tool (blood pressure cuffs, cholesterol checks), it will:
+- Correctly identify most real problems (high sensitivity)
+- Occasionally flag areas that a dentist then confirms are not significant (false positives)
+- Have limits on what it can detect from photos alone (e.g. interproximal cavities, sub-gingival conditions)
+
+The critical point is that the AI report should always be followed up with a dentist's clinical examination. The dentist's examination is the definitive step; the AI report is the efficient, accessible pathway to get there.
+
+REVIEWED BY PROFESSIONALS:
+Oral Link's process includes expert review of AI-generated reports before they are returned to patients. The system is not purely automated — professional oversight is part of the quality assurance process.
+
+[HUMAN HANDOFF — ACCURACY CONCERNS]
+If you feel the AI report has missed something or flagged something you believe is incorrect, contact Oral Link and they will arrange a clinical review:
+  Phone: +65 8098 6800
+  Email: info@orallink.health
+
+--- END CHUNK 013 ---
+
+================================================================================
+--- CHUNK 014 ---
+[CHUNK ID]   orallink-dental-challenges-singapore
+[TOPIC]      Dental health challenges in Singapore — the context Oral Link addresses
+[DOMAIN]     OralLink clinic information — health education context
+[KEYWORDS]   dental problems Singapore, Singapore oral health statistics, childhood decay Singapore, adult gum disease Singapore, elderly dental care Singapore, dental neglect Singapore, Singapore dental access
+[TRIGGERS]
+  - What are the dental health problems in Singapore?
+  - Why don't people see a dentist in Singapore?
+  - How many Singaporeans have gum disease?
+  - What is the state of dental health in Singapore?
+  - Are children's teeth a problem in Singapore?
+  - Why is dental care a problem for the elderly?
+
+CONTENT:
+
+Singapore faces significant oral health challenges across all age groups. These are the problems that Oral Link was designed to help address:
+
+CHILDHOOD DECAY:
+50 percent of children in Singapore have cavities by the time they reach kindergarten (approximately age 4 to 5). This represents one of the highest rates of early childhood dental decay in a developed nation.
+
+ADULT NEGLECT:
+Three in four adults in Singapore have untreated gum disease or tooth decay. The majority of dental check-ups among adults happen only when pain or an obvious problem is already present — meaning that preventive care is largely absent from most adults' healthcare routines.
+
+ELDERLY CARE GAP:
+There are virtually no dental programmes in nursing homes or elderly care facilities in Singapore. As Singaporeans age and spend longer in residential care, their oral health often deteriorates with no systematic screening or preventive intervention.
+
+ECONOMIC BURDEN:
+Oral diseases cost approximately US$710 billion globally per year. Singapore's dental healthcare costs are rising, and a significant portion of this cost is driven by late-stage treatment of conditions that could have been caught earlier.
+
+LACK OF PREVENTION:
+Most dental encounters in Singapore are reactive (emergency or pain-driven) rather than preventive. The absence of a national adult dental screening programme means there is no systematic way to catch problems early.
+
+SYSTEMIC HEALTH RISKS:
+Poor oral health increases the risk of heart disease, diabetes complications, dementia, and other systemic conditions (see the oral-systemic health chunk). This means untreated dental disease has a cost that extends well beyond the mouth.
+
+SCREENING GAPS:
+There is no structured preventive dental care programme between the School Dental Service (for school-age children) and senior dental programmes — leaving most working-age adults without any supported pathway to proactive dental care.
+
+OVERLOADED PUBLIC SYSTEM:
+Long wait times at polyclinics and public hospitals discourage regular check-ups. Many people who would like subsidised care cannot access it promptly.
+
+TECHNOLOGY GAP:
+Singapore has been noted to trail Hong Kong and other regional peers in the adoption of mobile dental technology for population-level screening.
+
+--- END CHUNK 014 ---
+
+================================================================================
+--- CHUNK 015 ---
+[CHUNK ID]   orallink-social-media-and-updates
+[TOPIC]      Oral Link social media channels and where to find updates
+[DOMAIN]     OralLink clinic information
+[KEYWORDS]   oral link social media, oral link instagram, oral link linkedin, oral link facebook, oral link updates, oral link news, follow oral link
+[TRIGGERS]
+  - Where can I follow Oral Link?
+  - Does Oral Link have Instagram?
+  - Is Oral Link on LinkedIn?
+  - Where do I find Oral Link news?
+  - How do I stay updated with Oral Link?
+
+CONTENT:
+
+Oral Link maintains a presence on several social media platforms. The following channels are listed on the Oral Link website:
+
+Instagram: Linked from the Oral Link website at https://orallink.health
+LinkedIn: Oral Link Pte Ltd — linked from the Oral Link website
+Facebook: Listed on the Oral Link website
+Twitter / X: Listed on the Oral Link website
+
+For the most current links and handles, visit https://orallink.health and use the social media icons in the header or footer.
+
+For news and announcements, the Oral Link website (https://orallink.health) is the primary source of official updates.
+
+--- END CHUNK 015 ---
+
+================================================================================
+--- CHUNK 016 ---
+[CHUNK ID]   orallink-faq-common-questions
+[TOPIC]      Frequently asked patient questions about Oral Link
+[DOMAIN]     OralLink clinic information — FAQ
+[KEYWORDS]   oral link FAQ, oral link common questions, oral link questions answers, oral link how to, is oral link free, how much does oral link cost, oral link data privacy, my photos oral link
+[TRIGGERS]
+  - Is Oral Link free?
+  - How much does the screening cost?
+  - Is my data safe with Oral Link?
+  - What happens to my photos?
+  - Do I need an app?
+  - What phone do I need?
+  - How long does the report take?
+  - Can I do the screening more than once?
+
+CONTENT:
+
+COMMON PATIENT QUESTIONS:
+
+Q: Is the Oral Link screening free?
+A: Oral Link does not publish a standard consumer pricing page on its website. Screening may be free as part of a community programme (e.g. Active Aging Center events) or as part of a partner telehealth package. For individual pricing, contact Oral Link directly: +65 8098 6800 or info@orallink.health.
+
+Q: How long does it take to get my report?
+A: Reports are typically returned within hours of photo submission. Oral Link targets a 10-minute turnaround for standard cases. Expert review is part of the process before the report is sent to you.
+
+Q: Do I need a special app?
+A: The Oral Link platform is accessible via its website and, in some partnership contexts, through partner apps (such as the MaNaDr telehealth app). Contact Oral Link to confirm the current access method: +65 8098 6800 or info@orallink.health.
+
+Q: What kind of phone do I need?
+A: Any modern smartphone with a functioning camera is expected to be sufficient. No special attachments or equipment are required. Specific technical requirements are confirmed on the platform when you access it.
+
+Q: What happens to my photos and personal data?
+A: Your photos are processed by the Oral Link AI system and reviewed by the Oral Link team. For specific data privacy, data retention, and security policies, contact Oral Link directly: info@orallink.health. Oral Link is a Singapore-registered company and is subject to Singapore's Personal Data Protection Act (PDPA).
+
+Q: Can I do the screening multiple times?
+A: The service is designed to be repeatable — you can use it to monitor your oral health over time between professional dental visits. Contact Oral Link to confirm any limitations or interval recommendations: +65 8098 6800.
+
+Q: I already see a dentist regularly. Is Oral Link still useful for me?
+A: Yes. Oral Link can supplement professional check-ups by providing a quick between-visit assessment, particularly if you notice a change in your teeth or gums and want guidance before your next appointment.
+
+Q: Is Oral Link only available in Singapore?
+A: Currently, Oral Link primarily serves Singapore. Expansion to Malaysia, Indonesia, and the Philippines is planned for mid-2026 (via the MaNaDr partnership), but direct Oral Link services in those markets may follow separately. Confirm current availability at: info@orallink.health.
+
+[HUMAN HANDOFF — ALL PRICING, ACCOUNT, AND TECHNICAL QUESTIONS]
+Pricing, access, data privacy, and technical questions require direct contact with the Oral Link team:
+  Phone: +65 8098 6800
+  Email: info@orallink.health
+  Web form: https://orallink.health/#contact-us
+
+--- END CHUNK 016 ---
+
+================================================================================
+--- CHUNK 017 ---
+[CHUNK ID]   orallink-contact-card
+[TOPIC]      Oral Link contact details — quick reference card
+[DOMAIN]     OralLink clinic information — contact
+[KEYWORDS]   oral link phone, oral link email, oral link address, oral link contact number, how to contact oral link, oral link support contact
+[TRIGGERS]
+  - Give me Oral Link's contact details
+  - What is the phone number for Oral Link?
+  - What is Oral Link's email?
+  - How do I contact the clinic?
+  - I need to speak to someone at Oral Link
+
+CONTENT:
+
+ORAL LINK — CONTACT QUICK REFERENCE
+
+Company:    Oral Link Pte Ltd
+Country:    Singapore
+
+Phone:      +65 8098 6800
+Email:      info@orallink.health
+Website:    https://orallink.health
+Contact:    https://orallink.health/#contact-us
+
+Social:
+  Instagram — via https://orallink.health
+  LinkedIn  — Oral Link Pte Ltd
+  Facebook  — via https://orallink.health
+
+FOR URGENT DENTAL CARE (not an Oral Link service):
+  Singapore Emergency: Call 995
+  Polyclinics:         Walk-in during operating hours
+  NDCS:                https://www.ndcs.com.sg
+  SGH Dental:          Singapore General Hospital
+
+--- END CHUNK 017 ---
+
+================================================================================
+END OF ORAL LINK CLINIC RAG KNOWLEDGE BASE
+Total chunks: 17
+
+CHUNK INDEX:
+  001 — Company overview and mission
+  002 — How the 4-step screening process works
+  003 — What conditions the AI can detect
+  004 — Understanding your report
+  005 — Partner clinic network and booking
+  006 — Who the service is for (patient eligibility)
+  007 — B2B partnerships and corporate programmes
+  008 — Track record and real-world outcomes
+  009 — Oral-systemic health link (why oral health matters)
+  010 — How to contact Oral Link (all channels)
+  011 — Human handoff master guide (escalation scenarios)
+  012 — Common dental issues explained (patient education)
+  013 — AI accuracy and technology
+  014 — Dental health challenges in Singapore (context)
+  015 — Social media and updates
+  016 — FAQ (pricing, data, app, repeat use)
+  017 — Contact quick reference card
+
+[HUMAN HANDOFF] FLAGS SUMMARY:
+  Chunk 002 — Platform access and process questions
+  Chunk 003 — Clinical interpretation of report findings
+  Chunk 004 — Report queries and access issues
+  Chunk 005 — Clinic referral and appointment booking
+  Chunk 006 — Eligibility for specific patient groups
+  Chunk 007 — All B2B/corporate enquiries
+  Chunk 009 — Specific medical-dental interaction questions
+  Chunk 011 — MASTER escalation guide (emergencies, urgent care, complaints)
+  Chunk 012 — Clinical questions about specific conditions
+  Chunk 013 — Accuracy concerns and report disputes
+  Chunk 016 — Pricing, account, data privacy, technical issues
+
+ALL HUMAN HANDOFF: +65 8098 6800 | info@orallink.health | https://orallink.health/#contact-us
+================================================================================

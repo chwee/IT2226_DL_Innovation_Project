@@ -1,0 +1,825 @@
+================================================================================
+ORAL LINK — DENTAL TREATMENT KNOWLEDGE BASE FOR RAG
+Chatbot Knowledge File
+Source: Oral Link treatment guidance (internal); aligned with Singapore dental practice
+Audience: Dental patients (laypersons) preparing for or enquiring about treatment
+Context: Entries are triggered when a patient's AI screening report recommends a
+         treatment, or when a patient asks about a procedure they have been told about.
+================================================================================
+
+DESIGN NOTES
+------------
+- Each section between "--- CHUNK ---" dividers is one self-contained retrieval unit.
+- [WHEN THIS IS RECOMMENDED] links each treatment to its typical trigger conditions.
+- [WHAT TO EXPECT] provides a step-by-step walkthrough for patient preparation.
+- [COMPARED TO ALTERNATIVES] covers the key clinical trade-off questions.
+- [HUMAN HANDOFF] flags every decision or action that requires a dentist.
+- Cost figures are not repeated here — see the separate Dental Costs and Subsidies
+  RAG file for Singapore pricing, CHAS subsidies, and Medisave guidance.
+- All cross-references removed. Every chunk is fully self-contained.
+
+HUMAN HANDOFF MASTER CONTACT — used throughout this file:
+  Oral Link: +65 8098 6800 | info@orallink.health | https://orallink.health/#contact-us
+  For dental emergencies in Singapore: polyclinics, NDCS, restructured hospitals,
+  or call 995 if breathing or swallowing is affected by swelling.
+
+================================================================================
+--- CHUNK 001 ---
+[CHUNK ID]   treatment-scaling-polishing
+[TOPIC]      Professional dental cleaning — scaling and polishing
+[DOMAIN]     Dental treatment referral — OralLink
+[KEYWORDS]   scaling polishing, professional cleaning, dental cleaning, calculus removal, tartar removal, deep cleaning difference, how often cleaning, does cleaning hurt, low priority cleaning, scaling gum line
+[WHEN THIS IS RECOMMENDED]
+  - Flagged as Potential Action on most Oral Link screening reports
+  - Almost always listed as Low priority — even on High overall risk reports
+  - Relevant whenever plaque, calculus, or gum inflammation is detected
+[TRIGGERS]
+  - My report says I need a cleaning — what does that involve?
+  - Why is the cleaning Low priority if my risk is High?
+  - What is scaling and polishing?
+  - What is the difference between a cleaning and a deep cleaning?
+  - How often should I get my teeth professionally cleaned?
+  - Does a dental cleaning hurt?
+  - Why can't I just brush more at home instead of getting a cleaning?
+  - What happens at a dental cleaning?
+
+CONTENT:
+
+WHAT IT IS:
+Professional cleaning — called scaling and polishing in clinical terms — is the removal of plaque and calculus (hardened plaque, also called tartar) from the surfaces of teeth using specialised dental instruments. It is the most common dental procedure and the foundation of preventive care.
+
+WHY IT APPEARS AS LOW PRIORITY ON A HIGH RISK REPORT:
+A cleaning sits at Low priority not because it is unimportant but because it is part of ongoing health management rather than urgent intervention. A High overall risk report means attention is needed — but emergency pain, an abscess, or a mobile tooth would be more urgent than a scheduled cleaning. Most people benefit from professional cleaning every six to twelve months.
+
+WHY HOME BRUSHING IS NOT ENOUGH:
+No matter how thoroughly you brush, plaque begins to harden into calculus within 24 to 72 hours. Once hardened, calculus cannot be removed by brushing or flossing — only dental instruments can dislodge it. Calculus accumulates behind the lower front teeth, between teeth, and along the gum line at the back of the mouth. It irritates gum tissue and provides a rough surface that more plaque sticks to. Left over time, calculus leads to gum inflammation (gingivitis) and eventually gum disease (periodontitis). Regular professional cleaning is the most reliable way to prevent this cycle.
+
+WHAT TO EXPECT AT THE APPOINTMENT:
+A standard cleaning takes approximately 30 to 45 minutes and follows this sequence:
+
+Step 1 — Examination: the dentist or dental hygienist checks for obvious problems, areas of gum inflammation, and areas that need closer attention.
+
+Step 2 — Scaling: calculus and heavy plaque are removed from tooth surfaces, both above and just at the gum line. Most clinics use an ultrasonic scaler — a small instrument using high-frequency vibration with a water spray. Hand instruments are used for finer work.
+
+Step 3 — Polishing: a polishing paste is applied with a small rotating brush or rubber cup to smooth the tooth surfaces and remove surface stains. Teeth feel smoother and look slightly cleaner afterwards.
+
+Step 4 — Fluoride application: some clinics apply a topical fluoride varnish at the end, particularly for higher-risk patients.
+
+Step 5 — Home care advice: the dentist or hygienist may show you areas you tend to miss when brushing and recommend changes to technique, brush type, or interdental cleaning.
+
+DOES IT HURT:
+If your gums are inflamed or bleeding, cleaning may feel slightly uncomfortable — particularly at the gum line where the scaler works. It should not be painful. Clinics can offer topical numbing gel for sensitive patients. After the cleaning, gums typically look better within a few days and any bleeding reduces as inflammation settles.
+
+DIFFERENCE BETWEEN A STANDARD CLEANING AND DEEP CLEANING:
+A standard cleaning addresses plaque and calculus above and at the gum line. A procedure called scaling and root planing — sometimes called "deep cleaning" — goes below the gum line to clean root surfaces inside periodontal pockets that have formed due to gum disease. Deep cleaning is reserved for Moderate or Advanced gum disease cases, is often performed across two or more visits, and is usually done under local anaesthetic. If your report flags Advanced plaque or significant gum recession, the dentist may recommend scaling and root planing rather than a standard cleaning.
+
+HOW OFTEN:
+The general guideline is every six to twelve months, with more frequent cleaning for patients who have a history of gum disease, heavy plaque build-up between visits, diabetes or conditions that affect gum health, a history of smoking, or difficulty cleaning effectively at home due to crowded teeth or dental restorations. Your dentist will advise on the interval based on what they see at the visit.
+
+[HUMAN HANDOFF]
+A professional cleaning cannot be done at home — it requires a dentist or dental hygienist in person.
+To book a cleaning at an Oral Link partner clinic:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+
+--- END CHUNK 001 ---
+
+================================================================================
+--- CHUNK 002 ---
+[CHUNK ID]   treatment-filling
+[TOPIC]      Dental filling — composite and glass ionomer, what to expect
+[DOMAIN]     Dental treatment referral — OralLink
+[KEYWORDS]   dental filling, cavity filling, tooth filling, white filling, composite resin, amalgam filling, how long filling lasts, filling appointment, will filling hurt, silver filling, tooth decay treatment filling
+[WHEN THIS IS RECOMMENDED]
+  - Decay that has not reached the nerve (pulp) of the tooth
+  - Enough sound tooth structure remains around the cavity to support a filling
+  - Cavity is small to moderate in size
+  - Not appropriate when decay has reached the nerve, destroyed too much structure, or a very large portion of the tooth is missing
+[TRIGGERS]
+  - My dentist mentioned a filling — what does that involve?
+  - What are fillings made of?
+  - Will a filling hurt?
+  - How long does a filling last?
+  - What is the difference between a filling and a crown?
+  - Are silver fillings still used?
+  - What is a white filling?
+  - What happens if my cavity is too deep for a filling?
+
+CONTENT:
+
+WHAT IT IS:
+A filling repairs a tooth damaged by decay or minor fracture. The dentist removes the decayed or damaged portion and fills the resulting hole with a restorative material that returns the tooth to a functional, cleanable shape. A filling is the appropriate treatment when decay has not yet reached the nerve and enough tooth structure remains to support it.
+
+FILLING MATERIALS:
+
+Composite resin (white or tooth-coloured filling): a blend of plastic and fine glass particles bonded directly to the tooth, shaped, and hardened with a curing light. Tooth-coloured, aesthetically suitable for any tooth, and the standard choice in most modern dental practice in Singapore.
+
+Glass ionomer: releases small amounts of fluoride over time. Used in specific situations — children's teeth, cavities below the gum line, or as a temporary material.
+
+Amalgam (silver filling): a silver-coloured alloy of mercury, silver, tin, and copper. Still used in some settings — it is durable and well-tested — but composite resin has become the default for new fillings in Singapore and most of the world.
+
+WHAT TO EXPECT AT THE APPOINTMENT:
+A filling appointment typically takes 30 to 60 minutes for a single tooth:
+
+Step 1 — Local anaesthetic: a small injection numbs the tooth and surrounding area. You should not feel pain during the procedure, though you may feel pressure or vibration.
+
+Step 2 — Removal of decay: the dentist removes the decayed portion using a small drill and other instruments. Only affected tissue is removed; healthy tooth structure is preserved.
+
+Step 3 — Preparation: the cavity is cleaned and shaped to receive the filling material.
+
+Step 4 — Placement: composite resin is placed in thin layers, each hardened with a curing light. The filling is shaped to match the natural contour of the tooth.
+
+Step 5 — Bite check and polish: the dentist checks your bite, makes any adjustments, and polishes the filling smooth.
+
+Most people leave able to eat normally once the anaesthetic wears off — usually one to three hours later. Some sensitivity to cold or pressure in the days afterwards is normal and usually settles within one to two weeks.
+
+HOW LONG FILLINGS LAST:
+A well-placed composite filling on an otherwise healthy tooth typically lasts five to ten years, often longer. Fillings can fail over time — chipping, leaking around edges, or wearing down — and may need replacement. Larger fillings tend to last less well than smaller ones, which is why treating a cavity early typically gives better long-term results than treating a larger one later.
+
+WHEN A FILLING IS NOT ENOUGH:
+If, when the decay is removed, it turns out the cavity extends close to or into the nerve, the treatment may need to change to a root canal followed by a crown. If too little tooth structure remains to support a filling reliably, a crown may be recommended. Your dentist will discuss this with you before proceeding — they will not escalate treatment without your consent.
+
+FILLING VERSUS CROWN:
+A filling replaces a portion of the tooth. A crown replaces the entire outer surface of the tooth. As a rough guideline: if more than about half the tooth's natural structure has been lost, or if the tooth has had a root canal, a crown is typically the more durable option.
+
+[HUMAN HANDOFF]
+Fillings require in-person dental treatment. The AI screening report can flag cavities but cannot treat them.
+To book a filling at an Oral Link partner clinic:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+See also: treatment-crown, treatment-root-canal chunks for when a filling may escalate.
+
+--- END CHUNK 002 ---
+
+================================================================================
+--- CHUNK 003 ---
+[CHUNK ID]   treatment-crown
+[TOPIC]      Dental crown — what it is, when it is needed, and what to expect
+[DOMAIN]     Dental treatment referral — OralLink
+[KEYWORDS]   dental crown, tooth crown, crown vs filling, crown after root canal, what is a crown, crown materials, porcelain crown, zirconia crown, how many appointments crown, crown Singapore, crown hurt, how long crown last
+[WHEN THIS IS RECOMMENDED]
+  - Decay or damage too extensive for a filling alone to restore reliably
+  - A previous large filling has fractured or compromised surrounding tooth structure
+  - A tooth has had a root canal and needs protection
+  - More than approximately half the natural tooth structure has been lost
+  - A cracked tooth that would fracture under chewing forces without protection
+[TRIGGERS]
+  - My report says I need a crown — what is that?
+  - Why do I need a crown instead of a filling?
+  - How long does a crown last?
+  - What is a crown made of?
+  - Will it hurt to get a crown?
+  - How many appointments do I need for a crown?
+  - What is a dental cap?
+  - Do I need a crown after a root canal?
+
+CONTENT:
+
+WHAT IT IS:
+A crown (sometimes called a cap) is a custom-made covering that fits over the entire visible portion of a tooth. It restores the tooth's shape, strength, and appearance when the tooth has been damaged or weakened beyond what a standard filling can reliably repair.
+
+WHY A CROWN RATHER THAN A FILLING:
+A filling replaces a portion of the tooth. A crown replaces the entire outer surface. As decay or damage increases, more tooth structure is lost. At a certain point the remaining tooth is not strong enough to hold a filling under chewing forces — it would crack or the filling would fail. A crown solves this by surrounding the remaining tooth on all sides, restoring full shape and biting strength. A common guideline: if more than about half the tooth's natural structure is missing, or if the tooth has had a root canal, a crown is the more durable and appropriate choice.
+
+CROWN MATERIALS:
+
+Porcelain or ceramic: tooth-coloured, used most often for front teeth and increasingly for back teeth. Looks the most natural.
+
+Porcelain fused to metal: a metal core for strength with porcelain on the outside for appearance. Older but still commonly used.
+
+Full metal (gold or other alloy): very strong and long-lasting, but visible. More common on back teeth where appearance matters less.
+
+Zirconia: very strong, tooth-coloured, increasingly common in modern dentistry. Often the preferred material for back teeth due to its combination of strength and aesthetics.
+
+Your dentist recommends a material based on the tooth's location, bite forces involved, and your preferences.
+
+WHAT TO EXPECT AT THE APPOINTMENTS:
+A traditional crown usually requires two visits:
+
+First visit — Preparation (60 to 90 minutes): the dentist removes any decay and shapes the remaining tooth to accept the crown. An impression or digital scan is taken. A temporary crown is placed while the permanent crown is made at a dental laboratory — usually taking one to two weeks.
+
+Second visit — Fitting (30 to 45 minutes): the temporary is removed, the permanent crown is checked, adjusted for fit and bite, and cemented in place.
+
+Some clinics in Singapore offer same-day crowns using digital scanning and in-office milling — the entire process is completed in one visit.
+
+Local anaesthetic is used during the preparation visit. You should not feel pain; some sensitivity in the days afterwards is normal and usually settles within one to two weeks.
+
+HOW LONG CROWNS LAST:
+A well-made crown on a tooth that is otherwise healthy and cared for properly typically lasts ten to fifteen years or longer. The crown itself cannot decay, but the natural tooth underneath can — particularly at the margin where the crown meets the tooth. Brushing twice a day, daily interdental cleaning, and regular dental check-ups remain important throughout the crown's life.
+
+CROWN AFTER ROOT CANAL:
+A tooth that has had a root canal loses some of its moisture and becomes more brittle. A crown protects the treated tooth from fracture under chewing forces. For back teeth, a crown after root canal is almost always recommended. Front teeth occasionally do not need a full crown — the dentist will advise.
+
+[HUMAN HANDOFF]
+A crown is a restorative dental procedure that requires in-person assessment, preparation, and fitting by a dentist.
+To book a crown consultation at an Oral Link partner clinic:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+
+--- END CHUNK 003 ---
+
+================================================================================
+--- CHUNK 004 ---
+[CHUNK ID]   treatment-root-canal
+[TOPIC]      Root canal treatment — what it is, when it is needed, and what to expect
+[DOMAIN]     Dental treatment referral — OralLink
+[KEYWORDS]   root canal, endodontic treatment, root canal painful, root canal fear, root canal steps, how long root canal, root canal molar, root canal crown, root canal vs extraction, is root canal worth it, root canal Singapore
+[WHEN THIS IS RECOMMENDED]
+  - Decay has progressed deep enough to involve the nerve (pulp) of the tooth
+  - An existing large filling has failed and bacteria have reached the pulp
+  - The tooth has been damaged by trauma and the pulp is affected
+  - There are signs of pulp inflammation or infection: persistent ache, sensitivity to heat, abscess at the gum, or a pimple-like bump on the gum
+  - The goal is always to save the natural tooth where possible
+[TRIGGERS]
+  - Will I need a root canal?
+  - Are root canals painful?
+  - Why do I need a crown after a root canal?
+  - How long does a root canal take?
+  - Is a root canal better than an extraction?
+  - How long does a root canal-treated tooth last?
+  - What happens during a root canal?
+  - I am scared of root canal — what should I know?
+  - What is endodontic treatment?
+
+CONTENT:
+
+WHAT IT IS:
+Root canal treatment (endodontic treatment) is a procedure to save a tooth where decay or infection has reached the nerve at the centre of the tooth. The dentist removes the infected or inflamed nerve tissue, cleans and disinfects the inside of the tooth, fills the empty space with a sealing material, and seals the tooth so it can continue to function. The goal is straightforward: to keep the natural tooth rather than extracting it. A natural tooth, even after a root canal, generally provides better long-term function and bone preservation than any replacement option.
+
+WHY ROOT CANALS HAVE AN UNDESERVED REPUTATION:
+Many people associate root canals with significant pain. The reality of modern endodontic treatment is the opposite: the tooth is usually painful before the root canal because the nerve is inflamed or infected. The procedure relieves that pain by removing the source of infection. With effective local anaesthetic and modern instruments, the procedure itself feels comparable to a large filling — pressure and vibration, but not pain. Most patients are surprised by how routine it is.
+
+WHAT TO EXPECT AT THE VISITS:
+A root canal is typically completed in one to three appointments depending on the tooth:
+
+Step 1 — Local anaesthetic: the tooth is numbed thoroughly. You should feel no pain during the procedure.
+
+Step 2 — Isolation: a small rubber sheet (a rubber dam) is placed around the tooth to keep it dry and prevent bacteria from saliva entering during treatment.
+
+Step 3 — Access: a small opening is made through the top of the tooth to reach the nerve canals inside.
+
+Step 4 — Cleaning: the infected or inflamed nerve tissue is removed using fine instruments. The canals are cleaned, shaped, and disinfected with irrigating solutions.
+
+Step 5 — Filling: the cleaned canals are filled with a rubber-like material called gutta-percha and sealed.
+
+Step 6 — Temporary or permanent restoration: a temporary filling is placed at the access opening. Usually the tooth is then prepared for a crown at a follow-up visit, because a tooth that has had a root canal is more brittle and benefits from a crown's protection.
+
+Front teeth (single canal) typically take 60 to 90 minutes. Molars with three or four canals can take 90 to 120 minutes per visit, sometimes across two visits.
+
+AFTER THE PROCEDURE:
+Most people can eat normally once the anaesthetic wears off, though chewing gently on that side is wise until the permanent crown is placed. Some tenderness when biting is normal for a few days and usually settles. Over-the-counter pain relief is typically sufficient.
+
+SUCCESS AND LONGEVITY:
+Root canal treatment has a success rate typically over 90 percent for straightforward cases, when followed by an appropriate restoration (usually a crown). A tooth that has had a root canal and a crown can last decades. Good home care and regular check-ups remain important — the tooth can still develop decay around the edges of the crown.
+
+In a small percentage of cases the infection persists or recurs and the tooth may need retreatment (a second root canal) or a small surgical procedure called an apicoectomy. If retreatment is not feasible, extraction may eventually be necessary.
+
+ROOT CANAL VERSUS EXTRACTION:
+A root canal is usually preferred because keeping the natural tooth is better for long-term function, comfort, and bone preservation. However, in some cases — where the tooth is too damaged to restore reliably, root anatomy is unfavourable, or the long-term outlook is poor — extraction followed by a replacement (implant, bridge, or partial denture) may be the more practical option. Your dentist will discuss the trade-offs specific to your tooth.
+
+[HUMAN HANDOFF]
+Root canal treatment requires in-person assessment and treatment by a dentist. Symptoms suggesting you need urgent root canal attention — severe throbbing pain, swelling, a pimple-like bump on the gum — should not wait for a scheduled appointment.
+For urgent or routine dental care through an Oral Link partner clinic:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+For dental emergencies: visit your nearest polyclinic, NDCS, or restructured hospital.
+
+--- END CHUNK 004 ---
+
+================================================================================
+--- CHUNK 005 ---
+[CHUNK ID]   treatment-extraction
+[TOPIC]      Tooth extraction — simple and surgical, recovery, and replacement planning
+[DOMAIN]     Dental treatment referral — OralLink
+[KEYWORDS]   tooth extraction, pulling tooth, extraction recovery, dry socket, simple extraction vs surgical, wisdom tooth extraction, tooth removed, extraction painful, tooth socket healing, should I replace extracted tooth, extraction aftercare Singapore
+[WHEN THIS IS RECOMMENDED]
+  - A tooth too damaged by decay or fracture to be restored reliably
+  - Severe gum disease has caused excessive bone loss around a tooth
+  - A failed root canal that cannot be retreated or surgically resolved
+  - Impacted, repeatedly inflamed, or problematic wisdom teeth
+  - Teeth removed for orthodontic purposes (to create space)
+  - Persistent pain or infection in a tooth where all treatment options have been exhausted
+[TRIGGERS]
+  - What does an extraction involve?
+  - Will my extraction be a simple or surgical procedure?
+  - How long does it take to recover from a tooth extraction?
+  - Is an extraction painful?
+  - What is a dry socket?
+  - Should I get an implant after my extraction?
+  - Can Medisave be used for tooth extraction?
+  - What happens if I do not replace a pulled tooth?
+  - How long does a tooth extraction take?
+
+CONTENT:
+
+WHAT IT IS:
+An extraction is the removal of a tooth that cannot be saved or that is causing problems significant enough that removal is the appropriate option. Modern dentistry strongly favours saving teeth wherever possible — through fillings, crowns, root canals, or periodontal treatment — but in some situations extraction is the right clinical choice.
+
+WHEN EXTRACTION IS RECOMMENDED:
+A tooth too damaged to restore: if decay or fracture has destroyed too much structure to support a filling or crown reliably, extraction may be more practical than an extensive restoration attempt that is likely to fail.
+
+Severe gum disease: if periodontal disease has caused too much bone loss, the tooth may be too loose to keep. Removing it prevents the disease from spreading to neighbouring teeth.
+
+Failed root canal: where a root canal has not resolved an infection and retreatment or apicoectomy is not feasible.
+
+Impacted wisdom teeth: wisdom teeth that are partially erupted, repeatedly inflamed, decayed, or pushing on neighbouring teeth are often best removed.
+
+Orthodontic reasons: healthy teeth are sometimes removed to create space for remaining teeth to align during orthodontic treatment.
+
+TYPES OF EXTRACTION:
+
+Simple extraction: performed when the tooth is fully erupted and can be removed with forceps and gentle pressure. Done by a general dentist under local anaesthetic; typically takes 15 to 30 minutes.
+
+Surgical extraction: required when the tooth is broken below the gum line, has curved or fragile roots, or is impacted. Involves a small incision in the gum, sometimes removing a small amount of bone, and removing the tooth in sections if necessary. May be performed by a general dentist or referred to an oral surgeon. Sedation or general anaesthetic can be offered for surgical extractions, particularly impacted wisdom teeth.
+
+WHAT TO EXPECT DURING THE PROCEDURE:
+
+Step 1 — Local anaesthetic: the area around the tooth is numbed thoroughly. You will feel pressure but not pain.
+
+Step 2 — Loosening and removal: the dentist uses a small instrument called an elevator to loosen the tooth from the surrounding ligament, then forceps to remove it. Surgical extractions involve additional steps as needed.
+
+Step 3 — Wound care: the socket is cleaned, stitches are placed if needed, and you bite on gauze to control initial bleeding.
+
+The procedure takes 15 to 45 minutes for a single tooth, longer for surgical cases.
+
+RECOVERY — WHAT TO EXPECT:
+
+First 24 hours: some bleeding, mild to moderate discomfort, and possible swelling. Bite on the gauze for the first 30 to 45 minutes, replacing if needed. Cold compresses on the cheek help reduce swelling. Eat soft, cool foods and avoid hot drinks.
+
+First few days: discomfort gradually decreases. Avoid rinsing forcefully, smoking, drinking through a straw, or vigorous exercise — these can dislodge the blood clot forming in the socket.
+
+First two weeks: gum tissue heals over the socket. Stitches, if placed, may dissolve or be removed at a follow-up visit.
+
+First three months: bone gradually fills in beneath the gum. Most people are fully healed within three months.
+
+Over-the-counter pain relief is usually sufficient. The dentist will prescribe stronger medication or antibiotics if needed.
+
+WHAT IS DRY SOCKET:
+Dry socket (alveolar osteitis) is a painful complication that occurs when the blood clot in the extraction socket is dislodged or dissolves before the wound has healed, leaving the bone exposed. It typically develops two to four days after extraction and causes a sudden increase in pain, often radiating to the jaw or ear. It is more common after lower molar and wisdom tooth extractions, and in smokers. Treatment involves a dentist cleaning the socket and placing a medicated dressing. Contact your dentist promptly if pain worsens significantly two to four days after the extraction rather than improving.
+
+REPLACEMENT CONSIDERATIONS:
+Once a tooth is extracted — other than a wisdom tooth in most cases — replacement is worth planning for. Without replacement:
+
+Neighbouring teeth drift into the gap over months and years. The opposing tooth super-erupts (moves toward the gap). Bone resorption begins under the gum at the extraction site within weeks. Bite changes can affect chewing efficiency and cause jaw discomfort.
+
+Replacement options:
+Implant: typically the best long-term option — preserves bone, fixed, and feels most like a natural tooth. Usually planned three to six months after extraction to allow healing, unless an immediate implant is placed at the time of extraction.
+Bridge: a fixed replacement using the adjacent teeth as anchors. Faster than an implant but requires preparing (grinding down) the adjacent teeth.
+Partial denture: removable, more affordable, suitable for multiple missing teeth. A practical interim or longer-term option.
+No replacement: sometimes appropriate for wisdom teeth and for specific orthodontic situations. Your dentist will advise.
+
+Discussing replacement before the extraction — where possible — is useful because implants in particular benefit from planning that begins before the tooth is removed.
+
+[HUMAN HANDOFF — URGENT CARE]
+If you have symptoms of a dental abscess alongside a tooth that may need extraction — severe throbbing pain, facial swelling, fever, or difficulty swallowing — seek urgent dental care immediately.
+  Singapore dental emergency: polyclinics (walk-in hours), NDCS, nearest restructured hospital.
+  Call 995 if swelling is affecting your breathing or swallowing.
+
+For planned extractions through an Oral Link partner clinic:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+
+--- END CHUNK 005 ---
+
+================================================================================
+--- CHUNK 006 ---
+[CHUNK ID]   treatment-implant
+[TOPIC]      Dental implant — what it is, the multi-stage process, and how it compares to alternatives
+[DOMAIN]     Dental treatment referral — OralLink
+[KEYWORDS]   dental implant Singapore, implant procedure, implant vs bridge, implant vs denture, osseointegration, titanium implant, implant crown, how long implant takes, implant painful, bone graft implant, peri-implantitis, implant cost, single tooth implant
+[WHEN THIS IS RECOMMENDED]
+  - One or more missing teeth where a fixed long-lasting replacement is appropriate
+  - Surrounding bone and gum tissue are sufficient to support an implant (or can be prepared with a bone graft)
+  - The patient wants a fixed non-removable tooth replacement
+  - Adjacent healthy teeth should not be prepared (ground down) for a bridge
+  - Long-term preservation of jawbone is a priority
+[TRIGGERS]
+  - What is a dental implant?
+  - Should I get an implant or a partial denture?
+  - How long does an implant procedure take?
+  - How long do implants last?
+  - Can I get an implant if I have been missing the tooth for years?
+  - Is the implant procedure painful?
+  - What is osseointegration?
+  - Can smokers get dental implants?
+  - What is peri-implantitis?
+  - Is an implant worth it?
+
+CONTENT:
+
+WHAT IT IS:
+A dental implant is a fixed (non-removable) replacement for a missing tooth. It consists of three parts: a titanium post placed into the jawbone where the tooth root used to be; an abutment that connects to the post above the gum line; and a crown that sits on top and looks and functions like a natural tooth.
+
+Implants are typically the most durable and most natural-feeling tooth replacement option. They also preserve the jawbone — because the titanium post is embedded in the bone, it stimulates the bone the way a natural root does, preventing the bone loss that typically follows tooth loss.
+
+WHEN AN IMPLANT IS THE RIGHT CHOICE:
+A single missing tooth where adjacent teeth are healthy and you want to avoid preparing them for a bridge. Multiple missing teeth that can be supported by a small number of implants (implant-supported bridge or implant-supported denture). When long-term bone preservation matters — particularly in younger patients or in visible smile areas. When a fixed non-removable replacement is strongly preferred over a removable denture.
+
+WHEN AN IMPLANT MAY NOT BE SUITABLE:
+Insufficient bone: a tooth missing for many years may have caused significant bone resorption. A bone graft can rebuild bone before or at the time of implant placement, but it adds time and cost to the procedure.
+
+Smoking: smoking significantly reduces implant success rates — it impairs blood flow to the surgical site and slows osseointegration. Most implant dentists strongly recommend stopping smoking at least four to six weeks before surgery and for at least three months afterwards. Some will not place implants in heavy active smokers in higher-risk situations.
+
+Poorly controlled diabetes: high blood sugar impairs healing and osseointegration, reducing implant success rates. Well-controlled diabetes is not necessarily a contraindication, but control must be assessed before proceeding.
+
+Certain bone medications (bisphosphonates, denosumab): used for osteoporosis or cancer bone complications. These can affect bone healing in ways that complicate implant placement. Full disclosure of all medications is essential before any implant surgery.
+
+Young patients: implant placement is generally deferred until the jawbone has finished growing — usually after the late teens.
+
+WHAT TO EXPECT — THE MULTI-STAGE PROCESS:
+A standard implant from start to finish typically takes four to nine months for a straightforward case, longer if a bone graft is required.
+
+Stage 1 — Assessment and planning: the dentist examines the mouth, takes X-rays and often a 3D scan (CBCT) to assess bone volume and plan the exact implant position. If insufficient bone is present, a bone graft is discussed at this stage.
+
+Stage 2 — Implant placement (Surgery 1): the titanium post is placed into the jawbone under local anaesthetic, sometimes with sedation. A single implant placement typically takes 60 to 90 minutes. Some clinics use computer-guided surgery for greater precision.
+
+Stage 3 — Osseointegration (healing): the bone gradually fuses with the titanium surface over three to six months. During this period a temporary tooth or denture may be worn for appearance. Osseointegration is the critical biological process that makes implants durable — it cannot be rushed.
+
+Stage 4 — Abutment placement (sometimes combined with Stage 2): once healing is confirmed, the abutment is attached to the post above the gum line.
+
+Stage 5 — Crown placement: impressions or digital scans are taken and the final crown is fabricated and fitted onto the abutment.
+
+WHAT IT IS LIKE TO LIVE WITH AN IMPLANT:
+Eating is unrestricted once fully healed. Chewing is normal. Speaking is unaffected. Cleaning is similar to a natural tooth — brushing twice daily and daily interdental cleaning around the implant margin. Special care around the gum line of the implant is important to prevent peri-implantitis (an inflammatory condition around the implant if plaque is not controlled — the implant equivalent of gum disease). Appearance is typically very good; a well-made implant crown is difficult to distinguish from natural teeth.
+
+HOW LONG IMPLANTS LAST:
+The titanium post, in healthy bone with good home care and regular dental visits, typically lasts decades — often a lifetime. The crown on top has a shorter expected lifespan: ten to fifteen years is common before it may need replacement, even when the implant post itself remains sound.
+
+IMPLANT VERSUS BRIDGE VERSUS PARTIAL DENTURE:
+Implant: fixed, preserves adjacent teeth, preserves bone, longest-lasting. Most expensive, longest treatment timeline.
+Bridge: fixed, faster than an implant, less expensive. Requires grinding down healthy adjacent teeth. Does not preserve bone under the gap. Lasts approximately ten to fifteen years.
+Partial denture: removable, most affordable, suitable for multiple missing teeth. Less comfortable than fixed options for most patients. Does not preserve bone. Needs adjustment or replacement over time.
+
+For a single missing tooth with healthy adjacent teeth, an implant is generally the preferred long-term option. For multiple missing teeth or where budget is a significant consideration, a bridge or partial denture may be more practical. Your dentist will discuss the trade-offs specific to your situation.
+
+PERI-IMPLANTITIS:
+Peri-implantitis is an inflammatory condition affecting the gum and bone around a dental implant, caused by plaque accumulation around the implant margin. It is the implant equivalent of periodontitis (gum disease around natural teeth). It can cause bone loss around the implant and, if left untreated, implant failure. Prevention is through consistent daily plaque control — brushing, interdental cleaning, and regular professional maintenance visits. Signs to watch for: bleeding or swelling around the implant, or a sensation that the implant is less stable than usual. Report these to a dentist promptly.
+
+[HUMAN HANDOFF]
+Dental implants require specialist assessment, surgery, and multi-stage treatment by an experienced implant dentist. The Oral Link screening can identify missing teeth warranting implant consideration, but the full treatment plan must be developed in person.
+To discuss implant treatment through an Oral Link partner clinic:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+
+--- END CHUNK 006 ---
+
+================================================================================
+--- CHUNK 007 ---
+[CHUNK ID]   treatment-partial-denture
+[TOPIC]      Partial removable denture — what it is, types, living with one, and alternatives
+[DOMAIN]     Dental treatment referral — OralLink
+[KEYWORDS]   partial denture, removable denture, acrylic denture, cobalt chrome denture, flexible denture, how to clean denture, partial denture vs implant, partial denture vs bridge, will denture be uncomfortable, how long denture takes, denture sore spots, denture Singapore
+[WHEN THIS IS RECOMMENDED]
+  - One or more missing teeth and a removable appliance is a practical restoration option
+  - Multiple missing teeth in a row or in different parts of the mouth
+  - Insufficient bone for an implant without major grafting
+  - Adjacent healthy teeth should not be used as bridge anchors
+  - Budget is a significant consideration
+  - A staged interim solution while planning for an implant or bridge
+[TRIGGERS]
+  - My report says I need a partial denture — what is that?
+  - How is a partial denture different from a full denture?
+  - What are partial dentures made of?
+  - Will a partial denture be uncomfortable?
+  - How long do partial dentures last?
+  - Should I get a partial denture or an implant?
+  - How do I clean a partial denture?
+  - Can I sleep with my partial denture in?
+  - How many appointments does a partial denture take?
+
+CONTENT:
+
+WHAT IT IS:
+A partial denture is a removable appliance that replaces one or more missing teeth. It consists of artificial teeth attached to a base — usually pink to match the gum colour — that rests against remaining teeth and gums. You can remove it for cleaning and reinsert it for normal daily use.
+
+WHY A PARTIAL DENTURE MIGHT BE RECOMMENDED:
+Multiple missing teeth in a row, or scattered across the mouth — a single partial denture can replace several teeth at once. Insufficient bone for an implant — where a tooth has been missing for many years and bone has resorbed. Adjacent teeth that should not be prepared for a bridge. Budget considerations — partial dentures are typically the most affordable replacement option. A staged approach — a partial denture can serve as a practical interim while planning and saving for an implant or bridge.
+
+TYPES OF PARTIAL DENTURE:
+
+Acrylic partial denture: the base is pink acrylic plastic, often with metal clasps that grip adjacent teeth to hold the denture in place. Lighter and less expensive; suitable for many cases. A practical first denture.
+
+Cobalt-chrome (metal-framework) partial denture: a metal framework supports the acrylic and artificial teeth. Stronger, thinner, and fits more precisely. More expensive but generally the preferred choice for long-term use.
+
+Flexible partial denture (e.g. Valplast): made from a flexible nylon-based material. Sometimes used for small partials in specific situations, particularly where appearance matters and metal clasps would be visible. Not appropriate in all clinical situations; the dentist will advise.
+
+WHAT TO EXPECT AT THE APPOINTMENTS:
+Making a partial denture typically involves four to five appointments over several weeks:
+
+Visit 1 — Assessment: the dentist examines your mouth, takes X-rays if needed, and discusses the design of the denture.
+
+Visit 2 — Impressions: detailed moulds of your teeth and gums are taken (or digital scans). For a metal-framework denture a more detailed second impression may be taken at a later visit.
+
+Visit 3 — Try-in: a wax version of the denture is placed in your mouth so the fit, bite, and tooth position can be checked and adjusted before the final denture is made.
+
+Visit 4 — Fitting: the finished denture is fitted, adjusted for comfort, and you are shown how to insert, remove, and clean it.
+
+Visit 5 — Review: a follow-up appointment one to two weeks later checks how you are getting on. Any sore spots are adjusted — let the dentist know rather than enduring discomfort.
+
+WHAT IT IS LIKE TO LIVE WITH A PARTIAL DENTURE:
+Most people find a partial denture takes a couple of weeks to feel normal.
+
+Eating: start with softer foods, cutting food into smaller pieces, and chewing on both sides of the mouth. Most people return to a normal diet within a few weeks.
+
+Speaking: may feel slightly different initially, particularly with sounds involving the tongue near the front teeth. Reading aloud at home for the first few days speeds up adjustment.
+
+Cleaning: remove the denture and brush it daily with a separate denture brush (not your regular toothbrush) and denture cleaner. Soak overnight in a denture-cleaning solution. Clean your remaining natural teeth and gums as normal. Good oral hygiene around remaining teeth is especially important — plaque on natural teeth accelerates when a denture is in regular contact with them.
+
+Wearing overnight: generally not recommended — taking the denture out at night gives gum tissue time to rest and reduces the risk of fungal infections (denture stomatitis).
+
+Sore spots: common in the first week or two as the denture settles against your gums. These are easily adjusted by the dentist at a review appointment.
+
+HOW LONG PARTIAL DENTURES LAST:
+A well-made partial denture typically lasts five to ten years. The fit may change over time as gums and bone change shape gradually, and remaining teeth may shift slightly. Periodic relines — where the inside surface of the denture is adjusted to fit the changed gum contour — can extend the denture's useful life.
+
+PARTIAL DENTURE VERSUS IMPLANT:
+Partial denture: removable, affordable, suitable for multiple missing teeth, available quickly. Does not preserve bone. May feel less stable than a fixed option. Needs eventual replacement or relining.
+Implant: fixed, preserves adjacent teeth and bone, feels and functions like a natural tooth, longest-lasting. Most expensive, longest treatment timeline (four to nine months from start to finish).
+
+For patients missing many teeth or where budget is the primary consideration, a partial denture is a practical and clinically sound option. For patients missing one or two teeth with healthy adjacent teeth and sufficient bone, an implant is typically the better long-term investment. Your dentist will help you weigh the trade-offs for your specific situation.
+
+[HUMAN HANDOFF]
+A partial denture requires clinical assessment, impressions, and fitting by a dentist across multiple appointments.
+To discuss partial denture treatment through an Oral Link partner clinic:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+
+--- END CHUNK 007 ---
+
+================================================================================
+--- CHUNK 008 ---
+[CHUNK ID]   treatment-comparison-table
+[TOPIC]      Dental treatment comparison — quick reference for common procedures
+[DOMAIN]     Dental treatment referral — OralLink
+[KEYWORDS]   dental treatment comparison, filling vs crown vs root canal, implant vs bridge vs denture, which treatment do I need, dental treatment overview, what treatment for cavity, what treatment for missing tooth, dental procedure comparison Singapore
+[TRIGGERS]
+  - What is the difference between a filling and a crown?
+  - Should I get a root canal or extraction?
+  - Which is better — implant, bridge, or denture?
+  - What treatment options are there for a cavity?
+  - What treatment options are there for a missing tooth?
+  - Give me an overview of dental treatments
+
+CONTENT:
+
+This chunk is a quick-reference comparison of the eight main dental treatments covered in this knowledge base.
+
+RESTORATIVE TREATMENTS FOR DAMAGED TEETH:
+
+Professional cleaning (scaling and polishing):
+  What it treats: plaque and calculus accumulation, early gum inflammation
+  When: at regular recall intervals (6–12 months); more often for gum disease
+  Duration: 30–45 minutes
+  Visits: 1
+  How long it lasts: preventive; repeated as needed
+  Key point: the only way to remove hardened calculus; no substitute at home
+
+Filling:
+  What it treats: cavities (tooth decay) that have not reached the nerve
+  When: decay is small to moderate and enough tooth structure remains
+  Duration: 30–60 minutes
+  Visits: 1
+  How long it lasts: 5–10 years typically
+  Key point: earliest effective intervention for cavities; smaller cavities = better outcomes
+
+Crown:
+  What it treats: extensively damaged or weakened teeth; post-root-canal teeth
+  When: more than ~50% tooth structure lost; tooth has had root canal; large failed filling
+  Duration: 60–90 min (1st visit), 30–45 min (2nd visit)
+  Visits: 2 (some clinics offer same-day)
+  How long it lasts: 10–15 years or longer
+  Key point: covers the whole tooth; cannot decay itself but natural tooth underneath can
+
+Root canal:
+  What it treats: decay or infection that has reached the nerve inside the tooth
+  When: deep decay to the pulp; infected nerve; abscess; persistent toothache
+  Duration: 60–90 min for front teeth; 90–120 min for molars (may take 1–2 visits)
+  Visits: 1–3
+  How long it lasts: decades if followed by a crown; >90% success rate
+  Key point: saves the natural tooth; usually followed by a crown; not painful with anaesthetic
+
+Extraction:
+  What it treats: a tooth that cannot be saved or that is causing intractable problems
+  When: severe decay or fracture beyond restoration; bone loss from gum disease; failed root canal; impacted wisdom teeth
+  Duration: 15–45 minutes
+  Visits: 1 (plus optional follow-up)
+  How long it lasts: permanent — plan replacement for non-wisdom teeth
+  Key point: last resort; replacement planning (implant/bridge/denture) should begin before extraction where possible
+
+TOOTH REPLACEMENT TREATMENTS FOR MISSING TEETH:
+
+Implant:
+  What it replaces: one or more missing teeth with a fixed restoration
+  Suitability: sufficient bone; non-smoker preferred; no uncontrolled systemic illness
+  Duration: 4–9 months total (multiple stages)
+  Visits: multiple across several months
+  How long it lasts: implant post: decades / lifetime; crown on top: 10–15 years
+  Fixed or removable: FIXED
+  Cost level: highest
+  Key advantage: preserves bone; no preparation of adjacent teeth; most natural feel
+
+Bridge:
+  What it replaces: one or two adjacent missing teeth
+  Suitability: healthy adjacent teeth to act as anchors; good oral hygiene
+  Duration: 2–3 weeks (2 visits)
+  How long it lasts: 10–15 years
+  Fixed or removable: FIXED
+  Cost level: moderate
+  Key advantage: faster than implant; fixed and comfortable. Adjacent teeth must be prepared (ground down)
+
+Partial denture:
+  What it replaces: one or more missing teeth — particularly where multiple teeth are missing
+  Suitability: most patients; most flexible option; suitable even where bone is insufficient for implants
+  Duration: 3–5 visits over several weeks
+  How long it lasts: 5–10 years (may need reline before replacement)
+  Fixed or removable: REMOVABLE
+  Cost level: lowest
+  Key advantage: most affordable; can replace many teeth at once; no surgery
+
+TREATMENT DECISION PATHWAY — NATURAL LANGUAGE FORMAT:
+
+If your tooth has a small to moderate cavity and the nerve is intact: a filling is the first-line treatment.
+
+If the decay is extensive, more than half the tooth structure is lost, or the tooth has already had a root canal: a crown is needed, often preceded by or combined with a root canal.
+
+If the decay or infection has reached the nerve: a root canal is needed, usually followed by a crown.
+
+If the tooth cannot be saved by any restorative means: extraction is the final option. Plan replacement immediately.
+
+If you have a missing tooth and adjacent teeth are healthy: an implant is typically the best long-term option if bone allows.
+
+If you have multiple missing teeth or budget is a primary concern: a partial denture is the most accessible starting point.
+
+If you want a fixed replacement faster and less expensively than an implant: a bridge is the middle option, at the cost of preparing adjacent teeth.
+
+[HUMAN HANDOFF]
+Every treatment in this table requires clinical assessment and in-person care by a dentist. The AI screening report identifies findings and potential actions — the actual treatment decision is made by a dentist after examining you in person.
+To book an assessment through an Oral Link partner clinic:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+
+--- END CHUNK 008 ---
+
+================================================================================
+--- CHUNK 009 ---
+[CHUNK ID]   treatment-urgency-guide
+[TOPIC]      Treatment urgency — when to act immediately versus when to schedule
+[DOMAIN]     Dental treatment referral — OralLink — clinical escalation
+[KEYWORDS]   urgent dental care Singapore, dental emergency, when to see dentist urgently, toothache urgent, dental abscess urgent, swollen jaw, knocked out tooth, broken tooth urgent, when is dental finding urgent, dental emergency Singapore
+[TRIGGERS]
+  - How urgent is my dental treatment?
+  - Do I need to see a dentist immediately?
+  - I have severe tooth pain — what should I do?
+  - My jaw is swollen — is this a dental emergency?
+  - I knocked out a tooth — what do I do?
+  - Is a dental abscess dangerous?
+  - My report flagged an Advanced finding — how quickly do I need treatment?
+  - I have a pimple on my gum — is this serious?
+
+CONTENT:
+
+NOT ALL DENTAL FINDINGS NEED THE SAME SPEED OF RESPONSE. This guide maps typical situations to urgency levels.
+
+IMMEDIATE — GO NOW (same day or call 995):
+These are medical emergencies or situations where delay causes serious harm:
+
+Facial swelling spreading toward the throat or neck: can compromise breathing and swallowing. Call 995 (Singapore ambulance) immediately. Do not wait for a dental appointment.
+
+Difficulty breathing or swallowing due to oral or facial swelling: call 995 immediately.
+
+Dental trauma in a child with a permanent tooth knocked out: replant within 30 minutes if possible — hold the tooth by the crown, not the root; rinse briefly with milk or saline if dirty; place back in socket or keep in milk. Go to a dentist or A&E immediately.
+
+Signs of rapidly spreading infection: severe swelling, high fever, trismus (cannot open the mouth), feeling very unwell alongside dental pain.
+
+URGENT — WITHIN 24 TO 48 HOURS:
+These situations need prompt dental attention but are not immediately life-threatening:
+
+Severe throbbing toothache that is not controlled by over-the-counter pain relief — particularly if the pain has a spontaneous character (occurs without eating or biting).
+
+A visible swelling or pimple-like bump on the gum — this is typically a dental abscess (a chronic draining infection). It requires treatment; the draining may reduce pain temporarily but the infection does not resolve without dental intervention.
+
+A broken or fractured tooth that is sharp, causing soft tissue injury, or exposing the nerve.
+
+A tooth knocked out or severely displaced in an adult — see a dentist the same day.
+
+Significant post-extraction bleeding that has not stopped after 30 to 45 minutes of firm biting on gauze.
+
+Dry socket symptoms — severe pain at an extraction site that starts two to four days after the procedure rather than improving.
+
+SOON — WITHIN ONE TO TWO WEEKS:
+These need attention but can wait for a scheduled appointment:
+
+Moderate tooth pain that comes on biting or with temperature changes but does not linger for more than a few seconds — suggests a cavity or cracked tooth that needs assessment before it progresses.
+
+Bleeding gums that have not improved after two to three weeks of consistent good home care.
+
+A new chip or crack in a tooth that is not causing pain but should be assessed before it worsens.
+
+A moderate finding on the Oral Link AI screening report (Moderate plaque, Moderate gum recession) — see a dentist within a few weeks; this is not urgent but should not be indefinitely delayed.
+
+ROUTINE SCHEDULE:
+These can be addressed at the next routine dental visit:
+
+Low-risk findings on the Oral Link report — early plaque, low-level findings — are managed through improved home care and a dental cleaning at the next scheduled recall.
+
+Professional cleaning recommended on a Low overall risk report — book at a convenient time within the next one to six months.
+
+Questions about treatment options, costs, or planning — these can be discussed at any dental consultation.
+
+SINGAPORE DENTAL CARE PATHWAYS FOR URGENT CASES:
+Private dental clinics: most accommodate same-day or next-day appointments for acute pain. Call ahead.
+Polyclinics (NHG, SingHealth, NUHS clusters): accept walk-in dental patients during operating hours.
+National Dental Centre Singapore (NDCS): accepts urgent referrals.
+Restructured hospitals with dental services: Alexandra Hospital, Changi General Hospital, KK Women's and Children's Hospital, Khoo Teck Puat Hospital, Ng Teng Fong General Hospital, Sengkang General Hospital, Tan Tock Seng Hospital.
+Singapore General Hospital Dental Centre: open for dental emergencies.
+
+[HUMAN HANDOFF — ALL URGENT DENTAL SITUATIONS]
+Contact Oral Link to be connected to the nearest available partner clinic for urgent or routine care:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+For life-threatening situations: call 995 immediately.
+
+--- END CHUNK 009 ---
+
+================================================================================
+--- CHUNK 010 ---
+[CHUNK ID]   treatment-faq-common-concerns
+[TOPIC]      Common patient fears and questions about dental treatment
+[DOMAIN]     Dental treatment referral — OralLink — patient education
+[KEYWORDS]   scared of dentist, dental anxiety, will treatment hurt, dental fear, is treatment painful, do I really need root canal, can I delay treatment, dental treatment cost worth it, what if I ignore tooth pain, dental phobia Singapore
+[TRIGGERS]
+  - I am scared of going to the dentist
+  - Will my treatment hurt?
+  - Can I delay getting treatment?
+  - Do I really need a root canal?
+  - What happens if I ignore a cavity?
+  - Is dental treatment worth the cost?
+  - I have dental anxiety — what can I do?
+  - What if the tooth stops hurting — does that mean it is better?
+
+CONTENT:
+
+WILL TREATMENT HURT:
+Modern dental treatment performed under effective local anaesthetic should not be painful. Pressure, vibration, and the sound of dental instruments are normal sensations. Actual pain during a procedure means the anaesthetic has not worked fully — and in that case you should tell the dentist immediately. Dentists expect this and will add more anaesthetic.
+
+Post-procedure soreness for one to three days is normal for most treatments (fillings, extractions, crown preparations). Over-the-counter pain relief such as paracetamol or ibuprofen is usually sufficient. Your dentist will prescribe stronger medication if needed.
+
+WHAT HAPPENS IF I IGNORE A CAVITY:
+Cavities do not heal on their own once they have progressed past the very earliest stages of enamel demineralisation. Untreated, a cavity progresses predictably:
+Early cavity: a filling is all that is needed.
+Moderate cavity: a larger filling, or a crown if too much structure is lost.
+Deep cavity reaching the nerve: a root canal is needed before a crown.
+Severe decay with infection: a root canal may no longer be feasible; extraction may be the only option.
+
+Each stage is more expensive, more involved, and takes longer to treat than the one before. Early treatment costs less and preserves more natural tooth structure — the most compelling reason not to delay.
+
+WHAT IF THE TOOTH STOPS HURTING:
+A tooth that was painful and then stops hurting spontaneously does not mean it has healed. It often means the nerve has died — the infection may still be present (or progressing) but there is no longer a functioning nerve to signal pain. A dental abscess can develop without pain. Seek a dental assessment even if symptoms resolve.
+
+DENTAL ANXIETY — WHAT HELPS:
+Dental anxiety is very common and dental teams are experienced in managing it. Practical approaches that help:
+
+Tell the dentist upfront. Saying "I have dental anxiety" before the appointment allows the dentist to adjust their pace, explain each step before doing it, and use a pre-agreed stop signal (typically raising your hand) if you need a break.
+
+Ask about numbing first. Topical numbing gel before the injection significantly reduces the sting of the local anaesthetic needle.
+
+Bring a support person. Many clinics welcome a friend or family member in the treatment room.
+
+Sedation options for significant anxiety: inhalation sedation (nitrous oxide, or "happy gas") is offered at some Singapore clinics and helps many anxious patients relax without losing consciousness. For procedures like wisdom tooth extraction, IV sedation or general anaesthetic is also available at appropriate settings (restructured hospitals, oral surgery centres).
+
+CAN I DELAY TREATMENT:
+Whether it is safe to delay depends on the finding. Acute dental pain, swelling, or signs of infection should not be delayed. A moderate cavity can typically wait weeks to a few months before it significantly worsens. A routine cleaning can wait until the next convenient appointment. When in doubt, call a dentist or Oral Link for guidance on how urgently a specific finding needs attention.
+
+IS DENTAL TREATMENT WORTH THE COST:
+The consistent pattern in dentistry is that earlier intervention costs significantly less than later intervention. A filling costs a fraction of a root canal and crown. Treating gum disease early costs far less than managing advanced periodontitis. Preserving a natural tooth costs less over a lifetime than replacing it with an implant or bridge. The most cost-effective dental strategy is the simplest one: attend regular cleaning and check-up appointments so problems are caught when they are small.
+
+[HUMAN HANDOFF — DENTAL ANXIETY AND TREATMENT PLANNING]
+For patients with significant dental anxiety who want a supportive first consultation with an Oral Link partner clinic:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+The team can help match you with a clinic and dentist experienced in managing anxious patients.
+
+--- END CHUNK 010 ---
+
+================================================================================
+END OF ORAL LINK DENTAL TREATMENT REFERRAL RAG KNOWLEDGE BASE
+Total chunks: 10
+
+CHUNK INDEX:
+  001 — Professional cleaning (scaling and polishing)
+  002 — Dental filling
+  003 — Dental crown
+  004 — Root canal treatment
+  005 — Tooth extraction (simple and surgical)
+  006 — Dental implant (multi-stage process)
+  007 — Partial removable denture
+  008 — Treatment comparison table (quick-reference for all 7 procedures + bridge)
+  009 — Urgency guide (when to act immediately vs schedule)
+  010 — Common patient fears and FAQs (anxiety, pain, delaying treatment)
+
+[HUMAN HANDOFF] SUMMARY — ALL REQUIRE DENTIST INVOLVEMENT:
+  Chunk 001 — All professional cleaning: book via Oral Link
+  Chunk 002 — All fillings: book via Oral Link; escalate if decay escalates
+  Chunk 003 — All crown treatment: book via Oral Link
+  Chunk 004 — Root canal: urgent if abscess/swelling present
+  Chunk 005 — Extraction: URGENT if facial swelling/fever/difficulty swallowing → 995
+  Chunk 006 — Implant: multi-stage specialist planning needed
+  Chunk 007 — Partial denture: multi-appointment clinical process
+  Chunk 008 — All treatments: clinical assessment required for every treatment decision
+  Chunk 009 — URGENCY ESCALATION: immediate/urgent/soon/routine decision guide
+  Chunk 010 — Dental anxiety: supportive clinic matching available
+
+ALL HUMAN HANDOFF: +65 8098 6800 | info@orallink.health | https://orallink.health/#contact-us
+DENTAL EMERGENCY SERVICES: Polyclinics (walk-in) | NDCS | Restructured hospitals
+LIFE-THREATENING (swelling affecting airway): Call 995 immediately
+================================================================================

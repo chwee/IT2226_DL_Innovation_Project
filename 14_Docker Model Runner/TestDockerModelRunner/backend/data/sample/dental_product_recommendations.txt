@@ -1,0 +1,864 @@
+================================================================================
+ORAL LINK — DENTAL PRODUCT RECOMMENDATIONS RAG KNOWLEDGE BASE
+Chatbot Knowledge File
+Source: Oral Link product guidance (internal) + Singapore retail product research
+Products: Prototype examples sourced from Singapore retail (Guardian, Watsons, FairPrice, NTUC, Lazada/Shopee/Amazon.sg) as of June 2026
+Audience: Dental patients — laypersons
+================================================================================
+
+DESIGN NOTES
+------------
+- Each section between "--- CHUNK ---" dividers is one self-contained retrieval unit.
+- [PRODUCT EXAMPLES] sections list real Singapore-available products as prototypes
+  that represent the product category. These are examples, not exclusive endorsements.
+- [WHO THIS SUITS] flags link product recommendations to specific screening findings.
+- [HUMAN HANDOFF] flags mark topics requiring a dentist's involvement.
+- Attach [CHUNK ID], [TOPIC], and [KEYWORDS] as metadata fields at ingestion.
+- All chunks are fully self-contained.
+
+================================================================================
+--- CHUNK 001 ---
+[CHUNK ID]   product-dental-floss
+[TOPIC]      Dental floss — waxed, PTFE, tape, picks, super floss
+[DOMAIN]     Oral Link product recommendation
+[KEYWORDS]   dental floss, flossing, waxed floss, PTFE floss, floss picks, super floss, orthodontic floss, how to floss, should I floss, floss recommendation Singapore
+[WHO THIS SUITS]
+  - Users with tightly spaced teeth and healthy gums
+  - Budget-conscious users (most affordable interdental option)
+  - Users who travel frequently
+  - Users with an established flossing habit that is working
+  - Users with braces, bridges, or implants (super floss / floss threaders)
+[TRIGGERS]
+  - Should I floss every day?
+  - Is waxed or unwaxed floss better?
+  - Are floss picks as good as regular floss?
+  - Should I floss before or after brushing?
+  - How do I floss properly?
+  - Why does the floss keep shredding on the same tooth?
+  - What type of floss should I use?
+
+CONTENT:
+
+WHAT DENTAL FLOSS IS:
+Dental floss is a thin nylon or PTFE thread used to remove plaque and food debris from between teeth — surfaces that a toothbrush cannot reach. For users with tightly spaced teeth and healthy gums, it is often the right interdental cleaning choice. For users with wider gaps, gum recession, crowns, bridges, or implants, an interdental brush or water flosser is usually more effective.
+
+TYPES OF DENTAL FLOSS:
+
+Waxed floss: coated in wax to slide more easily between tightly spaced teeth. The default choice for most adults. Available everywhere in Singapore.
+
+Unwaxed floss: slightly thinner; some users prefer the texture. Shreds more easily on rough fillings or crowns.
+
+PTFE (Teflon-based) floss: slides smoothly even between very tight contacts; less likely to shred. Generally more expensive.
+
+Dental tape: a wider, ribbon-like floss that can feel gentler on the gums; suitable for slightly wider gaps.
+
+Floss picks (disposable Y- or F-shaped handles with a short floss segment): easier to handle than spool floss, particularly for users with limited dexterity. Less effective than spool floss for getting into the C-shape around each tooth, but better than not flossing at all.
+
+Super floss / orthodontic floss: has a stiff threader at one end and a spongy section. Designed for braces, bridges, and around implants.
+
+HOW TO FLOSS:
+1. Take 30 to 45 cm of floss. Wrap most around the middle finger of one hand, a small amount around the other.
+2. Hold a 2 to 3 cm working section between thumbs and index fingers.
+3. Slide gently between two teeth using a side-to-side sawing motion — do not snap it down.
+4. Curve the floss into a C-shape against one tooth, slide up and down slightly under the gum line. Repeat against the neighbouring tooth.
+5. Use a fresh section of floss for each gap to avoid transferring bacteria.
+6. Cover every gap including the back of the last molar. A full pass takes 60 to 90 seconds.
+
+FLOSS BEFORE BRUSHING: most people find it more practical to floss last thing at night before brushing, so any loosened debris is then swept away during brushing.
+
+COMMON MISTAKES:
+Snapping floss down hard between teeth (can cut the gum). Using one short section for the whole mouth. Sawing back and forth at the gum line rather than wrapping around each tooth. Stopping because gums bleed — bleeding is from inflammation, not injury; consistent daily flossing is what resolves it within one to two weeks.
+
+WHEN TO SWITCH TOOLS:
+If floss shreds repeatedly on the same tooth, there may be a rough filling or crown edge needing attention from a dentist. If bleeding does not decrease after three weeks, see a dentist — the gum issue may be beyond simple gingivitis. If flossing simply will not be sustained daily, switch to interdental brushes or a water flosser.
+
+PRODUCT EXAMPLES (Singapore-available):
+
+Standard waxed floss:
+- Oral-B Essential Floss Waxed (50 m x 2 pack) — widely available at Watsons, Guardian, FairPrice, Shopee, Lazada. Budget option; reliable for most users.
+- Pearlie White FlossCare Classic Waxed Mint Floss (100 m and 200 m options) — Singapore brand, available at Guardian, Watsons, FairPrice, NTUC. Contains xylitol and antibacterial agents; shred-resistant.
+
+PTFE floss:
+- Pearlie White FlossCare Plus PTFE Mint Floss (50 m) — Singapore brand; ultra-smooth, shred-resistant. Suitable for tight contacts. Available at Guardian, Watsons, FairPrice.
+
+Floss picks:
+- Watsons Super Smooth Dental Floss Picks (50 pieces x 3 boxes) — available at Watsons stores and online. 3-in-1 pick with flosser, tongue cleaner, and toothpick. Suitable for users who find spool floss difficult.
+- Oral-B Glide Pro-Health Floss Picks — available at Watsons, Guardian, FairPrice.
+
+Super floss (for braces, bridges, implants):
+- Oral-B Super Floss (50 pre-cut strands) — available at Guardian, Watsons, Shopee, Lazada. Stiffened tip for threading under bridges/braces, spongy mid-section for wider gaps.
+- Pearlie White FlossCare Floss Threaders with Storage Case (30 pieces) — Singapore brand; assists threading under bridges, braces, and implants.
+
+WHERE TO BUY: Guardian, Watsons, NTUC FairPrice, Unity, Shopee, Lazada, Amazon.sg.
+
+--- END CHUNK 001 ---
+
+================================================================================
+--- CHUNK 002 ---
+[CHUNK ID]   product-interdental-brushes
+[TOPIC]      Interdental brushes — sizing, technique, when they outperform floss
+[DOMAIN]     Oral Link product recommendation
+[KEYWORDS]   interdental brush, tepe brush, proxy brush, bottle brush, interdental brush size, TePe, GUM, clean between teeth, interdental Singapore, gum recession interdental, braces interdental brush
+[WHO THIS SUITS]
+  - Users with Moderate or Advanced plaque accumulation
+  - Users with gum recession where gaps have opened between teeth
+  - Users with crowns, bridges, or implants
+  - Users with braces or orthodontic appliances
+  - Users who find flossing physically awkward or difficult
+  - Most adults with any visible gaps between teeth
+[TRIGGERS]
+  - What is an interdental brush?
+  - Are interdental brushes better than floss?
+  - What size interdental brush should I get?
+  - How often should I replace an interdental brush?
+  - Should I use interdental brushes if I have braces?
+  - Are interdental brushes good for gum recession?
+  - Which interdental brush is best in Singapore?
+
+CONTENT:
+
+WHAT INTERDENTAL BRUSHES ARE:
+Interdental brushes are small wire brushes shaped like miniature bottle brushes, sized to fit between specific pairs of teeth. For many users — particularly those with gum recession, wider spaces, crowns, bridges, or implants — they remove more plaque per minute than dental floss and are often easier to use daily.
+
+SIZING — THE MOST IMPORTANT DETAIL:
+The brush must fit snugly between teeth without forcing. Most adults need two or three different sizes for different parts of the mouth. Gaps between front teeth are usually smaller than those between back teeth.
+
+Sizing approach: buy a variety or mixed pack first. Try each size in different gaps. The right brush goes in with gentle resistance — if it requires real force, it is too big. Note which size works where and repeat those purchases.
+
+TePe Colour-Code Guide (most used in Singapore clinics):
+Pink = 0.4 mm (very small, front teeth). Orange = 0.45 mm. Red = 0.5 mm. Blue = 0.6 mm (medium, common for adults). Yellow = 0.7 mm. Green = 0.8 mm. Purple = 1.1 mm. Grey = 1.3 mm. Black = 1.5 mm (large gaps, recession, around implants).
+
+HOW TO USE:
+1. Insert gently between two teeth, angled slightly toward the gum line. Do not push if it does not go in.
+2. Push through and back out a few times. The bristles sweep both adjacent tooth surfaces.
+3. No toothpaste is needed (some users dip in mouthwash).
+4. Rinse the brush under running water after each gap.
+5. Replace when bristles splay or look matted — typically every one to two weeks.
+A full pass through the mouth takes 60 to 90 seconds.
+
+CARE: rinse and shake dry after each use. Store upright in a clean dry place. Do not share.
+
+WHEN FLOSS IS BETTER: very tightly spaced teeth where even the smallest brush does not fit; all-natural teeth with no recession. In practice, many users benefit from using both — floss for tightly spaced front areas, interdental brushes for back teeth.
+
+PRODUCT EXAMPLES (Singapore-available):
+
+TePe Original Interdental Brushes (6-pack per colour):
+- Available in pink (0.4 mm), orange (0.45 mm), red (0.5 mm), blue (0.6 mm), yellow (0.7 mm), green (0.8 mm), purple (1.1 mm), grey (1.3 mm), black (1.5 mm).
+- Price: approximately S$9.90 per 6-pack; S$10.70 for the 8-pack mixed.
+- Available at ProHealthShop (prohealthshop.co), selected Guardian and Watsons stores, Shopee, Lazada.
+- Also available as an Angle model (for users who find the back of the mouth hard to reach).
+- TePe Mixed Pack (8-pack with varied sizes) — ideal first purchase for new users. Price approximately S$10.70.
+- TePe Extra Soft model — recommended for users with gum recession or sensitivity.
+
+GUM Soft Picks (disposable rubber-stem picks):
+- Rubber pick for users who find wire brushes uncomfortable. Available at Guardian, Watsons.
+- Suitable for users with very tight gaps where even the smallest wire brush is too large.
+
+DentalPro Interdental Brushes:
+- Available at Watsons Singapore. Budget-friendly alternative to TePe.
+
+WHERE TO BUY: ProHealthShop (prohealthshop.co) carries the full TePe range with the best selection. Guardian, Watsons, Shopee, Lazada, Amazon.sg.
+
+--- END CHUNK 002 ---
+
+================================================================================
+--- CHUNK 003 ---
+[CHUNK ID]   product-water-flosser
+[TOPIC]      Water flossers — countertop vs cordless, features, technique
+[DOMAIN]     Oral Link product recommendation
+[KEYWORDS]   water flosser, oral irrigator, Waterpik, cordless water flosser, countertop water flosser, water flosser Singapore, best water flosser Singapore, implants water flosser, braces water flosser
+[WHO THIS SUITS]
+  - Users with bridges, crowns, or implants
+  - Users with braces or fixed orthodontic appliances
+  - Users with limited dexterity (arthritis, hand injury)
+  - Users with periodontal pockets from gum disease
+  - Users with a strong gag reflex
+  - Users who travel often (cordless model)
+  - Users who simply prefer the experience and will use it daily
+[TRIGGERS]
+  - Is a water flosser worth getting?
+  - Does a water flosser replace flossing?
+  - Are water flossers good for braces?
+  - Should I get a water flosser if I have implants?
+  - What pressure setting should I use on a water flosser?
+  - Is a countertop or cordless water flosser better?
+  - Where to buy water flosser in Singapore?
+
+CONTENT:
+
+WHAT A WATER FLOSSER IS:
+A water flosser (oral irrigator) directs a pulsating jet of water between teeth and along the gum line. It removes loose plaque, food debris, and bacteria — particularly useful around bridges, implants, and braces where floss and interdental brushes are harder to manoeuvre.
+
+A water flosser is not a substitute for brushing. It is a reasonable alternative or complement to floss for most users. For users with tight tooth contacts and healthy gums, traditional floss is more thorough at the actual contact point. For users with bridges, implants, or wider gaps, water flossing is often equally effective or better.
+
+TYPES:
+Countertop models: sit on the counter, plug into mains, larger reservoir (less refilling), wider pressure range, more attachments. Best for daily home use.
+Cordless/rechargeable models: handheld, smaller reservoir, portable. Slightly less powerful than countertop. Best for travel or small bathrooms.
+
+FEATURES WORTH HAVING:
+- Multiple pressure settings. Start at the lowest setting; always build up gradually. High pressure can damage gum tissue.
+- A periodontal tip (for users with gum disease, with a soft rubber tip that enters slightly under the gum line) or an orthodontic tip (bristles for users with braces).
+- Reservoir capacity of at least 600 ml for a countertop model so the whole mouth can be cleaned without refilling.
+
+HOW TO USE:
+1. Fill the reservoir with lukewarm water (cold water is uncomfortable, especially with gum recession).
+2. Choose the tip: standard for most users; periodontal for gum pockets; orthodontic for braces.
+3. Lean over the sink. Place the tip just at the gum line between two teeth, angled slightly toward the gum.
+4. Turn on at the lowest pressure setting. Move slowly along the arch, pausing a couple of seconds at each gap.
+5. A full pass takes 60 to 90 seconds.
+Use once daily, ideally before brushing so loosened debris is then brushed away.
+
+CAUTIONS: Do not use at maximum pressure if you have gum recession or bleeding gums. If you have a recent extraction or surgical site, follow your dentist's specific guidance before using a water flosser near that area.
+
+PRODUCT EXAMPLES (Singapore-available):
+
+Countertop:
+- Waterpik Aquarius Water Flosser (WP-660) — 10 pressure settings, 7 tips included (classic, orthodontic, plaque seeker, toothbrush, tongue cleaner, periodontal x2), 650 ml reservoir. The most clinically validated countertop model. Available at Watsons, Guardian, Lazada, Shopee, waterpik.com.sg. Approximately S$100–S$130.
+- Waterpik Complete Care 9.0 (WP-861) — combines Waterpik countertop water flosser with a Sonicare-style sonic brush head. A premium all-in-one option for users upgrading their full routine.
+
+Cordless:
+- Waterpik Cordless Advanced (WP-580) — 3 pressure settings, 2 tips, rechargeable, waterproof (can be used in shower), global voltage, approximately 45 seconds per full charge. Available at Watsons, Guardian, Lazada, Shopee, waterpik.com.sg. Approximately S$80–S$100.
+- Waterpik Cordless Enhance (WF-02) — 2 pressure settings, 2 tips, ultra-quiet, removable reservoir. Entry-level cordless. Available at waterpik.com.sg.
+- Panasonic Portable Oral Irrigator (EW-DJ10) — compact cordless, available at Watsons and Harvey Norman Singapore. Budget-friendly option.
+- Xiaomi Mijia Water Flosser — budget-friendly cordless option widely available on Shopee and Lazada Singapore.
+
+WHERE TO BUY: Watsons, Guardian, Harvey Norman, Courts, Shopee, Lazada, Amazon.sg, waterpik.com.sg.
+
+--- END CHUNK 003 ---
+
+================================================================================
+--- CHUNK 004 ---
+[CHUNK ID]   product-electric-toothbrush
+[TOPIC]      Electric toothbrush — oscillating vs sonic, key features, recommendations for Singapore
+[DOMAIN]     Oral Link product recommendation
+[KEYWORDS]   electric toothbrush Singapore, best electric toothbrush, Oral-B iO, Philips Sonicare, oscillating rotating, sonic toothbrush, pressure sensor toothbrush, electric brush plaque, electric brush gum recession
+[WHO THIS SUITS]
+  - Users with Moderate or Advanced plaque accumulation
+  - Users with crowded, restored, or hard-to-clean teeth (crowns, bridges, implants, braces)
+  - Users with arthritis or limited dexterity
+  - Users who consistently press too hard with a manual brush
+  - Users with gum recession who need to brush effectively without damaging gum margin
+[TRIGGERS]
+  - Should I get an electric toothbrush?
+  - Is an electric toothbrush worth it?
+  - Which type of electric toothbrush is best — sonic or oscillating?
+  - Can an electric toothbrush help with my plaque?
+  - Is an electric toothbrush safe for gum recession?
+  - What features should I look for in an electric toothbrush?
+  - Best electric toothbrush Singapore
+
+CONTENT:
+
+WHY ELECTRIC TOOTHBRUSHES MAKE A DIFFERENCE:
+Independent reviews consistently show that powered brushes remove more plaque than manual brushes, with the greatest benefit for people with high plaque accumulation, limited dexterity, or a habit of pressing too hard. A manual brush used well outperforms an electric brush used poorly — technique and duration matter most. But for most adults, switching to an electric brush with a timer and pressure sensor is one of the highest-impact practical changes available.
+
+THE TWO MAIN TYPES:
+
+Oscillating-rotating: the round brush head rotates back and forth in short bursts, often pulsing to disrupt plaque. The most clinically validated category. Best for users new to electric brushing; users with crowded teeth where the small round head reaches each tooth individually; users wanting the strongest evidence base.
+
+Sonic: the brush head vibrates at very high frequency in a small side-to-side motion. Vibration creates fluid dynamics that help disrupt plaque slightly beyond where bristles directly touch. Best for users who prefer a more familiar back-and-forth feel; users with gum recession or sensitivity; users with bridges or implants where fluid dynamics help clean around restorations.
+
+ESSENTIAL FEATURES:
+- Two-minute built-in timer with 30-second quadrant prompts.
+- Pressure sensor that warns visibly when pressing too hard — particularly useful for users with gum recession.
+- Sensitive mode for users with gum recession or general sensitivity.
+- Replaceable brush head — replace every three months.
+
+PRODUCT EXAMPLES (Singapore-available):
+
+Oscillating-rotating (Oral-B):
+- Oral-B iO Series 3 (iO3) — entry-level iO series. Round oscillating head, 2-minute timer, visible pressure sensor ring (lights up red/green), sensitive mode, 2 weeks battery. Available at Watsons, Guardian, Harvey Norman, Lazada, Shopee, Amazon.sg. Approximately S$90–S$130.
+- Oral-B iO Series 5 — adds multiple brushing modes and Bluetooth connectivity. Approximately S$150–S$200. Available at major electronics retailers and Watsons.
+- Oral-B iO Series 9 — premium model with AI-powered detection and full brush coverage map. Available at Harvey Norman, Courts, Lazada. Approximately S$250–S$350.
+  Recommended for: users with plaque findings, gum recession, or extensive dental work who want the Oral-B oscillating technology.
+
+Sonic (Philips Sonicare):
+- Philips Sonicare 4100 Series (HX3681) — entry-level with pressure sensor, 2-minute timer with QuadPacer, 2 weeks battery. One of the best value options for most users. Widely available at Watsons, Guardian, Harvey Norman, Lazada, Shopee, Amazon.sg. Approximately S$60–S$80.
+- Philips Sonicare 5300 (ProtectiveClean) — adds 3 cleaning modes (Clean, White, Gum Care) and BrushSync brush-head replacement reminder. Approximately S$100–S$140.
+- Philips Sonicare 6000 Series — 6 brushing settings, pressure sensor, 21-day battery. Best-in-class mid-range option. Approximately S$150–S$200 at Harvey Norman, Courts, Lazada.
+  Recommended for: users with gum recession or sensitivity (use Sensitive mode), users with bridges or implants, users who prefer a gentler feel.
+
+Singapore-local option:
+- FeelFreshly ProSense+ Sonic Toothbrush — Singapore brand; real-time pressure sensor with LED indicator and handle vibration alert. Designed specifically for users told by their dentist they brush too hard. Available via feelfreshly.com and on Shopee/Lazada. Approximately S$60–S$80.
+
+WHERE TO BUY: Watsons, Guardian, Harvey Norman, Courts, Lazada, Shopee, Amazon.sg.
+
+--- END CHUNK 004 ---
+
+================================================================================
+--- CHUNK 005 ---
+[CHUNK ID]   product-manual-toothbrush-soft
+[TOPIC]      Manual soft-bristle toothbrush — the baseline brush for all adults
+[DOMAIN]     Oral Link product recommendation
+[KEYWORDS]   manual toothbrush Singapore, soft toothbrush, best toothbrush Singapore, soft bristle brush, Curaprox CS5460, Colgate Extra Soft, toothbrush for gum recession, what toothbrush should I use
+[WHO THIS SUITS]
+  - Any adult — soft bristles are appropriate for all adults
+  - Users with gum recession (especially extra-soft options)
+  - Users with tooth sensitivity
+  - Users who travel often or want a low-cost backup brush
+  - Users who prefer manual brushing for personal or budget reasons
+[TRIGGERS]
+  - What toothbrush should I use?
+  - Should I use a soft or medium toothbrush?
+  - What kind of toothbrush is best for gum recession?
+  - Are manual toothbrushes good enough?
+  - Which toothbrush should I get for sensitive teeth?
+  - Best manual toothbrush Singapore
+
+CONTENT:
+
+WHY SOFT BRISTLES ALWAYS:
+Medium and hard bristles offer no cleaning benefit and accelerate gum recession and enamel wear. Soft or extra-soft bristles, used with correct Modified Bass technique for two minutes, remove plaque effectively without damaging gum tissue. This applies to every adult, every time — there is no situation in which a medium or hard bristle brush is the right choice for a patient.
+
+WHAT TO LOOK FOR:
+- Soft or extra-soft bristles only.
+- A small to compact head that can reach the back of the mouth and individual teeth.
+- A non-slip handle comfortable to grip for two minutes.
+- Tapered or rounded bristle tips, gentle on the gum margin.
+
+REPLACEMENT: every three months, or sooner if bristles splay outwards. Splayed bristles indicate the brush is no longer cleaning effectively — and often that too much pressure is being applied.
+
+PRODUCT EXAMPLES (Singapore-available):
+
+Premium soft/extra-soft:
+- Curaprox CS 5460 Ultra-Soft — the most recommended manual brush in dental clinics. 5,460 Curen® filaments (3x denser than most brushes), 0.1 mm diameter, ultra-soft, BPA-free. Does not splay as rapidly as nylon bristle brushes. Available at curaprox.sg, selected Guardian and Watsons stores, Shopee, Lazada. Approximately S$10–S$15 per brush.
+  Particularly recommended for: users with gum recession, users previously told they brush too hard, users with dental sensitivity.
+- Curaprox CS 1560 Soft — slightly softer and lower-profile head than the 5460; 1,560 Curen® filaments. Available at curaprox.sg.
+
+Mid-range soft:
+- Systema Ultra Fine Soft Toothbrush (Lion) — Japanese brand, widely available in Singapore at Guardian, Watsons, NTUC FairPrice. Compact head, very fine bristle tips. Approximately S$4–S$6.
+- Colgate Extra Clean Soft — standard soft-bristle option, available everywhere. Affordable and widely available at Guardian, Watsons, FairPrice, NTUC. Approximately S$3–S$5.
+- Oral-B Indicator Soft — bristles fade in the middle to indicate replacement time. Available at Guardian, Watsons, FairPrice. Approximately S$4–S$7.
+
+Budget soft:
+- GUM Technique+ Sensitive Soft — ergonomic handle, tapered bristles. Available at Guardian, Watsons. Approximately S$5–S$8.
+- Most major supermarket own-brand soft brushes are adequate for users at typical risk, as long as they carry the "soft" label explicitly.
+
+WHERE TO BUY: Any Guardian, Watsons, FairPrice, NTUC, Unity, Cold Storage, or major supermarket. Curaprox is more easily found at curaprox.sg, Shopee, and selected Guardian branches.
+
+--- END CHUNK 005 ---
+
+================================================================================
+--- CHUNK 006 ---
+[CHUNK ID]   product-toothpaste-standard-fluoride
+[TOPIC]      Standard fluoride toothpaste (1,000–1,500 ppm) — the daily baseline for all adults
+[DOMAIN]     Oral Link product recommendation
+[KEYWORDS]   fluoride toothpaste Singapore, best toothpaste Singapore, Colgate Total, Darlie, Sensodyne, toothpaste recommendation, 1450ppm toothpaste, standard toothpaste adult, charcoal toothpaste bad, natural toothpaste fluoride
+[WHO THIS SUITS]
+  - Almost all adults at typical cavity risk — this is the universal default
+  - Users with plaque findings at any severity
+  - Users with no specific need for a higher-strength or specialty toothpaste
+[TRIGGERS]
+  - What toothpaste should I use?
+  - Is fluoride toothpaste necessary?
+  - What strength of fluoride toothpaste do I need?
+  - Are charcoal toothpastes good?
+  - Can I use whitening toothpaste every day?
+  - Are natural toothpastes okay?
+  - Best toothpaste Singapore
+
+CONTENT:
+
+THE ONLY THING THAT MATTERS IN TOOTHPASTE — FLUORIDE:
+A fluoride toothpaste at 1,000 to 1,500 ppm is the baseline cavity-prevention tool for all adults at typical risk. The clinical evidence for fluoride is extremely strong — it is the single most well-evidenced cavity-prevention measure in dentistry. Brand differences at this concentration are small and unlikely to translate to noticeable differences in oral health. Choose one you will use consistently, twice a day.
+
+WHAT TO LOOK FOR ON THE PACK:
+- 1,000 to 1,500 ppm fluoride. This must appear on the pack. Products marketed as "natural" or "fluoride-free" do not meet this.
+- Sodium fluoride (NaF) or sodium monofluorophosphate (MFP) or stannous fluoride as the active ingredient. All work.
+
+HOW TO USE:
+Pea-sized amount. Twice daily — morning and last thing at night. Spit but do not rinse with water — leaving the residual film on the teeth significantly extends fluoride contact time. Do not eat or drink for 30 minutes after brushing, especially at night.
+
+ON WHITENING, CHARCOAL, AND NATURAL TOOTHPASTES:
+Whitening toothpastes work by mechanical abrasion; they can be more abrasive and are not ideal for users with gum recession or sensitivity. Charcoal toothpastes are abrasive, lack robust evidence of benefit, and most do not contain fluoride — their use trades cavity protection for unproven benefit. Not recommended. "Natural" or fluoride-free toothpastes typically lack fluoride, the most evidenced cavity-prevention ingredient.
+
+PRODUCT EXAMPLES (Singapore-available):
+
+Premium:
+- Colgate Total Active Prevention Original (1,450 ppm stannous fluoride + sodium fluoride) — antibacterial formula, clinically proven 24-hour protection. Widely available at Guardian, Watsons, FairPrice, NTUC. Approximately S$6–S$10 for 150g.
+- Colgate Total Advanced Fresh + Whitening (1,450 ppm) — same antibacterial base with whitening silicas. Available everywhere.
+- Sensodyne Pronamel Daily Protection (1,450 ppm) — for users who also want enamel strengthening alongside standard protection. Available at Guardian, Watsons. Approximately S$8–S$12.
+
+Widely available mainstream:
+- Darlie All Shiny White Double Action (1,000–1,450 ppm) — Singapore household name, widely available at all supermarkets and pharmacies. Affordable.
+- Colgate Fresh Confidence / Colgate Optic White (1,000–1,450 ppm) — mainstream options at all major retailers.
+- Pearlie White BrilliantWhite+ (1,450 ppm) — Singapore brand available at Guardian, Watsons, FairPrice. Contains fluoride and xylitol.
+- Systema Gum Care Toothpaste (1,450 ppm) — Japanese brand available at Guardian, Watsons. Particularly good for users also wanting gum care.
+
+Budget:
+- Colgate Cavity Protection / Colgate Fresh Gel (1,000 ppm) — affordable, available everywhere. Minimum effective fluoride for an adult. Fine for typical-risk adults.
+- Most major pharmacy own-brand fluoride toothpastes.
+
+NOTE ON CONCENTRATION: All products listed are 1,000–1,500 ppm. Check the pack before buying. Fluoride content is required to appear on the packaging.
+
+WHERE TO BUY: Any Guardian, Watsons, FairPrice, NTUC, Unity, Cold Storage, major supermarket, or pharmacy in Singapore.
+
+--- END CHUNK 006 ---
+
+================================================================================
+--- CHUNK 007 ---
+[CHUNK ID]   product-toothpaste-desensitising
+[TOPIC]      Desensitising toothpaste — for tooth sensitivity and gum recession
+[DOMAIN]     Oral Link product recommendation
+[KEYWORDS]   sensitive toothpaste Singapore, desensitising toothpaste, Sensodyne Singapore, sensitive teeth toothpaste, toothpaste for gum recession, potassium nitrate toothpaste, stannous fluoride sensitivity, tooth sensitivity toothpaste
+[WHO THIS SUITS]
+  - Users with Moderate or Advanced gum recession (exposed root surfaces are more sensitive)
+  - Users with generalised tooth sensitivity to cold, sweet, or hot
+  - Users in recovery after deep cleaning or periodontal treatment
+  - Users with mild enamel erosion from acidic diet
+[TRIGGERS]
+  - What toothpaste should I use for sensitive teeth?
+  - Is desensitising toothpaste worth it?
+  - How long does sensitive toothpaste take to work?
+  - Can I use sensitive toothpaste forever?
+  - Will sensitive toothpaste fix my gum recession?
+  - Should I use sensitive toothpaste every day or just when my teeth hurt?
+  - Best toothpaste for sensitive teeth Singapore
+
+CONTENT:
+
+WHAT DESENSITISING TOOTHPASTE DOES:
+A desensitising toothpaste contains fluoride (same cavity protection as standard toothpaste) plus additional active ingredients that reduce sensitivity from exposed dentine — the inner tooth layer exposed when gum recession reveals root surfaces. It is an additional layer of protection, not a cure for the underlying cause.
+
+Mild root sensitivity from gum recession often responds well. Sensitivity from a cavity, cracked tooth, exposed nerve, or recent dental work needs clinical attention — toothpaste alone will not address it.
+
+TWO MAIN ACTIVE-INGREDIENT APPROACHES:
+- Potassium nitrate (e.g. Sensodyne Gum Care, Sensodyne Complete Protection): calms the nerve response inside the tooth by reducing nerve excitability. Effect builds over two to four weeks of consistent twice-daily use.
+- Stannous fluoride or arginine-calcium-carbonate (e.g. Sensodyne Rapid Relief, Colgate Sensitive Pro-Relief): physically blocks dentine tubules. Some formulations claim faster relief within a few days. Both approaches work well for most users.
+
+HOW TO USE:
+Use twice a day in place of regular toothpaste — not as an addition. Be patient: most desensitising toothpastes take two to four weeks of consistent twice-daily use before the effect peaks. Stopping after a few days because it is "not working" is the most common reason patients do not see benefit. Continue indefinitely if it works. For an extra-targeted effect: after brushing, put a small amount on a clean fingertip and rub into the sensitive root surface, leaving it on overnight.
+
+WHEN TO SEE A DENTIST: if sensitivity persists or worsens after four weeks of consistent use, see a dentist. A professional fluoride varnish application can provide faster and more durable relief. Severe localised sensitivity from gum recession may warrant a gum graft.
+
+PRODUCT EXAMPLES (Singapore-available):
+
+Potassium nitrate formulations:
+- Sensodyne Gum Care (1,450 ppm with potassium nitrate) — builds protection against sensitivity while supporting gum health. Available at Watsons, Guardian, FairPrice. Approximately S$8–S$12 / 100g.
+- Sensodyne Complete Protection Fresh Breath (1,450 ppm) — 8 oral care benefits including sensitivity, enamel, plaque, and gum health. Available at Watsons, Guardian.
+- Sensodyne Sensitivity & Gum (1,450 ppm stannous fluoride + potassium nitrate) — dual action for sensitivity and gum health. Available at Watsons, Guardian. Approximately S$9–S$12.
+- Sensodyne Gentle Whitening (1,450 ppm) — for users who also want mild surface stain removal without excessive abrasion. Available at Watsons, Guardian.
+
+Stannous fluoride / dentine-blocking formulations:
+- Sensodyne Rapid Relief (1,450 ppm stannous fluoride) — claims relief from first brush; builds ongoing protection. Available at Watsons, Guardian. Approximately S$10–S$13.
+- Sensodyne Repair & Protect Deep Repair (1,450 ppm with NovaMin technology) — builds a reparative layer within dentine tubules. Available at Watsons, Guardian. Approximately S$12–S$16.
+- Colgate Sensitive Pro-Relief (1,450 ppm arginine + calcium carbonate) — physically seals dentine tubules. Available at Guardian, Watsons, FairPrice.
+
+WHERE TO BUY: All major Guardian, Watsons, FairPrice, NTUC, Unity, pharmacies in Singapore. Sensodyne is the number one dentist-recommended sensitive toothpaste brand in Singapore (based on a 2023 Singapore survey by the brand).
+
+[HUMAN HANDOFF — PERSISTENT SENSITIVITY]
+If sensitivity does not improve after four weeks of consistent use of a desensitising toothpaste, this needs clinical assessment. Contact an Oral Link partner clinic:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+
+--- END CHUNK 007 ---
+
+================================================================================
+--- CHUNK 008 ---
+[CHUNK ID]   product-toothpaste-prescription-fluoride
+[TOPIC]      Prescription-strength fluoride toothpaste (2,800 or 5,000 ppm) — high-risk patients only
+[DOMAIN]     Oral Link product recommendation
+[KEYWORDS]   prescription fluoride toothpaste, high fluoride toothpaste Singapore, 5000ppm fluoride, Duraphat, high strength toothpaste, cavity risk toothpaste, dry mouth toothpaste, post-radiation dental
+[WHO THIS SUITS]
+  - Adults with a history of multiple recent cavities despite good home care
+  - Adults with extensive dental work (multiple crowns, bridges, implants)
+  - Adults with exposed root surfaces from significant gum recession
+  - Adults with reduced saliva (dry mouth) from medication or medical conditions
+  - Adults post-radiation therapy to head and neck
+  - Adults currently in fixed orthodontic treatment (braces)
+  - Clinically assessed high cavity risk — by dentist only
+[TRIGGERS]
+  - What is prescription fluoride toothpaste?
+  - Do I need a 5000 ppm toothpaste?
+  - How is prescription toothpaste different from regular?
+  - Can I buy high-fluoride toothpaste over the counter?
+  - How long do I need to use prescription toothpaste?
+  - Should I use prescription toothpaste if I get a lot of cavities?
+
+CONTENT:
+
+WHAT PRESCRIPTION-STRENGTH FLUORIDE TOOTHPASTE IS:
+Prescription fluoride toothpastes contain 2,800 or 5,000 ppm fluoride — significantly higher than the 1,000 to 1,500 ppm in standard adult formulations. They are reserved for adults at high cavity risk and are available only with a prescription from a dentist or doctor in Singapore.
+
+HOW IT DIFFERS FROM STANDARD TOOTHPASTE:
+Used in place of regular toothpaste, twice daily — not as an addition. The same spit-don-not-rinse rule applies, and matters even more at this concentration. Not for children. Used until the dentist reassesses risk, typically three to twelve months for an active risk period, or long-term for chronic dry mouth or multiple implants.
+
+WHAT IT DOES AND DOES NOT DO:
+It strengthens enamel and supports remineralisation faster than standard toothpaste. It can arrest very early enamel demineralisation and slow new cavity formation. It does not reverse existing cavities — those need clinical treatment. It does not replace other elements of the routine: effective brushing, interdental cleaning, reduced acid and sugar frequency, and professional cleaning at the recommended interval.
+
+PRESCRIPTION REQUIREMENT:
+In Singapore, 2,800 and 5,000 ppm fluoride toothpastes require a prescription and are dispensed by dental clinics, hospital pharmacies, and some retail pharmacies (with prescription). They are not available over the counter for general purchase.
+
+PRODUCT EXAMPLES (Singapore-available, prescription required):
+
+- Duraphat 2,800 ppm Fluoride Toothpaste (Colgate) — for adults at elevated cavity risk. Available at dental clinic dispensaries and hospital pharmacies with a dentist's prescription. This is the most commonly prescribed high-strength fluoride toothpaste in Singapore.
+- Duraphat 5,000 ppm Fluoride Toothpaste (Colgate) — for adults at highest cavity risk (dry mouth, post-radiation, multiple active caries). Available at dental clinic dispensaries and selected hospital pharmacies with a dentist's prescription. Available at NDCS pharmacy, NHG, SingHealth, NUHS polyclinic pharmacies (with prescription).
+
+If your screening flagged an Advanced Cavity, or if you have a history of recurrent cavities despite good home care, ask your dentist whether prescription-strength fluoride is appropriate for your specific situation. It is not a standard recommendation for everyone who has ever had a cavity — the underlying risk pattern determines whether it is needed.
+
+[HUMAN HANDOFF — PRESCRIPTION REQUIRED]
+Prescription fluoride toothpaste cannot be obtained without a dentist's assessment. Contact an Oral Link partner clinic to discuss your cavity risk and whether a prescription is appropriate:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+
+--- END CHUNK 008 ---
+
+================================================================================
+--- CHUNK 009 ---
+[CHUNK ID]   product-mouthwash-fluoride
+[TOPIC]      Daily fluoride mouthwash — an enhancer for cavity prevention
+[DOMAIN]     Oral Link product recommendation
+[KEYWORDS]   fluoride mouthwash Singapore, fluoride rinse, Act mouthwash, Colgate Plax fluoride, Pearlie White rinse, cavity prevention mouthwash, mouthwash after brushing, when to use mouthwash, 225ppm mouthwash
+[WHO THIS SUITS]
+  - Users with Advanced Cavity findings who want additional cavity protection
+  - Users with Moderate or Advanced gum recession (exposed root surfaces are cavity-prone)
+  - Users with dry mouth from medication or medical conditions
+  - Users with extensive dental work (crowns, bridges, implants, fillings)
+  - Users in active orthodontic treatment (braces)
+  - Older adults with root-surface exposure
+[TRIGGERS]
+  - Should I use mouthwash?
+  - Is fluoride mouthwash worth using?
+  - When should I use mouthwash — before or after brushing?
+  - What mouthwash should I use for cavity prevention?
+  - Does mouthwash replace brushing?
+  - How often should I use fluoride mouthwash?
+
+CONTENT:
+
+WHAT FLUORIDE MOUTHWASH DOES:
+A daily fluoride mouthwash (typically 225 ppm sodium fluoride) provides an additional fluoride exposure at a different time of day from brushing — extending the window of fluoride protection. For most adults at typical cavity risk who already brush twice daily with fluoride toothpaste, it is a useful enhancer rather than essential. For higher-risk users (cavity findings, gum recession, dry mouth), it can meaningfully reduce new cavity formation.
+
+Mouthwash does not remove plaque — brushing is the cleaning step. Mouthwash is a protective enhancement only.
+
+HOW TO USE:
+Use at a different time of day from brushing. The most practical pattern: brush morning and night, rinse with fluoride mouthwash after lunch or at another mid-day point. Using mouthwash immediately after brushing washes off the higher-concentration fluoride from the toothpaste. Swish 10 ml (about two teaspoons) vigorously for 60 seconds. Spit. Do not eat or drink for 30 minutes afterwards. Do not dilute with water.
+
+WHAT TO LOOK FOR:
+Sodium fluoride at approximately 225 ppm. This must be on the pack. Alcohol-free formulation is preferred for users with gum recession, dry mouth, or sensitivity — alcohol can irritate exposed root surfaces and worsen dry mouth. Daily-use suitability (most fluoride mouthwashes are formulated for daily ongoing use).
+
+PRODUCT EXAMPLES (Singapore-available):
+
+Alcohol-free daily fluoride rinses (recommended for most users):
+- Colgate Plax Cool Mint Alcohol-Free (225 ppm sodium fluoride, CPC antiseptic) — available at Guardian, Watsons, FairPrice, NTUC. One of the most widely available alcohol-free fluoride rinses in Singapore. Approximately S$8–S$12 / 500 ml.
+- Pearlie White Sensirinze Fluoride Mouth Rinse for Sensitive Teeth — alcohol-free, contains fluoride and potassium citrate for sensitivity relief. Available at Guardian, Watsons, FairPrice, NTUC, hospital polyclinic pharmacies. Singapore brand co-developed with NDCS input. Approximately S$9–S$14 / 480 ml.
+- Listerine Zero (alcohol-free, with fluoride and zinc chloride) — available at Guardian, Watsons, NTUC FairPrice. Approximately S$8–S$12 / 500 ml.
+
+Alcohol-containing daily fluoride rinses (for users without specific sensitivity concerns):
+- Listerine Total Care (with fluoride, essential oils, zinc chloride) — antiseptic and fluoride in one. Available at Guardian, Watsons, FairPrice. Approximately S$9–S$14 / 500 ml.
+- Colgate Plax Peppermint Fresh (with fluoride) — standard daily option at all major retailers. Approximately S$7–S$10 / 500 ml.
+
+WHERE TO BUY: Guardian, Watsons, NTUC FairPrice, Unity, Cold Storage, Shopee, Lazada, Amazon.sg, and at NDCS and NHG/SingHealth polyclinic pharmacies.
+
+--- END CHUNK 009 ---
+
+================================================================================
+--- CHUNK 010 ---
+[CHUNK ID]   product-mouthwash-antiseptic
+[TOPIC]      Antiseptic mouthwash — chlorhexidine, essential-oil, and CPC rinses
+[DOMAIN]     Oral Link product recommendation
+[KEYWORDS]   antiseptic mouthwash Singapore, chlorhexidine mouthwash Singapore, Listerine antiseptic, antibacterial mouthwash, gingivitis mouthwash, Corsodyl Singapore, Pearlie White Defenze, CPC mouthwash, essential oil mouthwash
+[WHO THIS SUITS]
+  - Users with Moderate or Advanced plaque, particularly when bleeding gums are also present
+  - Users immediately after a professional cleaning, scaling and root planing, or periodontal surgery (chlorhexidine course, typically two to four weeks)
+  - Users in orthodontic treatment with fixed appliances
+  - Users with persistent gingivitis despite good home care (as a short-term adjunct)
+  - Users with implants experiencing peri-implant inflammation (under dentist guidance)
+[TRIGGERS]
+  - Should I use Listerine?
+  - Is mouthwash with alcohol bad for me?
+  - What is chlorhexidine mouthwash?
+  - Can I use antibacterial mouthwash every day?
+  - Why does the dentist say not to use chlorhexidine for too long?
+  - Will antiseptic mouthwash help my bleeding gums?
+  - What is the best mouthwash for gum disease?
+
+CONTENT:
+
+THREE TYPES OF ANTISEPTIC MOUTHWASH:
+
+Chlorhexidine (0.12% or 0.2%):
+The most clinically potent antiseptic mouthwash. Highly effective at reducing plaque and gum inflammation. Short-term use only — typically two to four weeks at a time, often prescribed after periodontal treatment, oral surgery, or to break a plaque cycle. Extended use causes brown staining of teeth and tongue (reversible with professional cleaning) and alters taste perception. Do not use within 30 minutes of brushing — chlorhexidine is inactivated by sodium lauryl sulfate in most toothpastes. Available by prescription or from dental clinics in Singapore; lower concentrations (0.05–0.1%) available over the counter.
+
+Essential-oil mouthwashes (e.g. Listerine-style):
+Contain eucalyptol, menthol, methyl salicylate, and thymol. Reasonable evidence for plaque and gingivitis reduction with twice-daily use. Suitable for longer-term daily use. Often contain alcohol — alcohol-free versions exist for users with dry mouth, gum recession, or sensitivity. Strong taste that some users find unpleasant.
+
+Cetylpyridinium chloride (CPC) mouthwashes:
+A milder antiseptic for daily use. Modest evidence for plaque reduction. Usually well-tolerated. Often combined with fluoride in over-the-counter rinses (e.g. Colgate Plax).
+
+ANTISEPTIC MOUTHWASH IS NOT:
+A replacement for brushing or interdental cleaning. A treatment for gum disease on its own. A daily long-term necessity for users with healthy gums.
+
+HOW TO USE:
+Follow the product's stated duration. Use at a different time from fluoride toothpaste — at least 30 minutes apart. Swish for 30 to 60 seconds. Spit; do not swallow. Do not eat or drink for 30 minutes afterwards.
+
+PRODUCT EXAMPLES (Singapore-available):
+
+Chlorhexidine (short-term, prescription or dentist-dispensed):
+- Corsodyl Mouthwash 0.2% Chlorhexidine — available at Guardian, Watsons (over the counter at lower concentrations; higher concentrations require a prescription or dental clinic dispensary). Standard post-surgical or post-scaling rinse.
+- GUM Paroex 0.12% Chlorhexidine Rinse — available at selected Guardian and pharmacies; used for post-periodontal treatment courses.
+
+Essential-oil (daily use):
+- Listerine Cool Mint (contains alcohol, essential oils) — standard antiseptic daily rinse. Available at Guardian, Watsons, FairPrice, NTUC. Approximately S$9–S$14 / 500 ml.
+- Listerine Zero Cool Mint (alcohol-free version with essential oils and fluoride) — for users who want essential-oil antiseptic action without alcohol. Available at Guardian, Watsons, FairPrice.
+
+CPC-based alcohol-free (daily use):
+- Pearlie White Defenze Antiseptic Fluoride Mouth Rinse (CPC + sodium fluoride, 750 ml) — Singapore brand, co-developed with NDCS. Contains CPC, xylitol, zinc gluconate, chamomile, tea tree oil, and sodium fluoride. Alcohol-free and antiviral. Available at Guardian, Watsons, FairPrice, Unity, NTUC, and all major Singapore hospital pharmacies (NHG, SingHealth, NDCS, KKH, SGH, TTSH). Approximately S$12–S$18 / 750 ml. One of the most comprehensive antiseptic fluoride rinses available in Singapore without a prescription.
+- Colgate Plax Cool Mint Alcohol-Free (CPC + 225 ppm fluoride) — see also the fluoride mouthwash chunk. Available everywhere. A good everyday option combining mild antiseptic and fluoride protection.
+- Darlie Mouthwash Double Mint Alcohol-Free — available at Guardian, Watsons, FairPrice, NTUC. Budget-friendly alcohol-free option.
+- Systema Gum Care Mouthwash — Japanese brand; gum-care focused, available at Guardian, Watsons.
+
+WHERE TO BUY: Guardian, Watsons, FairPrice, NTUC, Unity, hospital pharmacies. Pearlie White Defenze is specifically available at NDCS, all NHG and SingHealth polyclinic pharmacies, KKH, SGH, and Tan Tock Seng Hospital pharmacies.
+
+[HUMAN HANDOFF — CHLORHEXIDINE PRESCRIPTION AND POST-SURGICAL CARE]
+Chlorhexidine at therapeutic concentrations and duration should be recommended by a dentist. For advice on which mouthwash is appropriate after treatment or surgery:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+
+--- END CHUNK 010 ---
+
+================================================================================
+--- CHUNK 011 ---
+[CHUNK ID]   product-mouthwash-alcohol-free
+[TOPIC]      Alcohol-free mouthwash — why it matters and when to choose it
+[DOMAIN]     Oral Link product recommendation
+[KEYWORDS]   alcohol-free mouthwash Singapore, mouthwash without alcohol, sensitive mouthwash, dry mouth mouthwash, alcohol free rinse, mouthwash gum recession, mouthwash cancer patient, mouthwash pregnancy, mouthwash for children
+[WHO THIS SUITS]
+  - Users with gum recession (alcohol stings exposed root surfaces)
+  - Users with dry mouth from medication, medical conditions, or aging
+  - Users with mouth ulcers, canker sores, or oral inflammation
+  - Users recovering from dental procedures
+  - Users in cancer treatment (high oral tissue sensitivity)
+  - Children and teenagers
+  - Users who avoid alcohol for personal, religious, or recovery reasons
+[TRIGGERS]
+  - Is alcohol-free mouthwash better?
+  - Should I avoid mouthwash with alcohol?
+  - Does alcohol mouthwash cause cancer?
+  - What mouthwash should I use if I have dry mouth?
+  - Is there an alcohol-free version of Listerine?
+  - Can I use alcohol-free mouthwash every day?
+
+CONTENT:
+
+WHEN ALCOHOL-FREE IS THE BETTER CHOICE:
+Alcohol-free mouthwash is preferable for users with gum recession (alcohol stings exposed root surfaces), dry mouth (alcohol is mildly drying and worsens the condition), mouth ulcers or oral inflammation, those recovering from dental procedures, cancer treatment patients, children who may accidentally swallow, and users who avoid alcohol for personal or religious reasons.
+
+For users with none of these specific concerns, alcohol-containing mouthwashes are not problematic at standard daily use concentrations. For most patients, alcohol-free is a sound default choice — it avoids all these issues without sacrificing any meaningful cleaning benefit.
+
+ON ALCOHOL AND CANCER: standard daily use of alcohol-containing mouthwash has not been shown to meaningfully increase oral cancer risk in well-designed studies. Tobacco and heavy drinking from beverages remain the dominant oral cancer risk factors by a wide margin. Alcohol-free mouthwash avoids the question entirely and is sensible for users with multiple oral cancer risk factors.
+
+IMPORTANT: the underlying mouthwash type (fluoride rinse, antiseptic rinse, or both) matters more than the alcohol question alone. An alcohol-free daily fluoride rinse provides fluoride protection; an alcohol-free antiseptic provides plaque and gum protection. Many products combine both.
+
+PRODUCT EXAMPLES (Singapore-available — alcohol-free):
+
+Daily fluoride (alcohol-free):
+- Listerine Zero Cool Mint — alcohol-free, contains fluoride and zinc chloride for antibacterial action. Available at Guardian, Watsons, FairPrice, NTUC.
+- Colgate Plax Cool Mint Alcohol-Free (225 ppm fluoride + CPC) — alcohol-free daily rinse. Available everywhere.
+- Pearlie White Sensirinze Fluoride Mouth Rinse for Sensitive Teeth — alcohol-free fluoride rinse with potassium citrate. For sensitivity and cavity prevention. Available at Guardian, Watsons, FairPrice, NTUC, hospital pharmacies.
+
+Antiseptic and fluoride combined (alcohol-free):
+- Pearlie White Defenze Antiseptic Fluoride Mouth Rinse (750 ml) — alcohol-free, CPC + sodium fluoride + chamomile + tea tree oil. Singapore brand available at Guardian, Watsons, all major hospital pharmacies. Good all-in-one option for users wanting both antiseptic and fluoride action without alcohol.
+- Darlie Double Mint Alcohol-Free — basic alcohol-free rinse for daily freshness and plaque control. Available at Guardian, Watsons, FairPrice.
+- Systema Gum Care Mouthwash — gum health focused, alcohol-free, available at Guardian, Watsons.
+
+WHERE TO BUY: Guardian, Watsons, FairPrice, NTUC, Unity, Shopee, Lazada, Amazon.sg.
+
+--- END CHUNK 011 ---
+
+================================================================================
+--- CHUNK 012 ---
+[CHUNK ID]   product-night-guard
+[TOPIC]      Night guard (occlusal splint) — custom vs over-the-counter, bruxism protection
+[DOMAIN]     Oral Link product recommendation
+[KEYWORDS]   night guard Singapore, teeth grinding guard, bruxism guard, occlusal splint Singapore, boil and bite night guard, custom night guard Singapore, how much night guard, grinding teeth at night, night guard pharmacy
+[WHO THIS SUITS]
+  - Users showing signs of teeth grinding or clenching (flat or worn tooth surfaces, fractured fillings, jaw pain, morning headaches)
+  - Users told by a dentist they are bruxers or have a heavy bite
+  - Users with gum recession suspected to involve excessive bite forces
+  - Users with extensive crowns, veneers, or dental work needing protection
+  - Users whose partner reports hearing them grind their teeth at night
+[TRIGGERS]
+  - Should I get a night guard?
+  - What is the difference between a custom and over-the-counter night guard?
+  - How much does a night guard cost?
+  - Will a night guard stop me grinding my teeth?
+  - Can I just buy a night guard at the pharmacy?
+  - How long does a night guard last?
+  - Where to buy night guard Singapore?
+
+CONTENT:
+
+WHAT A NIGHT GUARD IS:
+A night guard (occlusal splint) is a thin custom-fitted plastic appliance worn over the upper or lower teeth at night to protect them from grinding (bruxism) or clenching forces. It absorbs and distributes grinding forces so the wear happens to the plastic rather than enamel, and it protects existing crowns, veneers, and fillings from excessive bite forces.
+
+WHAT A NIGHT GUARD DOES NOT DO:
+It does not stop grinding from happening — it is a protective device, not a cure for bruxism. It does not fix gum recession, cavities, or worn fillings. Stress, sleep position, and sleep disorders that drive bruxism are addressed separately. Pain, sudden bite changes, or persistent jaw stiffness should be clinically assessed by a dentist before assuming bruxism is the only cause.
+
+CUSTOM-FITTED (DENTIST-MADE) vs OVER-THE-COUNTER:
+
+Custom-fitted (dentist-made):
+The dentist takes impressions or digital scans of your teeth; the guard is made at a dental laboratory to fit exactly. Best fit, most durable (five to ten years with good care), most comfortable, bite-adjusted by the dentist. Recommended for established bruxism, extensive dental work, or persistent jaw symptoms. Cost in Singapore: typically several hundred dollars (S$300–S$700+) depending on clinic and material.
+
+Over-the-counter boil-and-bite:
+Softened in hot water and bitten into to shape. Affordable (S$10–S$40), available at most Singapore pharmacies. Reasonable for short-term use while waiting for a custom guard, or as a trial. Less durable (often needs replacing within months), less comfortable, bite not adjusted. Not appropriate for established bruxism, multiple crowns, or persistent symptoms. A poorly fitting guard can sometimes worsen jaw symptoms.
+
+Stock guards (one-size-fits-all):
+Sometimes sold in pharmacies. Generally not recommended — fit is poor and most users abandon them quickly.
+
+PRODUCT EXAMPLES (Singapore-available):
+
+Custom (dentist-fitted — requires dental appointment):
+Custom night guards are not a retail product — they are made to measure at the patient's dentist or at an Oral Link partner clinic. Request a custom occlusal splint at your next dental consultation. Oral Link partner clinics handle this:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+
+Over-the-counter boil-and-bite (for interim or trial use only):
+- DenTek Maximum Protection Dental Guard — available at Guardian, Watsons in Singapore. Includes a case. Suitable for trial or while waiting for a custom appliance. Approximately S$20–S$35.
+- Plackers Grind No More Dental Night Guard Disposable — available on Shopee, Lazada, Amazon.sg. Disposable soft-plastic guards for single-night use or short-term use. Approximately S$20–S$30 per pack.
+- Watsons brand dental guard — available at Watsons. Budget option. Approximately S$10–S$20.
+
+CARE OF A NIGHT GUARD:
+Rinse with cool water after use (hot water warps plastic). Store in the case provided, dry, away from direct sunlight. Clean weekly with a denture cleaner tablet or as the dentist recommends. Bring to dental check-ups for the dentist to inspect wear. A custom guard typically lasts five to ten years; replace sooner if you can see meaningful wear marks.
+
+WHERE TO BUY (over-the-counter): Guardian, Watsons, Shopee, Lazada, Amazon.sg.
+
+[HUMAN HANDOFF — CUSTOM NIGHT GUARD AND CLINICAL ASSESSMENT]
+Over-the-counter guards are for interim or trial use only. Any persistent grinding, jaw pain, or tooth wear should be assessed by a dentist and a custom night guard obtained. To book with an Oral Link partner clinic:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+
+--- END CHUNK 012 ---
+
+================================================================================
+--- CHUNK 013 ---
+[CHUNK ID]   product-quick-reference-by-finding
+[TOPIC]      Product recommendations by screening finding — quick reference guide
+[DOMAIN]     Oral Link product recommendation — index
+[KEYWORDS]   what product for plaque, what product for gum recession, product recommendation AI report, what to buy for sensitive teeth, product for gum disease, oral link product guide, what product for cavity, which product for my finding
+[TRIGGERS]
+  - My report flagged plaque — what product should I use?
+  - What should I buy for gum recession?
+  - My report showed cavities — what can I do at home?
+  - I have sensitive teeth — what products do I need?
+  - What is the best routine for gum disease?
+  - Which products are recommended for my findings?
+
+CONTENT:
+
+This chunk is a fast-lookup guide mapping common screening findings to product priorities.
+
+IF YOUR REPORT FLAGGED PLAQUE (Initial to Moderate):
+Priority 1 — Interdental cleaning: add daily interdental brushes (TePe Original variety pack from prohealthshop.co, Guardian, or Watsons) or upgrade to dental floss if tightly spaced teeth.
+Priority 2 — Brushing upgrade: consider an electric toothbrush (Oral-B iO3 or Philips Sonicare 4100) for more effective plaque removal at the gum line.
+Priority 3 — Toothpaste: ensure you are using any standard 1,450 ppm fluoride toothpaste (Colgate Total, Darlie, Pearlie White) with the spit-don't-rinse habit.
+Optional add-on: short-term antiseptic mouthwash (Listerine Zero or Pearlie White Defenze) if also experiencing bleeding gums.
+
+IF YOUR REPORT FLAGGED GUM RECESSION:
+Priority 1 — Toothbrush: switch to an extra-soft manual brush (Curaprox CS 5460 from curaprox.sg or Guardian) or a sonic electric brush with sensitive mode (Philips Sonicare 4100 or 5300).
+Priority 2 — Sensitivity toothpaste: use a desensitising toothpaste if experiencing sensitivity (Sensodyne Gum Care, Sensodyne Repair & Protect, or Sensodyne Rapid Relief) — all available at Watsons and Guardian.
+Priority 3 — Fluoride mouthwash: add a daily alcohol-free fluoride rinse for extra root-surface protection (Colgate Plax Alcohol-Free or Pearlie White Sensirinze).
+Priority 4 — Consider a water flosser: for users with recession and interdental gaps, a Waterpik Cordless Advanced cleans effectively without physical trauma to exposed root surfaces.
+
+IF YOUR REPORT FLAGGED ADVANCED CAVITY:
+Priority 1 — See a dentist: AI screening cannot treat a cavity — this needs in-person clinical treatment. Contact Oral Link for a partner clinic: +65 8098 6800 or info@orallink.health.
+Priority 2 — Fluoride mouthwash: add a daily fluoride rinse mid-day (Colgate Plax, Pearlie White Sensirinze) for between-meal protection.
+Priority 3 — Diet: reduce sugary and acidic drinks between meals — replace with water.
+Priority 4 — Ask your dentist: whether prescription-strength fluoride toothpaste (Duraphat 2,800 or 5,000 ppm) is appropriate for your cavity risk profile.
+
+IF YOU HAVE TOOTH SENSITIVITY:
+Priority 1 — Desensitising toothpaste: Sensodyne Gum Care, Sensodyne Rapid Relief, or Colgate Sensitive Pro-Relief. Use twice daily, consistently for at least four weeks.
+Priority 2 — Soft brush: Curaprox CS 5460 or Philips Sonicare with sensitive mode.
+Priority 3 — Alcohol-free rinse: Pearlie White Sensirinze or Colgate Plax Alcohol-Free.
+Priority 4 — See a dentist: if sensitivity does not improve after four weeks of consistent product use.
+
+IF YOU SUSPECT TEETH GRINDING (BRUXISM):
+Priority 1 — See a dentist: for clinical assessment and a custom-fitted night guard. Contact: +65 8098 6800 or info@orallink.health.
+Priority 2 — Interim protection: boil-and-bite night guard from Guardian or Watsons (DenTek Maximum Protection) while waiting for a custom guard.
+
+GENERAL BASELINE ROUTINE (all adults):
+- Soft-bristle toothbrush (manual or electric)
+- Standard fluoride toothpaste 1,000–1,500 ppm, twice daily, spit don't rinse
+- Daily interdental cleaning (interdental brushes, floss, or water flosser)
+- Recall dental visit every 6 to 12 months
+
+--- END CHUNK 013 ---
+
+================================================================================
+--- CHUNK 014 ---
+[CHUNK ID]   product-where-to-buy-singapore
+[TOPIC]      Where to buy dental products in Singapore — retailer guide
+[DOMAIN]     Oral Link product recommendation — retail guide
+[KEYWORDS]   where to buy dental products Singapore, Guardian pharmacy, Watsons dental, FairPrice oral care, Unity pharmacy, TePe Singapore, Curaprox Singapore, Waterpik Singapore, Shopee Lazada dental products
+[TRIGGERS]
+  - Where can I buy these dental products in Singapore?
+  - Is TePe available at Guardian?
+  - Where do I buy Curaprox in Singapore?
+  - Can I get Waterpik at Watsons?
+  - Which pharmacy stocks interdental brushes?
+  - Are these products available online?
+
+CONTENT:
+
+MAINSTREAM RETAIL (widest selection):
+Guardian Pharmacy — oral care section carries Sensodyne, Colgate, Oral-B, Pearlie White, GUM, Listerine, Colgate Plax, Waterpik (selected branches), TePe (selected branches), Curaprox (selected branches). Found in most malls and MRT areas across Singapore.
+
+Watsons — carries Sensodyne, Colgate, Darlie, Oral-B, Pearlie White, Listerine, DentalPro interdental brushes, Waterpik (selected branches), TePe (selected branches), electric toothbrushes. Found across Singapore.
+
+NTUC FairPrice / FairPrice Xtra — mainstream dental products including Colgate, Darlie, Sensodyne, Listerine, Oral-B. Available in all FairPrice supermarkets.
+
+Cold Storage / Giant — similar range to FairPrice. Good for everyday toothpastes and mouthwashes.
+
+PHARMACIES (WIDER RANGE INCLUDING CLINICAL PRODUCTS):
+Unity Pharmacy — carries a wide range including Pearlie White Defenze (hospital-pharmacy quality over-the-counter).
+Watsons Health (some branches) — extended pharmacy range.
+
+SPECIALIST DENTAL / HEALTH STORES:
+ProHealthShop (prohealthshop.co) — the most comprehensive Singapore source for TePe interdental brushes (full colour range including variety packs), TePe Angle brushes, and professional-grade oral care. Online store with island-wide delivery.
+Curaprox Singapore (curaprox.sg) — full range of Curaprox CS 5460 and other models. Online store and selected Guardian / pharmacy stockists.
+Waterpik Singapore (waterpik.com.sg) — full range of countertop and cordless water flossers. Also available at Watsons, Guardian, Harvey Norman, Courts.
+
+ELECTRONICS RETAILERS (electric toothbrushes):
+Harvey Norman — broad range of Oral-B and Philips Sonicare models.
+Courts — full range of electric toothbrushes.
+Best Denki — selected models.
+
+ONLINE:
+Shopee Singapore — most dental products available from official brand stores and authorised resellers. Often with best pricing.
+Lazada Singapore — same coverage as Shopee.
+Amazon.sg — particularly useful for water flossers, Waterpik, and imported models.
+Official brand websites: waterpik.com.sg, curaprox.sg, pearliewhite.com.
+
+HOSPITAL AND POLYCLINIC PHARMACIES (clinical products):
+Pearlie White Defenze, prescription fluoride toothpastes, and chlorhexidine rinses are available at:
+- NDCS (National Dental Centre Singapore) pharmacy
+- NHG Polyclinic pharmacies
+- SingHealth Polyclinic pharmacies
+- NUHS Pharmacy
+- SGH, KKH, TTSH, Changi General Hospital pharmacies (with prescription where required)
+
+--- END CHUNK 014 ---
+
+================================================================================
+END OF ORAL LINK DENTAL PRODUCT RECOMMENDATIONS RAG KNOWLEDGE BASE
+Total chunks: 14
+
+CHUNK INDEX:
+  001 — Dental floss (waxed, PTFE, tape, picks, super floss)
+  002 — Interdental brushes (TePe, sizing, technique)
+  003 — Water flossers (Waterpik, cordless vs countertop)
+  004 — Electric toothbrushes (Oral-B iO, Philips Sonicare)
+  005 — Manual soft-bristle toothbrush (Curaprox, Systema, Colgate)
+  006 — Standard fluoride toothpaste (Colgate Total, Darlie, Sensodyne Pronamel)
+  007 — Desensitising toothpaste (Sensodyne range)
+  008 — Prescription-strength fluoride toothpaste (Duraphat — requires dentist)
+  009 — Daily fluoride mouthwash (Colgate Plax, Pearlie White Sensirinze, Listerine Zero)
+  010 — Antiseptic mouthwash (Corsodyl, Listerine, Pearlie White Defenze)
+  011 — Alcohol-free mouthwash (when to choose it)
+  012 — Night guard / occlusal splint (custom vs over-the-counter)
+  013 — Quick reference: product by screening finding
+  014 — Where to buy in Singapore — retailer guide
+
+[HUMAN HANDOFF] SUMMARY:
+  Chunk 007 — Persistent sensitivity after 4 weeks of product use → dentist review
+  Chunk 008 — Prescription fluoride toothpaste → dentist required
+  Chunk 012 — Custom night guard → dentist required for assessment and fitting
+  Chunk 013 — Advanced Cavity finding → in-person clinical treatment required
+
+ALL HUMAN HANDOFF: +65 8098 6800 | info@orallink.health | https://orallink.health/#contact-us
+================================================================================

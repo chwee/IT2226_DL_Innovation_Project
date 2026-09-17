@@ -1,0 +1,924 @@
+================================================================================
+ORAL LINK — AI SCREENING REPORT INTERPRETATION
+RAG Knowledge Base for Patient Chatbot
+Source: Oral Link screening report guidance (internal)
+Audience: Dental patients who have received an Oral Link AI screening report
+Purpose: Help patients understand what their report means, what each finding
+         indicates, how urgent their situation is, and what to do next.
+================================================================================
+
+DESIGN NOTES
+------------
+Each section between "--- CHUNK ---" dividers is one self-contained retrieval unit.
+Chunk structure:
+  [CHUNK ID]       — unique identifier for metadata tagging
+  [TOPIC]          — what the chunk covers
+  [REPORT SECTION] — which part of the Oral Link report this explains
+  [KEYWORDS]       — terms for hybrid keyword + vector retrieval
+  [TRIGGERS]       — natural-language patient questions this chunk answers
+  CONTENT          — plain-text patient-facing explanation
+  [URGENCY]        — at-a-glance action timeline
+  [HUMAN HANDOFF]  — when a dentist is required and Oral Link contact details
+
+ORAL LINK CONTACT — used throughout:
+  Phone:  +65 8098 6800
+  Email:  info@orallink.health
+  Web:    https://orallink.health/#contact-us
+DENTAL EMERGENCY (Singapore): polyclinics (walk-in), NDCS, restructured hospitals
+LIFE-THREATENING (swelling affecting airway): Call 995 immediately
+
+================================================================================
+--- CHUNK 001 ---
+[CHUNK ID]   report-overall-risk-high
+[TOPIC]      Overall Risk: HIGH — what it means and what to do
+[REPORT SECTION] Overall Risk classification
+[KEYWORDS]   overall risk high, high risk dental, high risk oral link report, is high risk emergency, how urgent high risk, report says high risk, what does high risk mean dental screening
+[URGENCY]    Book dentist within 1–2 weeks
+[TRIGGERS]
+  - My report says OVERALL RISK: HIGH — what does that mean?
+  - Is High risk an emergency?
+  - How soon do I need to see a dentist if my risk is High?
+  - Will I need surgery if my risk is High?
+  - Can High risk get better with treatment?
+
+CONTENT:
+
+WHAT THE ORAL LINK ENGINE SAYS:
+"Photos classified under High Risk show significant dental issues requiring immediate attention. This includes advanced decay, severe gum disease or substantial tooth damage. Immediate treatment is crucial to mitigate pain, prevent further damage, or infections, and restore oral health. A comprehensive dental examination is recommended to determine the specific treatments needed. Delay in addressing these concerns can lead to more severe health issues and complications."
+
+WHAT IT MEANS IN PLAIN LANGUAGE:
+A High overall risk means the screening has identified findings that warrant prompt dental attention. This is the most urgent of the three risk classifications. It typically reflects one or more of the following: an Advanced Cavity on a specific tooth (substantial decay unlikely to be managed with a simple filling); Advanced gum recession with significant root exposure; multiple missing teeth affecting chewing function or bite stability; heavy plaque or calculus across many teeth; or a combination of these.
+
+A High risk is not necessarily a medical emergency — but it is a clear signal that the conditions identified are unlikely to resolve without professional treatment, and that delaying makes matters worse.
+
+WHAT TO DO NEXT:
+1. Book a dental appointment within the next one to two weeks — not a routine recall but a visit specifically to assess the screening findings.
+2. Review the Potential Actions table on your report. High-priority items listed there are the ones to discuss first with the dentist.
+3. Expect the visit to take longer than a routine check-up. The dentist may take X-rays, do a full periodontal assessment, and outline a treatment plan that unfolds across several appointments.
+4. Be prepared for a possible specialist referral. Depending on specific findings — particularly Advanced gum recession or extensive decay — the dentist may refer to a periodontist, prosthodontist, or other specialist.
+5. Bring your screening report and Potential Actions list to the appointment.
+
+IN A DENTAL EMERGENCY:
+If you are currently experiencing severe pain, facial swelling that affects breathing or swallowing, uncontrolled mouth bleeding, or facial trauma — do not wait. Go to the nearest A&E department or call 995. The screening report is not a substitute for emergency care.
+
+WHAT HIGH RISK DOES NOT MEAN:
+It does not mean you will lose teeth, need major surgery, or that all recommended treatments must happen at once. Most High-risk situations stabilise well once the most urgent items are addressed.
+
+[HUMAN HANDOFF]
+To book with an Oral Link partner clinic: +65 8098 6800 | info@orallink.health
+Dental emergency: polyclinics (walk-in), NDCS, restructured hospitals | Airway affected: Call 995
+
+--- END CHUNK 001 ---
+
+================================================================================
+--- CHUNK 002 ---
+[CHUNK ID]   report-overall-risk-moderate
+[TOPIC]      Overall Risk: MODERATE — what it means and what to do
+[REPORT SECTION] Overall Risk classification
+[KEYWORDS]   overall risk moderate, moderate risk oral link, moderate risk dental, how worried moderate, moderate vs high risk, what is moderate dental risk, is moderate risk serious
+[URGENCY]    Book dentist within 4–6 weeks
+[TRIGGERS]
+  - My report says OVERALL RISK: MODERATE — how worried should I be?
+  - How soon do I need to see a dentist if my risk is Moderate?
+  - Is Moderate risk serious?
+  - What is the difference between Moderate and High risk?
+  - Can Moderate risk go back down to Low?
+
+CONTENT:
+
+WHAT IT MEANS:
+A Moderate overall risk means the AI detected one or more dental concerns that are no longer at the earliest stage. There may be Moderate-severity findings — visible plaque accumulation, gum recession with some root exposure, or other conditions that have progressed past the early-warning stage — or a combination of multiple Initial-stage findings that together suggest active attention is needed.
+
+Moderate risk is not an emergency, but it is a clear signal that home care alone is not keeping up. The underlying causes need to be examined and managed in partnership with a dental professional.
+
+WHAT IT TYPICALLY REFLECTS:
+One or more Moderate-severity findings on specific teeth. Plaque or calculus accumulation visible at the gum line on multiple teeth. Gum recession that has progressed to visible root exposure on at least one tooth. Possibly one or two Advanced-severity findings on specific teeth, balanced by predominantly milder findings elsewhere.
+
+WHAT TO DO NEXT:
+1. Schedule a dental appointment within the next four to six weeks — not a routine recall but a visit scheduled with the screening findings in mind.
+2. Bring your screening report to the appointment. The dentist can use it as a starting point for the clinical examination.
+3. Review and adjust your home oral care now — brushing technique, interdental cleaning, and dietary habits.
+4. Take note of any Advanced-severity findings on specific teeth. Even within a Moderate overall risk, an Advanced finding on a single tooth may warrant earlier attention.
+
+WHAT MODERATE RISK DOES NOT MEAN:
+It does not mean you have severe dental disease, will inevitably lose teeth, or need emergency dental care. Most Moderate-risk results are well managed by a planned dental visit, a professional cleaning, and adjustments to your home care routine.
+
+MODERATE VERSUS HIGH RISK:
+Both warrant a dental visit rather than waiting for a routine recall. The key difference is urgency: High risk calls for an appointment within one to two weeks; Moderate risk allows up to four to six weeks. Both require active follow-up — neither should be ignored.
+
+[HUMAN HANDOFF]
+To book with an Oral Link partner clinic: +65 8098 6800 | info@orallink.health
+
+--- END CHUNK 002 ---
+
+================================================================================
+--- CHUNK 003 ---
+[CHUNK ID]   report-overall-risk-low
+[TOPIC]      Overall Risk: LOW — what it means and what to do
+[REPORT SECTION] Overall Risk classification
+[KEYWORDS]   overall risk low, low risk oral link, low risk dental screening, no problems low risk, still see dentist low risk, what does low risk mean, low risk screening result
+[URGENCY]    Continue routine dental recall (every 6–12 months)
+[TRIGGERS]
+  - My report says OVERALL RISK: LOW — what does that mean?
+  - Do I still need to see a dentist if my risk is Low?
+  - Is Low risk the same as having no problems?
+  - How often should I get screened if my risk is Low?
+  - Can my risk go from Low to Moderate or High?
+
+CONTENT:
+
+WHAT IT MEANS:
+A Low overall risk means the AI did not detect significant dental concerns in the photographs submitted. There may be no findings flagged at all, or only Initial-stage findings — early signs that are worth noting but do not indicate active dental problems requiring prompt attention.
+
+A Low risk classification is the most reassuring result the screening can give. It does not, however, mean oral health is perfect or that dental care can be skipped indefinitely. It means that based on visible evidence in the photos, nothing currently rises to the level of needing prompt attention.
+
+WHAT IT TYPICALLY REFLECTS:
+No visible cavities, advanced decay, or significant gum recession. Minimal or no plaque accumulation visible at the gum line. All teeth present in the photographed views. Gums that appear pink and firm rather than red, swollen, or receded. Any findings that are flagged are typically at Initial severity — early signs addressable through routine care and good home hygiene.
+
+WHAT TO DO NEXT:
+1. Continue regular dental check-ups at the normal recall interval — every six months or as your dentist recommends. Routine recall is what keeps a Low-risk result a Low-risk result.
+2. Maintain effective daily oral hygiene: brushing twice a day with fluoride toothpaste, daily interdental cleaning, and being mindful of sugar and snacking frequency.
+3. Take note of any Initial-stage findings on the report. Even though these are early-stage, they are worth understanding and monitoring.
+
+IMPORTANT LIMITATION:
+Low overall risk reflects only what the photographs show. A clinical examination is the only way to assess the full picture — including conditions that lie between teeth or below the gum line that are invisible to photographs. Low risk does not eliminate the need for in-person dental check-ups.
+
+WHAT LOW RISK DOES NOT MEAN:
+It does not mean you have no dental issues at all. It does not mean you can skip dental check-ups. It does not mean any Initial-stage findings can be safely ignored. It does not make you immune to future dental problems.
+
+[HUMAN HANDOFF]
+Continue regular dental visits. To find an Oral Link partner clinic: +65 8098 6800 | info@orallink.health
+
+--- END CHUNK 003 ---
+
+================================================================================
+--- CHUNK 004 ---
+[CHUNK ID]   report-priority-labels
+[TOPIC]      Priority labels in the Potential Actions table — High, Medium, Low
+[REPORT SECTION] Potential Actions table
+[KEYWORDS]   potential actions priority, high priority dental, low priority cleaning, what does priority mean report, is priority the same as severity, medium priority, why cleaning low priority, high risk low priority
+[URGENCY]    Varies by priority label — see content
+[TRIGGERS]
+  - What does High or Low priority mean on my report?
+  - Why is my cleaning Low priority if my overall risk is High?
+  - How urgently do I need to act on a High-priority recommendation?
+  - Is the priority the same thing as severity?
+  - Should I do High-priority and Low-priority items at different appointments?
+  - What is the Potential Actions table?
+
+CONTENT:
+
+WHAT THE POTENTIAL ACTIONS TABLE IS:
+The Potential Actions section near the end of your screening report lists suggested treatments — for example, Crown, Cleaning, or Partial Denture — alongside a priority label for each. Priority is colour-coded: High in red/pink, Medium in amber, Low in blue.
+
+PRIORITY DESCRIBES URGENCY, NOT SERIOUSNESS:
+Priority describes how urgently the suggested treatment should be considered — not how serious the underlying finding is. The two are related but not the same thing. It is entirely normal to see a High overall risk report with some Low-priority treatment recommendations.
+
+HIGH PRIORITY:
+The screening has identified a condition where delaying treatment is likely to make things worse — through pain, infection risk, or further damage to the tooth or surrounding tissue. Act within days to a couple of weeks. Examples: an Advanced Cavity on a specific tooth (which may need a filling, root canal, or crown depending on extent), substantial structural damage.
+
+MEDIUM PRIORITY:
+A treatment that should be addressed within a defined window — generally weeks to a few months — but is not as time-sensitive as a High-priority item. Most Moderate-severity findings with a clear treatment pathway sit here. Schedule these actively rather than folding them into a routine recall.
+
+LOW PRIORITY:
+A treatment that should be done but does not need to be rushed. Routine professional cleaning typically appears here — even on a High overall risk report — because cleaning is part of long-term health management rather than urgent intervention. A partial denture for a long-standing missing tooth often appears as Low priority because a few more weeks of planning does not change the outcome.
+
+WHY LOW PRIORITY CAN APPEAR ON A HIGH-RISK REPORT:
+Overall risk and priority measure different things. Overall risk reflects your dental health as a whole across all findings together. Priority is per recommended treatment, reflecting how time-sensitive that specific treatment is.
+
+If your report shows High overall risk, a High-priority Crown recommendation, and a Low-priority Cleaning, the message is: address the Crown promptly, and schedule the Cleaning when convenient — the Cleaning is still important, just not the most pressing item.
+
+PRIORITY IS A GUIDE, NOT A CLINICAL INSTRUCTION:
+The priority label is generated by the screening algorithm. A dentist's in-person assessment may agree, accelerate, or de-escalate any recommendation after examining each tooth directly. Use the priority labels to guide your conversation with the dentist, not as a fixed treatment plan.
+
+--- END CHUNK 004 ---
+
+================================================================================
+--- CHUNK 005 ---
+[CHUNK ID]   report-severity-bands
+[TOPIC]      Severity bands — Initial, Moderate, Advanced — and the colour-coded dental chart
+[REPORT SECTION] Findings table and dental chart
+[KEYWORDS]   initial moderate advanced severity, severity bands oral link, coloured dots dental chart, what does initial mean, what does moderate mean, what does advanced mean, severity scale oral link, colour coding report
+[URGENCY]    Varies by band — Initial: routine, Moderate: weeks, Advanced: 1–2 weeks
+[TRIGGERS]
+  - What does Initial or Moderate or Advanced mean on my report?
+  - Is Moderate gum recession the same urgency as Moderate plaque?
+  - What do the coloured dots on the dental chart mean?
+  - What is the difference between Initial and Advanced severity?
+  - If I have Initial on most teeth and Advanced on one, what does that mean?
+  - What are the coloured markers on the tooth map?
+
+CONTENT:
+
+WHAT THE SEVERITY SCALE IS:
+Your Oral Link screening report uses a three-band severity scale to describe how far each flagged condition has progressed on a specific tooth. The same Initial / Moderate / Advanced labels apply across all findings — plaque, gum recession, and others.
+
+Each band is colour-coded on the dental chart at the top of your report:
+
+INITIAL — light blue marker:
+The condition has been identified at an early stage. Visible signs are present but limited. Practical impact on day-to-day comfort or function is usually minimal. Best addressed through routine dental care and improved home oral hygiene. Does not usually demand a dedicated dental visit on its own.
+
+MODERATE — orange marker:
+The condition has progressed beyond early signs. There may be visible changes you can see in the mirror, and you may notice symptoms — sensitivity, mild discomfort, or aesthetic changes — starting to appear. Typically warrants a dental review within weeks rather than months so the underlying cause can be examined and managed.
+
+ADVANCED — red marker:
+The condition is well established. Visible signs are clear, symptoms are likely, and professional dental care is needed to manage it. Generally warrants a dental review within one to two weeks. Specialist input becomes more likely depending on the specific finding.
+
+HOW SEVERITY SHAPES YOUR RESPONSE:
+Initial findings: act through routine dental care and good home hygiene — no urgent visit needed.
+Moderate findings: book a dental review within weeks; this is an active schedule, not a routine recall.
+Advanced findings: book within one to two weeks; the condition warrants prompt attention.
+
+SEVERITY IS PER TOOTH, PER FINDING:
+Severity is set independently for each tooth and each finding. One tooth may have Initial plaque and another may have Advanced plaque. The dental chart colours visualise the most urgent finding on each tooth. If your report flags the same condition at different severities on different teeth, the most advanced finding is what drives your overall urgency.
+
+SEVERITY IS NOT THE SAME AS PRIORITY:
+Severity describes how far a condition has progressed. Priority describes how urgently the recommended treatment should be considered. Both appear on your report and are used for different purposes.
+
+SCREENING SEVERITY IS NOT A CLINICAL DIAGNOSIS:
+A screening identifies the appearance of a condition — it is not a confirmed clinical diagnosis. Even an Advanced finding still requires a dentist's in-person examination to confirm what is happening and what treatment is appropriate.
+
+--- END CHUNK 005 ---
+
+================================================================================
+--- CHUNK 006 ---
+[CHUNK ID]   report-tooth-numbering
+[TOPIC]      Tooth numbering — how to find the tooth your report is referring to
+[REPORT SECTION] Findings table — tooth identification
+[KEYWORDS]   tooth number, UNS numbering, universal numbering system, where is tooth 5, which tooth is tooth 8, upper right lower left teeth, FDI numbering, tooth name, bicuspid tooth number, how to read dental chart tooth numbers
+[URGENCY]    Informational — no urgency
+[TRIGGERS]
+  - Where is Tooth 5?
+  - Which tooth is the 1st Bicuspid?
+  - What does Upper Right or Lower Left mean on my report?
+  - Why does my dentist use different tooth numbers?
+  - Is Tooth 8 the same as Tooth 11 in another system?
+  - How do I find which tooth my report is flagging?
+  - What tooth does number 14 refer to?
+
+CONTENT:
+
+HOW TOOTH IDENTIFICATION WORKS ON YOUR REPORT:
+Your Oral Link screening report identifies each tooth using the Universal Numbering System (UNS) — a standard scheme that numbers adult teeth from 1 to 32. Each entry in the findings table looks like:
+
+  1st Bicuspid (Tooth 5, Upper Right)
+
+That single line gives you three pieces of information: the tooth's anatomical name (1st Bicuspid), its UNS number (5), and which quadrant of your mouth it sits in (Upper Right).
+
+HOW THE NUMBERS ARE ARRANGED:
+Numbering starts at the back of your upper-right jaw and runs along the top arch to the back of the upper-left jaw, then drops down to the lower-left and runs back along the bottom arch to the lower-right.
+
+Upper jaw, right to left: Tooth 1 (upper-right wisdom tooth) → Tooth 16 (upper-left wisdom tooth)
+Lower jaw, left to right: Tooth 17 (lower-left wisdom tooth) → Tooth 32 (lower-right wisdom tooth)
+
+QUICK REFERENCE — KEY ANCHOR TEETH:
+Tooth 8 and Tooth 9 — the two upper front teeth (central incisors)
+Tooth 24 and Tooth 25 — the two lower front teeth (central incisors)
+Tooth 6 and Tooth 11 — the upper canines ("eye teeth")
+Tooth 5 and Tooth 12 — the upper first bicuspids (premolars)
+Tooth 14 and Tooth 15 — the upper left molars
+Tooth 1, 16, 17, and 32 — the four wisdom teeth (third molars)
+
+TOOTH NAMES AND THEIR POSITIONS:
+Central incisors (Teeth 8, 9, 24, 25): the four front teeth, upper and lower
+Lateral incisors (Teeth 7, 10, 23, 26): the teeth just beside the front teeth
+Canines (Teeth 6, 11, 22, 27): the pointed "eye teeth"
+1st Bicuspids / Premolars (Teeth 5, 12, 21, 28): just behind the canines
+2nd Bicuspids / Premolars (Teeth 4, 13, 20, 29): further back from the canines
+1st Molars (Teeth 3, 14, 19, 30): large back teeth, one from the centre on each side
+2nd Molars (Teeth 2, 15, 18, 31): the second-from-last teeth
+3rd Molars / Wisdom Teeth (Teeth 1, 16, 17, 32): the rearmost teeth
+
+UNDERSTANDING "UPPER RIGHT" AND "LOWER LEFT":
+Right and Left refer to your right and left as the patient — not the camera's view. So "Upper Right" is the right side of your mouth as you look in a mirror. However, on the dental chart in the report, which shows your mouth from the dentist's perspective, "Upper Right" appears on the left side of the diagram. This is the standard dental convention and the reason your dentist always confirms "your right side, correct?" before treating.
+
+QUADRANT SUMMARY:
+Upper Right: Teeth 1–8 (from wisdom tooth to upper front)
+Upper Left: Teeth 9–16 (from upper front to wisdom tooth)
+Lower Left: Teeth 17–24 (from wisdom tooth to lower front)
+Lower Right: Teeth 25–32 (from lower front to wisdom tooth)
+
+WHY YOUR DENTIST MAY USE DIFFERENT NUMBERS:
+Singapore dentists often use the FDI World Dental Federation system, which uses two-digit numbers (11–48). The two systems describe the same teeth with different labels. When you bring your Oral Link report to a dental appointment, the dentist can map between the two systems without difficulty — the anatomical name in brackets (e.g. 1st Bicuspid) is consistent across both systems.
+
+--- END CHUNK 006 ---
+
+================================================================================
+--- CHUNK 007 ---
+[CHUNK ID]   report-advanced-cavity
+[TOPIC]      Advanced Cavity finding — what it means, urgency, and what to expect at the dentist
+[REPORT SECTION] Findings table — cavity finding
+[KEYWORDS]   advanced cavity oral link, tooth decay report, cavity finding, advanced cavity what does it mean, will I need root canal cavity, cavity urgent, dental abscess cavity, cavity too deep for filling, dark hole tooth
+[URGENCY]    Book dentist within 1–2 weeks
+[TRIGGERS]
+  - My report says Advanced Cavity on Tooth 5 — what does that mean?
+  - Will I need a root canal?
+  - How urgent is an advanced cavity?
+  - Can an advanced cavity be filled or do I need a crown?
+  - Why doesn't the screening show smaller cavities?
+  - What is a dental cavity?
+  - My tooth has a dark spot — is that a cavity?
+  - What happens if I don't treat a cavity?
+
+CONTENT:
+
+WHAT IT IS:
+An Advanced Cavity is a hole in a tooth caused by acid-producing bacteria that has progressed beyond the tooth surface — typically deep enough that a simple filling may not be sufficient, and prompt treatment is needed to prevent further damage or infection.
+
+WHY THE SCREENING ONLY FLAGS ADVANCED CAVITIES (NOT SMALL ONES):
+The Oral Link screening engine reports cavities under the single name "Advanced Cavity" rather than separating them into Initial, Moderate, or Advanced bands the way it does for plaque or gum recession. This is because small cavities are very difficult to identify reliably from photographs — they often start between teeth or under existing fillings where photos cannot reach. The screening flags only those cavities visible enough in photos to be confident about, which by the time they are that visible, are typically already advanced.
+
+Important: the absence of an Advanced Cavity finding on your report does NOT mean you have no cavities. Smaller cavities are detected by clinical examination and X-rays at a dental visit.
+
+WHAT AN ADVANCED CAVITY CAN LOOK LIKE:
+A visible dark hole or pit in the tooth — often brown, grey, or black at the centre. A clearly broken or missing portion of a tooth. A larger area of darkened or softened enamel. A tooth that has already partially fractured around a decayed area.
+
+SYMPTOMS YOU MAY HAVE NOTICED:
+Sensitivity to cold, hot, or sweet foods. A dull or sharp ache that comes and goes. Food regularly catching in the affected tooth. In some cases — no symptoms at all. Advanced cavities can be surprisingly painless if they have not yet reached the nerve.
+
+WHY ADVANCED CAVITIES MATTER:
+Decay does not stop on its own. Once bacteria have breached the enamel, they progress into the softer dentine and eventually toward the pulp (the nerve and blood supply at the tooth's centre). Without treatment:
+- The cavity continues to enlarge
+- The remaining tooth becomes weaker and more prone to fracture
+- Bacteria can reach the pulp, causing inflammation (pulpitis) and then nerve death
+- An abscess can form at the root tip, causing severe pain and potentially serious complications
+- Treatment options narrow as decay progresses (a filling at an early stage becomes a root canal or extraction later)
+
+WHAT TO DO NEXT:
+1. Book a dental appointment within the next one to two weeks. Available treatment options are typically broader and less invasive when acted on sooner.
+2. Be prepared for X-rays. X-rays show the depth of the cavity in a way photographs cannot, and are essential for recommending the right treatment.
+3. Expect a treatment plan rather than a single appointment. Depending on how deep the cavity extends, treatment may involve: a filling (if enough sound tooth structure remains); a crown (if the tooth needs more support than a filling provides); a root canal followed by a crown (if decay has reached the nerve); or in some cases an extraction (if the tooth cannot be saved).
+4. Be gentle with the affected tooth until treatment. Chew on the opposite side if sensitive. Avoid biting hard foods on that tooth.
+
+DENTAL EMERGENCY SIGNS — ACT NOW:
+If you experience severe persistent toothache, facial swelling, fever, swelling affecting swallowing or breathing, or signs of a dental abscess (a pimple-like bump on the gum near the tooth, sometimes with discharge) — do not wait. Contact a dentist for same-day care or go to the nearest A&E.
+
+WHAT THIS FINDING DOES NOT MEAN:
+An Advanced Cavity finding does not automatically mean you will lose the tooth. Many advanced cavities can be successfully restored. It also does not mean every cavity in your mouth has been identified — only those visible enough from photographs.
+
+[HUMAN HANDOFF]
+To book urgent care through an Oral Link partner clinic: +65 8098 6800 | info@orallink.health
+Dental emergency: polyclinics (walk-in), NDCS, restructured hospitals | 995 if airway affected
+
+--- END CHUNK 007 ---
+
+================================================================================
+--- CHUNK 008 ---
+[CHUNK ID]   report-gum-recession-overview
+[TOPIC]      Gum recession — what it is, causes, and why the report flags it
+[REPORT SECTION] Findings table — gum recession (general)
+[KEYWORDS]   gum recession report, what is gum recession, why report says gum recession, gum recession causes, can gum recession grow back, gum recession serious, gingival recession, receding gums
+[URGENCY]    Depends on severity band — see severity-specific chunks
+[TRIGGERS]
+  - What does gum recession mean?
+  - Why does my report say I have gum recession?
+  - What causes gum recession?
+  - Is gum recession serious?
+  - Can gum recession grow back?
+  - What is gingival recession?
+  - Why do my gums look like they are pulling away from my teeth?
+
+CONTENT:
+
+WHAT GUM RECESSION IS:
+Gum recession occurs when the gum tissue around your teeth pulls back, exposing more of the tooth — and sometimes the root surface below. The clinical name is gingival recession. When your screening flags gum recession on a tooth, it means the photographs showed signs that the gum line has moved further down (or up, on lower teeth) than where it would normally sit on a healthy tooth.
+
+Most people do not notice gum recession in its early stages because it develops slowly and without pain.
+
+WHAT THE SCREENING LOOKS FOR:
+A tooth that appears longer than the teeth next to it. A visible step or notch where the enamel meets the exposed root. Darker yellowish areas near the gum line (root surface, which is naturally darker and more yellow than enamel). A gum line that is uneven across the front of the mouth.
+
+WHAT TYPICALLY CAUSES GUM RECESSION:
+Brushing too hard or with a hard-bristled brush — one of the most common causes, especially on canine and premolar teeth where people often press hardest.
+Gum disease (gingivitis or periodontitis) — long-term plaque and calculus irritates and destroys supporting tissue, causing the gums to recede.
+Tooth position or bite forces — crowded or misaligned teeth can create extra stress on the gum margin.
+Grinding or clenching (bruxism) — repeated heavy forces over years can contribute to recession on certain teeth.
+Genetic factors — some people have naturally thinner gum tissue, which recedes more easily.
+Smoking — impairs gum tissue healing and is associated with greater recession.
+
+WHY IT MATTERS:
+Once gum tissue has receded, it does not naturally grow back on its own. The exposed root surface is softer than enamel and more prone to sensitivity, decay (root caries), and further recession if the underlying cause is not corrected. Early identification — which is what the screening is designed for — gives you the best chance to slow or stop the progression.
+
+WHAT TO DO NEXT:
+The screening identifies the appearance of recession. Only a dentist can measure the recession depth, examine the surrounding tissue, and confirm the underlying cause.
+
+The severity band on your report — Initial, Moderate, or Advanced — tells you how urgently to act. See the severity-specific chunks below for what each band means for you.
+
+--- END CHUNK 008 ---
+
+================================================================================
+--- CHUNK 009 ---
+[CHUNK ID]   report-gum-recession-initial
+[TOPIC]      Gum recession — INITIAL severity: what it means and what to do
+[REPORT SECTION] Findings table — gum recession, Initial band
+[KEYWORDS]   initial gum recession, early gum recession, minimal recession, initial severity gum recession, early stage receding gums, gum recession not serious, fix gum recession at home, initial recession urgency
+[URGENCY]    Routine dental check-up within 3–6 months
+[TRIGGERS]
+  - My report says Initial gum recession on two teeth — what does that mean?
+  - How serious is Initial gum recession?
+  - Do I need to see a specialist for Initial gum recession?
+  - Can I fix Initial gum recession at home?
+  - How urgent is gum recession at the early stage?
+
+CONTENT:
+
+WHAT IT MEANS:
+Your screening has flagged Initial-stage gum recession — the earliest band on Oral Link's severity scale. The gum line shows early visual signs of pulling back, but the recession is still mild and the underlying tooth root is largely unexposed.
+
+This is the most favourable stage to identify the problem because early recession is often stoppable at the cause level. The recession itself does not grow back — but at this stage there is usually no significant root exposure, no notable sensitivity, and no immediate functional concern. Correcting the cause is far more useful than treating the recession itself.
+
+THE MOST IMPORTANT QUESTION AT THIS STAGE: WHY IS IT HAPPENING?
+The cause is usually one of: brushing too hard or with a hard-bristled brush; plaque or calculus build-up at the gum line; or a bite or tooth position that puts extra pressure on certain teeth. Identifying and correcting the cause stops the recession from progressing further.
+
+WHAT TO DO NEXT:
+1. Schedule a routine dental check-up within the next three to six months so the cause can be assessed in person.
+2. Review your brushing technique — switch to a soft-bristled brush and a gentler, angled motion (Modified Bass technique: 45-degree angle toward the gum line, small gentle circular strokes).
+3. Maintain good plaque control between visits, including interdental cleaning.
+4. Your dentist will measure the recession, identify the likely cause, and advise on follow-up.
+
+WHAT INITIAL RECESSION DOES NOT MEAN:
+It does not mean you need surgery, gum grafts, or specialist referral. It does not mean you have advanced gum disease. It is an early-warning marker — most useful when paired with a cause-correcting routine.
+
+[HUMAN HANDOFF]
+Mention the Initial recession finding at your next routine dental visit. To find an Oral Link partner clinic: +65 8098 6800 | info@orallink.health
+
+--- END CHUNK 009 ---
+
+================================================================================
+--- CHUNK 010 ---
+[CHUNK ID]   report-gum-recession-moderate
+[TOPIC]      Gum recession — MODERATE severity: what it means and what to do
+[REPORT SECTION] Findings table — gum recession, Moderate band
+[KEYWORDS]   moderate gum recession, moderate severity recession, visible root recession, root exposed gum, sensitive teeth recession, moderate receding gums, how soon dentist gum recession, moderate recession dentist
+[URGENCY]    Book dentist within 4–6 weeks
+[TRIGGERS]
+  - My report says Moderate gum recession — how worried should I be?
+  - How soon should I see a dentist for Moderate gum recession?
+  - Why are my teeth sensitive after my screening flagged Moderate gum recession?
+  - Will I need surgery for Moderate gum recession?
+  - What kind of toothbrush should I use if I have Moderate gum recession?
+
+CONTENT:
+
+WHAT IT MEANS:
+Your screening has flagged Moderate-stage gum recession. The gum line has receded enough that part of the tooth root is becoming visible. This is no longer a faint early-stage marker — you may already be noticing symptoms.
+
+WHAT YOU MAY SEE AND FEEL:
+A visible step or band of darker, yellowish tissue (exposed root surface) where the enamel meets the gum. A tooth that looks noticeably longer than the ones beside it. Possible sensitivity to cold drinks, cold air, or sweet foods on the affected teeth. A gum margin that may appear slightly inflamed.
+
+The exposed root surface is softer than enamel — more prone to sensitivity and to a type of decay called root caries if plaque sits on it. This is the stage where recession starts to have a real practical impact on day-to-day comfort.
+
+WHAT TYPICALLY DRIVES IT:
+Moderate recession usually means the underlying cause has been active for some time — continued aggressive brushing, untreated plaque or calculus at the gum margin, or repeated occlusal stress on a specific tooth. In some cases, moderate recession is the visible part of underlying periodontal disease that needs professional assessment.
+
+WHAT TO DO NEXT:
+1. Book a dental appointment within the next four to six weeks. The dentist will measure the recession depth, examine the surrounding tissue and bone, and determine whether underlying gum disease is present.
+2. Switch to a soft-bristled toothbrush and review your brushing technique. The goal is to clean thoroughly without scrubbing the gum margin.
+3. If you have sensitivity, a desensitising toothpaste used daily may help in the short term — but the underlying cause still needs assessment.
+4. Avoid abrasive whitening products and stiff brushes until the dentist has reviewed the area.
+
+At the appointment, the dentist may remove calculus from the gum margin, assess whether gum disease is contributing, and advise whether any further follow-up — including a specialist referral — is appropriate. In most Moderate cases this is not yet a surgical situation.
+
+WHAT MODERATE RECESSION DOES NOT MEAN:
+It does not mean you need a gum graft or surgery in most cases. It does not mean you will lose the affected tooth. It does mean that home-only management is no longer sufficient.
+
+[HUMAN HANDOFF]
+To book with an Oral Link partner clinic: +65 8098 6800 | info@orallink.health
+
+--- END CHUNK 010 ---
+
+================================================================================
+--- CHUNK 011 ---
+[CHUNK ID]   report-gum-recession-advanced
+[TOPIC]      Gum recession — ADVANCED severity: what it means and what to do
+[REPORT SECTION] Findings table — gum recession, Advanced band
+[KEYWORDS]   advanced gum recession, severe gum recession, significant root exposure, bone loss gum recession, periodontist referral, gum graft recession, advanced receding gums, loose tooth recession, black triangle teeth, will I lose tooth recession
+[URGENCY]    Book dentist within 1–2 weeks
+[TRIGGERS]
+  - My report says Advanced gum recession — does that mean surgery?
+  - How urgent is Advanced gum recession?
+  - Will I lose my tooth if I have Advanced gum recession?
+  - Do I need a specialist for Advanced gum recession?
+  - What does Advanced gum recession look like?
+  - I have a gap between my teeth where the gum used to be — is that bad?
+  - My tooth looks very long — why?
+
+CONTENT:
+
+WHAT IT MEANS:
+Your screening has flagged Advanced-stage gum recession. At this stage a substantial portion of the tooth root is visible, the recession may extend close to or beyond the bone level supporting the tooth, and there is a meaningful risk that the recession is part of an active underlying gum-disease process.
+
+WHAT YOU MAY SEE AND FEEL:
+A clearly elongated tooth — often noticeably longer than its neighbours. A large band of exposed root surface, sometimes with a step or notch you can feel with your tongue. Marked sensitivity to cold, sweet foods, or air. Possible looseness in the affected tooth, gum tenderness, or bleeding when brushing. A change in the way your bite feels. A gap or "black triangle" appearing between teeth where the gum used to fill the space.
+
+At this stage the exposed root is highly susceptible to root caries, the supporting bone may already have been affected, and the long-term outlook for the tooth depends on prompt and appropriate clinical care.
+
+WHAT THIS OFTEN SIGNALS:
+Advanced gum recession is rarely caused by toothbrush abrasion alone. It frequently coexists with periodontitis — a chronic inflammatory gum disease in which the bone and ligament supporting the tooth break down. It may also involve heavy occlusal (bite) forces, long-standing plaque and calculus accumulation, or systemic factors such as smoking or poorly controlled diabetes. These underlying causes need to be identified and addressed — treating the recession in isolation is not sufficient.
+
+WHAT TO DO NEXT:
+1. Book a dental appointment within the next one to two weeks. This is no longer a routine timeline — your dentist needs to examine the tooth, measure the recession and pocket depths around adjacent teeth, and assess whether there is active underlying gum disease.
+2. Expect a referral discussion. Depending on findings, you may be referred to a periodontist — a specialist in gum and supporting-tissue conditions — who can evaluate whether non-surgical or surgical treatment (including, in selected cases, a gum graft) is appropriate.
+3. Do not delay because the tooth is not painful. Advanced recession often progresses without much pain right up to the point that the tooth becomes loose. Pain is a poor indicator of urgency at this stage.
+4. Maintain very gentle oral hygiene in the meantime. Use a soft-bristled brush, avoid scrubbing, and continue interdental cleaning where you can do so without trauma to the gum.
+
+DENTAL EMERGENCY SIGNS:
+If you experience significant tooth mobility, severe pain, swelling affecting breathing or swallowing, or other emergency symptoms — seek emergency dental or medical care rather than waiting.
+
+WHAT ADVANCED RECESSION DOES NOT MEAN:
+Advanced gum recession does not automatically mean the affected tooth will be lost. With timely periodontal care, many advanced cases can be stabilised. It does mean that home management alone is no longer adequate and that specialist input is more likely to be needed.
+
+[HUMAN HANDOFF]
+To book urgent care through an Oral Link partner clinic: +65 8098 6800 | info@orallink.health
+Dental emergency: polyclinics (walk-in), NDCS, restructured hospitals | 995 if airway affected
+
+--- END CHUNK 011 ---
+
+================================================================================
+--- CHUNK 012 ---
+[CHUNK ID]   report-plaque-overview
+[TOPIC]      Plaque finding — what it is and why the screening flags it
+[REPORT SECTION] Findings table — plaque (general)
+[KEYWORDS]   plaque report, what is plaque oral link, plaque screening, plaque vs tartar calculus, plaque causes, plaque why flagged, plaque visible gum line, plaque accumulation
+[URGENCY]    Depends on severity band — see severity-specific chunks
+[TRIGGERS]
+  - What is plaque?
+  - Why does my report say I have plaque?
+  - Where does plaque come from?
+  - Is plaque the same as tartar?
+  - Why is plaque a problem if I brush every day?
+  - What does plaque look like on teeth?
+
+CONTENT:
+
+WHAT PLAQUE IS:
+Plaque is a soft, sticky film of bacteria that builds up on teeth throughout the day. It forms naturally — every mouth contains bacteria, and these bacteria stick to the tooth surface and to each other to form plaque. When your screening report flags plaque on a tooth, it means the photos showed visible accumulation that is more than what regular daily brushing should leave behind.
+
+Plaque starts forming within hours of brushing, which is why brushing twice a day and cleaning between teeth daily is recommended. Left undisturbed, plaque hardens within a couple of days into calculus (tartar), which can no longer be removed with a toothbrush and requires professional cleaning to clear.
+
+PLAQUE IS NOT THE SAME AS CALCULUS (TARTAR):
+Plaque is soft and can be removed by brushing and interdental cleaning. Calculus is hardened plaque that cannot be removed by brushing — only a dentist or dental hygienist can remove it with professional instruments. The longer plaque is left undisturbed, the more of it hardens into calculus.
+
+WHAT THE SCREENING LOOKS FOR:
+A pale yellowish or whitish film along the gum line. A duller, less reflective tooth surface compared to a clean tooth. Visible deposits in the gaps between teeth or where teeth meet the gum. Discoloured patches near the gum margin, particularly on the cheek-side surfaces of back teeth. In more advanced cases, signs of calculus deposits or gum inflammation.
+
+WHY PLAQUE MATTERS:
+Plaque is the root cause of the two most common dental conditions: tooth decay (cavities) and gum disease. Bacteria in plaque produce acids when they encounter sugars from food — those acids erode enamel over time. The same bacteria irritate gum tissue, causing inflammation (gingivitis), bleeding, and eventually gum recession and bone loss if left unaddressed.
+
+Plaque is the most controllable risk factor in oral health. Unlike most dental concerns, plaque responds directly to changes you make in your daily oral care routine.
+
+COMMON CAUSES OF PLAQUE BUILD-UP:
+Brushing technique that misses certain areas — often the back teeth, inside surfaces, and the gum line. Brushing for too short a time (less than two minutes). Skipping or inconsistent cleaning between teeth. Frequent snacking or sugary drinks that give bacteria more fuel. Reduced saliva flow from medication, mouth breathing, or dehydration. Tooth crowding or dental restorations that create hard-to-clean areas.
+
+WHAT TO DO NEXT:
+The severity band on your report — Initial, Moderate, or Advanced — tells you how urgently to act. See the severity-specific chunks for what each band means for you.
+
+--- END CHUNK 012 ---
+
+================================================================================
+--- CHUNK 013 ---
+[CHUNK ID]   report-plaque-initial
+[TOPIC]      Plaque — INITIAL severity: what it means and what to do
+[REPORT SECTION] Findings table — plaque, Initial band
+[KEYWORDS]   initial plaque, early plaque, mild plaque accumulation, initial plaque report, fix plaque at home, initial plaque not serious, brush better plaque, plaque initial severity
+[URGENCY]    No urgent appointment needed — adjust home routine and continue routine recall
+[TRIGGERS]
+  - My report says Initial plaque on a few teeth — what does that mean?
+  - How serious is Initial plaque?
+  - Do I need to see a dentist for Initial plaque?
+  - Can I fix Initial plaque at home?
+  - What changes should I make to my brushing if I have Initial plaque?
+
+CONTENT:
+
+WHAT IT MEANS:
+Your screening has flagged Initial-stage plaque accumulation — the earliest band on Oral Link's severity scale. Visible plaque has been picked up in the photos, but the build-up is still mild and there are no obvious signs of complications such as gum inflammation or hardened calculus deposits.
+
+This is the most favourable plaque category. The screening has surfaced early visible signs before plaque has had time to harden into calculus or cause noticeable gum problems. At this stage the situation is almost entirely under your control through changes to your daily oral care routine.
+
+WHY IT WAS FLAGGED:
+The most likely reasons are: brushing technique missing certain areas (back of the mouth, inside tooth surfaces, or right at the gum line); brushing for too short a time; skipping or inconsistent cleaning between teeth; or recent timing of the photos relative to brushing (plaque re-forms within hours).
+
+Initial plaque does not usually cause symptoms. There may be mild gum redness or occasional bleeding when brushing or flossing, but most people notice nothing different.
+
+WHAT TO DO NEXT:
+1. Continue routine dental check-ups at your normal interval (typically every six months). Mention the screening at your next visit so the dentist or therapist can show you exactly which areas you are missing.
+2. Review your brushing technique. The most effective change is usually angling the brush at about 45 degrees toward the gum line and using small circular or gentle back-and-forth strokes, focusing on each tooth for about 30 seconds. Two full minutes total makes a measurable difference.
+3. Add or improve interdental cleaning if you do not already do this. Floss, interdental brushes, or a water flosser — whichever you will actually use consistently — clears plaque from between teeth where a toothbrush cannot reach.
+4. Consider an electric toothbrush. Oscillating-rotating and sonic powered brushes consistently remove more plaque than manual brushing for most people, particularly in hard-to-reach areas.
+
+WHAT INITIAL PLAQUE DOES NOT MEAN:
+It does not mean you have gum disease, cavities, or any clinical problem requiring treatment. It does not require a special dental appointment outside of your routine recall. It is a "tune-up your home routine" signal, not a "see the dentist now" signal.
+
+--- END CHUNK 013 ---
+
+================================================================================
+--- CHUNK 014 ---
+[CHUNK ID]   report-plaque-moderate
+[TOPIC]      Plaque — MODERATE severity: what it means and what to do
+[REPORT SECTION] Findings table — plaque, Moderate band
+[KEYWORDS]   moderate plaque, moderate plaque report, gum inflammation plaque, gingivitis plaque, calculus moderate plaque, bleeding gums plaque, moderate plaque dentist visit, how soon dentist moderate plaque
+[URGENCY]    Book professional cleaning within 4–6 weeks
+[TRIGGERS]
+  - My report says Moderate plaque — how worried should I be?
+  - How soon should I see a dentist for Moderate plaque?
+  - Why are my gums bleeding when I brush?
+  - Will Moderate plaque cause cavities?
+  - Do I need a special cleaning if my report says Moderate plaque?
+
+CONTENT:
+
+WHAT IT MEANS:
+Your screening has flagged Moderate-stage plaque accumulation. At this stage the build-up is no longer mild — it has been present long enough to be clearly visible in the photographs, and there may be early signs of complications such as gum inflammation or hardened calculus deposits beginning to form.
+
+WHAT YOU MAY SEE AND FEEL:
+Plaque visible along the gum line on multiple teeth — particularly on the cheek-side surfaces of back teeth and the tongue-side surfaces of the lower front teeth. Possible early calculus deposits, especially behind the lower front teeth where saliva pools. Gums that appear redder than normal, may bleed when brushing or flossing, and feel tender in places — this is gingivitis, the early reversible stage of gum disease. A persistent feeling that teeth are not as smooth as they should be after brushing.
+
+WHY IT HAPPENED:
+Moderate plaque reflects a sustained gap between bacterial accumulation and what your routine is removing — not just one missed brushing. Common contributing factors: brushing technique consistently missing the same areas; no regular interdental cleaning; long gaps between professional dental cleanings; a diet with frequent sugar or starch exposures; crowded or rotated teeth creating hard-to-clean areas; reduced saliva flow from medication or other factors.
+
+WHAT TO DO NEXT:
+1. Book a professional cleaning within the next four to six weeks. A dentist or dental hygienist can remove the calculus and disrupted plaque that home tools cannot reach, and identify areas where gum inflammation has started.
+2. Use the visit to get personalised technique advice. Ask the dentist to point out the specific teeth and surfaces where you are missing — far more useful than generic tips.
+3. Upgrade your home routine. If you do not already use interdental cleaning, start. If you brush manually, an electric toothbrush often makes a marked difference. Two minutes of effective brushing twice a day is the minimum target.
+4. Reduce snacking frequency. The bacteria are fed every time you eat or drink something sugary — stretching gaps between meals and avoiding sugary drinks throughout the day reduces how often acid attacks occur.
+5. Watch for bleeding gums. Bleeding when brushing or flossing signals gingivitis. With consistent home care plus the professional cleaning, gingivitis is reversible — usually within two to three weeks.
+
+WHAT MODERATE PLAQUE DOES NOT MEAN:
+It does not mean you have advanced gum disease, periodontitis, or permanent damage. It does not require specialist referral in most cases. It does mean that home care alone is no longer enough — a professional cleaning combined with routine adjustments is the right intervention.
+
+[HUMAN HANDOFF]
+To book a cleaning at an Oral Link partner clinic: +65 8098 6800 | info@orallink.health
+
+--- END CHUNK 014 ---
+
+================================================================================
+--- CHUNK 015 ---
+[CHUNK ID]   report-plaque-advanced
+[TOPIC]      Plaque — ADVANCED severity: what it means and what to do
+[REPORT SECTION] Findings table — plaque, Advanced band
+[KEYWORDS]   advanced plaque, heavy plaque calculus, severe plaque gum disease, advanced plaque gum disease, advanced plaque periodontist, advanced plaque will I lose teeth, advanced plaque treatment, loose teeth plaque, periodontal disease plaque
+[URGENCY]    Book dentist within 1–2 weeks
+[TRIGGERS]
+  - My report says Advanced plaque — does that mean gum disease?
+  - How urgent is Advanced plaque?
+  - Will I lose teeth if I have Advanced plaque?
+  - Do I need a specialist for Advanced plaque?
+  - What treatment will I need for Advanced plaque?
+  - I have very heavy build-up on my teeth — what does that mean?
+
+CONTENT:
+
+WHAT IT MEANS:
+Your screening has flagged Advanced-stage plaque accumulation. At this stage the build-up is heavy and well established, calculus (hardened plaque) is almost certainly present, and there is a meaningful likelihood that gum inflammation or early periodontal disease has developed alongside it. Home care can no longer reverse this on its own — even perfect brushing from today onwards cannot remove existing calculus.
+
+WHAT YOU MAY SEE AND FEEL:
+Heavy visible plaque and calculus along the gum line on multiple teeth. Calculus visible above the gum line as discoloured (yellowish, brownish, or greyish) hard deposits — and likely also below the gum line where it cannot be seen but still damages gum tissue. Red, swollen gums that bleed readily when brushed or flossed. Possible gum recession, exposed root surfaces, or gum tenderness. Bad breath that does not resolve with normal brushing, or a persistent unpleasant taste. In some cases: loose teeth or a feeling that the bite has changed — a sign that periodontal disease may be affecting the supporting bone.
+
+WHAT ADVANCED PLAQUE OFTEN SIGNALS:
+Advanced plaque rarely exists in isolation. It usually coexists with gingivitis and may indicate active periodontitis — chronic gum disease in which the bone and ligament supporting the teeth break down. Other factors that frequently coexist: long-standing absence of professional dental cleanings; smoking, which markedly accelerates gum disease; poorly controlled diabetes, which has a two-way relationship with gum disease; or crowded teeth and restorations where plaque accumulates undisturbed.
+
+WHAT TO DO NEXT:
+1. Book a dental appointment within the next one to two weeks. The dentist needs to assess the gum tissue, measure the depth of any gum pockets, and identify whether scaling alone is sufficient or whether deeper periodontal treatment is needed.
+2. Expect more than a single cleaning visit. A typical course of treatment for Advanced plaque-related gum disease may involve scaling and root planing (deeper cleaning under the gum line), often across two visits, with a follow-up review four to six weeks later to assess gum healing.
+3. Be prepared for a possible periodontist referral. If the screening and clinical examination together suggest the gum disease has progressed beyond what a general dentist normally manages, specialist referral may be recommended.
+4. Maintain very gentle but thorough oral hygiene in the meantime. Use a soft-bristled brush, brush twice a day, clean between teeth daily. Do not be alarmed if gums bleed initially — bleeding usually decreases as gum tissue becomes healthier with consistent care.
+5. Address contributing factors. If you smoke, this is the right moment to discuss stopping with your dentist or doctor. If you have diabetes, ensure it is well controlled — gum disease and blood sugar control are directly linked.
+
+DENTAL EMERGENCY SIGNS:
+If you experience severe pain, swelling affecting breathing or swallowing, or a sudden marked increase in tooth mobility — do not wait for a routine appointment. Seek emergency dental or medical care.
+
+WHAT ADVANCED PLAQUE DOES NOT MEAN:
+Advanced plaque does not automatically mean you will lose teeth. With timely periodontal care, many advanced cases can be stabilised even when gum disease has progressed significantly. It does mean that professional intervention — and likely ongoing periodontal maintenance — is the right path forward.
+
+[HUMAN HANDOFF]
+To book urgent dental care through an Oral Link partner clinic: +65 8098 6800 | info@orallink.health
+Dental emergency: polyclinics (walk-in), NDCS, restructured hospitals | 995 if airway affected
+
+--- END CHUNK 015 ---
+
+================================================================================
+--- CHUNK 016 ---
+[CHUNK ID]   report-missing-tooth
+[TOPIC]      Missing tooth finding — what it means, why replacement matters, options available
+[REPORT SECTION] Findings table — missing tooth
+[KEYWORDS]   missing tooth report, tooth missing oral link, replace missing tooth, missing tooth options, missing molar, what happens if I don't replace tooth, partial denture implant bridge missing tooth, teeth drifting missing tooth
+[URGENCY]    Planned dental visit — no immediate urgency, but earlier is better
+[TRIGGERS]
+  - My report says I have missing teeth — what does that mean?
+  - Do I need to replace a missing tooth?
+  - What are my options for a missing molar?
+  - Why does the screening flag teeth that have been missing for years?
+  - What happens if I don't replace a missing tooth?
+  - Is it important to replace wisdom teeth that were removed?
+  - How long can I leave a missing tooth without replacing it?
+
+CONTENT:
+
+WHAT IT MEANS:
+Your screening has flagged one or more teeth as missing. Unlike most other findings, this one does not have severity bands — a tooth is either present or absent, so the screening reports it as a single state. The screening identifies a missing tooth by comparing your photograph against the expected positions of the 32 adult teeth. If a position is empty, the tooth is flagged.
+
+WHAT THE CAUSE MAY BE:
+A previous extraction (decayed, infected, or unrestorable tooth removed in the past). A tooth lost to trauma. A tooth removed for orthodontic reasons. An electively removed wisdom tooth. A tooth that was congenitally missing — never developed. The screening cannot distinguish between these histories — it can only confirm the position is empty.
+
+WHY MISSING TEETH MATTER:
+Each tooth in the mouth has a job — chewing, supporting the bite, holding the position of neighbouring teeth, and contributing to the appearance of the smile. When a tooth is missing and not replaced, several things can happen:
+
+Adjacent teeth drift: the teeth on either side of the gap can tilt or shift into the empty space over months and years.
+The opposing tooth supererupts: the tooth on the opposite jaw that used to bite against the missing tooth may grow longer because it no longer has anything to bite against.
+Bite changes: as teeth shift, the way the upper and lower jaws meet can change, putting extra stress on remaining teeth or the jaw joints.
+Bone resorption: the bone that used to support the missing tooth gradually shrinks because it is no longer being stimulated by chewing forces. This matters significantly if you ever want to replace the tooth with an implant — less bone means more complex surgery.
+Chewing function declines: several missing teeth, especially molars, makes it harder to chew certain foods comfortably.
+Speech and aesthetics: front-teeth gaps can affect speech and confidence.
+
+These consequences develop slowly. A molar missing for many years may already have caused adjacent teeth to drift — replacing it now is more involved than it would have been at the time of loss. This is one reason the screening surfaces missing teeth even if they have been missing a long time.
+
+REPLACEMENT OPTIONS:
+The Potential Actions table on your report typically suggests one of:
+
+Partial Denture: a removable appliance that fills in one or more missing teeth. Usually the most affordable option and a common starting point for multiple missing teeth.
+Bridge: a fixed (non-removable) replacement that uses the adjacent teeth as anchors.
+Implant: a fixed replacement that uses a titanium post placed in the jawbone to support a single artificial tooth or a row of teeth.
+
+Each option has different costs, durability, requirements (such as adequate jawbone for an implant), and trade-offs.
+
+WHAT TO DO NEXT:
+1. Book a dental appointment to discuss replacement options. The dentist can assess the bone and adjacent teeth, take any X-rays needed, and outline which replacement options are suitable in your specific case.
+2. Consider the time factor. The longer a tooth has been missing, the more the adjacent teeth and bone may have shifted, and the more involved any replacement becomes. Earlier conversations are easier conversations.
+3. Check subsidy and Medisave eligibility. Certain procedures (such as surgical work and some restorations) may be Medisave-claimable; partial dentures may have CHAS subsidies for eligible card holders.
+
+WHAT THIS FINDING DOES NOT MEAN:
+A missing tooth does not mean replacement is mandatory. Some missing teeth — particularly wisdom teeth, or teeth removed for orthodontic spacing — do not need to be replaced. The dentist will help you decide whether replacement is appropriate, what the trade-offs of each option are, and what the cost and time commitment looks like.
+
+[HUMAN HANDOFF]
+To discuss replacement options through an Oral Link partner clinic: +65 8098 6800 | info@orallink.health
+
+--- END CHUNK 016 ---
+
+================================================================================
+--- CHUNK 017 ---
+[CHUNK ID]   report-reading-guide
+[TOPIC]      How to read your Oral Link screening report — a complete overview
+[REPORT SECTION] Entire report
+[KEYWORDS]   how to read oral link report, what is in my report, explain my report, oral link report guide, report sections, dental chart report, findings table, overall risk, potential actions, screening report explained
+[URGENCY]    Informational
+[TRIGGERS]
+  - How do I read my Oral Link report?
+  - What are the different sections of my report?
+  - I don't understand my report — where do I start?
+  - What is the dental chart at the top of my report?
+  - How do I use my report when I see the dentist?
+  - What is the Overall Risk section?
+  - What is the Potential Actions table?
+
+CONTENT:
+
+YOUR ORAL LINK REPORT HAS THREE MAIN SECTIONS:
+
+SECTION 1 — OVERALL RISK (top of the report):
+A single classification — Low, Moderate, or High — that summarises the screening's view of your dental health as a whole, taking all findings together.
+
+Low: no significant concerns visible in the photographs. Continue routine care.
+Moderate: one or more conditions have progressed past the early-warning stage. Plan a dental visit within four to six weeks.
+High: findings warrant prompt dental attention. Book within one to two weeks.
+
+SECTION 2 — DENTAL CHART AND FINDINGS TABLE (middle of the report):
+A visual map of your teeth showing coloured markers on any teeth where a condition was detected, followed by a table listing each finding in detail.
+
+Colour coding on the chart:
+Light blue = Initial severity — early stage, low urgency
+Orange = Moderate severity — progressed, requires planned dental visit
+Red = Advanced severity — well-established, requires prompt dental visit
+
+Each row in the findings table shows:
+The tooth (identified by name and UNS number, e.g. "1st Bicuspid, Tooth 5, Upper Right")
+The finding (e.g. Plaque, Gum Recession, Advanced Cavity, Missing Tooth)
+The severity band (Initial, Moderate, or Advanced — except Missing Tooth, which has no band)
+
+SECTION 3 — POTENTIAL ACTIONS TABLE (end of the report):
+A list of suggested treatments (e.g. Crown, Cleaning, Partial Denture) with a priority label for each:
+High priority (red): act within days to two weeks — delaying risks making things worse
+Medium priority (amber): schedule within weeks to a few months
+Low priority (blue): should be done but no rush — routine scheduling is fine
+
+HOW TO USE THE REPORT AT YOUR DENTAL APPOINTMENT:
+1. Bring the report to the appointment.
+2. Tell the dentist you have had an Oral Link AI screening — hand them the report before the examination begins.
+3. The dentist will use the findings and Potential Actions list as a starting point, then confirm or update them after their own clinical examination.
+4. The report is not a clinical diagnosis — the dentist's in-person examination is the definitive assessment.
+
+KEY THINGS TO REMEMBER:
+Priority is not the same as severity. A High-risk report can contain Low-priority recommendations — because overall risk and per-treatment urgency measure different things.
+Severity is per finding per tooth. The same condition may appear at different severities on different teeth.
+The screening only shows what photographs reveal. Some conditions (interproximal cavities, sub-gingival calculus, conditions between teeth) are only detected by clinical examination and X-rays.
+
+--- END CHUNK 017 ---
+
+================================================================================
+--- CHUNK 018 ---
+[CHUNK ID]   report-urgency-action-map
+[TOPIC]      Quick-reference urgency guide — what to do based on your report findings
+[REPORT SECTION] All report findings — action guide
+[KEYWORDS]   urgency report oral link, when to book dentist, action plan dental screening, how quickly act on report, what to do after screening, next steps oral link report, report findings action
+[URGENCY]    See content — varies by finding
+[TRIGGERS]
+  - What should I do after getting my Oral Link report?
+  - How quickly do I need to see a dentist?
+  - My report has mixed findings — what do I prioritise?
+  - I have Initial findings on most teeth but one Advanced — which is more urgent?
+  - What is the action plan after my screening?
+
+CONTENT:
+
+ACT IMMEDIATELY — same day or call 995:
+Severe toothache not controlled by over-the-counter pain relief + swelling.
+Facial swelling affecting breathing or swallowing.
+Signs of a spreading dental abscess (swelling, fever, feeling very unwell).
+Knocked-out permanent tooth (replant or get to a dentist within 30 minutes).
+
+BOOK WITHIN 1–2 WEEKS:
+Overall Risk: High on your report.
+Advanced Cavity on any tooth.
+Advanced Plaque accumulation.
+Advanced Gum Recession on any tooth.
+Any High-priority item in the Potential Actions table.
+Dental pain, sensitivity, or symptoms that are new and worsening.
+
+BOOK WITHIN 4–6 WEEKS:
+Overall Risk: Moderate on your report.
+Moderate Plaque accumulation on multiple teeth.
+Moderate Gum Recession on any tooth.
+Any Medium-priority item in the Potential Actions table.
+
+CONTINUE AT ROUTINE RECALL (next scheduled check-up, within 6 months):
+Overall Risk: Low on your report.
+Initial Plaque on one or a few teeth.
+Initial Gum Recession on one or a few teeth.
+Low-priority items in the Potential Actions table.
+Missing tooth from a wisdom tooth or orthodontic extraction — discuss at next visit.
+
+IN ALL CASES:
+Bring your Oral Link screening report and the Potential Actions list to your dental appointment.
+Tell the dentist you have had an Oral Link AI screening — the report gives them a useful starting point.
+The dentist's in-person examination is the definitive step — the screening identifies what to look at, the dentist determines what it actually is and what to do.
+
+WHEN IN DOUBT:
+If you are unsure how urgent your findings are, contact Oral Link for guidance:
+  Phone: +65 8098 6800 | Email: info@orallink.health
+
+--- END CHUNK 018 ---
+
+================================================================================
+END OF ORAL LINK SCREENING REPORT INTERPRETATION RAG KNOWLEDGE BASE
+Total chunks: 18
+
+CHUNK INDEX BY CATEGORY:
+
+OVERALL RISK CLASSIFICATION (3 chunks):
+  001 — Overall Risk: HIGH
+  002 — Overall Risk: MODERATE
+  003 — Overall Risk: LOW
+
+REPORT STRUCTURE AND LABELS (3 chunks):
+  004 — Priority labels in the Potential Actions table (High / Medium / Low)
+  005 — Severity bands (Initial / Moderate / Advanced) and colour coding
+  006 — Tooth numbering — Universal Numbering System (UNS) guide
+
+CAVITY FINDING (1 chunk):
+  007 — Advanced Cavity — what it means and what to do
+
+GUM RECESSION FINDINGS (4 chunks):
+  008 — Gum recession — overview and causes
+  009 — Gum recession — INITIAL severity
+  010 — Gum recession — MODERATE severity
+  011 — Gum recession — ADVANCED severity
+
+PLAQUE FINDINGS (4 chunks):
+  012 — Plaque — overview and causes
+  013 — Plaque — INITIAL severity
+  014 — Plaque — MODERATE severity
+  015 — Plaque — ADVANCED severity
+
+MISSING TOOTH FINDING (1 chunk):
+  016 — Missing tooth — what it means and replacement options
+
+REPORT NAVIGATION (2 chunks):
+  017 — How to read your Oral Link report — complete overview
+  018 — Quick-reference urgency action map
+
+URGENCY SUMMARY TABLE (natural language):
+  Advanced Cavity → book within 1–2 weeks
+  Advanced Plaque → book within 1–2 weeks
+  Advanced Gum Recession → book within 1–2 weeks
+  Overall Risk HIGH → book within 1–2 weeks
+  Moderate Plaque → book within 4–6 weeks
+  Moderate Gum Recession → book within 4–6 weeks
+  Overall Risk MODERATE → book within 4–6 weeks
+  Initial Plaque → continue routine recall
+  Initial Gum Recession → routine check-up within 3–6 months
+  Overall Risk LOW → continue routine recall
+  Missing tooth → planned dental visit, no urgency
+
+ALL HUMAN HANDOFF: +65 8098 6800 | info@orallink.health | https://orallink.health/#contact-us
+DENTAL EMERGENCY: polyclinics (walk-in) | NDCS | restructured hospitals | Call 995 (life-threatening)
+================================================================================

@@ -1,0 +1,28 @@
+services:
+  app:
+    build: .
+    expose:
+      - "8000"
+    environment:
+      # From inside a container, Docker Model Runner is reached via this
+      # special DNS name rather than localhost:12434.
+      - DMR_BASE_URL=http://model-runner.docker.internal/engines/v1
+      - DMR_MODEL=docker.io/ai/ministral3:8B-Q4_K_M
+      - RAG_TOP_K=4
+      - RAG_MAX_TOKENS=800
+      - REASONING_EFFORT=low
+    volumes:
+      # Mount the knowledge base and frontend read-only so edits are picked
+      # up without rebuilding the image (use POST /api/reload after editing
+      # data files; static/index.html changes just need a browser refresh).
+      - ./backend/data/sample:/app/data/sample:ro
+      - ./backend/static:/app/static:ro
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app

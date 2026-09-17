@@ -1,0 +1,1335 @@
+================================================================================
+DENTAL COSTS AND SUBSIDIES IN SINGAPORE — RAG KNOWLEDGE BASE
+Clinic Chatbot Knowledge File
+Source Authority: Ministry of Health Singapore; CPF Board; CHAS; AIC
+Data effective: October 2025 (CHAS/PG/MG enhanced rates); 2024 (hospital averages)
+GST rate: 9% (current as of 1 January 2024)
+Audience: General dental patients (laypersons) in Singapore
+================================================================================
+
+HOW TO USE THIS FILE
+--------------------
+Each section between "--- CHUNK ---" dividers is one self-contained retrieval unit.
+Tables appear in TWO formats within each chunk:
+  (A) NATURAL LANGUAGE ROWS — one sentence per data point, for dense vector retrieval
+  (B) CLEAN MARKDOWN TABLE — for LLM reading and structured answer generation
+All cross-references to other documents have been removed. Each chunk is fully
+self-contained. Attach [CHUNK ID], [TOPIC], and [KEYWORDS] as metadata fields.
+
+================================================================================
+--- CHUNK 001 ---
+[CHUNK ID]   cost-overview-singapore-dental
+[TOPIC]      How dental costs work in Singapore — care settings, fees, GST
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   dental cost Singapore, how much dental Singapore, MOH fee benchmark, GST dental, dental fee explained, private clinic cost, what is included dental fee
+[TRIGGERS]
+  - How much does dental treatment cost in Singapore?
+  - Why is the cost different at different clinics?
+  - Does the dental fee include GST?
+  - What does a dental fee usually include?
+  - How do I plan for dental treatment costs?
+  - Where can I see the MOH dental fee benchmarks?
+
+CONTENT:
+
+Singapore has four dental care settings, each with different pricing and subsidy access.
+
+Private dental clinics handle about 80 percent of dental care in Singapore. Fees are set by each clinic and vary. The Ministry of Health (MOH) publishes fee benchmarks as a reference for what routine cases cost in primary care private clinics. These benchmarks cover 18 common procedures and are a reference, not a price cap.
+
+CHAS clinics are private dental clinics that participate in the Community Health Assist Scheme. Patients with CHAS Blue, CHAS Orange, Pioneer Generation (PG), or Merdeka Generation (MG) cards receive subsidies on the 18 specified procedures at these clinics.
+
+Polyclinics are government-run clinics that provide subsidised dental services to Singapore Citizens, with deeper discounts for children under 18 and elderly aged 65 and above. Permanent Residents pay an intermediate rate; non-residents pay full rates.
+
+Restructured hospitals and the National Dental Centre Singapore (NDCS) handle complex or specialist dental care. Subsidised access is available for Singapore Citizens with a referral letter dated before the consultation.
+
+HOW THE MOH FEE BENCHMARKS WORK:
+In August 2025, the Dental Fee Benchmarking Advisory Committee published recommended fee benchmarks for 18 common dental procedures. MOH accepted these on 1 September 2025. From 1 October 2025, CHAS dental clinics are required to display these benchmarks alongside their own price lists. The benchmarks cover routine cases in private primary care clinics, exclude GST, and are a reference — not a strict cap.
+
+WHAT A QUOTED FEE USUALLY INCLUDES AND EXCLUDES:
+A quoted procedure fee at a private clinic typically covers the procedure itself and materials directly used. It does not usually include the consultation fee, X-rays, laboratory work for crowns or dentures, follow-up visits, or re-treatment if the procedure fails. Always ask the clinic what is and is not included before agreeing to a quote.
+
+GST HANDLING:
+GST in Singapore is currently 9 percent. At private clinics, fees are usually quoted exclusive of GST — check whether GST is added at billing. At polyclinics and restructured hospitals, displayed fees for non-subsidised patients are inclusive of GST; GST is absorbed by the government for subsidised Singapore Citizen and Permanent Resident patients.
+
+[RELATED CHUNKS]  cost-care-settings-comparison | cost-cleaning | cost-consultation | cost-crown | cost-extraction | cost-filling | cost-implant | subsidy-chas-blue | subsidy-chas-orange | subsidy-pioneer-generation | subsidy-merdeka-generation | subsidy-medisave-dental | subsidy-flexi-medisave
+
+PROVIDER CONTEXT NOTE:
+The "restructured hospitals and NDCS" category referenced in this file includes the following institutions that publish dental services: National Dental Centre Singapore (NDCS), National University Centre for Oral Health Singapore (NUCOHS — also written as NUCOH in fee tables), Alexandra Hospital, Changi General Hospital, Khoo Teck Puat Hospital, KK Women's and Children's Hospital, Ng Teng Fong General Hospital (NTFGH), Sengkang General Hospital, and Tan Tock Seng Hospital. NDCS and NUCOHS are the two National Specialty Dental Centres (NSCs) designated by MOH for specialist dental care. The remaining institutions are restructured hospitals with dental departments. Polyclinics are operated by three clusters: SingHealth Polyclinics (central, east, south), NHG Polyclinics (north), and National University Polyclinics / NUHS Polyclinics (west). Fee figures in this file are sourced from SingHealth Polyclinics and are representative; NHG and NUHS polyclinic rates are similar with cluster-specific variations.
+--- END CHUNK 001 ---
+
+================================================================================
+--- CHUNK 002 ---
+[CHUNK ID]   cost-care-settings-comparison
+[TOPIC]      Comparing the four dental care settings in Singapore — cost, complexity, subsidies
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   private clinic vs polyclinic, where to get dental treatment Singapore, CHAS clinic vs private, restructured hospital dental, cheapest dental Singapore, dental care setting comparison, where to go for implant Singapore, do I need referral dentist
+[TRIGGERS]
+  - Where should I get my dental treatment done?
+  - Should I go to a private clinic or a polyclinic?
+  - What is the difference between a CHAS clinic and a regular private clinic?
+  - Do I need a referral to see a hospital dentist?
+  - Where is dental treatment cheapest in Singapore?
+  - Where do I go for an implant in Singapore?
+
+CONTENT:
+
+Singapore has four dental care settings. Choosing the right one depends on the treatment needed, subsidy eligibility, and whether a referral is required.
+
+PRIVATE DENTAL CLINICS:
+Private clinics handle about 80 percent of dental care in Singapore. They suit routine and typical cases, walk-in access, choice of dentist, and evening or weekend appointments. Fees are referenced by the MOH 2025 benchmarks for 18 common procedures. No subsidy applies unless the clinic is also a CHAS-participating clinic. No referral is required.
+
+CHAS CLINICS:
+CHAS clinics are private dental clinics that have signed up to the Community Health Assist Scheme. The dentists are the same as private clinics; the difference is the subsidy infrastructure. They suit Singapore Citizens with CHAS Blue, CHAS Orange, Pioneer Generation, or Merdeka Generation cards. The same MOH benchmarks apply; the subsidy is deducted from the bill. From 1 October 2025, CHAS clinics must display MOH benchmarks alongside their own price lists. No referral required. Participating clinics can be found at chas.sg.
+
+POLYCLINICS:
+Polyclinics are government-run primary care clinics operated by NHG Polyclinics (north), SingHealth Polyclinics (central, east, south), and NUHS Polyclinics (west). They handle routine dental care: examinations, cleanings, fillings, extractions, and X-rays. Complex or specialist work is referred to a restructured hospital. Subsidised rates apply for Singapore Citizens; deeper subsidies for children under 18 and elderly aged 65 and above. Permanent Residents pay an intermediate rate. CHAS and Medisave are generally not used at polyclinics for routine dental procedures. No referral required for routine work.
+
+RESTRUCTURED HOSPITALS AND NDCS:
+These institutions handle specialist procedures: root canal on molars, complex crowns, implants, full dentures, impacted wisdom tooth surgery, orthodontics, periodontal surgery, and oral and maxillofacial surgery. Institutions include Alexandra Hospital, Changi General Hospital, Khoo Teck Puat Hospital, KK Women's and Children's Hospital, National Dental Centre Singapore (NDCS), National University Centre for Oral Health Singapore (NUCOH), Ng Teng Fong General Hospital, Sengkang General Hospital, and Tan Tock Seng Hospital. A referral letter is required for subsidised access. Walk-in is possible at private (non-subsidised) rates. Medisave can be used for eligible surgical procedures.
+
+SETTING COMPARISON — NATURAL LANGUAGE FORMAT:
+A private clinic provides routine work and convenience with no subsidy unless CHAS, and no referral needed.
+A CHAS clinic provides routine work for CHAS, PG, or MG cardholders with subsidy on 18 procedures, and no referral needed.
+A polyclinic provides routine work at the lowest cost for citizens with built-in subsidy (deeper for children and elderly), and no referral needed.
+A restructured hospital or NDCS handles complex, surgical, or specialist care with subsidies available when a referral letter is provided.
+
+SETTING COMPARISON — MARKDOWN TABLE FORMAT:
+| Setting                        | Best For                                      | Subsidy Available?                                 | Referral Needed?          |
+|---                             |---                                            |---                                                 |---                        |
+| Private clinic                 | Routine work, convenience, choice of dentist  | None unless also a CHAS clinic                     | No                        |
+| CHAS clinic                    | Routine work for CHAS / PG / MG cardholders   | Yes — 18 procedures, caps vary by card type        | No                        |
+| Polyclinic                     | Routine work, lowest cost for citizens        | Built-in for Singapore Citizens; deeper for child/elderly | No                   |
+| Restructured hospital / NDCS   | Complex, surgical, specialist procedures      | Yes, with referral letter; means-tested            | Yes, for subsidised rates |
+
+PROVIDER CONTEXT — POLYCLINICS:
+Polyclinics handle basic dental care: examination, scaling and polishing, simple fillings, simple extractions, X-rays, simple root canal (front teeth only), simple crowns, simple dentures (up to 5 teeth), denture repair, and simple pulpectomy. Complex cases are referred onward. No referral is needed to visit a polyclinic — patients self-book via HealthHub (eservices.healthhub.sg/appointments) or by phone. Dental services at polyclinics are by appointment only; emergency cases are seen same day. Median waiting time for a non-emergency polyclinic dental appointment is approximately 3 months (MOH, January 2025).
+
+PROVIDER CONTEXT — NDCS (National Dental Centre Singapore):
+NDCS is Singapore's flagship National Specialty Dental Centre under SingHealth, located at the Singapore General Hospital campus. It provides all 8 MOH-recognised dental specialties: Endodontics, Oral and Maxillofacial Surgery, Orthodontics, Paediatric Dentistry, Periodontics, Prosthodontics, Dental Public Health, and Special Care Dentistry. It handles complex and specialist cases referred from polyclinics and CHAS clinics. A referral letter is required for subsidised rates. Private patients (no referral) are seen at full private rates. Median waiting time for a non-emergency first appointment at NDCS is approximately 1 month (33 days) (MOH). Emergency dental services are available on the same day.
+
+PROVIDER CONTEXT — NUCOHS (National University Centre for Oral Health Singapore):
+NUCOHS is the second National Specialty Dental Centre, under NUHS. It operates from three locations: main campus at 9 Lower Kent Ridge Road (co-located with NUS Faculty of Dentistry), NUCOHS Dental Clinic @ Ng Teng Fong General Hospital (Jurong East), and NUCOHS Dental Clinic @ Alexandra Hospital. It provides all 8 dental specialties plus unique multidisciplinary clinics including a Dental Sleep Medicine Clinic and an Orofacial Pain Clinic. All patients are registered as private by default; only those referred by a polyclinic or CHAS clinic receive subsidised rates. Referred patients use NUHS App or email NUHS_Dental@nuhs.edu.sg for appointments.
+
+PROVIDER CONTEXT — RESTRUCTURED HOSPITAL DENTAL DEPARTMENTS:
+Hospital dental departments (e.g., Ng Teng Fong General Hospital Division of Dentistry, Tan Tock Seng Hospital, Changi General Hospital) provide the full spectrum of general and specialist dental care, including inpatient dental management. They accept referrals from polyclinics, other hospitals, the Singapore Armed Forces, schools' dental services, and private practitioners. A referral from a polyclinic or public hospital is required for subsidised patient classification. Without a referral, the patient is classified as a private patient. The fee tables in this file labelled "2024 average fees, non-subsidised patients" reflect private patient rates at these institutions; subsidised rates for referred Singapore Citizens and PRs are substantially lower.
+
+COST PATTERNS ACROSS SETTINGS:
+A routine cleaning (scaling and polishing) is almost always cheapest at a polyclinic. A CHAS clinic with subsidy can also be very affordable. The MOH benchmark for private scaling is S$35–S$60 and polishing is S$26–S$38, excluding GST.
+
+A simple filling is similarly cheaper at a polyclinic. The MOH benchmark for a private simple filling is S$65–S$160 and complex filling is S$80–S$180, excluding GST.
+
+A permanent crown typically costs more at a restructured hospital than at a private clinic for comparable cases. The MOH benchmark for a private permanent crown is S$750–S$1,400. Restructured hospital averages range from approximately S$804 to S$1,491 per unit before subsidy.
+
+A dental implant is not typically cheap anywhere. Restructured hospital averages range from approximately S$4,539 to S$6,600 per unit (implant plus crown). Medisave can be used for the surgical portion.
+
+--- END CHUNK 002 ---
+
+================================================================================
+--- CHUNK 003 ---
+[CHUNK ID]   cost-consultation
+[TOPIC]      Dental consultation cost — private clinics, NDCS, polyclinics, and CHAS subsidy
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   dental consultation cost, how much dental check-up Singapore, NDCS consultation fee, polyclinic dental examination fee, CHAS consultation subsidy, consultation separate from procedure
+[TRIGGERS]
+  - How much does a dental consultation cost?
+  - Is the consultation fee included in the procedure fee?
+  - How much is a consultation at NDCS?
+  - Does CHAS cover dental consultation?
+  - Why is the consultation fee separate from the treatment fee?
+  - How much does a dental check-up cost at a polyclinic?
+
+CONTENT:
+
+A dental consultation is the first appointment where the dentist examines your teeth and gums, takes any X-rays needed, and proposes a treatment plan. It is almost always billed separately from the procedure — even if a procedure is done in the same visit, the consultation has its own fee.
+
+PRIVATE CLINICS — MOH 2025 FEE BENCHMARK (excluding GST):
+The MOH reference range for a routine consultation at a private primary care clinic is S$21 to S$31. Specialist consultations (periodontics, orthodontics, oral surgery) typically fall above this range.
+
+In natural language: A consultation at a typical private dental clinic in Singapore costs S$21 to S$31 before GST, per the MOH 2025 benchmark. This is a reference range, not a price cap.
+
+NATIONAL DENTAL CENTRE SINGAPORE (NDCS) — PRIVATE (NON-SUBSIDISED) PATIENTS:
+NDCS charges for consultation depend on clinician rank and visit type. A first visit with a Senior Consultant costs S$186. A first visit with a Consultant costs S$164. A first visit with an Associate Consultant costs S$142. Repeat visits with any rank cost S$81. A sterile supplies fee of S$17 to S$18 applies at each visit as a separate line item. Private prices include GST.
+
+NDCS consultation fees — natural language per row:
+First visit with Senior Consultant at NDCS (private rate) costs S$186 including GST.
+First visit with Consultant at NDCS (private rate) costs S$164 including GST.
+First visit with Associate Consultant at NDCS (private rate) costs S$142 including GST.
+Repeat visit at NDCS (private rate) costs S$81 regardless of clinician rank.
+A sterile supplies fee of S$17 to S$18 is charged separately at each NDCS visit.
+
+NDCS consultation fees — markdown table:
+| Visit Type   | Senior Consultant | Consultant | Associate Consultant |
+|---           |---                |---         |---                   |
+| First Visit  | S$186             | S$164      | S$142                |
+| Repeat Visit | S$81              | S$81       | S$81                 |
+(Private rates; include GST. Sterile supplies S$17–S$18 extra per visit.)
+
+NDCS — SUBSIDISED PATIENTS (Singapore Citizens with referral letter; GST absorbed by Government):
+A first visit costs S$33 to S$78. A repeat visit costs S$21 to S$49. Treatment, X-rays, and lab investigations are billed separately from the consultation.
+
+POLYCLINICS — SINGHEALTH POLYCLINICS (figures inclusive of GST; subsidised rates have GST absorbed by Government):
+A Singapore Citizen pays S$21.60 to S$38.70 for an examination or review. A Singapore Citizen who is a child under 18 or elderly aged 65 and above pays S$11.10 to S$20.10. A Permanent Resident pays S$34.00 to S$60.30. A non-resident pays S$57.01 to S$99.95.
+
+SingHealth Polyclinic consultation fees — natural language per row:
+A Singapore Citizen pays S$21.60 to S$38.70 for a dental examination at a SingHealth Polyclinic (GST inclusive; subsidised rate has GST absorbed).
+A Singapore Citizen child under 18 or elderly aged 65 and above pays S$11.10 to S$20.10 (GST inclusive; subsidised rate has GST absorbed).
+A Permanent Resident pays S$34.00 to S$60.30 for a dental examination at a SingHealth Polyclinic.
+A non-resident pays S$57.01 to S$99.95 for a dental examination at a SingHealth Polyclinic.
+
+SingHealth Polyclinic consultation fees — markdown table:
+| Patient Category                                       | Examination / Review Fee |
+|---                                                     |---                       |
+| Singapore Citizen                                      | S$21.60 – S$38.70        |
+| Singapore Citizen (child <18 or elderly 65+)           | S$11.10 – S$20.10        |
+| Permanent Resident                                     | S$34.00 – S$60.30        |
+| Non-Resident                                           | S$57.01 – S$99.95        |
+(Inclusive of GST. Subsidised SC and PR rates have GST absorbed by Government.)
+
+CHAS SUBSIDY FOR CONSULTATION (effective 1 October 2025):
+A Pioneer Generation (PG) cardholder receives up to S$30.50 subsidy on consultation. A Merdeka Generation (MG) cardholder receives up to S$25.50. A CHAS Blue cardholder receives up to S$20.50. A CHAS Orange cardholder receives up to S$13.50. CHAS Orange holders gained consultation subsidy access from 1 October 2025 — this was not available before that date.
+
+CHAS consultation subsidies — natural language per row:
+Pioneer Generation cardholders receive a maximum subsidy of S$30.50 per consultation claim at a CHAS dental clinic.
+Merdeka Generation cardholders receive a maximum subsidy of S$25.50 per consultation claim.
+CHAS Blue cardholders receive a maximum subsidy of S$20.50 per consultation claim.
+CHAS Orange cardholders receive a maximum subsidy of S$13.50 per consultation claim (new from 1 October 2025).
+
+CHAS consultation subsidies — markdown table:
+| Card Type              | Max Consultation Subsidy (S$) |
+|---                     |---                            |
+| Pioneer Generation     | 30.50                         |
+| Merdeka Generation     | 25.50                         |
+| CHAS Blue              | 20.50                         |
+| CHAS Orange            | 13.50                         |
+
+WHAT IS NOT INCLUDED IN THE CONSULTATION FEE:
+A consultation fee does not include X-rays taken during the visit, cleaning or any procedure performed during the visit, a sterile supplies fee at hospital settings, or specialist referral if recommended.
+
+WHO PROVIDES CONSULTATIONS AT EACH SETTING:
+At polyclinics, consultations are conducted by registered dentists and oral health therapists (OHTs). OHTs are trained and supervised health professionals who assist with basic dental procedures. Polyclinic dental consultations are by appointment only. For a new consultation at a polyclinic, the patient does not need a referral and can self-book via HealthHub.
+At CHAS dental clinics (private clinics in the CHAS scheme), consultations are conducted by registered dentists. No referral is needed. CHAS subsidy applies to the consultation fee for eligible cardholders.
+At NDCS, consultations are conducted by dental specialists and specialist trainees (residents), supervised by senior clinicians. Patients requiring subsidised access must present a referral letter from a polyclinic or CHAS clinic. Private patients (without referral) pay the private rates listed in this chunk.
+At NUCOHS, the same specialist-level consultation applies. All patients are treated as private by default unless referred from a polyclinic or CHAS clinic. NUCOHS is contactable at +65 6716 2233 or NUHS_Dental@nuhs.edu.sg for appointment queries.
+--- END CHUNK 003 ---
+
+================================================================================
+--- CHUNK 004 ---
+[CHUNK ID]   cost-cleaning
+[TOPIC]      Dental cleaning cost — scaling and polishing — private, polyclinic, and CHAS subsidy
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   scaling polishing cost, dental cleaning Singapore, how much dental cleaning, polyclinic cleaning fee, CHAS cleaning subsidy, scaling cost, polishing cost, MOH cleaning benchmark
+[TRIGGERS]
+  - How much does scaling and polishing cost?
+  - How much is dental cleaning in Singapore?
+  - Is dental cleaning subsidised under CHAS?
+  - How much does a polyclinic charge for cleaning?
+  - What is the cost difference between private clinic and polyclinic for cleaning?
+  - Will Medisave cover dental cleaning?
+
+CONTENT:
+
+Professional dental cleaning combines scaling (removal of plaque and calculus from tooth surfaces, particularly at and below the gum line) and polishing (smoothing tooth surfaces and removing surface stains). They are usually billed as separate line items.
+
+PRIVATE CLINICS — MOH 2025 FEE BENCHMARK (excluding GST):
+The MOH reference range for scaling at a private primary care clinic is S$35 to S$60. For polishing it is S$26 to S$38. A combined scaling and polishing visit at a private clinic therefore typically falls in the S$61 to S$98 range before GST, before any consultation fee, and before any X-rays. The benchmark is a reference, not a strict cap. Fees may be higher for heavy calculus build-up, gum disease, or complicating factors.
+
+Private clinic cleaning fees — natural language:
+Scaling at a private clinic costs S$35 to S$60 before GST, per MOH 2025 benchmark.
+Polishing at a private clinic costs S$26 to S$38 before GST, per MOH 2025 benchmark.
+A combined scaling and polishing visit at a private clinic typically costs S$61 to S$98 before GST and before the consultation fee.
+
+Private clinic cleaning fees — markdown table:
+| Procedure | Lower Bound (S$) | Upper Bound (S$) |
+|---        |---               |---               |
+| Scaling   | 35               | 60               |
+| Polishing | 26               | 38               |
+(Excluding GST. MOH 2025 benchmark — reference range for private primary care.)
+
+POLYCLINICS — SINGHEALTH POLYCLINICS (figures inclusive of GST; subsidised rates have GST absorbed by Government):
+A Singapore Citizen pays S$52.60 to S$89.20 for scaling and polishing combined. A Singapore Citizen who is a child under 18 or elderly aged 65 and above pays S$26.20 to S$44.60. A Permanent Resident pays S$79.60 to S$133.30. A non-resident pays S$148.24 to S$276.75. NHG Polyclinics and NUHS Polyclinics publish similar figures with cluster-specific variations.
+
+SingHealth Polyclinic cleaning fees — natural language per row:
+A Singapore Citizen pays S$52.60 to S$89.20 for scaling and polishing at a SingHealth Polyclinic (GST inclusive; subsidised rate has GST absorbed).
+A Singapore Citizen child under 18 or elderly aged 65 and above pays S$26.20 to S$44.60 for scaling and polishing (GST inclusive; subsidised rate has GST absorbed).
+A Permanent Resident pays S$79.60 to S$133.30 for scaling and polishing at a SingHealth Polyclinic.
+A non-resident pays S$148.24 to S$276.75 for scaling and polishing at a SingHealth Polyclinic.
+
+SingHealth Polyclinic cleaning fees — markdown table:
+| Patient Category                                     | Scaling and Polishing    |
+|---                                                   |---                       |
+| Singapore Citizen                                    | S$52.60 – S$89.20        |
+| Singapore Citizen (child <18 or elderly 65+)         | S$26.20 – S$44.60        |
+| Permanent Resident                                   | S$79.60 – S$133.30       |
+| Non-Resident                                         | S$148.24 – S$276.75      |
+(Inclusive of GST. Subsidised SC and PR rates have GST absorbed by Government.)
+
+CHAS SUBSIDY FOR CLEANING (effective 1 October 2025):
+CHAS Orange holders gained subsidy access for scaling and polishing from 1 October 2025 — this was a new addition. Subsidy is per procedure, not per combined visit.
+
+CHAS cleaning subsidies — natural language per row:
+Pioneer Generation cardholders receive a maximum subsidy of S$30.50 per polishing claim and S$40.00 per scaling claim at a CHAS dental clinic.
+Merdeka Generation cardholders receive a maximum subsidy of S$25.50 per polishing claim and S$35.00 per scaling claim.
+CHAS Blue cardholders receive a maximum subsidy of S$20.50 per polishing claim and S$30.00 per scaling claim.
+CHAS Orange cardholders receive a maximum subsidy of S$13.50 per polishing claim and S$20.00 per scaling claim (new from 1 October 2025).
+
+CHAS cleaning subsidies — markdown table:
+| Card Type          | Max Polishing Subsidy (S$) | Max Scaling Subsidy (S$) |
+|---                 |---                         |---                       |
+| Pioneer Generation | 30.50                      | 40.00                    |
+| Merdeka Generation | 25.50                      | 35.00                    |
+| CHAS Blue          | 20.50                      | 30.00                    |
+| CHAS Orange        | 13.50                      | 20.00                    |
+
+MEDISAVE: Medisave does not cover routine dental cleaning. Scaling and polishing are not surgical procedures and have no TOSP code.
+
+WHAT IS TYPICALLY NOT INCLUDED IN A CLEANING FEE:
+A scaling and polishing fee does not automatically include the consultation fee for the visit, X-rays if taken, or topical fluoride application (often offered as an add-on).
+
+WHEN DEEPER CLEANING IS NEEDED:
+If moderate or advanced gum disease is present, the dentist may recommend scaling and root planing (sometimes called deep cleaning), which goes below the gum line into periodontal pockets. This is a separate procedure not covered under the standard CHAS scaling subsidy and is typically performed across two or more visits.
+
+WHO PROVIDES SCALING AND POLISHING AT EACH SETTING:
+At polyclinics, scaling and polishing is provided by dentists and oral health therapists (OHTs). It is a standard polyclinic dental service. No referral is needed.
+At CHAS dental clinics, scaling and polishing is a routine service. CHAS subsidy applies per procedure.
+At NDCS and NUCOHS (National Specialty Dental Centres), routine scaling and polishing is not the primary focus. Oral health therapists at NDCS perform scaling and polishing for patients referred by specialists within NDCS (e.g. for periodontal or orthodontic cases). Patients needing only routine cleaning are better served at polyclinics or CHAS clinics.
+--- END CHUNK 004 ---
+
+================================================================================
+--- CHUNK 005 ---
+[CHUNK ID]   cost-xray
+[TOPIC]      Dental X-ray cost — types, private clinics, polyclinics, and CHAS subsidy
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   dental X-ray cost, OPG cost, panoramic X-ray Singapore, bitewing X-ray cost, periapical X-ray, CHAS X-ray subsidy, polyclinic X-ray fee
+[TRIGGERS]
+  - How much is a dental X-ray?
+  - How much does a panoramic X-ray cost?
+  - What is an OPG?
+  - Will CHAS cover my dental X-ray?
+  - How much does a dental X-ray cost at a polyclinic?
+
+CONTENT:
+
+Dental X-rays come in several types:
+Periapical X-rays show single-tooth detail including the root and surrounding bone.
+Bitewing X-rays image back teeth on both arches in one image and are useful for spotting cavities between teeth.
+Occlusal X-rays provide a broader view of the floor of the mouth or palate.
+Orthopantomogram (OPG or panoramic X-ray) provides a full-mouth single image and is standard for treatment planning, wisdom tooth assessment, and implant planning.
+
+PRIVATE CLINICS — MOH 2025 FEE BENCHMARK (excluding GST):
+A periapical, bitewing, or occlusal X-ray costs S$16 to S$33 before GST. An OPG (panoramic X-ray) costs S$65 to S$104 before GST.
+
+Private clinic X-ray fees — natural language per row:
+A periapical, bitewing, or occlusal X-ray at a private dental clinic costs S$16 to S$33 before GST, per MOH 2025 benchmark.
+An OPG (panoramic X-ray) at a private dental clinic costs S$65 to S$104 before GST, per MOH 2025 benchmark.
+
+Private clinic X-ray fees — markdown table:
+| X-Ray Type                             | Lower Bound (S$) | Upper Bound (S$) |
+|---                                     |---               |---               |
+| Periapical, Bitewing, or Occlusal      | 16               | 33               |
+| OPG / Orthopantomogram (panoramic)     | 65               | 104              |
+(Excluding GST. MOH 2025 benchmark — reference range for private primary care.)
+
+POLYCLINICS — SINGHEALTH POLYCLINICS (figures inclusive of GST; subsidised rates have GST absorbed by Government):
+A Singapore Citizen pays S$16.00 to S$40.50 per X-ray. A Singapore Citizen child under 18 or elderly aged 65 and above pays S$8.10 to S$40.50. A Permanent Resident pays S$24.20 to S$42.90. A non-resident pays S$48.18 to S$60.28.
+
+SingHealth Polyclinic X-ray fees — natural language per row:
+A Singapore Citizen pays S$16.00 to S$40.50 per X-ray at a SingHealth Polyclinic (GST inclusive; subsidised rate has GST absorbed).
+A Singapore Citizen child under 18 or elderly aged 65 and above pays S$8.10 to S$40.50 per X-ray (GST inclusive).
+A Permanent Resident pays S$24.20 to S$42.90 per X-ray at a SingHealth Polyclinic.
+A non-resident pays S$48.18 to S$60.28 per X-ray at a SingHealth Polyclinic.
+
+SingHealth Polyclinic X-ray fees — markdown table:
+| Patient Category                                     | X-Ray Fee                |
+|---                                                   |---                       |
+| Singapore Citizen                                    | S$16.00 – S$40.50        |
+| Singapore Citizen (child <18 or elderly 65+)         | S$8.10 – S$40.50         |
+| Permanent Resident                                   | S$24.20 – S$42.90        |
+| Non-Resident                                         | S$48.18 – S$60.28        |
+(Inclusive of GST. Subsidised rates have GST absorbed by Government.)
+
+CHAS SUBSIDY FOR X-RAYS (effective 1 October 2025):
+CHAS Orange holders gained X-ray subsidy access from 1 October 2025 — this was not available before that date.
+
+CHAS X-ray subsidies — natural language per row:
+Pioneer Generation cardholders receive a maximum subsidy of S$21.00 per X-ray claim at a CHAS dental clinic.
+Merdeka Generation cardholders receive a maximum subsidy of S$16.00 per X-ray claim.
+CHAS Blue cardholders receive a maximum subsidy of S$11.00 per X-ray claim.
+CHAS Orange cardholders receive a maximum subsidy of S$7.50 per X-ray claim (new from 1 October 2025).
+
+CHAS X-ray subsidies — markdown table:
+| Card Type          | Max X-Ray Subsidy (S$) |
+|---                 |---                     |
+| Pioneer Generation | 21.00                  |
+| Merdeka Generation | 16.00                  |
+| CHAS Blue          | 11.00                  |
+| CHAS Orange        | 7.50                   |
+
+WHO PROVIDES DENTAL X-RAYS AT EACH SETTING:
+X-rays are taken at polyclinics, CHAS clinics, NDCS, NUCOHS, and restructured hospital dental departments. The CHAS subsidy per X-ray claim applies at CHAS dental clinics. At polyclinics, X-ray fees are charged at the subsidised polyclinic rate. At NDCS and NUCOHS, X-rays are billed separately from the consultation and are not covered by the CHAS X-ray subsidy (CHAS subsidies apply only at CHAS-participating private clinics, not at NSCs or public hospitals). OPG (panoramic) X-rays for implant planning, orthodontic assessment, or wisdom tooth evaluation are routinely taken at restructured hospitals and NSCs.
+--- END CHUNK 005 ---
+
+================================================================================
+--- CHUNK 006 ---
+[CHUNK ID]   cost-filling
+[TOPIC]      Dental filling cost — simple and complex — private clinics, polyclinics, and CHAS subsidy
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   filling cost Singapore, tooth filling price, simple filling cost, complex filling cost, amalgam filling polyclinic, composite filling cost, CHAS filling subsidy, does Medisave cover fillings
+[TRIGGERS]
+  - How much does a filling cost?
+  - How much is a tooth-coloured filling at a polyclinic?
+  - Is a filling cheaper at a polyclinic than a private clinic?
+  - Will CHAS cover my filling?
+  - What is the difference in cost between simple and complex fillings?
+  - Does Medisave cover fillings?
+
+CONTENT:
+
+Dental fillings are billed as simple (smaller cavities, single surface, straightforward access) or complex (larger cavities, multi-surface, or restorations involving more tooth structure). At polyclinics there is also a distinction between amalgam (silver-coloured) and tooth-coloured composite fillings.
+
+PRIVATE CLINICS — MOH 2025 FEE BENCHMARK (excluding GST):
+A simple filling costs S$65 to S$160 before GST. A complex filling costs S$80 to S$180 before GST. These are reference ranges, not price caps. Larger cavities, multi-surface restorations, or hard-to-access teeth may carry higher fees.
+
+Private clinic filling fees — natural language per row:
+A simple filling at a private dental clinic costs S$65 to S$160 before GST, per MOH 2025 benchmark.
+A complex filling at a private dental clinic costs S$80 to S$180 before GST, per MOH 2025 benchmark.
+
+Private clinic filling fees — markdown table:
+| Procedure        | Lower Bound (S$) | Upper Bound (S$) |
+|---               |---               |---               |
+| Filling, Simple  | 65               | 160              |
+| Filling, Complex | 80               | 180              |
+(Excluding GST. MOH 2025 benchmark — reference range for private primary care.)
+
+POLYCLINICS — SINGHEALTH POLYCLINICS (figures inclusive of GST; subsidised rates have GST absorbed by Government):
+For amalgam (silver) fillings: a Singapore Citizen pays S$26.50 to S$49.00. A Singapore Citizen child under 18 or elderly aged 65 and above pays S$13.10 to S$24.60. A Permanent Resident pays S$39.90 to S$73.60. A non-resident pays S$74.45 to S$134.62. For tooth-coloured composite fillings: a Singapore Citizen pays S$38.20 to S$67.90. A Singapore Citizen child under 18 or elderly aged 65 and above pays S$19.10 to S$34.10. A Permanent Resident pays S$56.90 to S$102.00. A non-resident pays S$95.48 to S$176.25. The fee depends on cavity size and number of surfaces involved.
+
+SingHealth Polyclinic filling fees — natural language per row:
+A Singapore Citizen pays S$26.50 to S$49.00 for an amalgam filling at a SingHealth Polyclinic.
+A Singapore Citizen child or elderly pays S$13.10 to S$24.60 for an amalgam filling.
+A Permanent Resident pays S$39.90 to S$73.60 for an amalgam filling.
+A non-resident pays S$74.45 to S$134.62 for an amalgam filling.
+A Singapore Citizen pays S$38.20 to S$67.90 for a tooth-coloured composite filling at a SingHealth Polyclinic.
+A Singapore Citizen child or elderly pays S$19.10 to S$34.10 for a composite filling.
+A Permanent Resident pays S$56.90 to S$102.00 for a composite filling.
+A non-resident pays S$95.48 to S$176.25 for a composite filling.
+
+SingHealth Polyclinic filling fees — markdown table:
+| Patient Category                               | Amalgam (Silver)       | Tooth-Coloured Composite |
+|---                                             |---                     |---                       |
+| Singapore Citizen                              | S$26.50 – S$49.00      | S$38.20 – S$67.90        |
+| Singapore Citizen (child <18 or elderly 65+)   | S$13.10 – S$24.60      | S$19.10 – S$34.10        |
+| Permanent Resident                             | S$39.90 – S$73.60      | S$56.90 – S$102.00       |
+| Non-Resident                                   | S$74.45 – S$134.62     | S$95.48 – S$176.25       |
+(Inclusive of GST. Subsidised rates have GST absorbed by Government.)
+
+CHAS SUBSIDY FOR FILLINGS (effective 1 October 2025):
+Both simple and complex fillings are covered under CHAS.
+
+CHAS filling subsidies — natural language per row:
+Pioneer Generation cardholders receive a maximum subsidy of S$40.00 for a simple filling and S$60.00 for a complex filling at a CHAS dental clinic.
+Merdeka Generation cardholders receive a maximum subsidy of S$35.00 for a simple filling and S$55.00 for a complex filling.
+CHAS Blue cardholders receive a maximum subsidy of S$30.00 for a simple filling and S$50.00 for a complex filling.
+CHAS Orange cardholders receive a maximum subsidy of S$20.00 for a simple filling and S$33.50 for a complex filling.
+
+CHAS filling subsidies — markdown table:
+| Card Type          | Simple Filling Subsidy (S$) | Complex Filling Subsidy (S$) |
+|---                 |---                          |---                           |
+| Pioneer Generation | 40.00                       | 60.00                        |
+| Merdeka Generation | 35.00                       | 55.00                        |
+| CHAS Blue          | 30.00                       | 50.00                        |
+| CHAS Orange        | 20.00                       | 33.50                        |
+
+MEDISAVE: Medisave does not cover routine fillings. Fillings are non-surgical restorative work and are not in the Table of Surgical Procedures (TOSP). For subsidies on fillings, use CHAS if eligible.
+
+WHO PROVIDES FILLINGS AT EACH SETTING:
+At polyclinics, simple and standard fillings (amalgam and tooth-coloured composite) are provided as a routine service. No referral is needed. Polyclinics offer both amalgam (silver) and composite (tooth-coloured) fillings, with different fee tiers for each.
+At CHAS dental clinics, fillings are a standard routine service. CHAS subsidy applies for eligible cardholders.
+At NDCS and NUCOHS, fillings form part of the restorative dentistry services (under the Department of Restorative Dentistry at NDCS). These NSCs handle complex restorative cases — patients with straightforward fillings are generally treated at polyclinics or CHAS clinics. Complex multi-surface restorations, build-ups, or restorations on previously root-canal-treated teeth may be managed at the specialist level.
+At restructured hospital dental departments (e.g. NTFGH, TTSH), fillings are provided as part of the general dentistry service. These departments serve both routine and complex cases, including inpatients requiring dental treatment.
+--- END CHUNK 006 ---
+
+================================================================================
+--- CHUNK 007 ---
+[CHUNK ID]   cost-extraction
+[TOPIC]      Simple tooth extraction cost — private clinics, polyclinics, and CHAS subsidy
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   tooth extraction cost, pulling tooth Singapore, extraction price, anterior extraction, posterior extraction, CHAS extraction subsidy, polyclinic extraction fee, Medisave extraction
+[TRIGGERS]
+  - How much does it cost to extract a tooth?
+  - Is extraction cheaper at a polyclinic?
+  - Will CHAS cover my tooth extraction?
+  - Does Medisave cover tooth extraction?
+  - What is the difference in cost between front and back tooth extraction?
+  - What if my extraction turns out to be surgical?
+
+CONTENT:
+
+This chunk covers simple extractions — removal of a fully erupted tooth using forceps under local anaesthetic. For surgical extractions of impacted wisdom teeth or teeth requiring bone removal, see the wisdom tooth surgery cost chunk.
+
+PRIVATE CLINICS — MOH 2025 FEE BENCHMARK (excluding GST):
+Anterior teeth (front incisors and canines) are typically simpler to extract than posterior teeth (premolars and molars, which have multiple roots). Extraction of an anterior tooth costs S$70 to S$120 before GST. Extraction of a posterior tooth costs S$93 to S$164 before GST.
+
+Private clinic extraction fees — natural language per row:
+Extraction of an anterior (front) tooth at a private dental clinic costs S$70 to S$120 before GST, per MOH 2025 benchmark.
+Extraction of a posterior (back) tooth at a private dental clinic costs S$93 to S$164 before GST, per MOH 2025 benchmark.
+
+Private clinic extraction fees — markdown table:
+| Procedure              | Lower Bound (S$) | Upper Bound (S$) |
+|---                     |---               |---               |
+| Extraction, Anterior   | 70               | 120              |
+| Extraction, Posterior  | 93               | 164              |
+(Excluding GST. MOH 2025 benchmark — reference range for private primary care.)
+
+POLYCLINICS — SINGHEALTH POLYCLINICS (figures inclusive of GST; subsidised rates have GST absorbed by Government):
+Polyclinics bill all simple extractions at one rate regardless of tooth position. A Singapore Citizen pays S$31.20 to S$58.30. A Singapore Citizen child under 18 or elderly aged 65 and above pays S$15.50 to S$28.80. A Permanent Resident pays S$46.70 to S$87.40. A non-resident pays S$80.88 to S$218.00. Polyclinics handle simple extractions only; complex or impacted cases are referred to a restructured hospital.
+
+SingHealth Polyclinic extraction fees — natural language per row:
+A Singapore Citizen pays S$31.20 to S$58.30 for a simple extraction at a SingHealth Polyclinic.
+A Singapore Citizen child under 18 or elderly aged 65 and above pays S$15.50 to S$28.80 for a simple extraction.
+A Permanent Resident pays S$46.70 to S$87.40 for a simple extraction.
+A non-resident pays S$80.88 to S$218.00 for a simple extraction.
+
+SingHealth Polyclinic extraction fees — markdown table:
+| Patient Category                                     | Extraction               |
+|---                                                   |---                       |
+| Singapore Citizen                                    | S$31.20 – S$58.30        |
+| Singapore Citizen (child <18 or elderly 65+)         | S$15.50 – S$28.80        |
+| Permanent Resident                                   | S$46.70 – S$87.40        |
+| Non-Resident                                         | S$80.88 – S$218.00       |
+(Inclusive of GST. Subsidised rates have GST absorbed by Government.)
+
+CHAS SUBSIDY FOR EXTRACTIONS (effective 1 October 2025):
+Both anterior and posterior simple extractions are covered under CHAS.
+
+CHAS extraction subsidies — natural language per row:
+Pioneer Generation cardholders receive a maximum subsidy of S$38.50 for an anterior extraction and S$78.50 for a posterior extraction at a CHAS dental clinic.
+Merdeka Generation cardholders receive a maximum subsidy of S$33.50 for an anterior extraction and S$73.50 for a posterior extraction.
+CHAS Blue cardholders receive a maximum subsidy of S$28.50 for an anterior extraction and S$68.50 for a posterior extraction.
+CHAS Orange cardholders receive a maximum subsidy of S$19.00 for an anterior extraction and S$45.50 for a posterior extraction.
+
+CHAS extraction subsidies — markdown table:
+| Card Type          | Anterior Extraction Subsidy (S$) | Posterior Extraction Subsidy (S$) |
+|---                 |---                               |---                                |
+| Pioneer Generation | 38.50                            | 78.50                             |
+| Merdeka Generation | 33.50                            | 73.50                             |
+| CHAS Blue          | 28.50                            | 68.50                             |
+| CHAS Orange        | 19.00                            | 45.50                             |
+
+MEDISAVE: Medisave does not cover simple (non-surgical) extractions. Medisave applies only to surgical extractions — impacted wisdom teeth, broken roots, or retained roots requiring incision and bone removal. A simple extraction that becomes more complex mid-procedure may escalate to a surgical category; the dentist will discuss this before proceeding.
+
+WHEN A SIMPLE EXTRACTION BECOMES SURGICAL:
+Some extractions that appear simple can become surgical if the tooth fractures during removal or access is more difficult than expected. In those cases the procedure and fee escalate. If a tooth is broken below the gum line, has had a previous root canal, or has severely curved roots visible on X-ray, expect a surgical extraction from the outset.
+
+WHO PROVIDES SIMPLE EXTRACTIONS AT EACH SETTING:
+At polyclinics, simple extractions (fully erupted teeth removed with forceps) are a standard service. All simple extractions are billed at one rate regardless of tooth position (anterior or posterior). Polyclinics handle simple extractions only; complex, impacted, or surgical extractions are referred to a restructured hospital or NSC. No referral is needed to visit a polyclinic for a simple extraction.
+At CHAS dental clinics, simple anterior and posterior extractions are covered under CHAS. CHAS does not cover surgical extractions.
+At NDCS and NUCOHS, extractions that are surgical in nature (impacted, broken, complex) are managed by the Oral and Maxillofacial Surgery department. Simple extractions at NSCs are typically incidental to specialist treatment plans.
+At restructured hospital dental departments (e.g. NTFGH, Changi General Hospital), both simple and surgical extractions are performed. Surgical extractions are Medisave-claimable.
+--- END CHUNK 007 ---
+
+================================================================================
+--- CHUNK 008 ---
+[CHUNK ID]   cost-crown
+[TOPIC]      Permanent dental crown cost — private clinics, hospitals, and CHAS subsidy
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   crown cost Singapore, dental crown price, how much crown, NDCS crown, hospital crown price, CHAS crown subsidy, root canal and crown total cost, Medisave crown, Flexi-MediSave crown
+[TRIGGERS]
+  - How much does a crown cost?
+  - How much is a crown at NDCS?
+  - Is a crown cheaper at a hospital or a private clinic?
+  - Will CHAS cover my crown?
+  - Can I use Medisave for a crown?
+  - What is the total cost of a root canal and crown?
+
+CONTENT:
+
+A permanent crown is the most common single-procedure cost driver on a dental treatment plan. Crowns vary by material — porcelain, porcelain-fused-to-metal, full metal, zirconia — but the MOH benchmark covers a representative range for typical routine cases.
+
+PRIVATE CLINICS — MOH 2025 FEE BENCHMARK (excluding GST):
+A permanent crown at a private primary care clinic costs S$750 to S$1,400 before GST. This is a reference range. Crowns made of premium materials, crowns requiring build-up or post-and-core preparation, or crowns on implants typically fall above this range.
+
+RESTRUCTURED HOSPITALS — 2024 AVERAGE FEES (non-subsidised private patients; excluding GST):
+These fees generally exclude consultation, X-ray, investigation, and re-treatment fees.
+
+Hospital crown fees — natural language per row:
+A permanent crown at Alexandra Hospital costs an average of S$1,491 for a private (non-subsidised) patient.
+A permanent crown at Changi General Hospital costs an average of S$980 for a private patient.
+A permanent crown at Khoo Teck Puat Hospital costs an average of S$1,200 for a private patient.
+A permanent crown at KK Women's and Children's Hospital costs an average of S$1,131 for a private patient.
+A permanent crown at National Dental Centre Singapore (NDCS) costs an average of S$1,002 for a private patient.
+A permanent crown at National University Centre for Oral Health Singapore (NUCOH) costs an average of S$1,454 for a private patient.
+A permanent crown at Ng Teng Fong General Hospital costs an average of S$1,281 for a private patient.
+A permanent crown at Sengkang General Hospital costs an average of S$804 for a private patient.
+A permanent crown at Tan Tock Seng Hospital costs an average of S$1,101 for a private patient.
+Subsidised rates for Singapore Citizens with a referral letter are substantially lower than these figures.
+
+Hospital crown fees — markdown table:
+| Hospital / Institution                                | Crown (Single Unit) — Private Rate |
+|---                                                    |---                                 |
+| Alexandra Hospital                                    | S$1,491                            |
+| Changi General Hospital                               | S$980                              |
+| Khoo Teck Puat Hospital                               | S$1,200                            |
+| KK Women's and Children's Hospital                    | S$1,131                            |
+| National Dental Centre Singapore (NDCS)               | S$1,002                            |
+| National University Centre for Oral Health (NUCOH)    | S$1,454                            |
+| Ng Teng Fong General Hospital                         | S$1,281                            |
+| Sengkang General Hospital                             | S$804                              |
+| Tan Tock Seng Hospital                                | S$1,101                            |
+(2024 average fees, non-subsidised patients, excluding GST. Excludes consultation, X-ray, investigation, re-treatment fees.)
+
+CHAS SUBSIDY FOR PERMANENT CROWN (effective 1 October 2025):
+Crown subsidies were specifically increased in the October 2025 CHAS enhancement.
+
+CHAS crown subsidies — natural language per row:
+Pioneer Generation cardholders receive a maximum subsidy of S$625.00 per permanent crown claim at a CHAS dental clinic.
+Merdeka Generation cardholders receive a maximum subsidy of S$620.00 per permanent crown claim.
+CHAS Blue cardholders receive a maximum subsidy of S$615.00 per permanent crown claim.
+CHAS Orange cardholders receive a maximum subsidy of S$410.00 per permanent crown claim.
+
+CHAS crown subsidies — markdown table:
+| Card Type          | Max Permanent Crown Subsidy (S$) |
+|---                 |---                               |
+| Pioneer Generation | 625.00                           |
+| Merdeka Generation | 620.00                           |
+| CHAS Blue          | 615.00                           |
+| CHAS Orange        | 410.00                           |
+
+FLEXI-MEDISAVE FOR CROWNS (from mid-2026):
+Singapore Citizens and Permanent Residents aged 60 and above can use Flexi-MediSave to offset up to S$400 per year for permanent crowns. This is available at CHAS dental clinics and public healthcare institutions (restructured hospitals, NDCS, NUCOH). The S$400 is an annual cap across both crowns and root canal treatments combined. This is in addition to any CHAS subsidy received. Patients below age 60 cannot use Flexi-MediSave for crowns.
+
+MEDISAVE: Standard Medisave does not cover permanent crowns — they are non-surgical restorative procedures. The only Medisave pathway for crowns is Flexi-MediSave for patients aged 60 and above from mid-2026.
+
+WHAT IS NOT INCLUDED IN THE CROWN FEE:
+A crown fee typically does not include the build-up filling or post-and-core preparation if needed, the root canal that may have preceded the crown, the temporary crown worn between visits (sometimes included, sometimes separate), or adjustments at follow-up visits beyond the standard fitting.
+
+COMBINED ROOT CANAL AND CROWN ESTIMATE:
+A common treatment plan combines root canal treatment and a crown on the same tooth. For a molar, the total private benchmark range is approximately S$1,622 to S$2,800 (S$872–S$1,400 root canal plus S$750–S$1,400 crown), excluding GST, consultation, and X-ray fees.
+
+WHO PROVIDES PERMANENT CROWNS AT EACH SETTING:
+At polyclinics, simple crowns are now provided as part of the expanded polyclinic dental service. Cases deemed more complex are referred to tertiary institutions. No referral is needed at the polyclinic level.
+At CHAS dental clinics, permanent crowns are covered by CHAS subsidy. From mid-2026, eligible patients aged 60 and above can also apply Flexi-MediSave (up to S$400/year) on top of the CHAS subsidy.
+At NDCS, crowns are managed by the Department of Restorative Dentistry (Prosthodontics). Complex crowns, crowns on implants, and full-mouth rehabilitation involving multiple crowns are specialty-level care. A referral from a polyclinic or CHAS clinic is required for subsidised access. Private rates are as listed in the hospital fee table in this chunk.
+At NUCOHS, crowns are provided under Prosthodontics and the Dental Implant Clinic. NUCOHS services include veneers, crowns, bridges, and full mouth reconstruction. Referral from polyclinic or CHAS clinic required for subsidised access.
+At restructured hospital dental departments (e.g. NTFGH, Alexandra Hospital, TTSH), crowns are provided as part of the restorative dental service. Hospital private patient rates are as listed in the fee table in this chunk. Subsidised rates for referred Singapore Citizens and PRs are substantially lower than private rates.
+--- END CHUNK 008 ---
+
+================================================================================
+--- CHUNK 009 ---
+[CHUNK ID]   cost-root-canal
+[TOPIC]      Root canal treatment cost — by tooth type, hospitals, and CHAS subsidy
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   root canal cost, root canal price Singapore, molar root canal cost, anterior root canal, premolar root canal, CHAS root canal subsidy, NDCS root canal, hospital root canal, Flexi-MediSave root canal
+[TRIGGERS]
+  - How much does a root canal cost?
+  - Is a molar root canal more expensive than a front tooth?
+  - How much is a root canal at NDCS?
+  - Will CHAS cover my root canal?
+  - Can I use Medisave for root canal treatment?
+  - What is the total cost of a root canal and crown?
+
+CONTENT:
+
+Root canal treatment costs vary by tooth type. Anterior (front) teeth typically have one canal and are fastest to treat. Pre-molars usually have one or two canals. Molars have three or four canals and take the most time. The fee structure reflects this. Root canal treatment is typically followed by a crown to protect the treated tooth — that is a separate cost.
+
+PRIVATE CLINICS — MOH 2025 FEE BENCHMARK (excluding GST):
+An anterior root canal costs S$400 to S$775 before GST. A pre-molar root canal costs S$500 to S$900 before GST. A molar root canal costs S$872 to S$1,400 before GST.
+
+Private clinic root canal fees — natural language per row:
+Root canal treatment on an anterior (front) tooth at a private dental clinic costs S$400 to S$775 before GST, per MOH 2025 benchmark.
+Root canal treatment on a pre-molar at a private dental clinic costs S$500 to S$900 before GST.
+Root canal treatment on a molar at a private dental clinic costs S$872 to S$1,400 before GST.
+
+Private clinic root canal fees — markdown table:
+| Tooth Type                          | Lower Bound (S$) | Upper Bound (S$) |
+|---                                  |---               |---               |
+| Root Canal Treatment (Anterior)     | 400              | 775              |
+| Root Canal Treatment (Pre-molar)    | 500              | 900              |
+| Root Canal Treatment (Molar)        | 872              | 1,400            |
+(Excluding GST. MOH 2025 benchmark — reference range for private primary care.)
+
+RESTRUCTURED HOSPITALS — 2024 AVERAGE FEES (non-subsidised private patients; excluding GST):
+These fees generally exclude consultation, X-ray, investigation, and re-treatment fees. A dash (–) indicates the institution did not publish an average for that tooth category.
+
+Hospital root canal fees — natural language per row:
+Root canal on an anterior tooth at Alexandra Hospital costs an average of S$671 for a private patient (pre-molar: S$722; molar: not published).
+Root canal on an anterior tooth at Changi General Hospital costs an average of S$329 for a private patient (pre-molar: S$520; molar: S$912).
+Root canal on an anterior tooth at Khoo Teck Puat Hospital costs an average of S$498 for a private patient (pre-molar: S$702; molar: S$1,056).
+Root canal on an anterior tooth at KK Women's and Children's Hospital costs an average of S$462 for a private patient (pre-molar and molar: not published).
+Root canal on an anterior tooth at National Dental Centre Singapore (NDCS) costs an average of S$505 for a private patient (pre-molar: S$696; molar: S$979).
+Root canal on an anterior tooth at National University Centre for Oral Health (NUCOH) costs an average of S$638 for a private patient (pre-molar: S$812; molar: S$1,345).
+Root canal on an anterior tooth at Sengkang General Hospital costs an average of S$406 for a private patient (pre-molar and molar: not published).
+Root canal on an anterior tooth at Tan Tock Seng Hospital costs an average of S$457 for a private patient (pre-molar: S$644; molar: S$969).
+Subsidised rates for Singapore Citizens with a referral letter are substantially lower.
+
+Hospital root canal fees — markdown table:
+| Hospital / Institution                             | Anterior   | Pre-molar  | Molar      |
+|---                                                 |---         |---         |---         |
+| Alexandra Hospital                                 | S$671      | S$722      | –          |
+| Changi General Hospital                            | S$329      | S$520      | S$912      |
+| Khoo Teck Puat Hospital                            | S$498      | S$702      | S$1,056    |
+| KK Women's and Children's Hospital                 | S$462      | –          | –          |
+| National Dental Centre Singapore (NDCS)            | S$505      | S$696      | S$979      |
+| National University Centre for Oral Health (NUCOH) | S$638      | S$812      | S$1,345    |
+| Sengkang General Hospital                          | S$406      | –          | –          |
+| Tan Tock Seng Hospital                             | S$457      | S$644      | S$969      |
+(2024 average fees, non-subsidised patients, excluding GST. "–" means not published.)
+
+CHAS SUBSIDY FOR ROOT CANAL TREATMENT (effective 1 October 2025):
+All three root canal categories are covered under CHAS. Subsidies were enhanced for restorative procedures from 1 October 2025.
+
+CHAS root canal subsidies — natural language per row:
+Pioneer Generation cardholders receive a maximum subsidy of S$336.00 for an anterior root canal, S$472.50 for a pre-molar, and S$594.50 for a molar root canal.
+Merdeka Generation cardholders receive a maximum subsidy of S$331.00 for an anterior root canal, S$467.50 for a pre-molar, and S$589.50 for a molar.
+CHAS Blue cardholders receive a maximum subsidy of S$326.00 for an anterior root canal, S$462.50 for a pre-molar, and S$584.50 for a molar.
+CHAS Orange cardholders receive a maximum subsidy of S$217.50 for an anterior root canal, S$308.50 for a pre-molar, and S$389.50 for a molar.
+
+CHAS root canal subsidies — markdown table:
+| Card Type          | RCT Anterior (S$) | RCT Pre-molar (S$) | RCT Molar (S$) |
+|---                 |---                |---                 |---             |
+| Pioneer Generation | 336.00            | 472.50             | 594.50         |
+| Merdeka Generation | 331.00            | 467.50             | 589.50         |
+| CHAS Blue          | 326.00            | 462.50             | 584.50         |
+| CHAS Orange        | 217.50            | 308.50             | 389.50         |
+
+FLEXI-MEDISAVE FOR ROOT CANAL (from mid-2026):
+Singapore Citizens and Permanent Residents aged 60 and above can use Flexi-MediSave for up to S$400 per year for root canal treatments and permanent crowns combined, at CHAS dental clinics and public healthcare institutions. This is in addition to any CHAS subsidy. Patients below 60 cannot use Flexi-MediSave for root canal treatment.
+
+MEDISAVE: Standard Medisave does not cover routine root canal treatment — it is non-surgical restorative work. The only Medisave pathway for root canal is Flexi-MediSave for patients aged 60 and above from mid-2026, or a surgical root canal (apicoectomy), which has a TOSP code and is claimable.
+
+WHAT IS NOT INCLUDED IN THE ROOT CANAL FEE:
+A root canal fee typically does not include the follow-up crown, initial consultation, X-rays, pulp diagnostic tests, or retreatment if the original procedure fails.
+
+WHO PROVIDES ROOT CANAL TREATMENT AT EACH SETTING:
+At polyclinics, simple root canal treatment on anterior (front) teeth is now provided as part of the expanded polyclinic dental service. Root canal treatment on premolars and molars, or complex cases, are referred to tertiary institutions (NDCS, NUCOHS, or restructured hospitals). No referral is needed to visit a polyclinic.
+At CHAS dental clinics, root canal treatment on anterior, premolar, and molar teeth is covered under CHAS (all three categories in the fee table). CHAS does not cover specialist-level endodontic procedures such as apicoectomy (surgical root canal), which is Medisave-claimable.
+At NDCS, root canal treatment is managed by the Department of Restorative Dentistry — Endodontics. NDCS handles complex cases including re-treatment of failed root canals and surgical endodontics (apicoectomy). Referral from polyclinic or CHAS clinic required for subsidised access.
+At NUCOHS, root canal treatment is provided under the Endodontics specialist clinic. Complex and multi-rooted cases are managed here. Referral required for subsidised rates.
+At restructured hospital dental departments, root canal treatment is provided for both general and complex cases. Hospital private patient rates for root canal are as listed in the fee table in this chunk.
+--- END CHUNK 009 ---
+
+================================================================================
+--- CHUNK 010 ---
+[CHUNK ID]   cost-denture-full
+[TOPIC]      Complete (full) removable denture cost — private clinics, hospitals, and CHAS subsidy
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   full denture cost, complete denture Singapore, how much denture, denture reline repair cost, CHAS denture subsidy, hospital denture price, Medisave denture
+[TRIGGERS]
+  - How much does a full denture cost?
+  - Will CHAS cover my full denture?
+  - How much is a denture at a polyclinic?
+  - Can I use Medisave for a full denture?
+  - How much does it cost to repair a denture?
+
+CONTENT:
+
+A complete denture replaces all teeth on one arch (upper or lower). The MOH benchmark and hospital figures are per arch. Replacing both arches requires two complete dentures and costs approximately twice these amounts.
+
+PRIVATE CLINICS — MOH 2025 FEE BENCHMARK (excluding GST, per arch):
+A complete removable denture for one arch costs S$500 to S$818 before GST. A denture reline or repair costs S$80 to S$150 before GST.
+
+Private clinic full denture fees — natural language per row:
+A complete removable denture for one arch (upper or lower) at a private dental clinic costs S$500 to S$818 before GST, per MOH 2025 benchmark.
+A denture reline or repair at a private dental clinic costs S$80 to S$150 before GST.
+
+Private clinic full denture fees — markdown table:
+| Procedure                                       | Lower Bound (S$) | Upper Bound (S$) |
+|---                                              |---               |---               |
+| Removable Denture, Complete (per arch)          | 500              | 818              |
+| Denture Reline / Repair                         | 80               | 150              |
+(Excluding GST. MOH 2025 benchmark — reference range for private primary care.)
+
+RESTRUCTURED HOSPITALS — 2024 AVERAGE FEES (non-subsidised private patients; per arch; excluding GST):
+
+Hospital full denture fees — natural language per row:
+A complete denture per arch at Alexandra Hospital costs an average of S$1,197 for a private patient.
+A complete denture per arch at Changi General Hospital costs an average of S$890 for a private patient.
+A complete denture per arch at Khoo Teck Puat Hospital costs an average of S$1,057 for a private patient.
+A complete denture per arch at KK Women's and Children's Hospital costs an average of S$1,324 for a private patient.
+A complete denture per arch at National Dental Centre Singapore (NDCS) costs an average of S$1,237 for a private patient.
+A complete denture per arch at National University Centre for Oral Health (NUCOH) costs an average of S$1,081 for a private patient.
+A complete denture per arch at Ng Teng Fong General Hospital costs an average of S$1,048 for a private patient.
+A complete denture per arch at Tan Tock Seng Hospital costs an average of S$970 for a private patient.
+Subsidised rates for Singapore Citizens with a referral letter are substantially lower.
+
+Hospital full denture fees — markdown table:
+| Hospital / Institution                                | Full Denture (per arch) |
+|---                                                    |---                      |
+| Alexandra Hospital                                    | S$1,197                 |
+| Changi General Hospital                               | S$890                   |
+| Khoo Teck Puat Hospital                               | S$1,057                 |
+| KK Women's and Children's Hospital                    | S$1,324                 |
+| National Dental Centre Singapore (NDCS)               | S$1,237                 |
+| National University Centre for Oral Health (NUCOH)    | S$1,081                 |
+| Ng Teng Fong General Hospital                         | S$1,048                 |
+| Tan Tock Seng Hospital                                | S$970                   |
+(2024 average fees, non-subsidised patients, excluding GST, per arch.)
+
+CHAS SUBSIDY FOR COMPLETE DENTURE (effective 1 October 2025):
+Complete denture subsidies were enhanced from 1 October 2025.
+
+CHAS full denture subsidies — natural language per row:
+Pioneer Generation cardholders receive a maximum subsidy of S$418.50 per complete denture claim (per arch) at a CHAS dental clinic.
+Merdeka Generation cardholders receive a maximum subsidy of S$413.50 per complete denture claim.
+CHAS Blue cardholders receive a maximum subsidy of S$408.50 per complete denture claim.
+CHAS Orange cardholders receive a maximum subsidy of S$272.50 per complete denture claim.
+
+CHAS full denture subsidies — markdown table:
+| Card Type          | Max Complete Denture Subsidy (S$) |
+|---                 |---                                |
+| Pioneer Generation | 418.50                            |
+| Merdeka Generation | 413.50                            |
+| CHAS Blue          | 408.50                            |
+| CHAS Orange        | 272.50                            |
+
+MEDISAVE: Medisave does not cover removable dentures. Dentures are non-surgical restorative work and do not have a TOSP code.
+
+WHO PROVIDES COMPLETE DENTURES AT EACH SETTING:
+At polyclinics, denture fabrication, repair and fitting services are provided as a standard service. Complex denture cases requiring specialist management are referred to tertiary institutions. No referral is needed at the polyclinic level.
+At CHAS dental clinics, complete dentures are covered under CHAS subsidy for eligible cardholders.
+At NDCS, complete dentures and complex prosthetic cases are managed under the Prosthodontics department. NDCS handles patients with complex clinical conditions requiring full mouth rehabilitation or specialist prosthodontic management. Referral from polyclinic or CHAS clinic required for subsidised access.
+At NUCOHS, complete dentures are provided under Prosthodontics and the Dental Implant Clinic (for implant-supported dentures). Referral required for subsidised access.
+At restructured hospital dental departments, complete dentures are provided as part of the general and specialist dental service. Hospital private patient rates are as listed in the fee table in this chunk. Subsidised rates for referred Singapore Citizens and PRs are substantially lower.
+--- END CHUNK 010 ---
+
+================================================================================
+--- CHUNK 011 ---
+[CHUNK ID]   cost-denture-partial
+[TOPIC]      Partial removable denture cost — private clinics and CHAS subsidy
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   partial denture cost, removable partial denture Singapore, cobalt chrome denture, acrylic denture, CHAS partial denture subsidy, simple partial denture, complex partial denture, denture reline repair
+[TRIGGERS]
+  - How much does a partial denture cost?
+  - Is a partial denture covered by CHAS?
+  - What is the difference in cost between simple and complex partial dentures?
+  - Can I use Medisave for a partial denture?
+  - How much does it cost to repair a partial denture?
+
+CONTENT:
+
+A partial denture replaces some but not all teeth on one arch. The MOH benchmark differentiates simple (fewer teeth, healthy adjacent teeth) from complex (more teeth, challenging gum condition, or more complex framework). Each benchmark figure is per arch. Replacing teeth on both arches requires two separate appliances.
+
+PRIVATE CLINICS — MOH 2025 FEE BENCHMARK (excluding GST, per arch):
+A simple removable partial denture costs S$320 to S$603 before GST. A complex removable partial denture costs S$450 to S$750 before GST. A denture reline or repair costs S$80 to S$150 before GST. Metal-framework cobalt-chrome partial dentures typically fall in the upper portion of the range; acrylic partials are usually lower.
+
+Private clinic partial denture fees — natural language per row:
+A simple removable partial denture at a private dental clinic costs S$320 to S$603 before GST, per MOH 2025 benchmark.
+A complex removable partial denture at a private dental clinic costs S$450 to S$750 before GST.
+A denture reline or repair at a private dental clinic costs S$80 to S$150 before GST.
+
+Private clinic partial denture fees — markdown table:
+| Procedure                              | Lower Bound (S$) | Upper Bound (S$) |
+|---                                     |---               |---               |
+| Removable Denture, Partial, Simple     | 320              | 603              |
+| Removable Denture, Partial, Complex    | 450              | 750              |
+| Denture Reline / Repair                | 80               | 150              |
+(Excluding GST. MOH 2025 benchmark — reference range for private primary care.)
+
+CHAS SUBSIDY FOR PARTIAL DENTURES (effective 1 October 2025):
+Partial denture subsidies were enhanced for restorative procedures from 1 October 2025. Reline and repair subsidies were not changed in the October 2025 enhancement.
+
+CHAS partial denture subsidies — natural language per row:
+Pioneer Generation cardholders receive a maximum subsidy of S$314.00 for a simple partial denture, S$395.50 for a complex partial denture, and S$85.00 for a denture reline or repair.
+Merdeka Generation cardholders receive a maximum subsidy of S$309.00 for a simple partial denture, S$390.50 for a complex partial denture, and S$80.00 for reline or repair.
+CHAS Blue cardholders receive a maximum subsidy of S$304.00 for a simple partial denture, S$385.50 for a complex partial denture, and S$75.00 for reline or repair.
+CHAS Orange cardholders receive a maximum subsidy of S$202.50 for a simple partial denture, S$257.00 for a complex partial denture, and S$50.00 for reline or repair.
+
+CHAS partial denture subsidies — markdown table:
+| Card Type          | Partial Simple (S$) | Partial Complex (S$) | Reline / Repair (S$) |
+|---                 |---                  |---                   |---                   |
+| Pioneer Generation | 314.00              | 395.50               | 85.00                |
+| Merdeka Generation | 309.00              | 390.50               | 80.00                |
+| CHAS Blue          | 304.00              | 385.50               | 75.00                |
+| CHAS Orange        | 202.50              | 257.00               | 50.00                |
+
+MEDISAVE: Medisave does not cover removable partial dentures.
+
+WHAT IS NOT INCLUDED IN THE PARTIAL DENTURE FEE:
+A partial denture fee typically does not include consultation and treatment-planning visits, extractions needed before the denture is fitted, X-rays, adjustments beyond the standard post-fitting set, or future relines.
+
+WHO PROVIDES PARTIAL DENTURES AT EACH SETTING:
+At polyclinics, simple partial dentures (replacing 5 teeth or fewer) are provided as part of the expanded polyclinic dental service. Complex partial dentures or cases involving more teeth are referred to tertiary institutions.
+At CHAS dental clinics, both simple and complex partial dentures are covered under CHAS for eligible cardholders.
+At NDCS, partial dentures — including complex metal-framework (cobalt-chrome) partial dentures — are managed under the Prosthodontics department as part of specialist restorative care. Referral from polyclinic or CHAS clinic required for subsidised access.
+At NUCOHS, partial dentures are provided under the Prosthodontics specialist clinic, including complex cases and implant-retained partial prostheses. Referral required for subsidised access.
+At restructured hospital dental departments, partial dentures are part of the general dental service. Hospital fee figures for partial dentures are not separately published in the MOH 2024 average fee data (partial dentures are typically managed at the primary or CHAS care level).
+--- END CHUNK 011 ---
+
+================================================================================
+--- CHUNK 012 ---
+[CHUNK ID]   cost-implant
+[TOPIC]      Dental implant cost — hospital averages, what is included, Medisave coverage
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   dental implant cost Singapore, implant price, NDCS implant, hospital implant fee, Medisave implant, CHAS implant, bone graft cost, sinus lift cost, osseointegration, implant total cost
+[TRIGGERS]
+  - How much does a dental implant cost in Singapore?
+  - Is implant cheaper at NDCS or a private clinic?
+  - How much will Medisave cover for an implant?
+  - Will CHAS cover my implant?
+  - What is the total cost of an implant including bone grafting?
+  - Why does implant cost vary between hospitals?
+
+CONTENT:
+
+Dental implants are not covered by the MOH 2025 fee benchmarks or by CHAS. Cost data comes from published averages at restructured hospitals. Medisave covers the surgical portion only.
+
+WHAT THE IMPLANT FEE TYPICALLY INCLUDES:
+The "implant with crown" fee at a restructured hospital usually covers surgical placement of the titanium post, the abutment, and the crown on top — the three main components of a single implant unit. It typically does not include bone grafting (if existing bone is insufficient), sinus lift (for upper back teeth where sinus floor is too low), soft tissue grafting, 3D CBCT imaging scans if needed, sedation, or consultation visits across the 4 to 9 month treatment timeline. A complex case requiring bone grafting can add several thousand dollars to the headline fee.
+
+RESTRUCTURED HOSPITALS — 2024 AVERAGE FEES (implant and crown per unit, non-subsidised private patients; excluding GST):
+
+Hospital implant fees — natural language per row:
+A dental implant with crown at Changi General Hospital costs an average of S$6,600 for a private patient.
+A dental implant with crown at Khoo Teck Puat Hospital costs an average of S$4,539 for a private patient.
+A dental implant with crown at KK Women's and Children's Hospital costs an average of S$5,821 for a private patient.
+A dental implant with crown at National Dental Centre Singapore (NDCS) costs an average of S$5,302 for a private patient.
+A dental implant with crown at National University Centre for Oral Health (NUCOH) costs an average of S$5,188 for a private patient.
+A dental implant with crown at Ng Teng Fong General Hospital costs an average of S$5,402 for a private patient.
+A dental implant with crown at Tan Tock Seng Hospital costs an average of S$5,713 for a private patient.
+Subsidised rates for Singapore Citizens with a referral letter are lower than these figures. Private dental clinics generally fall within or above this range.
+
+Hospital implant fees — markdown table:
+| Hospital / Institution                                | Implant + Crown (per unit) |
+|---                                                    |---                         |
+| Changi General Hospital                               | S$6,600                    |
+| Khoo Teck Puat Hospital                               | S$4,539                    |
+| KK Women's and Children's Hospital                    | S$5,821                    |
+| National Dental Centre Singapore (NDCS)               | S$5,302                    |
+| National University Centre for Oral Health (NUCOH)    | S$5,188                    |
+| Ng Teng Fong General Hospital                         | S$5,402                    |
+| Tan Tock Seng Hospital                                | S$5,713                    |
+(2024 average fees, non-subsidised patients, excluding GST, per implant unit with crown.)
+
+CHAS SUBSIDY: CHAS does not cover dental implants. The 18 CHAS-subsidised procedures cover common primary care work only; implants fall outside this list.
+
+MEDISAVE COVERAGE FOR IMPLANTS:
+Medisave covers the surgical portion of implant treatment. Maximum claim amounts per procedure are as follows.
+
+Medisave implant claims — natural language per row:
+Insertion of dental implants is covered by Medisave up to S$1,950 per tooth.
+Removal of dental implants is covered by Medisave up to S$1,350 per tooth.
+Bone grafting is covered by Medisave up to S$950.
+Guided bone regeneration is covered by Medisave up to S$1,250.
+Sinus lift is covered by Medisave up to S$1,550.
+Surgical consumables are covered by Medisave up to S$300.
+
+Medisave implant claims — markdown table:
+| Procedure                      | Maximum Medisave Claim    |
+|---                             |---                        |
+| Insertion of dental implants   | Up to S$1,950 per tooth   |
+| Removal of dental implants     | Up to S$1,350 per tooth   |
+| Bone grafting                  | Up to S$950               |
+| Guided bone regeneration       | Up to S$1,250             |
+| Sinus lift                     | Up to S$1,550             |
+| Surgical consumables           | Up to S$300               |
+
+The crown portion of an implant is not Medisave-claimable under standard Medisave. Seniors aged 60 and above can use Flexi-MediSave (from mid-2026) for up to S$400 per year toward permanent crowns at CHAS clinics or public hospitals — a small offset against the overall implant cost.
+
+PRACTICAL COST PICTURE FOR A SINGLE IMPLANT:
+Before subsidy at a restructured hospital: implant and crown costs approximately S$4,500 to S$6,600. Possible add-ons include bone grafting (roughly S$1,000 to S$2,500), sinus lift (roughly S$1,500 to S$3,000), and CBCT imaging. After Medisave: surgical portion may be offset by up to S$1,950 per tooth plus S$300 surgical consumables plus any applicable add-ons. The total out-of-pocket for a straightforward case can therefore be approximately S$2,000 to S$4,000 less than the headline fee. For long-standing missing teeth where bone grafting is anticipated, realistic out-of-pocket typically remains in the S$3,000 to S$6,000 range per implant after Medisave use.
+
+WHO PROVIDES DENTAL IMPLANTS AT EACH SETTING:
+Dental implants are not available at polyclinics. Polyclinics refer patients requiring implants to restructured hospitals or NSCs.
+CHAS does not cover dental implants. CHAS subsidies apply only to the 18 specified common procedures and implants are not on that list.
+At NDCS, dental implants are provided under the Oral and Maxillofacial Surgery and Prosthodontics departments. NDCS handles implant placement, bone grafting, and prosthetic restoration. A referral from a polyclinic or CHAS clinic is required for subsidised access. Private patient rates are as listed in the fee table in this chunk.
+At NUCOHS, dental implants are provided through the Dental Implant Clinic (a dedicated multidisciplinary clinic) and the Oral and Maxillofacial Surgery and Prosthodontics specialist clinics. NUCOHS provides a full range of implant services including surgical placement, bone augmentation, and prosthetic restoration. Referral required for subsidised access.
+At restructured hospital dental departments (e.g. NTFGH, Changi General Hospital, Khoo Teck Puat Hospital, KK Women's and Children's Hospital, Tan Tock Seng Hospital), dental implants are provided as part of the specialist dental service. Hospital private patient rates are as listed in the fee table in this chunk. Subsidised rates for referred Singapore Citizens and PRs are substantially lower.
+--- END CHUNK 012 ---
+
+================================================================================
+--- CHUNK 013 ---
+[CHUNK ID]   cost-wisdom-tooth-surgery
+[TOPIC]      Wisdom tooth surgery cost — hospital averages and Medisave coverage
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   wisdom tooth surgery cost, wisdom tooth extraction Singapore, impacted wisdom tooth fee, Medisave wisdom tooth, surgical extraction cost, how much wisdom tooth, CHAS wisdom tooth
+[TRIGGERS]
+  - How much does wisdom tooth surgery cost?
+  - Can I use Medisave for wisdom tooth extraction?
+  - How much will Medisave cover for wisdom tooth surgery?
+  - Is wisdom tooth surgery cheaper at a polyclinic?
+  - Why is wisdom tooth surgery more expensive than a simple extraction?
+
+CONTENT:
+
+Surgical extraction is required when a wisdom tooth (or any tooth) is impacted, broken, has curved roots, or cannot be removed with simple forceps technique. This is distinct from simple extraction. Surgical wisdom tooth extraction is Medisave-claimable, which substantially reduces out-of-pocket cost.
+
+RESTRUCTURED HOSPITALS — 2024 AVERAGE FEES (under local anaesthesia, non-subsidised private patients; excluding GST):
+These fees generally exclude consultation, X-ray, investigation, and re-treatment fees. Procedures performed under sedation or general anaesthesia carry additional fees.
+
+Hospital wisdom tooth surgery fees — natural language per row:
+Impacted wisdom tooth surgery under local anaesthesia at Changi General Hospital costs an average of S$1,319 for a private patient.
+Impacted wisdom tooth surgery at Khoo Teck Puat Hospital costs an average of S$894 for a private patient.
+Impacted wisdom tooth surgery at KK Women's and Children's Hospital costs an average of S$1,101 for a private patient.
+Impacted wisdom tooth surgery at National Dental Centre Singapore (NDCS) costs an average of S$1,144 for a private patient.
+Impacted wisdom tooth surgery at National University Centre for Oral Health (NUCOH) costs an average of S$1,181 for a private patient.
+Impacted wisdom tooth surgery at Ng Teng Fong General Hospital costs an average of S$1,192 for a private patient.
+Impacted wisdom tooth surgery at Sengkang General Hospital costs an average of S$784 for a private patient.
+Impacted wisdom tooth surgery at Tan Tock Seng Hospital costs an average of S$820 for a private patient.
+
+Hospital wisdom tooth surgery fees — markdown table:
+| Hospital / Institution                                | Impacted Wisdom Tooth Surgery (LA) |
+|---                                                    |---                                 |
+| Changi General Hospital                               | S$1,319                            |
+| Khoo Teck Puat Hospital                               | S$894                              |
+| KK Women's and Children's Hospital                    | S$1,101                            |
+| National Dental Centre Singapore (NDCS)               | S$1,144                            |
+| National University Centre for Oral Health (NUCOH)    | S$1,181                            |
+| Ng Teng Fong General Hospital                         | S$1,192                            |
+| Sengkang General Hospital                             | S$784                              |
+| Tan Tock Seng Hospital                                | S$820                              |
+(2024 average fees, non-subsidised patients, local anaesthesia, excluding GST.)
+
+CHAS SUBSIDY: CHAS does not cover surgical wisdom tooth extraction. CHAS covers anterior and posterior non-surgical (simple) extractions only.
+
+MEDISAVE COVERAGE:
+Medisave covers surgical wisdom tooth extraction. It does not apply to simple extractions, including straightforward removal of wisdom teeth that are fully erupted and removable with forceps.
+
+Medisave wisdom tooth claims — natural language per row:
+Wisdom tooth surgery on a single tooth is covered by Medisave up to S$1,250.
+Wisdom tooth surgery on 2 or 3 teeth in one operation is covered by Medisave up to S$2,150.
+Surgical consumables are covered by Medisave up to S$300 per procedure.
+
+Medisave wisdom tooth claims — markdown table:
+| Procedure                               | Maximum Medisave Claim |
+|---                                      |---                     |
+| Wisdom Tooth Surgery — Single Tooth     | Up to S$1,250          |
+| Wisdom Tooth Surgery — 2 or 3 Teeth    | Up to S$2,150          |
+| Surgical Consumables                    | Up to S$300            |
+
+PRACTICAL OUT-OF-POCKET:
+For a single impacted wisdom tooth at a restructured hospital: headline fee is approximately S$800 to S$1,300 before subsidy. After Medisave deduction of up to S$1,250, the out-of-pocket cash is often minimal. For two or three teeth in one operation: headline fee is typically S$1,500 to S$3,000 or more. After Medisave deduction of up to S$2,150, the balance plus any sedation fees is the out-of-pocket amount.
+
+WHO PROVIDES WISDOM TOOTH SURGERY AT EACH SETTING:
+Wisdom tooth surgery (surgical extraction of impacted wisdom teeth) is not available at polyclinics. Polyclinics refer patients requiring surgical wisdom tooth extraction to restructured hospitals or NSCs. Polyclinics handle simple extractions only — straightforward removal of a fully erupted, non-impacted wisdom tooth may be performed at the polyclinic.
+CHAS does not cover surgical wisdom tooth extraction. CHAS covers only non-surgical (simple) anterior and posterior extractions.
+At NDCS, surgical wisdom tooth extraction and complex oral surgical cases are managed by the Department of Oral and Maxillofacial Surgery. NDCS handles both routine and complex impacted wisdom tooth cases. Referral from polyclinic or CHAS clinic required for subsidised access. Private patient rates are as listed in the fee table in this chunk.
+At NUCOHS, surgical wisdom tooth extraction is provided under the Oral and Maxillofacial Surgery specialist clinic. Referral required for subsidised access.
+At restructured hospital dental departments (e.g. NTFGH, Changi General Hospital, Khoo Teck Puat Hospital, KK Women's and Children's Hospital, Sengkang General Hospital, Tan Tock Seng Hospital), surgical wisdom tooth extraction is performed as part of the oral surgery service. These departments accept referrals from polyclinics and other hospitals. Medisave can be used for surgical extractions at all these settings. Hospital private patient rates are as listed in the fee table in this chunk.
+--- END CHUNK 013 ---
+
+================================================================================
+--- CHUNK 014 ---
+[CHUNK ID]   subsidy-medisave-dental
+[TOPIC]      Medisave for dental — what is covered, what is not, and how to use it
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   Medisave dental, can I use Medisave for dental, Medisave dental coverage, Medisave surgical dental, Medisave filling crown, CPF Medisave dental, Medisave eligibility dental, TOSP dental
+[TRIGGERS]
+  - Can I use Medisave for dental treatment?
+  - Will Medisave cover my filling?
+  - Does Medisave cover dental crowns?
+  - Whose Medisave can I use for my dental work?
+  - How do I use Medisave for dental?
+
+CONTENT:
+
+Medisave is the national medical savings scheme administered by the CPF Board. For dental, Medisave covers surgical procedures only. Routine non-surgical work — fillings, scaling, polishing, simple extractions — is not Medisave-claimable. This is a frequent source of confusion.
+
+Whether a procedure is claimable is determined by the Table of Surgical Procedures (TOSP), a Ministry of Health master list of procedures eligible for Medisave and MediShield Life claims. If a dental procedure has a TOSP code it is in principle Medisave-claimable; if it does not, it is not. The dollar amount claimable is determined by the procedure's TOSP Table classification and CPF Board scheme rules.
+
+MEDISAVE ELIGIBILITY:
+To use Medisave for dental, you must be a Singapore Citizen or Permanent Resident, must be at least 18 years old, and must have sufficient Medisave balance. You may also use a family member's Medisave (spouse, parents, children, or in some cases siblings) depending on the procedure and relationship.
+
+PROCEDURES COVERED (reference maximum claim amounts):
+These amounts are compiled from a Singapore dental clinic's published reference. Confirm with the treating clinic before treatment, as the CPF Board does not publish a single canonical per-procedure dental claim-limit page.
+
+Medisave dental coverage — natural language per row:
+Insertion of dental implants is covered by Medisave up to S$1,950 per tooth.
+Removal of dental implants is covered by Medisave up to S$1,350 per tooth.
+Wisdom tooth surgery on a single tooth is covered by Medisave up to S$1,250.
+Wisdom tooth surgery on 2 or 3 teeth is covered by Medisave up to S$2,150.
+Guided bone regeneration is covered by Medisave up to S$1,250.
+Crown lengthening surgery is covered by Medisave up to S$650.
+Surgical consumables are covered by Medisave up to S$300.
+Gum grafting, frenectomy, and gingivectomy are covered by Medisave up to S$1,250.
+Sinus lift is covered by Medisave up to S$1,550.
+Bone grafting is covered by Medisave up to S$950.
+Surgical removal of fractured teeth is covered by Medisave up to S$350.
+Surgical removal of retained roots is covered by Medisave up to S$1,250.
+Removal of dental cysts is covered by Medisave up to S$950.
+Dental biopsies are covered by Medisave up to S$350.
+Incision and drainage of dental abscess is covered by Medisave up to S$1,050 per tooth.
+Removal of sharp bone is covered by Medisave up to S$350.
+Removal of salivary gland is covered by Medisave up to S$950.
+Alveoloplasty (jawbone smoothing) is covered by Medisave up to S$1,250.
+Embedded tooth removal is covered by Medisave up to S$1,550.
+Surgical exposure of a partially buried tooth is covered by Medisave up to S$950.
+
+Medisave dental coverage — markdown table:
+| Surgical Procedure                                    | Maximum Medisave Claim    |
+|---                                                    |---                        |
+| Insertion of Dental Implants                          | Up to S$1,950 per tooth   |
+| Removal of Dental Implants                            | Up to S$1,350 per tooth   |
+| Wisdom Tooth Surgery — Single Tooth                   | Up to S$1,250             |
+| Wisdom Tooth Surgery — 2 or 3 Teeth                  | Up to S$2,150             |
+| Guided Bone Regeneration                              | Up to S$1,250             |
+| Crown Lengthening                                     | Up to S$650               |
+| Surgical Consumables                                  | Up to S$300               |
+| Gum Grafting / Gum Surgery (Frenectomy, Gingivectomy) | Up to S$1,250             |
+| Sinus Lift                                            | Up to S$1,550             |
+| Bone Grafting                                         | Up to S$950               |
+| Surgical Removal of Fractured Teeth                   | Up to S$350               |
+| Retained Roots (surgical removal)                     | Up to S$1,250             |
+| Removal of Cysts                                      | Up to S$950               |
+| Biopsies                                              | Up to S$350               |
+| Incision and Drainage                                 | Up to S$1,050 per tooth   |
+| Removal of Sharp Bone                                 | Up to S$350               |
+| Removal of Salivary Gland                             | Up to S$950               |
+| Alveoloplasty (jawbone smoothing / re-contouring)     | Up to S$1,250             |
+| Embedded Tooth Removal                                | Up to S$1,550             |
+| Surgical Exposure of Partially Buried Tooth           | Up to S$950               |
+
+PROCEDURES NOT COVERED BY MEDISAVE:
+Medisave does not cover routine dental consultation, scaling and polishing, routine fillings (simple or complex), simple non-surgical extractions, permanent crowns (except via Flexi-MediSave for patients aged 60 and above from mid-2026), routine root canal treatment (except via Flexi-MediSave for patients aged 60 and above), removable dentures, veneers, teeth whitening, cosmetic procedures, or orthodontic treatment (braces).
+
+FLEXI-MEDISAVE (from mid-2026):
+A separate enhancement allows Singapore Citizens and Permanent Residents aged 60 and above to use Medisave for up to S$400 per year for permanent crowns and root canal treatments at CHAS dental clinics and public healthcare institutions. This is not standard Medisave — it is a specific extension for seniors only. See the Flexi-MediSave chunk for full details.
+
+HOW TO USE MEDISAVE FOR DENTAL:
+1. Confirm with the dentist or clinic that the procedure qualifies — clinics performing surgical work are familiar with the Medisave claim process.
+2. The clinic submits the Medisave claim on your behalf at the time of payment.
+3. The Medisave amount is deducted from your bill; the balance is payable in cash.
+4. You can use your own Medisave or a family member's, depending on the relationship and procedure category.
+
+IMPORTANT: The subsidy amounts listed are reference maximums compiled from a clinic-published source. Confirm the actual claimable amount with the clinic before treatment. Individual entitlement depends on Medisave balance and specific procedure classification.
+
+WHERE MEDISAVE-CLAIMABLE DENTAL PROCEDURES ARE PERFORMED:
+Medisave-claimable dental procedures are surgical in nature and are therefore performed at restructured hospitals, NDCS, and NUCOHS — not at polyclinics or routine CHAS primary care clinics. Specific settings by procedure:
+- Wisdom tooth surgery: NDCS, NUCOHS, and all major restructured hospital dental departments (NTFGH, Changi General Hospital, Khoo Teck Puat Hospital, KK Women's and Children's Hospital, Sengkang General Hospital, Tan Tock Seng Hospital, Alexandra Hospital).
+- Dental implants (surgical placement, bone grafting, sinus lift): NDCS, NUCOHS (Dental Implant Clinic), and restructured hospital dental departments with implantology programmes.
+- Periodontal surgery (gum grafting, gingivectomy, crown lengthening, guided bone regeneration): NDCS (Periodontics), NUCOHS (Periodontics), and restructured hospital dental departments.
+- Surgical endodontics (apicoectomy): NDCS (Endodontics) and NUCOHS (Endodontics).
+- Other oral surgery (cyst removal, biopsy, incision and drainage, alveoloplasty, embedded tooth removal): NDCS and NUCOHS Oral and Maxillofacial Surgery departments, and restructured hospital dental/oral surgery departments.
+Patients must be referred from a polyclinic or public hospital to access these services at subsidised rates. Without a referral, private patient rates apply. Medisave can be used regardless of subsidised or private patient status, subject to available balance and procedure eligibility.
+--- END CHUNK 014 ---
+
+================================================================================
+--- CHUNK 015 ---
+[CHUNK ID]   subsidy-chas-overview-all-tiers
+[TOPIC]      CHAS dental subsidy — full comparison of all four card tiers across all 18 procedures
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   CHAS subsidy all tiers, CHAS Blue Orange Pioneer Merdeka comparison, CHAS dental table, all CHAS procedures subsidy, CHAS dental 2025, 18 CHAS procedures, CHAS October 2025 enhanced
+[TRIGGERS]
+  - What does CHAS cover for dental?
+  - How do CHAS tiers compare to each other?
+  - What is the difference in CHAS subsidy between Pioneer and Blue?
+  - Which CHAS card gives the most dental subsidy?
+  - What procedures does CHAS cover for dental?
+  - What is the full CHAS dental subsidy table?
+
+CONTENT:
+
+The Community Health Assist Scheme (CHAS) provides dental subsidies to eligible Singapore Citizens at CHAS-participating private dental clinics. Cards are issued in four tiers based on age and means-testing. CHAS subsidies were enhanced from 1 October 2025.
+
+THE FOUR TIERS (highest to lowest subsidy):
+Pioneer Generation (PG): Singapore Citizens born on or before 31 December 1949 who became citizens by 31 December 1986. This is the highest subsidy tier.
+Merdeka Generation (MG): Singapore Citizens born between 1 January 1950 and 31 December 1959 who became citizens by 31 December 1996 and are not eligible for PG. Subsidies sit slightly below PG.
+CHAS Blue: Singapore Citizens with monthly household income per person of approximately S$1,200 to S$2,000. Lower-middle-income tier.
+CHAS Orange: Singapore Citizens with monthly household income per person of approximately S$2,001 to S$2,800. From 1 October 2025, CHAS Orange was expanded to cover all 18 procedures — previously it covered only 7.
+
+THE 18 COVERED PROCEDURES — ALL CARD TIERS (effective 1 October 2025):
+The subsidy is a maximum cap per claim, not a guaranteed amount. It applies per procedure per visit.
+
+CHAS all tiers full comparison — natural language (selected key procedures):
+For a consultation: PG covers up to S$30.50, MG covers up to S$25.50, CHAS Blue covers up to S$20.50, CHAS Orange covers up to S$13.50.
+For scaling: PG covers up to S$40.00, MG covers up to S$35.00, CHAS Blue covers up to S$30.00, CHAS Orange covers up to S$20.00.
+For polishing: PG covers up to S$30.50, MG covers up to S$25.50, CHAS Blue covers up to S$20.50, CHAS Orange covers up to S$13.50.
+For an X-ray: PG covers up to S$21.00, MG covers up to S$16.00, CHAS Blue covers up to S$11.00, CHAS Orange covers up to S$7.50.
+For topical fluoride: PG covers up to S$30.50, MG covers up to S$25.50, CHAS Blue covers up to S$20.50, CHAS Orange covers up to S$13.50.
+For an anterior extraction: PG covers up to S$38.50, MG covers up to S$33.50, CHAS Blue covers up to S$28.50, CHAS Orange covers up to S$19.00.
+For a posterior extraction: PG covers up to S$78.50, MG covers up to S$73.50, CHAS Blue covers up to S$68.50, CHAS Orange covers up to S$45.50.
+For a simple filling: PG covers up to S$40.00, MG covers up to S$35.00, CHAS Blue covers up to S$30.00, CHAS Orange covers up to S$20.00.
+For a complex filling: PG covers up to S$60.00, MG covers up to S$55.00, CHAS Blue covers up to S$50.00, CHAS Orange covers up to S$33.50.
+For re-cementation: PG covers up to S$45.00, MG covers up to S$40.00, CHAS Blue covers up to S$35.00, CHAS Orange covers up to S$23.50.
+For a denture reline or repair: PG covers up to S$85.00, MG covers up to S$80.00, CHAS Blue covers up to S$75.00, CHAS Orange covers up to S$50.00.
+For a permanent crown: PG covers up to S$625.00, MG covers up to S$620.00, CHAS Blue covers up to S$615.00, CHAS Orange covers up to S$410.00.
+For a complete denture: PG covers up to S$418.50, MG covers up to S$413.50, CHAS Blue covers up to S$408.50, CHAS Orange covers up to S$272.50.
+For a simple partial denture: PG covers up to S$314.00, MG covers up to S$309.00, CHAS Blue covers up to S$304.00, CHAS Orange covers up to S$202.50.
+For a complex partial denture: PG covers up to S$395.50, MG covers up to S$390.50, CHAS Blue covers up to S$385.50, CHAS Orange covers up to S$257.00.
+For an anterior root canal: PG covers up to S$336.00, MG covers up to S$331.00, CHAS Blue covers up to S$326.00, CHAS Orange covers up to S$217.50.
+For a pre-molar root canal: PG covers up to S$472.50, MG covers up to S$467.50, CHAS Blue covers up to S$462.50, CHAS Orange covers up to S$308.50.
+For a molar root canal: PG covers up to S$594.50, MG covers up to S$589.50, CHAS Blue covers up to S$584.50, CHAS Orange covers up to S$389.50.
+
+CHAS all tiers — full markdown table (effective 1 October 2025):
+| Procedure                              | PG (S$) | MG (S$) | CHAS Blue (S$) | CHAS Orange (S$) |
+|---                                     |---      |---      |---             |---               |
+| Consultation                           | 30.50   | 25.50   | 20.50          | 13.50            |
+| Polishing                              | 30.50   | 25.50   | 20.50          | 13.50            |
+| Scaling                                | 40.00   | 35.00   | 30.00          | 20.00            |
+| Topical Fluoride                       | 30.50   | 25.50   | 20.50          | 13.50            |
+| X-Ray                                  | 21.00   | 16.00   | 11.00          | 7.50             |
+| Extraction, Anterior                   | 38.50   | 33.50   | 28.50          | 19.00            |
+| Extraction, Posterior                  | 78.50   | 73.50   | 68.50          | 45.50            |
+| Filling, Simple                        | 40.00   | 35.00   | 30.00          | 20.00            |
+| Filling, Complex                       | 60.00   | 55.00   | 50.00          | 33.50            |
+| Re-cementation                         | 45.00   | 40.00   | 35.00          | 23.50            |
+| Denture Reline / Repair                | 85.00   | 80.00   | 75.00          | 50.00            |
+| Permanent Crown                        | 625.00  | 620.00  | 615.00         | 410.00           |
+| Removable Denture, Complete            | 418.50  | 413.50  | 408.50         | 272.50           |
+| Removable Denture, Partial, Simple     | 314.00  | 309.00  | 304.00         | 202.50           |
+| Removable Denture, Partial, Complex    | 395.50  | 390.50  | 385.50         | 257.00           |
+| Root Canal Treatment (Anterior)        | 336.00  | 331.00  | 326.00         | 217.50           |
+| Root Canal Treatment (Pre-molar)       | 472.50  | 467.50  | 462.50         | 308.50           |
+| Root Canal Treatment (Molar)           | 594.50  | 589.50  | 584.50         | 389.50           |
+(Maximum subsidy per claim, effective 1 October 2025.)
+
+WHAT CHAS DOES NOT COVER:
+CHAS dental subsidies cover only the 18 procedures listed above. Treatments outside this list are not covered, including dental implants, veneers, teeth whitening, orthodontic treatment (braces or clear aligners), cosmetic procedures, periodontal surgery, and most other surgical procedures (which may be Medisave-claimable instead).
+
+HOW TO USE CHAS:
+1. Verify your CHAS card status — cards are valid for two years before renewal.
+2. Find a participating CHAS dental clinic at chas.sg.
+3. Present your physical or digital CHAS card at the clinic before treatment.
+4. The clinic processes the claim; the subsidy is deducted from your bill.
+
+The subsidy is per claim per procedure, not per visit. A single visit with multiple procedures generates separate subsidy claims, each subject to its own cap.
+
+From 1 October 2025, CHAS dental clinics must display the MOH benchmarks alongside their price lists, allowing patients to see the clinic's fee, the MOH benchmark, the CHAS subsidy, and the expected co-payment before proceeding.
+
+IMPORTANT: The CHAS subsidy is a maximum cap per claim, not a guaranteed amount. Verify eligibility at chas.sg or with the clinic's billing team. The chatbot cannot confirm individual entitlement amounts.
+
+WHERE CHAS SUBSIDIES APPLY AND DO NOT APPLY:
+CHAS dental subsidies apply only at CHAS-participating private dental clinics. They do not apply at polyclinics, NDCS, NUCOHS, or restructured hospital dental departments.
+At polyclinics, built-in government subsidies apply automatically for Singapore Citizens and PRs — CHAS cards are not used at polyclinics for routine dental procedures.
+At NDCS and NUCOHS (National Specialty Dental Centres), CHAS subsidies do not apply. Subsidised access at NSCs is available through the referral pathway — patients referred by polyclinics or CHAS clinics receive government-subsidised (means-tested) rates, which are separate from and independent of CHAS card subsidies.
+At restructured hospital dental departments, the same applies — CHAS subsidies do not apply, but patients referred from polyclinics or public hospitals receive subsidised hospital rates.
+CHAS cardholders (PG, MG, CHAS Blue, CHAS Orange) who are referred from a CHAS dental clinic to NDCS or NUCOHS for specialist care will receive government-subsidised specialist rates at the NSC — the CHAS subsidy itself does not follow the patient to the NSC, but the referral pathway enables subsidised care there.
+--- END CHUNK 015 ---
+
+================================================================================
+--- CHUNK 016 ---
+[CHUNK ID]   subsidy-flexi-medisave
+[TOPIC]      Flexi-MediSave for dental — seniors aged 60+ using Medisave for crowns and root canals
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   Flexi-MediSave, seniors dental Medisave, Medisave crown senior, Medisave root canal senior, S$400 dental Medisave, aged 60 dental Medisave, Flexi-MediSave 2026
+[TRIGGERS]
+  - What is Flexi-MediSave for dental?
+  - Can seniors use Medisave for a crown?
+  - How does Flexi-MediSave work?
+  - When does Flexi-MediSave for dental start?
+  - How much Flexi-MediSave can I use per year?
+  - Where can I use Flexi-MediSave?
+
+CONTENT:
+
+Flexi-MediSave is a Medisave-funded dental enhancement that takes effect from mid-2026. It allows Singapore Citizens and Permanent Residents aged 60 and above to use Medisave for two specific non-surgical dental procedures that are not covered by standard Medisave. This is a meaningful change for seniors managing costs of crowns and root canals.
+
+ELIGIBILITY:
+You must be a Singapore Citizen or Permanent Resident, aged 60 years or above, with sufficient Medisave balance. Eligibility for Flexi-MediSave is independent of CHAS card status — a senior who does not hold a CHAS card can still use Flexi-MediSave at a CHAS clinic.
+
+WHAT IT COVERS:
+Up to S$400 per year can be drawn from Medisave under Flexi-MediSave for dental. This S$400 is an annual cap that applies across both covered procedure categories combined:
+- Permanent Crowns
+- Root Canal Treatments
+
+WHERE IT CAN BE USED:
+Flexi-MediSave is available at CHAS dental clinics and public healthcare institutions (restructured hospitals, NDCS, NUCOH). It does not apply at non-CHAS private clinics.
+
+ANNUAL CAP TIMING:
+The S$400 limit is per calendar year, not per procedure. If a crown draws the full S$400 in one year, a root canal in the same year cannot draw any additional Flexi-MediSave until the following year. For treatment plans involving multiple crowns or root canals, spreading procedures across calendar years maximises Flexi-MediSave use.
+
+PRACTICAL EXAMPLE FOR A SENIOR WITH A PG OR MG CARD NEEDING A CROWN:
+Step 1: MOH benchmark for a private permanent crown is S$750 to S$1,400 before GST.
+Step 2: PG subsidy at the CHAS clinic deducts up to S$625 from the bill.
+Step 3: Flexi-MediSave then offsets up to S$400 of the remaining balance.
+Step 4: The patient pays the remaining out-of-pocket balance in cash.
+This combination of CHAS subsidy plus Flexi-MediSave can substantially reduce the cost of a crown for qualifying seniors.
+
+WHAT FLEXI-MEDISAVE DOES NOT COVER:
+Flexi-MediSave does not cover procedures other than permanent crowns and root canal treatments. It does not apply at non-CHAS private clinics. It does not apply for patients younger than 60.
+
+CHAS CLINIC ACCREDITATION:
+As part of the Flexi-MediSave roll-out, all CHAS dental clinics are required to be Medisave-accredited and onboard Flexi-MediSave by 31 December 2026. CHAS clinics that are not accredited by that date will be offboarded from the CHAS scheme. In practice, most CHAS clinics will accept Flexi-MediSave from mid-2026 onward. If a clinic does not yet accept it, ask before booking.
+
+IMPORTANT: The chatbot cannot confirm individual Medisave balance or annual usage. Verify via cpf.gov.sg or the clinic before treatment.
+
+WHERE FLEXI-MEDISAVE CAN BE USED — PROVIDER DETAILS:
+Flexi-MediSave is accepted at CHAS dental clinics and public healthcare institutions. Public healthcare institutions in this context include: polyclinics (for the procedures they provide), NDCS, NUCOHS, and restructured hospital dental departments. It does not apply at non-CHAS private dental clinics.
+For crowns: Flexi-MediSave can be used at CHAS clinics (for crowns covered under CHAS) and at public institutions including NDCS, NUCOHS, and restructured hospital dental departments. This means a senior aged 60+ getting a crown at NDCS or NUCOHS as a referred subsidised patient can additionally claim up to S$400/year via Flexi-MediSave on top of any hospital subsidy.
+For root canal treatment: The same applies. Flexi-MediSave can be used at CHAS clinics and public institutions (NDCS, NUCOHS, restructured hospitals) for root canal treatment in patients aged 60+.
+--- END CHUNK 016 ---
+
+================================================================================
+--- CHUNK 017 ---
+[CHUNK ID]   subsidy-eligibility-guide
+[TOPIC]      Which dental subsidy scheme applies to you — eligibility guide by patient type
+[DOMAIN]     Dental costs and subsidies — Singapore
+[KEYWORDS]   which subsidy am I eligible for, dental subsidy Singapore eligibility, Pioneer Generation dental, Merdeka Generation dental, CHAS Blue eligibility, CHAS Orange eligibility, PR dental subsidy, non-resident dental, polyclinic subsidy, who qualifies for CHAS
+[TRIGGERS]
+  - Which dental subsidy am I eligible for?
+  - Am I eligible for CHAS?
+  - What dental subsidy does a Permanent Resident get?
+  - Do non-residents get any dental subsidy in Singapore?
+  - What is the difference between PG and MG dental subsidy?
+  - How do I check my CHAS card tier?
+  - How do I know if I qualify for Pioneer Generation?
+
+CONTENT:
+
+This chunk summarises eligibility for each dental subsidy scheme in Singapore to help patients identify which schemes apply to them.
+
+PIONEER GENERATION (PG) PACKAGE:
+Who qualifies: Singapore Citizens born on or before 31 December 1949, who became Singapore Citizens by 31 December 1986. The PG card is issued automatically — no application needed. If you believe you are eligible but have not received a card, contact the Pioneer Generation Office or visit pioneers.gov.sg.
+Subsidy level: Highest tier. PG subsidies are the largest across all 18 CHAS-covered dental procedures.
+Where it applies: CHAS dental clinics only.
+
+MERDEKA GENERATION (MG) PACKAGE:
+Who qualifies: Singapore Citizens born between 1 January 1950 and 31 December 1959, who became Singapore Citizens by 31 December 1996, and who are not eligible for the Pioneer Generation Package. The MG card is issued automatically. For more information visit merdeka.gov.sg.
+Subsidy level: Second highest, slightly below PG across all 18 procedures.
+Where it applies: CHAS dental clinics only.
+
+CHAS BLUE:
+Who qualifies: Singapore Citizens with monthly household income per person of approximately S$1,200 to S$2,000 (or Annual Value of home approximately S$13,001 to S$21,000 for households with no income). Final eligibility determined by the Agency for Integrated Care (AIC). Apply or check eligibility at chas.sg or via Healthhub.
+Subsidy level: Third tier; covers all 18 dental procedures.
+Where it applies: CHAS dental clinics only.
+
+CHAS ORANGE:
+Who qualifies: Singapore Citizens with monthly household income per person of approximately S$2,001 to S$2,800 (or Annual Value of home approximately S$21,001 to S$31,000 for households with no income). Final eligibility determined by the AIC. Apply or check at chas.sg or via Healthhub.
+Subsidy level: Lowest CHAS tier; covers all 18 dental procedures from 1 October 2025 (coverage of the 10 basic and preventive procedures was new from that date).
+Where it applies: CHAS dental clinics only.
+
+POLYCLINIC SUBSIDY (built-in, for routine care):
+Who qualifies: Singapore Citizens receive subsidised rates automatically at government polyclinics. Deeper subsidies apply for children under 18 and elderly aged 65 and above. Permanent Residents receive an intermediate subsidised rate. Non-residents pay full rates.
+No application is needed for polyclinic subsidies — they are applied automatically based on identity documents.
+Note: CHAS and Medisave are generally not used at polyclinics for routine dental procedures.
+
+MEDISAVE (for surgical procedures):
+Who qualifies: Singapore Citizens and Permanent Residents aged 18 and above with sufficient Medisave balance. Covers surgical dental procedures with a TOSP code. Does not cover routine non-surgical work.
+
+FLEXI-MEDISAVE (from mid-2026, for crowns and root canals only):
+Who qualifies: Singapore Citizens and Permanent Residents aged 60 and above. Available at CHAS dental clinics and public healthcare institutions. Independent of CHAS card status.
+
+PERMANENT RESIDENTS:
+Permanent Residents are not eligible for CHAS, Pioneer Generation, or Merdeka Generation subsidies. They receive intermediate subsidised rates at polyclinics (between citizen and non-resident rates), and they can use Medisave for eligible surgical procedures.
+
+NON-RESIDENTS:
+Non-residents pay full (non-subsidised) rates at all dental settings, including polyclinics and public hospitals. No subsidy schemes apply.
+
+HOW TO CHECK YOUR CHAS TIER:
+Check your physical CHAS card — the card colour and label indicate the tier. Alternatively, check via the Healthhub app or at chas.sg. Cards must be renewed every two years.
+
+--- END CHUNK 017 ---
+
+================================================================================
+END OF DENTAL COST AND SUBSIDIES RAG KNOWLEDGE BASE
+Total chunks: 17
+Topics covered:
+  - Cost overview: how costs work, GST, fee structure (1 chunk)
+  - Care settings comparison (1 chunk)
+  - Procedure costs: consultation, cleaning, X-ray, filling, extraction, crown, root canal, full denture, partial denture, implant, wisdom tooth surgery (11 chunks)
+  - Subsidy schemes: Medisave, CHAS all tiers combined, Flexi-MediSave, eligibility guide (4 chunks)
+
+TABLE STRATEGY USED IN THIS FILE:
+  - All tables appear twice: first as natural language sentences (one claim per row, for vector/semantic retrieval), then as clean markdown (for LLM reading and structured answer generation).
+  - This dual format ensures numeric facts are retrievable via semantic search AND accurately read by the LLM when the chunk is retrieved.
+  - All cross-references to other documents have been removed. Every chunk is fully self-contained.
+
+ENHANCEMENT LOG (appended June 2026):
+  - Each chunk now includes a "WHO PROVIDES [PROCEDURE] AT EACH SETTING" section identifying which provider type (polyclinic, CHAS clinic, NDCS, NUCOHS, restructured hospital dental department) can perform the treatment, whether a referral is needed at each level, and how subsidies interact at each setting.
+  - CHUNK 001: Added PROVIDER CONTEXT NOTE listing all named institutions in this file and polyclinic cluster operators.
+  - CHUNK 002: Added PROVIDER CONTEXT sections for polyclinics, NDCS, NUCOHS, and restructured hospital dental departments.
+  - CHUNKS 003–013: Added "WHO PROVIDES [PROCEDURE] AT EACH SETTING" sections for consultation, cleaning, X-rays, fillings, simple extraction, crowns, root canal, full denture, partial denture, implants, and wisdom tooth surgery.
+  - CHUNK 014: Added "WHERE MEDISAVE-CLAIMABLE DENTAL PROCEDURES ARE PERFORMED" section.
+  - CHUNK 015: Added "WHERE CHAS SUBSIDIES APPLY AND DO NOT APPLY" section.
+  - CHUNK 016: Added "WHERE FLEXI-MEDISAVE CAN BE USED — PROVIDER DETAILS" section.
+  - No original cost figures, subsidy amounts, or table data have been altered. All enhancements are appended within existing chunks before their END CHUNK markers.
+  - Source for provider information: Ministry of Health Singapore dental services page, SingHealth Polyclinics dental services page, NDCS About Us and Specialties pages, NUCOHS First Visit and Make a Referral pages, NTFGH Dentistry page, and MOH Parliamentary QA on dental waiting times (January 2025).
+================================================================================

@@ -1,0 +1,1186 @@
+<title>OralLink RAG Docker Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;600&display=swap">
+
+<style>
+:root{
+  --paper:#EEF1F4;
+  --surf:#FFFFFF;
+  --surf2:#F5F7F9;
+  --ink:#111A22;
+  --muted:#5C6B78;
+  --line:#C9D3DB;
+  --line-soft:#DFE6EB;
+  --accent:#0F6EA8;
+  --accent-soft:#E3EFF8;
+  --teal:#0B7F63;
+  --teal-soft:#E1F2EC;
+  --amber:#8F5B06;
+  --amber-soft:#FAEEDA;
+  --term-bg:#0F1720;
+  --term-ink:#D9E3EC;
+  --term-bar:#1B2733;
+  --sans:'Archivo','Segoe UI',system-ui,sans-serif;
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --mono:'JetBrains Mono','Cascadia Mono',Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C1218;
+    --surf:#141D26;
+    --surf2:#18232E;
+    --ink:#D8E0E8;
+    --muted:#8B9AA8;
+    --line:#2C3A47;
+    --line-soft:#22303C;
+    --accent:#5BADE4;
+    --accent-soft:#152836;
+    --teal:#46C4A2;
+    --teal-soft:#0F2A26;
+    --amber:#DBA34A;
+    --amber-soft:#2B2314;
+    --term-bg:#080D13;
+    --term-ink:#CBD7E2;
+    --term-bar:#131D28;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C1218;
+  --surf:#141D26;
+  --surf2:#18232E;
+  --ink:#D8E0E8;
+  --muted:#8B9AA8;
+  --line:#2C3A47;
+  --line-soft:#22303C;
+  --accent:#5BADE4;
+  --accent-soft:#152836;
+  --teal:#46C4A2;
+  --teal-soft:#0F2A26;
+  --amber:#DBA34A;
+  --amber-soft:#2B2314;
+  --term-bg:#080D13;
+  --term-ink:#CBD7E2;
+  --term-bar:#131D28;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{
+  display:grid;
+  grid-template-columns:236px minmax(0,1fr);
+  gap:48px;
+  max-width:1160px;
+  margin:0 auto;
+  padding:0 28px 96px;
+}
+
+/* ---------- masthead ---------- */
+.masthead{
+  grid-column:1/-1;
+  border-bottom:2px solid var(--ink);
+  padding:44px 0 22px;
+  margin-bottom:40px;
+}
+.eyebrow{
+  font-family:var(--sans);
+  font-size:11.5px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 14px;
+}
+h1{
+  font-family:var(--sans);
+  font-weight:700;
+  font-size:clamp(30px,4.6vw,46px);
+  line-height:1.05;
+  letter-spacing:-.02em;
+  margin:0 0 14px;
+  text-wrap:balance;
+}
+.standfirst{
+  max-width:62ch;
+  font-size:18.5px;
+  color:var(--ink);
+  margin:0 0 24px;
+}
+.meta-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 26px;
+  font-family:var(--sans);
+  font-size:12.5px;
+  color:var(--muted);
+}
+.meta-row b{color:var(--ink);font-weight:600}
+
+/* ---------- rail ---------- */
+.rail{
+  font-family:var(--sans);
+  font-size:13px;
+  align-self:start;
+  position:sticky;
+  top:20px;
+  max-height:calc(100vh - 40px);
+  overflow-y:auto;
+}
+.rail h2{
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:600;
+  margin:0 0 12px;
+}
+.rail ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.rail a{
+  display:grid;
+  grid-template-columns:22px 1fr auto;
+  gap:8px;
+  align-items:baseline;
+  padding:6px 8px 6px 4px;
+  border-radius:5px;
+  text-decoration:none;
+  color:var(--ink);
+  border-left:2px solid transparent;
+}
+.rail a:hover{background:var(--surf2);border-left-color:var(--accent)}
+.rail .n{font-family:var(--mono);font-size:11.5px;color:var(--accent);font-weight:600}
+.rail .t{font-size:12.5px;line-height:1.35}
+.rail .m{font-family:var(--mono);font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.rail .divider{height:1px;background:var(--line-soft);margin:12px 4px}
+
+/* ---------- steps ---------- */
+main{min-width:0}
+section{scroll-margin-top:24px}
+.step{
+  border-top:1px solid var(--line);
+  padding-top:26px;
+  margin-top:52px;
+}
+.step:first-of-type{margin-top:0}
+.step-head{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  margin-bottom:6px;
+}
+.step-num{
+  font-family:var(--mono);
+  font-size:13px;
+  font-weight:600;
+  color:var(--surf);
+  background:var(--accent);
+  width:34px;height:34px;
+  flex:0 0 34px;
+  border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:4px;
+}
+.step h2{
+  font-family:var(--sans);
+  font-size:27px;
+  font-weight:600;
+  letter-spacing:-.015em;
+  line-height:1.2;
+  margin:0;
+  text-wrap:balance;
+}
+.chip{
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--muted);
+  border:1px solid var(--line);
+  border-radius:99px;
+  padding:2px 9px;
+  white-space:nowrap;
+  margin-top:9px;
+  margin-left:auto;
+}
+.goal{
+  font-family:var(--sans);
+  font-size:13.5px;
+  color:var(--muted);
+  margin:2px 0 22px 50px;
+  max-width:60ch;
+}
+.step > p, .step > ul, .step > ol, .step > .fig, .step > .term,
+.step > .out, .step > .note, .step > .check, .step > .tablewrap, .step > h3{
+  margin-left:50px;
+}
+@media (max-width:860px){
+  .step > p,.step > ul,.step > ol,.step > .fig,.step > .term,
+  .step > .out,.step > .note,.step > .check,.step > .tablewrap,.step > h3,.goal{margin-left:0}
+}
+p{max-width:66ch;margin:0 0 18px}
+h3{
+  font-family:var(--sans);
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:34px 0 14px;
+}
+ul,ol{max-width:66ch;padding-left:22px;margin:0 0 18px}
+li{margin-bottom:8px}
+strong{font-weight:600}
+a{color:var(--accent)}
+code{
+  font-family:var(--mono);
+  font-size:.855em;
+  background:var(--surf2);
+  border:1px solid var(--line-soft);
+  border-radius:4px;
+  padding:1px 5px;
+  word-break:break-word;
+}
+
+/* ---------- terminal ---------- */
+.term{
+  background:var(--term-bg);
+  border-radius:7px;
+  overflow:hidden;
+  margin:0 0 18px;
+  border:1px solid var(--line);
+}
+.term-bar{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:var(--term-bar);
+  padding:7px 12px;
+  font-family:var(--mono);
+  font-size:11px;
+  color:#8FA3B5;
+  letter-spacing:.02em;
+}
+.term-bar .dot{width:8px;height:8px;border-radius:99px;background:#3B4C5C;flex:0 0 8px}
+.term-bar .path{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.copy{
+  font-family:var(--mono);
+  font-size:10.5px;
+  color:#8FA3B5;
+  background:transparent;
+  border:1px solid #334555;
+  border-radius:4px;
+  padding:2px 8px;
+  cursor:pointer;
+}
+.copy:hover{color:#D9E3EC;border-color:#5B7189}
+.copy:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.term pre{
+  margin:0;
+  padding:14px 14px;
+  overflow-x:auto;
+  color:var(--term-ink);
+  font-family:var(--mono);
+  font-size:13px;
+  line-height:1.72;
+}
+.term .p{color:#5F7B93;user-select:none}
+.term .c{color:#7E93A6}
+
+/* ---------- expected output ---------- */
+.out{
+  border:1px dashed var(--line);
+  border-radius:7px;
+  background:var(--surf2);
+  padding:12px 14px;
+  margin:0 0 18px;
+  overflow-x:auto;
+}
+.out .lbl{
+  font-family:var(--sans);
+  font-size:10.5px;
+  font-weight:600;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--muted);
+  display:block;
+  margin-bottom:8px;
+}
+.out pre{
+  margin:0;
+  font-family:var(--mono);
+  font-size:12.5px;
+  line-height:1.62;
+  color:var(--ink);
+  white-space:pre;
+}
+
+/* ---------- callouts ---------- */
+.note,.check{
+  border-left:3px solid;
+  border-radius:0 6px 6px 0;
+  padding:13px 16px;
+  margin:0 0 18px;
+  font-size:15.5px;
+}
+.note{border-color:var(--amber);background:var(--amber-soft)}
+.check{border-color:var(--teal);background:var(--teal-soft)}
+.note p,.check p{margin:0;max-width:60ch}
+.note p + p,.check p + p{margin-top:10px}
+.note .lbl,.check .lbl{
+  font-family:var(--sans);
+  font-size:10.5px;
+  font-weight:600;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  display:block;
+  margin-bottom:6px;
+}
+.note .lbl{color:var(--amber)}
+.check .lbl{color:var(--teal)}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:0 0 20px}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:520px}
+th{
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-align:left;
+  padding:0 14px 8px 0;
+  border-bottom:1.5px solid var(--line);
+  vertical-align:bottom;
+}
+td{
+  padding:11px 14px 11px 0;
+  border-bottom:1px solid var(--line-soft);
+  vertical-align:top;
+}
+td code{font-size:12.5px}
+kbd{
+  font-family:var(--mono);
+  font-size:.8em;
+  border:1px solid var(--line);
+  border-bottom-width:2px;
+  border-radius:4px;
+  padding:1px 5px;
+  background:var(--surf2);
+}
+
+/* ---------- figures ---------- */
+.fig{margin:0 0 24px}
+.fig svg{
+  display:block;
+  width:100%;
+  height:auto;
+  background:var(--surf);
+  border:1px solid var(--line-soft);
+  border-radius:7px;
+  color:var(--ink);
+}
+figcaption{
+  font-family:var(--sans);
+  font-size:12.5px;
+  color:var(--muted);
+  margin-top:9px;
+  max-width:64ch;
+  line-height:1.5;
+}
+figcaption b{color:var(--ink);font-weight:600}
+svg text{fill:currentColor;font-family:var(--sans);font-size:12.5px}
+svg .bx{fill:var(--surf2);stroke:currentColor;stroke-width:1.2}
+svg .bx-a{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.4}
+svg .zone{fill:none;stroke:currentColor;stroke-width:1;stroke-dasharray:5 4;opacity:.55}
+svg .ln{stroke:currentColor;stroke-width:1.4;fill:none}
+svg .ln-a{stroke:var(--accent);stroke-width:1.7;fill:none}
+svg .ln-bad{stroke:var(--amber);stroke-width:1.6;fill:none;stroke-dasharray:5 4}
+svg .lbl{font-family:var(--mono);font-size:10.5px}
+svg .sm{font-size:11px;opacity:.72}
+svg .zn{font-family:var(--sans);font-size:10.5px;letter-spacing:.11em;opacity:.6}
+svg .ttl{font-family:var(--sans);font-size:12px;font-weight:600}
+svg .ok{fill:var(--teal)}
+svg .bad{fill:var(--amber)}
+svg .acc{fill:var(--accent)}
+
+/* ---------- closing ---------- */
+.recap{
+  background:var(--surf);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:24px 26px;
+  margin-top:52px;
+}
+.recap h2{font-family:var(--sans);font-size:20px;font-weight:600;margin:0 0 14px}
+.recap ul{margin-bottom:0}
+.facil{
+  border-top:2px solid var(--ink);
+  margin-top:52px;
+  padding-top:22px;
+}
+.facil h2{font-family:var(--sans);font-size:20px;font-weight:600;margin:0 0 4px}
+.facil .sub{font-family:var(--sans);font-size:12.5px;color:var(--muted);margin:0 0 20px}
+@media (max-width:960px){
+  .wrap{grid-template-columns:1fr;gap:0}
+  .rail{position:static;max-height:none;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line-soft)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">Specialist Diploma in Applied AI · Practical Lab</p>
+  <h1>Containerising a RAG chatbot with Docker Model Runner</h1>
+  <p class="standfirst">You will take the OralLink RAG Tester — a FastAPI retrieval-augmented chatbot that already runs on your machine — and stand it up as a two-container Docker stack that talks to a large language model running locally through Docker Model Runner. No cloud, no API key, no data leaving your laptop.</p>
+  <div class="meta-row">
+    <span><b>Duration</b> 90 minutes</span>
+    <span><b>Environment</b> Windows 11 · Docker Desktop · PowerShell</span>
+    <span><b>Repo</b> <code>C:\MyWork\_NYP_Project\Orallink\TestDockerModelRunner</code></span>
+    <span><b>Model</b> Ministral 3 8B (Q4_K_M, ~4.8 GB)</span>
+  </div>
+</header>
+
+<nav class="rail" aria-label="Lab steps">
+  <h2>Lab sequence</h2>
+  <ol>
+    <li><a href="#s0"><span class="n">0</span><span class="t">Bench check</span><span class="m">10m</span></a></li>
+    <li><a href="#s1"><span class="n">1</span><span class="t">Model, no app</span><span class="m">15m</span></a></li>
+    <li><a href="#s2"><span class="n">2</span><span class="t">Read the blueprint</span><span class="m">10m</span></a></li>
+    <li><a href="#s3"><span class="n">3</span><span class="t">Build &amp; start the stack</span><span class="m">15m</span></a></li>
+    <li><a href="#s4"><span class="n">4</span><span class="t">Ask the chatbot</span><span class="m">10m</span></a></li>
+    <li><a href="#s5"><span class="n">5</span><span class="t">Change it while it runs</span><span class="m">15m</span></a></li>
+    <li><a href="#s6"><span class="n">6</span><span class="t">When it breaks</span><span class="m">10m</span></a></li>
+    <li><a href="#s7"><span class="n">7</span><span class="t">Tear down</span><span class="m">5m</span></a></li>
+  </ol>
+  <div class="divider"></div>
+  <ol>
+    <li><a href="#appx"><span class="n">A</span><span class="t">Where this goes in production</span><span class="m">read</span></a></li>
+    <li><a href="#recap"><span class="n">✓</span><span class="t">Self-check</span><span class="m"></span></a></li>
+    <li><a href="#facil"><span class="n">i</span><span class="t">Facilitator notes</span><span class="m"></span></a></li>
+  </ol>
+</nav>
+
+<main>
+
+<!-- ============ STEP 0 ============ -->
+<section id="s0" class="step">
+  <div class="step-head">
+    <div class="step-num">0</div>
+    <h2>Bench check</h2>
+    <span class="chip">10 min</span>
+  </div>
+  <p class="goal">Confirm the four things this lab depends on before you spend fifteen minutes downloading a model onto a machine that cannot run it.</p>
+
+  <p>Open <strong>Windows PowerShell</strong> (not the old Command Prompt) and move into the project folder. Every command in this lab is run from this folder unless the terminal header says otherwise.</p>
+
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell — repo root</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> cd C:\MyWork\_NYP_Project\Orallink\TestDockerModelRunner
+<span class="p">PS&gt;</span> dir</pre>
+  </div>
+
+  <p>You should see <code>Dockerfile</code>, <code>docker-compose.yml</code>, <code>nginx\</code>, <code>backend\</code> and <code>query_model.py</code>. If you do not, you are in the wrong folder — everything after this will fail in confusing ways.</p>
+
+  <h3>1 · Docker Desktop is running</h3>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> docker version</pre>
+  </div>
+  <p>Both a <strong>Client</strong> and a <strong>Server</strong> block must appear. A client-only reply with <code>error during connect</code> means the Docker Desktop engine is not started — launch Docker Desktop from the Start menu and wait for the whale icon to stop animating.</p>
+
+  <h3>2 · Model Runner is enabled</h3>
+  <p>Docker Model Runner is a Docker Desktop feature that runs GGUF language models on your own hardware and exposes them behind an OpenAI-compatible HTTP API. It is off by default.</p>
+  <ul>
+    <li>Docker Desktop → <strong>Settings</strong> → <strong>AI</strong> → tick <strong>Enable Docker Model Runner</strong>.</li>
+    <li>Tick <strong>Enable host-side TCP support</strong> and leave the port at <strong>12434</strong>. Apply &amp; restart.</li>
+  </ul>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> docker model status</pre>
+  </div>
+  <p>It should report that the runner is running. If <code>docker model</code> is not a recognised command at all, your Docker Desktop predates Model Runner — update it before continuing.</p>
+
+  <h3>3 · Port 80 is free</h3>
+  <p>The stack publishes its front door on port 80. IIS, Skype, another nginx or a stray container can already hold it.</p>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> netstat -ano | findstr :80</pre>
+  </div>
+  <p>Lines ending <code>LISTENING</code> with local address <code>0.0.0.0:80</code> mean something already owns it. Note the fix now — you will need it in Step 3: change the <code>nginx</code> port mapping in <code>docker-compose.yml</code> from <code>"80:80"</code> to <code>"8080:80"</code> and use <code>http://localhost:8080</code> throughout.</p>
+
+  <h3>4 · Disk space</h3>
+  <p>The model alone is about <strong>4.8 GB</strong>, plus roughly 1 GB for the Python image layers. Have <strong>8 GB free</strong> and at least <strong>8 GB of RAM</strong> available to Docker Desktop.</p>
+
+  <div class="check">
+    <span class="lbl">Checkpoint</span>
+    <p><code>docker version</code> shows a Server block · <code>docker model status</code> reports running · port 80 is free (or you have written down your alternative port).</p>
+  </div>
+</section>
+
+<!-- ============ STEP 1 ============ -->
+<section id="s1" class="step">
+  <div class="step-head">
+    <div class="step-num">1</div>
+    <h2>Meet the model on its own, before any app</h2>
+    <span class="chip">15 min</span>
+  </div>
+  <p class="goal">Pull a model into Docker Model Runner and talk to it directly, so that you know what the model knows <em>before</em> retrieval is added. This is the baseline the rest of the lab is measured against.</p>
+
+  <h3>Pull the model</h3>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell — repo root</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> docker model pull ai/ministral3:8B-Q4_K_M</pre>
+  </div>
+  <p>This downloads roughly 4.8 GB and takes several minutes on campus wifi. While it runs, read ahead to Step 2.</p>
+
+  <p><strong>Q4_K_M</strong> in the tag is the quantisation level: the model's weights have been compressed from 16-bit floats down to about 4 bits each. That is what makes an 8-billion-parameter model fit in memory on a laptop with no GPU. The trade is a small loss of answer quality for a very large gain in size and speed.</p>
+
+  <h3>Confirm the exact tag</h3>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> docker model list</pre>
+  </div>
+  <div class="out">
+    <span class="lbl">Expected output (shape, not exact figures)</span>
+<pre>MODEL NAME                             PARAMETERS  QUANTIZATION  SIZE
+docker.io/ai/ministral3:8B-Q4_K_M      8B          IQ2_XXS/Q4_K_M  4.80 GB</pre>
+  </div>
+  <div class="note">
+    <span class="lbl">Read the tag carefully</span>
+    <p>You pulled <code>ai/ministral3:8B-Q4_K_M</code> but the list shows <code>docker.io/ai/ministral3:8B-Q4_K_M</code>. The app must be configured with the name <em>as listed here</em>. A tag mismatch is the single most common cause of "model not found" later in this lab.</p>
+  </div>
+
+  <h3>Call the API by hand</h3>
+  <p>Model Runner listens on <code>http://localhost:12434</code> and speaks the OpenAI API dialect, so the same request shape you would send to a cloud provider works unchanged.</p>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> curl.exe http://localhost:12434/engines/v1/models</pre>
+  </div>
+  <div class="note">
+    <span class="lbl">PowerShell gotcha</span>
+    <p>In PowerShell, <code>curl</code> is an alias for <code>Invoke-WebRequest</code>, which takes different flags and prints a different object. Always type <code>curl.exe</code> in this lab so you get the real curl binary.</p>
+  </div>
+
+  <h3>Ask the raw model an OralLink question</h3>
+  <p><code>query_model.py</code> is a standalone console client using only the Python standard library — no virtual environment, no dependencies, and no retrieval. It goes straight to the model.</p>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell — repo root</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> python query_model.py "What is Oral Link's AI dental screening service?"</pre>
+  </div>
+  <p>The first call may hang for a minute or two while the model is loaded into RAM; after that, responses stream back quickly.</p>
+  <p><strong>Write down what it says.</strong> The model has never seen OralLink's documentation. It will either admit ignorance or — more instructively — invent a plausible-sounding dental company. That invention is the problem retrieval-augmented generation exists to solve, and you will re-ask this exact question in Step 4.</p>
+
+  <div class="check">
+    <span class="lbl">Checkpoint</span>
+    <p><code>docker model list</code> shows the Ministral tag · the raw model answered a question · you have noted its (probably wrong) answer about OralLink.</p>
+  </div>
+</section>
+
+<!-- ============ STEP 2 ============ -->
+<section id="s2" class="step">
+  <div class="step-head">
+    <div class="step-num">2</div>
+    <h2>Read the blueprint before you build</h2>
+    <span class="chip">10 min</span>
+  </div>
+  <p class="goal">Understand what the three configuration files describe, so that Step 3 is a confirmation rather than a magic trick.</p>
+
+  <p>The stack is two containers plus one process that is <em>not</em> a container. Trace the path of a single question through this diagram before you run anything.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 880 330" role="img" aria-label="A browser calls nginx on port 80; nginx proxies to the app container on port 8000 over the internal Docker network; the app calls Docker Model Runner on the host through the DNS name model-runner.docker.internal.">
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+        </marker>
+        <marker id="ara" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" fill="var(--accent)"/>
+        </marker>
+      </defs>
+
+      <!-- zones -->
+      <rect class="zone" x="176" y="52" width="392" height="216" rx="8"/>
+      <text class="zn" x="192" y="74">DOCKER COMPOSE PROJECT · INTERNAL NETWORK</text>
+      <rect class="zone" x="612" y="52" width="248" height="216" rx="8"/>
+      <text class="zn" x="628" y="74">YOUR WINDOWS HOST</text>
+
+      <!-- browser -->
+      <rect class="bx" x="22" y="132" width="118" height="60" rx="6"/>
+      <text x="81" y="158" text-anchor="middle" class="ttl">Browser</text>
+      <text x="81" y="176" text-anchor="middle" class="sm">you</text>
+
+      <!-- nginx -->
+      <rect class="bx" x="206" y="132" width="140" height="60" rx="6"/>
+      <text x="276" y="158" text-anchor="middle" class="ttl">nginx</text>
+      <text x="276" y="176" text-anchor="middle" class="sm">reverse proxy</text>
+      <text x="276" y="212" text-anchor="middle" class="lbl">nginx:alpine</text>
+
+      <!-- app -->
+      <rect class="bx-a" x="398" y="132" width="140" height="60" rx="6"/>
+      <text x="468" y="158" text-anchor="middle" class="ttl">app</text>
+      <text x="468" y="176" text-anchor="middle" class="sm">FastAPI + TF-IDF RAG</text>
+      <text x="468" y="212" text-anchor="middle" class="lbl">built from Dockerfile</text>
+
+      <!-- DMR -->
+      <rect class="bx" x="640" y="132" width="192" height="60" rx="6"/>
+      <text x="736" y="156" text-anchor="middle" class="ttl">Docker Model Runner</text>
+      <text x="736" y="174" text-anchor="middle" class="sm">Ministral 3 8B in RAM</text>
+      <text x="736" y="212" text-anchor="middle" class="lbl">not a container</text>
+
+      <!-- arrows -->
+      <line class="ln" x1="140" y1="162" x2="200" y2="162" marker-end="url(#ar)"/>
+      <text x="170" y="122" text-anchor="middle" class="lbl">:80</text>
+
+      <line class="ln" x1="346" y1="162" x2="392" y2="162" marker-end="url(#ar)"/>
+      <text x="369" y="122" text-anchor="middle" class="lbl">app:8000</text>
+
+      <line class="ln-a" x1="538" y1="162" x2="634" y2="162" marker-end="url(#ara)"/>
+      <text x="586" y="122" text-anchor="middle" class="lbl acc">:12434</text>
+
+      <!-- notes -->
+      <text x="81" y="248" text-anchor="middle" class="sm">http://localhost</text>
+      <text x="369" y="248" text-anchor="middle" class="sm">no host port —</text>
+      <text x="369" y="263" text-anchor="middle" class="sm">unreachable from Windows</text>
+      <text x="586" y="248" text-anchor="middle" class="sm acc">model-runner</text>
+      <text x="586" y="263" text-anchor="middle" class="sm acc">.docker.internal</text>
+
+      <text x="22" y="300" class="sm">Port 80 is the only door into the stack. Everything to the right of nginx is private.</text>
+    </svg>
+    <figcaption><b>Figure 1 — the whole stack.</b> Only nginx publishes a port to Windows. The <code>app</code> container is reachable solely over the Compose network, and the model itself runs outside both containers, on the host.</figcaption>
+  </figure>
+
+  <h3>docker-compose.yml — the stack definition</h3>
+  <p>Open it. Four things are worth naming out loud:</p>
+  <ul>
+    <li><code>build: .</code> under <code>app</code> — this service is compiled from the <code>Dockerfile</code>, not downloaded.</li>
+    <li><code>expose: "8000"</code> versus nginx's <code>ports: "80:80"</code> — <strong>expose</strong> opens a port to sibling containers only; <strong>ports</strong> punches a hole through to Windows. This is why you will browse to <code>http://localhost</code> and not <code>http://localhost:8000</code>.</li>
+    <li><code>environment:</code> — the model tag, the endpoint, <code>RAG_TOP_K=4</code> and the token budget are all injected here, not baked into the code.</li>
+    <li><code>volumes:</code> — <code>backend/data/sample</code> and <code>backend/static</code> are mounted read-only into the running container. Step 5 exploits this.</li>
+  </ul>
+
+  <h3>Why the endpoint address changes inside a container</h3>
+  <p>The <code>.env.example</code> file points at <code>http://localhost:12434</code>, but <code>docker-compose.yml</code> uses a different address for the same service. That is not an inconsistency — it is the single most important networking idea in this lab.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 880 300" role="img" aria-label="Comparison: a backend running on the host reaches Model Runner at localhost port 12434, while the same code inside a container must use model-runner.docker.internal because localhost resolves to the container itself.">
+      <!-- panel A -->
+      <rect class="zone" x="20" y="30" width="400" height="240" rx="8"/>
+      <text class="zn" x="36" y="52">A · BACKEND RUN ON THE HOST (uvicorn)</text>
+      <rect class="bx" x="46" y="132" width="132" height="56" rx="6"/>
+      <text x="112" y="158" text-anchor="middle" class="ttl">uvicorn</text>
+      <text x="112" y="175" text-anchor="middle" class="sm">on Windows</text>
+      <rect class="bx" x="262" y="132" width="132" height="56" rx="6"/>
+      <text x="328" y="158" text-anchor="middle" class="ttl">Model Runner</text>
+      <text x="328" y="175" text-anchor="middle" class="sm">port 12434</text>
+      <line class="ln" x1="178" y1="160" x2="256" y2="160" marker-end="url(#ar)"/>
+      <text x="217" y="148" text-anchor="middle" class="lbl">localhost</text>
+      <text x="217" y="222" text-anchor="middle" class="lbl ok">works — same machine</text>
+
+      <!-- panel B -->
+      <rect class="zone" x="460" y="30" width="400" height="240" rx="8"/>
+      <text class="zn" x="476" y="52">B · SAME CODE INSIDE THE app CONTAINER</text>
+      <rect class="bx-a" x="486" y="132" width="132" height="56" rx="6"/>
+      <text x="552" y="158" text-anchor="middle" class="ttl">app container</text>
+      <text x="552" y="175" text-anchor="middle" class="sm">own network stack</text>
+      <rect class="bx" x="702" y="132" width="132" height="56" rx="6"/>
+      <text x="768" y="158" text-anchor="middle" class="ttl">Model Runner</text>
+      <text x="768" y="175" text-anchor="middle" class="sm">port 12434</text>
+
+      <!-- bad loop -->
+      <path class="ln-bad" d="M506 132 C 496 96, 604 96, 594 132" marker-end="url(#ar)"/>
+      <text x="550" y="86" text-anchor="middle" class="lbl bad">localhost = itself ✗</text>
+
+      <line class="ln-a" x1="618" y1="160" x2="696" y2="160" marker-end="url(#ara)"/>
+      <text x="657" y="210" text-anchor="middle" class="lbl acc">model-runner</text>
+      <text x="657" y="224" text-anchor="middle" class="lbl acc">.docker.internal</text>
+      <text x="657" y="246" text-anchor="middle" class="lbl ok">works — Docker DNS ✓</text>
+    </svg>
+    <figcaption><b>Figure 2 — the localhost trap.</b> Inside a container, <code>localhost</code> means <em>this container</em>. Docker Desktop provides the DNS name <code>model-runner.docker.internal</code> so containers can reach the model runner on the host. Change nothing else in the code — only the environment variable.</figcaption>
+  </figure>
+
+  <h3>nginx/default.conf — two lines that matter</h3>
+  <ul>
+    <li><code>proxy_buffering off;</code> — the app streams answers token by token using Server-Sent Events. With buffering on, nginx would hold the whole response and forward it in one lump; the UI would show a long silence, then a wall of text. The streaming would not error, it would just silently stop feeling live.</li>
+    <li><code>proxy_read_timeout 910s;</code> — a cold model can take minutes to load on first use. The default 60-second timeout would cut the very first question off.</li>
+  </ul>
+
+  <div class="check">
+    <span class="lbl">Checkpoint</span>
+    <p>You can point at the line in <code>docker-compose.yml</code> that decides which model is used, and explain in one sentence why the app cannot say <code>localhost:12434</code>.</p>
+  </div>
+</section>
+
+<!-- ============ STEP 3 ============ -->
+<section id="s3" class="step">
+  <div class="step-head">
+    <div class="step-num">3</div>
+    <h2>Build the image and start the stack</h2>
+    <span class="chip">15 min</span>
+  </div>
+  <p class="goal">Turn the source folder into a running image, and see the difference between what is baked in and what is mounted live.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 880 320" role="img" aria-label="Application code is copied into the image at build time and needs a rebuild to change; the knowledge base and static UI are bind-mounted read-only at run time and take effect without a rebuild.">
+      <!-- build side -->
+      <text class="zn" x="22" y="34">BAKED IN AT BUILD TIME</text>
+      <rect class="bx" x="22" y="48" width="176" height="96" rx="6"/>
+      <text x="110" y="74" text-anchor="middle" class="lbl">backend/app.py</text>
+      <text x="110" y="94" text-anchor="middle" class="lbl">backend/rag.py</text>
+      <text x="110" y="114" text-anchor="middle" class="lbl">requirements.txt</text>
+      <text x="110" y="134" text-anchor="middle" class="lbl">Dockerfile</text>
+
+      <line class="ln-a" x1="198" y1="96" x2="300" y2="96" marker-end="url(#ara)"/>
+      <text x="249" y="84" text-anchor="middle" class="lbl acc">docker compose</text>
+      <text x="249" y="118" text-anchor="middle" class="lbl acc">up --build</text>
+
+      <rect class="bx-a" x="306" y="60" width="150" height="72" rx="6"/>
+      <text x="381" y="90" text-anchor="middle" class="ttl">image</text>
+      <text x="381" y="110" text-anchor="middle" class="sm">python:3.11-slim + deps</text>
+
+      <!-- container -->
+      <rect class="bx-a" x="560" y="106" width="180" height="82" rx="6"/>
+      <text x="650" y="140" text-anchor="middle" class="ttl">app container</text>
+      <text x="650" y="160" text-anchor="middle" class="sm">uvicorn on :8000</text>
+      <line class="ln-a" x1="456" y1="112" x2="554" y2="140" marker-end="url(#ara)"/>
+
+      <!-- mount side -->
+      <text class="zn" x="22" y="216">MOUNTED LIVE AT RUN TIME (read-only)</text>
+      <rect class="bx" x="22" y="230" width="176" height="66" rx="6"/>
+      <text x="110" y="256" text-anchor="middle" class="lbl">backend/data/sample/</text>
+      <text x="110" y="276" text-anchor="middle" class="lbl">backend/static/</text>
+      <path class="ln" d="M198 262 L 380 262 L 380 200 L 640 200 L 640 190" marker-end="url(#ar)"/>
+      <text x="470" y="252" text-anchor="middle" class="lbl">volumes: — no rebuild needed</text>
+
+      <!-- verdicts -->
+      <text x="790" y="86" text-anchor="middle" class="sm">edit these →</text>
+      <text x="790" y="104" text-anchor="middle" class="lbl bad">rebuild</text>
+      <text x="790" y="248" text-anchor="middle" class="sm">edit these →</text>
+      <text x="790" y="266" text-anchor="middle" class="lbl ok">reload only</text>
+    </svg>
+    <figcaption><b>Figure 3 — build time versus run time.</b> Python source is copied into the image and frozen there; the knowledge base and the web UI are bind-mounted, so editing them changes the running container without a rebuild. This is the rule Step 5 tests.</figcaption>
+  </figure>
+
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell — repo root</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> docker compose up --build -d</pre>
+  </div>
+  <ul>
+    <li><code>--build</code> compiles the <code>app</code> image from the Dockerfile first. The first build takes 2–4 minutes because pip has to download FastAPI, uvicorn and httpx; later builds hit the layer cache and take seconds.</li>
+    <li><code>-d</code> is <em>detached</em> — the containers keep running in the background and you get your prompt back. Drop it to watch logs in the foreground instead, where <kbd>Ctrl</kbd>+<kbd>C</kbd> stops the stack.</li>
+  </ul>
+
+  <h3>Confirm both containers are up</h3>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> docker compose ps</pre>
+  </div>
+  <div class="out">
+    <span class="lbl">Expected output</span>
+<pre>NAME                            SERVICE   STATUS    PORTS
+testdockermodelrunner-app-1     app       running   8000/tcp
+testdockermodelrunner-nginx-1   nginx     running   0.0.0.0:80-&gt;80/tcp</pre>
+  </div>
+  <p>Compose names containers <code>&lt;folder&gt;-&lt;service&gt;-1</code>, which is where <code>testdockermodelrunner-</code> comes from. Note the asymmetry in the PORTS column: nginx has a <code>0.0.0.0:80-&gt;80</code> mapping, the app has only <code>8000/tcp</code> — exactly what Figure 1 showed.</p>
+
+  <h3>Watch the app start</h3>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> docker compose logs -f app</pre>
+  </div>
+  <div class="out">
+    <span class="lbl">Expected output (tail)</span>
+<pre>app-1  | INFO:     Started server process [1]
+app-1  | INFO:     Waiting for application startup.
+app-1  | INFO:     Application startup complete.
+app-1  | INFO:     Uvicorn running on http://0.0.0.0:8000</pre>
+  </div>
+  <p><kbd>Ctrl</kbd>+<kbd>C</kbd> stops <em>following</em> the logs. It does not stop the containers — <code>docker compose ps</code> will confirm they are still running.</p>
+
+  <div class="check">
+    <span class="lbl">Checkpoint</span>
+    <p>Two containers running · nginx mapped to <code>0.0.0.0:80</code> · the app log ends with <code>Uvicorn running on http://0.0.0.0:8000</code>.</p>
+  </div>
+</section>
+
+<!-- ============ STEP 4 ============ -->
+<section id="s4" class="step">
+  <div class="step-head">
+    <div class="step-num">4</div>
+    <h2>Ask the chatbot, and inspect its evidence</h2>
+    <span class="chip">10 min</span>
+  </div>
+  <p class="goal">See retrieval change the model's behaviour on the exact question you asked in Step 1, and read the sources it used.</p>
+
+  <p>Open <a href="http://localhost">http://localhost</a> in a browser. <strong>Not</strong> <code>:8000</code> — nothing is listening there on Windows.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 880 260" role="img" aria-label="A question is scored against the TF-IDF index, the top four chunks are pasted into a prompt with a system instruction, the model streams tokens back, and the sources are sent to the browser first.">
+      <rect class="bx" x="20" y="86" width="120" height="60" rx="6"/>
+      <text x="80" y="112" text-anchor="middle" class="ttl">Question</text>
+      <text x="80" y="130" text-anchor="middle" class="sm">from the UI</text>
+
+      <rect class="bx" x="192" y="76" width="164" height="80" rx="6"/>
+      <text x="274" y="102" text-anchor="middle" class="ttl">TF-IDF index</text>
+      <text x="274" y="120" text-anchor="middle" class="sm">7 .txt files, chunked</text>
+      <text x="274" y="138" text-anchor="middle" class="sm">cosine similarity</text>
+
+      <rect class="bx-a" x="408" y="76" width="164" height="80" rx="6"/>
+      <text x="490" y="100" text-anchor="middle" class="ttl">Prompt</text>
+      <text x="490" y="118" text-anchor="middle" class="sm">system rule +</text>
+      <text x="490" y="134" text-anchor="middle" class="sm">top 4 chunks + question</text>
+
+      <rect class="bx" x="624" y="76" width="164" height="80" rx="6"/>
+      <text x="706" y="102" text-anchor="middle" class="ttl">Ministral 3 8B</text>
+      <text x="706" y="120" text-anchor="middle" class="sm">answers from context</text>
+      <text x="706" y="138" text-anchor="middle" class="sm">only</text>
+
+      <line class="ln" x1="140" y1="116" x2="186" y2="116" marker-end="url(#ar)"/>
+      <line class="ln" x1="356" y1="116" x2="402" y2="116" marker-end="url(#ar)"/>
+      <text x="379" y="104" text-anchor="middle" class="lbl">top_k=4</text>
+      <line class="ln-a" x1="572" y1="116" x2="618" y2="116" marker-end="url(#ara)"/>
+
+      <!-- return path -->
+      <path class="ln-a" d="M706 156 L 706 200 L 80 200 L 80 152" marker-end="url(#ara)"/>
+      <text x="400" y="192" text-anchor="middle" class="lbl acc">SSE stream: sources event first, then tokens, then done</text>
+
+      <text x="274" y="182" text-anchor="middle" class="sm">no vector DB, no embedding model</text>
+      <text x="20" y="238" class="sm">The system rule tells the model to answer only from the context and to cite passages by their [n] marker.</text>
+    </svg>
+    <figcaption><b>Figure 4 — one question, end to end.</b> Retrieval happens before the model is ever called. The sources arrive at the browser first, which is why the UI can show its evidence panel while the answer is still being written.</figcaption>
+  </figure>
+
+  <h3>Re-ask the Step 1 question</h3>
+  <p>Type the same question you asked the raw model:</p>
+  <div class="out">
+    <span class="lbl">Ask</span>
+<pre>What is Oral Link's AI dental screening service?</pre>
+  </div>
+  <p>Compare the two answers side by side. The grounded answer should name the actual service and carry <code>[1]</code>-style citation markers back to the sources panel.</p>
+
+  <h3>Three more questions, chosen to probe different behaviours</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th style="width:44%">Ask this</th><th>What to watch for</th></tr></thead>
+      <tbody>
+        <tr><td>How much does a dental consultation cost with CHAS?</td><td>Retrieval should pull from <code>dental_cost_subsidies_enhanced.txt</code>. Check the source panel — the file name and similarity score are shown per chunk.</td></tr>
+        <tr><td>What does a HIGH overall risk score mean in my screening report?</td><td>Comes from a different file entirely. Retrieval, not the model, decided that.</td></tr>
+        <tr><td>Who won the 2018 FIFA World Cup?</td><td>Nothing in the knowledge base matches. The system prompt instructs the model to say it does not know and to point the user to OralLink rather than guess. <strong>This is the behaviour that makes RAG safe to put in front of patients.</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Inspect the same thing over the API</h3>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> curl.exe http://localhost/api/config
+<span class="p">PS&gt;</span> curl.exe http://localhost/api/sources</pre>
+  </div>
+  <p><code>/api/config</code> reports the active model, the endpoint the container is using, the data directory and the number of chunks indexed. Confirm the endpoint really is <code>model-runner.docker.internal</code> and not <code>localhost</code> — that is Figure 2 proving itself at runtime.</p>
+
+  <div class="check">
+    <span class="lbl">Checkpoint</span>
+    <p>The grounded answer differs from Step 1's · the sources panel names real files with scores · the out-of-scope question is refused rather than invented.</p>
+  </div>
+</section>
+
+<!-- ============ STEP 5 ============ -->
+<section id="s5" class="step">
+  <div class="step-head">
+    <div class="step-num">5</div>
+    <h2>Change it while it runs</h2>
+    <span class="chip">15 min</span>
+  </div>
+  <p class="goal">Learn which kind of change needs which command — the practical difference between a rebuild, a recreate, and a reload.</p>
+
+  <h3>A · Add knowledge — no rebuild</h3>
+  <p>Open <code>backend\data\sample\orallink_clinic_info.txt</code> in your editor and paste this block at the end of the file. It follows the same chunk format the retriever parses.</p>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">backend\data\sample\orallink_clinic_info.txt — append</span><button class="copy" type="button">Copy</button></div>
+<pre>--- CHUNK 900 ---
+[CHUNK ID]   orallink-nyp-lab-hours
+[TOPIC]      OralLink NYP campus screening booth — opening hours
+[KEYWORDS]   nyp booth, campus screening, opening hours, walk in
+[TRIGGERS]
+  - When is the NYP screening booth open?
+  - Can I walk in at NYP?
+CONTENT:
+The OralLink campus screening booth at Nanyang Polytechnic operates on
+Tuesdays and Thursdays, 10am to 4pm, at Block L Level 1. Walk-ins are
+accepted; a screening takes about 8 minutes and results are emailed
+within one working day.
+--- END CHUNK 900 ---</pre>
+  </div>
+  <p>Now re-index without restarting anything — click <strong>Reload knowledge base</strong> in the UI sidebar, or call the endpoint directly:</p>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> curl.exe -X POST http://localhost/api/reload</pre>
+  </div>
+  <p>Ask: <em>"When is the NYP screening booth open?"</em> The answer should quote your new chunk. Nothing was rebuilt, nothing restarted — the folder was bind-mounted, so the container saw your edit the moment you saved it.</p>
+
+  <h3>B · Change a setting — recreate, don't rebuild</h3>
+  <p>In <code>docker-compose.yml</code>, change <code>RAG_TOP_K=4</code> to <code>RAG_TOP_K=1</code>, then:</p>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell — repo root</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> docker compose up -d</pre>
+  </div>
+  <p>Compose notices the environment block changed and recreates the <code>app</code> container from the <em>existing</em> image — no <code>--build</code>. Ask a broad question such as <em>"What should I do about bleeding gums?"</em> and watch the sources panel shrink to one chunk. Answers get thinner. Set it back to 4 and recreate again.</p>
+
+  <div class="note">
+    <span class="lbl">Why editing backend\.env does nothing here</span>
+    <p><code>.env</code> is copied into the image, but <code>docker-compose.yml</code> sets the same variable names in the environment before Python starts, and <code>load_dotenv()</code> never overwrites a variable that already exists. <code>.env</code> only takes effect when you run uvicorn directly on the host. Students lose a lot of time to this — edit the compose file, not <code>.env</code>.</p>
+  </div>
+
+  <h3>C · Swap the model — neither</h3>
+  <p>The sidebar's <strong>Active model</strong> dropdown lists what Model Runner already has pulled and switches the app at runtime via <code>POST /api/model</code>. It will not pull anything for you: to offer a new model, run <code>docker model pull &lt;tag&gt;</code> first, then reload the page.</p>
+
+  <h3>The rule, in one table</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th style="width:40%">You changed…</th><th style="width:34%">Command</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><code>backend/data/sample/*.txt</code></td><td>UI reload button, or <code>POST /api/reload</code></td><td>Bind-mounted; only the index is stale</td></tr>
+        <tr><td><code>backend/static/index.html</code></td><td>Refresh the browser</td><td>Bind-mounted; served as a static file</td></tr>
+        <tr><td>An <code>environment:</code> value</td><td><code>docker compose up -d</code></td><td>Recreates the container from the same image</td></tr>
+        <tr><td><code>backend/app.py</code>, <code>rag.py</code>, <code>requirements.txt</code></td><td><code>docker compose up --build -d</code></td><td>Copied in at build time; the image is stale</td></tr>
+        <tr><td><code>nginx/default.conf</code></td><td><code>docker compose restart nginx</code></td><td>Mounted config; nginx re-reads it on start</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="check">
+    <span class="lbl">Checkpoint</span>
+    <p>The chatbot answers a question using text you wrote yourself · you have seen <code>RAG_TOP_K</code> visibly change the sources panel · you can state which of the five changes above needs <code>--build</code>.</p>
+  </div>
+</section>
+
+<!-- ============ STEP 6 ============ -->
+<section id="s6" class="step">
+  <div class="step-head">
+    <div class="step-num">6</div>
+    <h2>When it breaks</h2>
+    <span class="chip">10 min</span>
+  </div>
+  <p class="goal">Match a symptom to the layer that caused it. Work through any failures you hit; if you hit none, read the table and try inducing the first one deliberately.</p>
+
+  <p>Your first move for anything is always the same pair:</p>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell — repo root</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> docker compose ps
+<span class="p">PS&gt;</span> docker compose logs --tail 50 app nginx</pre>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th style="width:32%">Symptom</th><th style="width:26%">Layer at fault</th><th>Fix</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>bind: address already in use</code> on startup</td>
+          <td>Windows host</td>
+          <td>Something already owns port 80. Change nginx's mapping to <code>"8080:80"</code> and browse to <code>http://localhost:8080</code>.</td>
+        </tr>
+        <tr>
+          <td><strong>502 Bad Gateway</strong> in the browser</td>
+          <td>app container</td>
+          <td>nginx is fine; the app behind it died or never started. <code>docker compose logs app</code> — usually a Python traceback.</td>
+        </tr>
+        <tr>
+          <td>Answer never arrives; first question only</td>
+          <td>Model Runner</td>
+          <td>Normal on a cold model — loading 4.8 GB into RAM takes minutes. The proxy allows ~15 minutes. Wait once; later questions are fast.</td>
+        </tr>
+        <tr>
+          <td><code>model not found</code> / 404 from the model call</td>
+          <td>Config</td>
+          <td><code>DMR_MODEL</code> does not match a pulled tag. Run <code>docker model list</code> and copy the name exactly, including the <code>docker.io/</code> prefix.</td>
+        </tr>
+        <tr>
+          <td><code>Connection refused</code> or DNS failure to the model</td>
+          <td>Networking</td>
+          <td>Model Runner disabled, or <code>DMR_BASE_URL</code> still says <code>localhost</code>. Re-read Figure 2, check Docker Desktop → Settings → AI.</td>
+        </tr>
+        <tr>
+          <td>Answers arrive all at once, not token by token</td>
+          <td>nginx</td>
+          <td><code>proxy_buffering off;</code> is missing or was edited out. Restore it, then <code>docker compose restart nginx</code>.</td>
+        </tr>
+        <tr>
+          <td>A question in Chinese or Tamil retrieves nothing</td>
+          <td>Retriever (by design)</td>
+          <td>Not a bug in your setup. <code>rag.py</code> tokenises Latin script only and the knowledge base is English. Genuine multilingual RAG needs a Unicode-aware tokeniser and translated documents — out of scope here.</td>
+        </tr>
+        <tr>
+          <td>Empty answer, but the reasoning block was full</td>
+          <td>Model choice</td>
+          <td>Only affects reasoning models such as gpt-oss or SEA-LION: the chain-of-thought consumed the whole <code>RAG_MAX_TOKENS</code> budget. Raise it or lower <code>REASONING_EFFORT</code>. Ministral never does this — it is not a reasoning model.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <span class="lbl">Diagnostic habit worth keeping</span>
+    <p>Work the layers in order: is the container running (<code>ps</code>) → did the app start (<code>logs app</code>) → can the app reach the model (<code>/api/config</code>, then <code>docker model list</code>). Guessing at the top of the stack when the bottom is broken wastes the most time.</p>
+  </div>
+</section>
+
+<!-- ============ STEP 7 ============ -->
+<section id="s7" class="step">
+  <div class="step-head">
+    <div class="step-num">7</div>
+    <h2>Tear down cleanly</h2>
+    <span class="chip">5 min</span>
+  </div>
+  <p class="goal">Return the machine to the state you found it in — lab PCs are shared.</p>
+
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell — repo root</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> docker compose down
+<span class="p">PS&gt;</span> docker compose ps          <span class="c"># should list nothing</span></pre>
+  </div>
+  <p><code>down</code> stops and removes both containers and the network Compose created. It leaves the built image on disk, so your next <code>docker compose up -d</code> starts in seconds.</p>
+
+  <p>The model stays loaded in Model Runner independently of the containers. Leave it if the next class needs it; remove it if the lab PC is short of disk:</p>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="path">PowerShell</span><button class="copy" type="button">Copy</button></div>
+<pre><span class="p">PS&gt;</span> docker model list
+<span class="p">PS&gt;</span> docker model rm docker.io/ai/ministral3:8B-Q4_K_M   <span class="c"># optional</span>
+<span class="p">PS&gt;</span> docker system df                                     <span class="c"># what Docker is holding</span></pre>
+  </div>
+
+  <div class="note">
+    <span class="lbl">Undo your edits</span>
+    <p>If you added CHUNK 900 in Step 5, remove it (or restore the file from git) before you leave, so the next group starts from the same knowledge base you did.</p>
+  </div>
+</section>
+
+<!-- ============ APPENDIX ============ -->
+<section id="appx" class="step">
+  <div class="step-head">
+    <div class="step-num">A</div>
+    <h2>Where this goes in production</h2>
+    <span class="chip">read only</span>
+  </div>
+  <p class="goal">Not run in this session. Read it to see how little of what you just built actually changes when it ships to a GPU server.</p>
+
+  <p>The production path ships the <em>image</em>, not the source. The server never gets a copy of the repository, never installs Python, and never runs a Docker build — which is exactly why the container abstraction is worth the effort.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 880 240" role="img" aria-label="On the laptop the image is built and exported with docker save to a tar file, copied to an EC2 GPU instance with scp, loaded with docker load, and started with the production compose file which points at host.docker.internal instead of model-runner.docker.internal.">
+      <rect class="zone" x="20" y="40" width="360" height="150" rx="8"/>
+      <text class="zn" x="36" y="62">YOUR LAPTOP</text>
+      <rect class="zone" x="500" y="40" width="360" height="150" rx="8"/>
+      <text class="zn" x="516" y="62">EC2 GPU INSTANCE (Ubuntu)</text>
+
+      <rect class="bx" x="44" y="92" width="140" height="52" rx="6"/>
+      <text x="114" y="114" text-anchor="middle" class="ttl">docker build</text>
+      <text x="114" y="131" text-anchor="middle" class="lbl">orallink-rag:latest</text>
+
+      <rect class="bx-a" x="222" y="92" width="134" height="52" rx="6"/>
+      <text x="289" y="114" text-anchor="middle" class="ttl">docker save</text>
+      <text x="289" y="131" text-anchor="middle" class="lbl">image/*.tar</text>
+      <line class="ln" x1="184" y1="118" x2="216" y2="118" marker-end="url(#ar)"/>
+
+      <line class="ln-a" x1="356" y1="118" x2="494" y2="118" marker-end="url(#ara)"/>
+      <text x="425" y="104" text-anchor="middle" class="lbl acc">scp</text>
+      <text x="425" y="156" text-anchor="middle" class="sm">no source code crosses</text>
+
+      <rect class="bx-a" x="524" y="92" width="134" height="52" rx="6"/>
+      <text x="591" y="114" text-anchor="middle" class="ttl">docker load</text>
+      <text x="591" y="131" text-anchor="middle" class="lbl">same image</text>
+
+      <rect class="bx" x="696" y="92" width="146" height="52" rx="6"/>
+      <text x="769" y="112" text-anchor="middle" class="ttl">compose.prod</text>
+      <text x="769" y="130" text-anchor="middle" class="lbl">app + nginx + GPU</text>
+      <line class="ln" x1="658" y1="118" x2="690" y2="118" marker-end="url(#ar)"/>
+
+      <text x="769" y="172" text-anchor="middle" class="lbl bad">host.docker.internal:12434</text>
+      <text x="114" y="172" text-anchor="middle" class="lbl">model-runner.docker.internal</text>
+      <text x="20" y="222" class="sm">One environment variable differs between the two sides. The application code is byte-identical.</text>
+    </svg>
+    <figcaption><b>Figure 5 — local to production.</b> <code>docker save</code> / <code>docker load</code> moves the built image as a tar file. The only meaningful change is the model endpoint: <code>model-runner.docker.internal</code> is a Docker Desktop convenience and does <b>not</b> resolve on Linux, so the production compose file uses <code>host.docker.internal:12434</code> with an <code>extra_hosts: host-gateway</code> entry instead.</figcaption>
+  </figure>
+
+  <p>The rest of the production story, documented in the project's own <code>README.md</code>: an NVIDIA driver plus the NVIDIA Container Toolkit on the instance, the Model Runner plugin installed on Docker Engine (Desktop is not available on a server), and a larger model — GPT-OSS-20B or Qwen SEA-LION v4 32B — that is only comfortable with a GPU behind it. SEA-LION measured about 0.34 tokens/second on CPU-only Docker Desktop: technically working, practically unusable.</p>
+
+  <h3>Intentionally out of scope for this lab</h3>
+  <ul>
+    <li><strong>TLS/HTTPS</strong> — the stack is plain HTTP on port 80, locally and on EC2. Real exposure needs certbot in front of nginx, or TLS terminated at an ALB.</li>
+    <li><strong>A real vector store</strong> — <code>rag.py</code> is pure-Python TF-IDF with no embeddings. It demonstrates the pattern; it is not a production retriever.</li>
+    <li><strong>Authentication, rate limiting, log persistence</strong> — none are present.</li>
+    <li><strong>Multi-container orchestration beyond Compose</strong> — no Kubernetes, no swarm, no autoscaling.</li>
+    <li><strong>Model fine-tuning or evaluation</strong> — the model is used as pulled.</li>
+  </ul>
+</section>
+
+<!-- ============ RECAP ============ -->
+<section id="recap" class="recap">
+  <h2>Self-check — can you explain each of these without looking?</h2>
+  <ul>
+    <li>Why the app container's address for the model is <code>model-runner.docker.internal</code> and not <code>localhost</code>.</li>
+    <li>The difference between <code>expose</code> and <code>ports</code>, and why you browse to port 80 rather than 8000.</li>
+    <li>Which file edits need <code>--build</code>, which need <code>up -d</code>, and which need neither.</li>
+    <li>What <code>proxy_buffering off</code> is protecting, and what the symptom would be without it.</li>
+    <li>Why the same question produced a different answer in Step 1 and Step 4 — with no change to the model.</li>
+    <li>What <code>RAG_TOP_K</code> controls, and what you observed when you set it to 1.</li>
+    <li>Why the chatbot refused the World Cup question, and where that behaviour is defined.</li>
+  </ul>
+</section>
+
+<!-- ============ FACILITATOR ============ -->
+<section id="facil" class="facil">
+  <h2>Facilitator notes</h2>
+  <p class="sub">Not part of the learner walkthrough</p>
+
+  <h3>Pre-lab preparation</h3>
+  <ul>
+    <li><strong>Pull the model onto lab PCs beforehand.</strong> Thirty simultaneous 4.8 GB downloads will consume the session. If the images cannot be pre-staged, run Step 1's pull as a whole-class action at the very start and cover Step 2's theory while it downloads.</li>
+    <li>Verify Docker Desktop on the lab image is recent enough to have Model Runner under Settings → AI, with host-side TCP available.</li>
+    <li>Check port 80 on the standard lab image. If it is taken estate-wide, edit <code>docker-compose.yml</code> to <code>"8080:80"</code> in the distributed copy and tell students to substitute the URL throughout.</li>
+    <li>Confirm Docker Desktop is allocated at least 8 GB of RAM in the WSL2 backend settings.</li>
+  </ul>
+
+  <h3>Timing at 90 minutes</h3>
+  <p>Steps 0–4 are the core (50 minutes) and every student should complete them. Step 5 is where understanding consolidates; protect at least 15 minutes for it even if it means compressing Step 6 into a demonstration. The appendix is reading, not doing — assign it as pre-reading for the next session if time runs short.</p>
+
+  <h3>Discussion prompts</h3>
+  <ul>
+    <li>After Step 1 vs Step 4: <em>the model did not learn anything between those two answers — so what actually changed?</em> Draws out the distinction between retrieval and training.</li>
+    <li>After Step 5B: <em>what would go wrong with <code>RAG_TOP_K=20</code>?</em> Leads to context windows, latency and cost.</li>
+    <li>After the World Cup question: <em>is refusing to answer a failure or a feature?</em> Connects to responsible AI and clinical liability.</li>
+  </ul>
+
+  <h3>Known rough edges</h3>
+  <ul>
+    <li>First model call after a Docker Desktop restart is slow enough that students will assume it has hung. Warn them before Step 4, not during.</li>
+    <li>PowerShell's <code>curl</code> alias trips at least one student per class; the lab uses <code>curl.exe</code> everywhere for this reason.</li>
+    <li>Students who edit <code>backend\.env</code> instead of <code>docker-compose.yml</code> will see no effect and no error. The callout in Step 5B addresses it, but it is worth saying aloud.</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var pre = btn.closest('.term').querySelector('pre');
+    var clone = pre.cloneNode(true);
+    clone.querySelectorAll('.p, .c').forEach(function(el){ el.remove(); });
+    var text = clone.textContent.split('\n').map(function(l){ return l.trim(); }).filter(function(l){ return l.length; }).join('\n');
+    navigator.clipboard.writeText(text).then(function(){
+      var old = btn.textContent;
+      btn.textContent = 'Copied';
+      setTimeout(function(){ btn.textContent = old; }, 1400);
+    }).catch(function(){
+      btn.textContent = 'Select manually';
+    });
+  });
+});
+</script>

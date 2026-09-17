@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OralLink RAG Tester</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f5f5f7;
+    --panel: #ffffff;
+    --border: #d9d9de;
+    --text: #1a1a1e;
+    --muted: #6b6b73;
+    --accent: #2563eb;
+    --user-bubble: #2563eb;
+    --user-text: #ffffff;
+    --assistant-bubble: #eef0f4;
+    --assistant-text: #1a1a1e;
+    --source-bg: #f7f7fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16171a;
+      --panel: #1f2023;
+      --border: #333438;
+      --text: #e8e8ea;
+      --muted: #9a9aa2;
+      --accent: #5b8def;
+      --user-bubble: #3a5fc9;
+      --user-text: #ffffff;
+      --assistant-bubble: #2a2b2f;
+      --assistant-text: #e8e8ea;
+      --source-bg: #26272b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    display: flex;
+  }
+  #sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    background: var(--panel);
+    border-right: 1px solid var(--border);
+    padding: 16px;
+    overflow-y: auto;
+  }
+  #sidebar h1 { font-size: 15px; margin: 0 0 2px; }
+  #sidebar .tagline { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+  h2.section-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--muted);
+    margin: 18px 0 6px;
+  }
+  .kv { font-size: 12px; margin-bottom: 4px; word-break: break-all; }
+  .kv .k { color: var(--muted); }
+  #docList { list-style: none; margin: 0; padding: 0; font-size: 12px; }
+  #docList li {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  #docList li:last-child { border-bottom: none; }
+  #docList .count { color: var(--muted); flex-shrink: 0; }
+  label { display: block; font-size: 12px; color: var(--muted); margin: 10px 0 4px; }
+  input, select { width: 100%; padding: 6px 8px; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 6px; font-size: 13px; }
+  #status { margin-top: 14px; font-size: 12px; padding: 8px; border-radius: 6px; display: none; }
+  #status.error { display: block; background: #fde2e1; color: #7a1c1c; }
+  #status.ok { display: block; background: #dcf5e3; color: #1a5c2e; }
+  button.secondary {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-top: 14px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  #main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+  #chatWindow { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+  .turn { display: flex; flex-direction: column; gap: 8px; max-width: 78%; }
+  .turn.user { align-self: flex-end; align-items: flex-end; }
+  .turn.assistant { align-self: flex-start; align-items: flex-start; }
+  .msg { padding: 10px 14px; border-radius: 12px; white-space: pre-wrap; font-size: 14px; line-height: 1.45; }
+  .msg.user { background: var(--user-bubble); color: var(--user-text); border-bottom-right-radius: 2px; }
+  .msg.assistant { background: var(--assistant-bubble); color: var(--assistant-text); border-bottom-left-radius: 2px; }
+  .msg.error { background: #fde2e1; color: #7a1c1c; }
+  .meta { font-size: 11px; opacity: .6; }
+  details.sources {
+    width: 100%;
+    background: var(--source-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  details.sources summary { cursor: pointer; color: var(--muted); padding: 4px 0; }
+  .source-item { padding: 8px 0; border-top: 1px solid var(--border); }
+  .source-item:first-of-type { border-top: none; }
+  .source-item .src-head { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); margin-bottom: 3px; }
+  .source-item .src-topic { color: var(--text); font-weight: 600; }
+  .source-item .src-text { color: var(--text); opacity: .85; white-space: pre-wrap; }
+  details.reasoning {
+    width: 100%;
+    background: var(--source-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 6px 10px;
+    color: var(--muted);
+  }
+  details.reasoning summary { cursor: pointer; padding: 4px 0; }
+  details.reasoning .reasoning-text { white-space: pre-wrap; padding: 4px 2px 2px; font-style: italic; }
+  #inputBar { border-top: 1px solid var(--border); padding: 12px 16px; display: flex; gap: 8px; background: var(--panel); }
+  #promptInput { flex: 1; resize: none; min-height: 42px; max-height: 160px; padding: 8px 10px; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; }
+  button#sendBtn { background: var(--accent); color: white; border: none; border-radius: 8px; padding: 0 18px; font-size: 14px; cursor: pointer; }
+  button#sendBtn:disabled { opacity: .5; cursor: default; }
+  .empty-state { margin: auto; color: var(--muted); font-size: 13px; text-align: center; max-width: 360px; }
+</style>
+</head>
+<body>
+  <div id="sidebar">
+    <h1>OralLink RAG Tester</h1>
+    <div class="tagline">Mock retrieval-augmented Q&amp;A over the OralLink knowledge base, answered by Docker Model Runner.</div>
+
+    <h2 class="section-title">Model</h2>
+    <div class="kv"><span class="k">Endpoint:</span> <span id="cfgEndpoint">…</span></div>
+    <div class="kv"><span class="k">Chunks indexed:</span> <span id="cfgChunks">…</span></div>
+
+    <label for="modelSelect">Active model (already pulled)</label>
+    <select id="modelSelect"><option value="">Loading…</option></select>
+
+    <label for="topK">Chunks to retrieve (top-k)</label>
+    <input id="topK" type="number" min="1" max="10" value="4">
+
+    <h2 class="section-title">Knowledge base</h2>
+    <ul id="docList"><li>Loading…</li></ul>
+
+    <button class="secondary" id="reloadBtn">Reload knowledge base</button>
+    <button class="secondary" id="clearBtn">Clear conversation</button>
+
+    <div id="status"></div>
+  </div>
+
+  <div id="main">
+    <div id="chatWindow">
+      <div class="empty-state" id="emptyState">
+        Ask a question about OralLink's screening service, dental hygiene, cost subsidies, or where to find care in Singapore. The answer will be grounded in the retrieved passages shown under each response.
+      </div>
+    </div>
+    <div id="inputBar">
+      <textarea id="promptInput" placeholder="Ask a question about OralLink…"></textarea>
+      <button id="sendBtn">Ask</button>
+    </div>
+  </div>
+
+<script>
+const chatWindow = document.getElementById('chatWindow');
+const emptyState = document.getElementById('emptyState');
+const promptInput = document.getElementById('promptInput');
+const sendBtn = document.getElementById('sendBtn');
+const statusEl = document.getElementById('status');
+const cfgEndpoint = document.getElementById('cfgEndpoint');
+const cfgChunks = document.getElementById('cfgChunks');
+const docList = document.getElementById('docList');
+const topKInput = document.getElementById('topK');
+const modelSelect = document.getElementById('modelSelect');
+
+function setStatus(message, kind) {
+  if (!message) { statusEl.style.display = 'none'; return; }
+  statusEl.textContent = message;
+  statusEl.className = kind || '';
+}
+
+async function loadConfig() {
+  try {
+    const res = await fetch('/api/config');
+    const data = await res.json();
+    cfgEndpoint.textContent = data.base_url;
+    cfgChunks.textContent = data.chunks_indexed;
+    topKInput.value = data.top_k;
+    if ([...modelSelect.options].some(o => o.value === data.model)) {
+      modelSelect.value = data.model;
+    }
+  } catch (e) {
+    cfgEndpoint.textContent = cfgChunks.textContent = 'unavailable';
+  }
+}
+
+async function loadModels() {
+  try {
+    const res = await fetch('/api/models');
+    const data = await res.json();
+    const ids = (data.data || []).map(m => m.id).sort();
+    modelSelect.innerHTML = '';
+    if (!ids.length) {
+      modelSelect.innerHTML = '<option value="">No models pulled — run `docker model pull`</option>';
+      return;
+    }
+    for (const id of ids) {
+      const opt = document.createElement('option');
+      opt.value = id;
+      opt.textContent = id;
+      modelSelect.appendChild(opt);
+    }
+    await loadConfig();
+  } catch (e) {
+    modelSelect.innerHTML = '<option value="">Failed to load models</option>';
+  }
+}
+
+async function loadSources() {
+  docList.innerHTML = '<li>Loading…</li>';
+  try {
+    const res = await fetch('/api/sources');
+    const data = await res.json();
+    if (!data.sources.length) {
+      docList.innerHTML = '<li>No documents indexed</li>';
+      return;
+    }
+    docList.innerHTML = '';
+    for (const s of data.sources) {
+      const li = document.createElement('li');
+      const name = document.createElement('span');
+      name.textContent = s.file;
+      const count = document.createElement('span');
+      count.className = 'count';
+      count.textContent = s.chunks + ' chunks';
+      li.append(name, count);
+      docList.appendChild(li);
+    }
+  } catch (e) {
+    docList.innerHTML = '<li>Failed to load</li>';
+  }
+}
+
+function addTurn(role) {
+  emptyState.remove();
+  const turn = document.createElement('div');
+  turn.className = 'turn ' + role;
+  chatWindow.appendChild(turn);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+  return turn;
+}
+
+function addMessage(turn, role, content) {
+  const div = document.createElement('div');
+  div.className = 'msg ' + role;
+  div.textContent = content;
+  turn.appendChild(div);
+  return div;
+}
+
+function addSources(turn, sources) {
+  const details = document.createElement('details');
+  details.className = 'sources';
+  const summary = document.createElement('summary');
+  summary.textContent = sources.length
+    ? `${sources.length} source${sources.length > 1 ? 's' : ''} used`
+    : 'No matching sources found';
+  details.appendChild(summary);
+  for (const s of sources) {
+    const item = document.createElement('div');
+    item.className = 'source-item';
+    const head = document.createElement('div');
+    head.className = 'src-head';
+    const topic = document.createElement('span');
+    topic.className = 'src-topic';
+    topic.textContent = `[${s.n}] ${s.topic}`;
+    const meta = document.createElement('span');
+    meta.textContent = `${s.source} · score ${s.score}`;
+    head.append(topic, meta);
+    const text = document.createElement('div');
+    text.className = 'src-text';
+    text.textContent = s.text;
+    item.append(head, text);
+    details.appendChild(item);
+  }
+  turn.appendChild(details);
+}
+
+function createReasoningBlock(turn, beforeEl) {
+  const details = document.createElement('details');
+  details.className = 'reasoning';
+  details.open = true;
+  const summary = document.createElement('summary');
+  summary.textContent = 'Thinking…';
+  const text = document.createElement('div');
+  text.className = 'reasoning-text';
+  details.append(summary, text);
+  turn.insertBefore(details, beforeEl);
+  return { details, summary, text };
+}
+
+// Splits a growing SSE buffer on blank-line frame boundaries, invoking
+// onFrame for each complete "event: ...\ndata: ..." frame found so far.
+function consumeSSEFrames(buffer, onFrame) {
+  let idx;
+  while ((idx = buffer.indexOf('\n\n')) !== -1) {
+    onFrame(buffer.slice(0, idx));
+    buffer = buffer.slice(idx + 2);
+  }
+  return buffer;
+}
+
+async function sendMessage() {
+  const question = promptInput.value.trim();
+  if (!question) return;
+
+  const userTurn = addTurn('user');
+  addMessage(userTurn, 'user', question);
+  promptInput.value = '';
+  sendBtn.disabled = true;
+
+  const assistantTurn = addTurn('assistant');
+  const answerEl = addMessage(assistantTurn, 'assistant', 'Retrieving context…');
+
+  let reasoningBlock = null;
+  let gotContent = false;
+  const started = performance.now();
+
+  function handleFrame(frame) {
+    let event = 'message';
+    let dataStr = '';
+    for (const line of frame.split('\n')) {
+      if (line.startsWith('event:')) event = line.slice(6).trim();
+      else if (line.startsWith('data:')) dataStr += line.slice(5).trim();
+    }
+    if (!dataStr) return;
+    let payload;
+    try { payload = JSON.parse(dataStr); } catch (e) { return; }
+
+    if (event === 'sources') {
+      addSources(assistantTurn, payload.sources || []);
+    } else if (event === 'reasoning') {
+      if (!reasoningBlock) {
+        reasoningBlock = createReasoningBlock(assistantTurn, answerEl);
+        answerEl.textContent = 'Composing answer…';
+      }
+      reasoningBlock.text.textContent += payload.delta;
+    } else if (event === 'token') {
+      if (!gotContent) {
+        gotContent = true;
+        answerEl.textContent = '';
+        if (reasoningBlock) {
+          reasoningBlock.summary.textContent = 'Reasoning';
+          reasoningBlock.details.open = false;
+        }
+      }
+      answerEl.textContent += payload.delta;
+    } else if (event === 'done') {
+      const elapsed = ((performance.now() - started) / 1000).toFixed(1);
+      const meta = document.createElement('div');
+      meta.className = 'meta';
+      meta.textContent = `${payload.model} · ${elapsed}s`;
+      answerEl.appendChild(meta);
+      setStatus('');
+    } else if (event === 'error') {
+      answerEl.className = 'msg error';
+      answerEl.textContent = 'Error: ' + payload.detail;
+      setStatus('Request failed: ' + payload.detail, 'error');
+    }
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+  }
+
+  try {
+    const res = await fetch('/api/ask/stream', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        question,
+        top_k: parseInt(topKInput.value, 10) || undefined,
+      }),
+    });
+    if (!res.ok || !res.body) {
+      const data = await res.json().catch(() => ({}));
+      throw new Error(data.detail || ('HTTP ' + res.status));
+    }
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      buffer = consumeSSEFrames(buffer, handleFrame);
+    }
+    if (!gotContent && answerEl.className === 'msg assistant') {
+      answerEl.textContent = '(no answer content received)';
+    }
+  } catch (e) {
+    answerEl.className = 'msg error';
+    answerEl.textContent = 'Error: ' + e.message;
+    setStatus('Request failed: ' + e.message, 'error');
+  } finally {
+    sendBtn.disabled = false;
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+  }
+}
+
+sendBtn.addEventListener('click', sendMessage);
+promptInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendMessage();
+  }
+});
+document.getElementById('reloadBtn').addEventListener('click', async () => {
+  setStatus('Reloading knowledge base…');
+  try {
+    const res = await fetch('/api/reload', { method: 'POST' });
+    const data = await res.json();
+    setStatus(`Reloaded — ${data.chunks_indexed} chunks indexed.`, 'ok');
+    await Promise.all([loadConfig(), loadSources()]);
+  } catch (e) {
+    setStatus('Reload failed: ' + e.message, 'error');
+  }
+});
+document.getElementById('clearBtn').addEventListener('click', () => {
+  chatWindow.innerHTML = '';
+  chatWindow.appendChild(emptyState);
+});
+modelSelect.addEventListener('change', async () => {
+  const model = modelSelect.value;
+  if (!model) return;
+  try {
+    const res = await fetch('/api/model', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.detail || ('HTTP ' + res.status));
+    setStatus(`Active model set to ${data.model}`, 'ok');
+  } catch (e) {
+    setStatus('Failed to switch model: ' + e.message, 'error');
+    await loadConfig();
+  }
+});
+
+loadConfig();
+loadModels();
+loadSources();
+</script>
+</body>
+</html>
