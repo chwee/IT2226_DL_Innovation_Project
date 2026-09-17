@@ -1,0 +1,6 @@
+Video for the Spec driven development
+https://www.youtube.com/watch?v=mViFYTwWvcM
+https://www.youtube.com/watch?v=Gv4hd49lI4E
+
+Document
+https://github.com/calebdel/spec-driven-development/tree/main/spec-process-guide/templates

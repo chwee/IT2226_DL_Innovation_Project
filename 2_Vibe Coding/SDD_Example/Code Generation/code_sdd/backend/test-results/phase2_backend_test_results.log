@@ -1,0 +1,213 @@
+======================================================================
+Web Translator Backend — Phase 2 Test Results
+Generated: 2026-08-11 08:19:24 UTC
+Python: Python 3.12.10
+Source: sdd/tasks_app.md — Phase 2: Backend Implementation
+======================================================================
+
+----------------------------------------------------------------------
+TASK 3 — Create Translation Service business logic
+File under test: app/translation_service.py
+Test file:       tests/test_translation_service.py
+Acceptance criteria tested:
+  - Valid text + supported target language -> detected language + translated text
+  - Simulated googletrans failure -> TranslationServiceError (not raw exception)
+----------------------------------------------------------------------
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend
+configfile: pytest.ini
+collecting ... collected 5 items
+
+tests/test_translation_service.py::test_success_returns_detected_language_and_translated_text PASSED [ 20%]
+tests/test_translation_service.py::test_detect_failure_raises_translation_service_error_not_raw_exception PASSED [ 40%]
+tests/test_translation_service.py::test_translate_failure_raises_translation_service_error_not_raw_exception PASSED [ 60%]
+tests/test_translation_service.py::test_unexpected_empty_translation_result_raises_translation_service_error PASSED [ 80%]
+tests/test_translation_service.py::test_unexpected_empty_detection_result_raises_translation_service_error PASSED [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\httpx\_models.py:1
+  C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Lib\site-packages\httpx\_models.py:1: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+    import cgi
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 5 passed, 1 warning in 0.27s =========================
+
+----------------------------------------------------------------------
+TASK 4.1 — Add request validation to POST /api/translate route
+File under test: app/routes.py (validation branch)
+Test file:       tests/test_api_translate.py (test_task_4_1_*)
+Acceptance criteria tested:
+  - Empty text / missing targetLanguage / oversized text -> 400 INVALID_INPUT
+  - Invalid requests never reach the Translation Service (mock not called)
+----------------------------------------------------------------------
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend
+configfile: pytest.ini
+collecting ... collected 9 items / 5 deselected / 4 selected
+
+tests/test_api_translate.py::test_task_4_1_empty_text_returns_400_and_never_calls_service PASSED [ 25%]
+tests/test_api_translate.py::test_task_4_1_missing_target_language_returns_400_and_never_calls_service PASSED [ 50%]
+tests/test_api_translate.py::test_task_4_1_oversized_text_returns_400_and_never_calls_service PASSED [ 75%]
+tests/test_api_translate.py::test_task_4_1_malformed_json_body_returns_400 PASSED [100%]
+
+============================== warnings summary ===============================
+tests/test_api_translate.py::test_task_4_1_empty_text_returns_400_and_never_calls_service
+  C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Lib\site-packages\httpx\_models.py:1: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+    import cgi
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================= 4 passed, 5 deselected, 1 warning in 0.23s ==================
+
+----------------------------------------------------------------------
+TASK 4.2 — Wire the route to the Translation Service and map responses
+File under test: app/routes.py (success/failure mapping branch)
+Test file:       tests/test_api_translate.py (test_task_4_2_*)
+Acceptance criteria tested:
+  - Valid request -> 200 with all four TranslationResponse fields populated
+  - Simulated service failure -> 500 with human-readable message, no raw traceback
+----------------------------------------------------------------------
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend
+configfile: pytest.ini
+collecting ... collected 9 items / 7 deselected / 2 selected
+
+tests/test_api_translate.py::test_task_4_2_valid_request_returns_200_with_all_four_fields PASSED [ 50%]
+tests/test_api_translate.py::test_task_4_2_simulated_service_failure_returns_500_with_no_raw_traceback PASSED [100%]
+
+============================== warnings summary ===============================
+tests/test_api_translate.py::test_task_4_2_valid_request_returns_200_with_all_four_fields
+  C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Lib\site-packages\httpx\_models.py:1: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+    import cgi
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================= 2 passed, 7 deselected, 1 warning in 0.19s ==================
+
+----------------------------------------------------------------------
+TASK 4.3 — Add backend logging per the design's logging strategy
+File under test: app/routes.py (logger.info call)
+Test file:       tests/test_api_translate.py (test_task_4_3_*)
+Note: task spec calls this manual inspection; automated caplog checks
+below are an added safety net, plus a manual review recorded further down.
+Acceptance criteria tested:
+  - Log output never contains request/response body text, success or error path
+----------------------------------------------------------------------
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend
+configfile: pytest.ini
+collecting ... collected 9 items / 7 deselected / 2 selected
+
+tests/test_api_translate.py::test_task_4_3_success_log_never_contains_text_content PASSED [ 50%]
+tests/test_api_translate.py::test_task_4_3_error_log_never_contains_text_content PASSED [100%]
+
+============================== warnings summary ===============================
+tests/test_api_translate.py::test_task_4_3_success_log_never_contains_text_content
+  C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Lib\site-packages\httpx\_models.py:1: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+    import cgi
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================= 2 passed, 7 deselected, 1 warning in 0.20s ==================
+
+----------------------------------------------------------------------
+TASK 4.4 — Write backend integration tests for the full endpoint
+File under test: app/routes.py (end to end via Flask test client)
+Test file:       tests/test_api_translate.py (test_task_4_4_*)
+Acceptance criteria tested:
+  - Full response-code matrix: 200 valid, 400 empty/missing/oversized, 500 failure
+----------------------------------------------------------------------
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend
+configfile: pytest.ini
+collecting ... collected 9 items / 8 deselected / 1 selected
+
+tests/test_api_translate.py::test_task_4_4_full_response_code_matrix PASSED [100%]
+
+============================== warnings summary ===============================
+tests/test_api_translate.py::test_task_4_4_full_response_code_matrix
+  C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Lib\site-packages\httpx\_models.py:1: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+    import cgi
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================= 1 passed, 8 deselected, 1 warning in 0.19s ==================
+
+----------------------------------------------------------------------
+TASK 4.3 — Manual log inspection (per task spec's Testing type)
+Method: ran real logging.basicConfig against Flask test client with
+canary strings CONFIDENTIAL_SOURCE_INPUT / CONFIDENTIAL_TRANSLATED_OUTPUT
+injected as the request text / mocked translation output, across the
+success, validation-error, and service-failure paths.
+Raw log lines observed:
+----------------------------------------------------------------------
+2026-08-11 16:20:57,777 translator INFO POST /api/translate status=200 error_code=None duration_ms=0.00
+2026-08-11 16:20:57,778 translator INFO POST /api/translate status=400 error_code=INVALID_INPUT duration_ms=0.00
+2026-08-11 16:20:57,778 translator INFO POST /api/translate status=500 error_code=TRANSLATION_FAILED duration_ms=0.00
+----------------------------------------------------------------------
+Manual review result: PASS — no log line contains CONFIDENTIAL_SOURCE_INPUT
+or CONFIDENTIAL_TRANSLATED_OUTPUT (or any other request/response text).
+----------------------------------------------------------------------
+
+======================================================================
+FULL REGRESSION — all tests (Phase 1 Task 2 + Phase 2 Tasks 3, 4.1-4.4)
+======================================================================
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend
+configfile: pytest.ini
+testpaths: tests
+collecting ... collected 23 items
+
+tests/test_api_translate.py::test_task_4_1_empty_text_returns_400_and_never_calls_service PASSED [  4%]
+tests/test_api_translate.py::test_task_4_1_missing_target_language_returns_400_and_never_calls_service PASSED [  8%]
+tests/test_api_translate.py::test_task_4_1_oversized_text_returns_400_and_never_calls_service PASSED [ 13%]
+tests/test_api_translate.py::test_task_4_1_malformed_json_body_returns_400 PASSED [ 17%]
+tests/test_api_translate.py::test_task_4_2_valid_request_returns_200_with_all_four_fields PASSED [ 21%]
+tests/test_api_translate.py::test_task_4_2_simulated_service_failure_returns_500_with_no_raw_traceback PASSED [ 26%]
+tests/test_api_translate.py::test_task_4_3_success_log_never_contains_text_content PASSED [ 30%]
+tests/test_api_translate.py::test_task_4_3_error_log_never_contains_text_content PASSED [ 34%]
+tests/test_api_translate.py::test_task_4_4_full_response_code_matrix PASSED [ 39%]
+tests/test_translation_service.py::test_success_returns_detected_language_and_translated_text PASSED [ 43%]
+tests/test_translation_service.py::test_detect_failure_raises_translation_service_error_not_raw_exception PASSED [ 47%]
+tests/test_translation_service.py::test_translate_failure_raises_translation_service_error_not_raw_exception PASSED [ 52%]
+tests/test_translation_service.py::test_unexpected_empty_translation_result_raises_translation_service_error PASSED [ 56%]
+tests/test_translation_service.py::test_unexpected_empty_detection_result_raises_translation_service_error PASSED [ 60%]
+tests/test_validation.py::test_rejects_empty_text PASSED                 [ 65%]
+tests/test_validation.py::test_rejects_whitespace_only_text PASSED       [ 69%]
+tests/test_validation.py::test_rejects_missing_text PASSED               [ 73%]
+tests/test_validation.py::test_rejects_text_over_max_length PASSED       [ 78%]
+tests/test_validation.py::test_accepts_text_at_max_length PASSED         [ 82%]
+tests/test_validation.py::test_rejects_missing_target_language PASSED    [ 86%]
+tests/test_validation.py::test_rejects_blank_target_language PASSED      [ 91%]
+tests/test_validation.py::test_valid_input_passes_and_returns_translation_request PASSED [ 95%]
+tests/test_validation.py::test_valid_input_has_no_side_effects PASSED    [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\httpx\_models.py:1
+  C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Lib\site-packages\httpx\_models.py:1: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+    import cgi
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 23 passed, 1 warning in 0.22s ========================
+
+======================================================================
+END OF REPORT
+======================================================================
+
+----------------------------------------------------------------------
+BONUS — Live smoke test (real googletrans network call, not mocked)
+Not required by Task 3/4 acceptance criteria (those specify mocked
+tests as the source of truth), included to confirm the real dependency
+still works, since googletrans is an unofficial library prone to breakage.
+Input:  'Hello, how are you?' -> fr
+Output: detected_language='en', translated_text='Bonjour comment allez-vous?'
+Result: PASS
+----------------------------------------------------------------------

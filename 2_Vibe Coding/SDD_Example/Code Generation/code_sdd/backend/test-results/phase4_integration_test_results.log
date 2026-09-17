@@ -1,0 +1,245 @@
+======================================================================
+Web Translator — Phase 4 Integration & Testing Results
+Generated: 2026-08-11 08:38:17 UTC
+Python: Python 3.12.10
+Source: sdd/tasks_app.md — Phase 4: Integration and Testing
+
+NOTE: requirements_app.md and design_app.md referenced by tasks_app.md
+are not present in this repo. Traceability in this report is against
+the acceptance criteria embedded directly in tasks_app.md's own task
+descriptions (Task 1, source doc v2.0), which state they were derived
+from requirements_app.md/design_app.md. Flag to the user if the
+original docs surface elsewhere, so this can be re-checked against them.
+======================================================================
+
+----------------------------------------------------------------------
+TASK 7.1 — Run the frontend against the live backend
+Method: live Flask server (wsgi.py) + Playwright/Chromium driving the
+real served frontend at http://127.0.0.1:5000/; captured the actual
+network request body sent by app.js's fetch() call.
+Acceptance criteria tested:
+  - Request payload matches TranslationRequest shape byte-for-byte
+    on field names (text, targetLanguage)
+  - Round trip succeeds with no field-name/type mismatches
+----------------------------------------------------------------------
+PASS - request body has exactly {text, targetLanguage} keys (got keys=['targetLanguage', 'text'])
+PASS - text field value matches input ('Good morning')
+PASS - targetLanguage field value matches selection ('es')
+PASS - round trip succeeded: sourceText/detectedLanguage/translatedText all populated
+  (translatedText verified byte-correct UTF-8 separately: b'Buen d\xc3\xada' == 'Buen día')
+
+----------------------------------------------------------------------
+TASK 7.2 — Execute end-to-end user scenarios
+Method: live Flask server + Playwright/Chromium against the real
+served frontend. Four required scenarios, each run against a fresh
+browser page/context.
+----------------------------------------------------------------------
+Scenario 1: Successful translate + read-aloud
+  PASS - translated 'Good morning' (es) -> result rendered with all fields
+  PASS - clicking Read Aloud calls speechSynthesis.speak() with an
+         utterance whose text equals the rendered translatedText
+
+Scenario 2: Empty-text validation
+  PASS - validation message shown ('Please enter some text to translate.')
+  PASS - zero /api/translate network calls made
+
+Scenario 3: Missing-target-language validation
+  PASS - validation message shown ('Please select a target language.')
+  PASS - zero /api/translate network calls made
+
+Scenario 4: Backend-unreachable error display
+  Method: routed /api/translate to abort with connectionrefused,
+  simulating the backend being unreachable.
+  PASS - distinct network-failure message shown:
+         'Could not reach the translation server. Check your
+         connection and try again.'
+  PASS - result section stayed hidden (no stale/partial result shown)
+  PASS - translate button re-enabled, loading indicator hidden after failure
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+TASK 7.3 — Run the full automated test suite and confirm performance target
+Part A: full pytest regression (unit + integration, Tasks 2, 3, 4.1-4.4)
+----------------------------------------------------------------------
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend
+configfile: pytest.ini
+testpaths: tests
+collecting ... collected 23 items
+
+tests/test_api_translate.py::test_task_4_1_empty_text_returns_400_and_never_calls_service PASSED [  4%]
+tests/test_api_translate.py::test_task_4_1_missing_target_language_returns_400_and_never_calls_service PASSED [  8%]
+tests/test_api_translate.py::test_task_4_1_oversized_text_returns_400_and_never_calls_service PASSED [ 13%]
+tests/test_api_translate.py::test_task_4_1_malformed_json_body_returns_400 PASSED [ 17%]
+tests/test_api_translate.py::test_task_4_2_valid_request_returns_200_with_all_four_fields PASSED [ 21%]
+tests/test_api_translate.py::test_task_4_2_simulated_service_failure_returns_500_with_no_raw_traceback PASSED [ 26%]
+tests/test_api_translate.py::test_task_4_3_success_log_never_contains_text_content PASSED [ 30%]
+tests/test_api_translate.py::test_task_4_3_error_log_never_contains_text_content PASSED [ 34%]
+tests/test_api_translate.py::test_task_4_4_full_response_code_matrix PASSED [ 39%]
+tests/test_translation_service.py::test_success_returns_detected_language_and_translated_text PASSED [ 43%]
+tests/test_translation_service.py::test_detect_failure_raises_translation_service_error_not_raw_exception PASSED [ 47%]
+tests/test_translation_service.py::test_translate_failure_raises_translation_service_error_not_raw_exception PASSED [ 52%]
+tests/test_translation_service.py::test_unexpected_empty_translation_result_raises_translation_service_error PASSED [ 56%]
+tests/test_translation_service.py::test_unexpected_empty_detection_result_raises_translation_service_error PASSED [ 60%]
+tests/test_validation.py::test_rejects_empty_text PASSED                 [ 65%]
+tests/test_validation.py::test_rejects_whitespace_only_text PASSED       [ 69%]
+tests/test_validation.py::test_rejects_missing_text PASSED               [ 73%]
+tests/test_validation.py::test_rejects_text_over_max_length PASSED       [ 78%]
+tests/test_validation.py::test_accepts_text_at_max_length PASSED         [ 82%]
+tests/test_validation.py::test_rejects_missing_target_language PASSED    [ 86%]
+tests/test_validation.py::test_rejects_blank_target_language PASSED      [ 91%]
+tests/test_validation.py::test_valid_input_passes_and_returns_translation_request PASSED [ 95%]
+tests/test_validation.py::test_valid_input_has_no_side_effects PASSED    [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\httpx\_models.py:1
+  C:\MyWork\_NYP_Course\Sem\2026S2\ITI122\All lesson\L2 TransformerAndLLM\Practical\Code Generation\code_sdd\backend\.venv\Lib\site-packages\httpx\_models.py:1: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+    import cgi
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 23 passed, 1 warning in 0.19s ========================
+
+----------------------------------------------------------------------
+Part B: ad hoc performance sampling against the live server (not
+formal load testing, per design_app.md's stated scope exclusion)
+5 real requests through the actual /api/translate endpoint, real
+googletrans network calls (not mocked), varied text/target language.
+----------------------------------------------------------------------
+target         ms  translated
+fr          375.0  "Bonjour, comment vas-tu aujourd'hui ?"
+de          625.0  'Der schnelle Braunfuchs springt über den faulen Hund.'
+ja          984.0  'この文を私に訳してください。'
+es         1297.0  'Buenos días, que tengas un día maravilloso.'
+zh-cn      1500.0  '这是一个简短的性能健全性检查。'
+
+max: 1500.0 ms   avg: 956.2 ms
+PASS - all samples well under 3000 ms
+
+----------------------------------------------------------------------
+TASK 7.4 — Traceability check against requirements_app.md
+CAVEAT: requirements_app.md is not present in this repository (only
+tasks_app.md exists under sdd/). This checklist traces against the
+acceptance criteria embedded directly inside each task's description
+in tasks_app.md, which states it derives from requirements_app.md/
+design_app.md v1.0. If those source docs turn up, re-run this check
+against their literal acceptance criteria text.
+----------------------------------------------------------------------
+
+Requirement 1 — Input & Language Selection (Tasks 2, 5.1, 5.2, 7.2)
+  [x] Text input accepts typed and pasted text
+      -> verified: textarea is a standard input, manual Playwright fill()
+         exercises the same code path as typing/pasting.
+  [x] Target-language dropdown displays the full fixed supported-language list
+      -> verified: Phase 3 live check, 19 options in #target-language.
+  [x] Empty text is rejected client-side with zero network calls
+      -> verified: Task 7.2 scenario 2 (this report).
+  [x] Missing target language is rejected client-side with zero network calls
+      -> verified: Task 7.2 scenario 3 (this report).
+  [x] Server-side validation is the actual source of truth (backend re-validates
+      independent of client)
+      -> verified: backend/tests/test_validation.py + test_api_translate.py
+         Task 4.1 tests reject invalid payloads even when sent directly,
+         bypassing the frontend entirely.
+
+Requirement 2 — Detection & Translation (Tasks 2, 3, 4.1, 4.2, 4.4, 5.3, 7.1)
+  [x] Given valid text + supported target language, detected source language
+      and translated text are returned
+      -> verified: test_translation_service.py (mocked), plus live smoke
+         test and Task 7.1/7.3 live requests (real googletrans).
+  [x] Library failure raises TranslationServiceError, not a raw exception
+      -> verified: test_translation_service.py failure-path tests.
+  [x] POST /api/translate: 200 on success with correct TranslationResponse
+      -> verified: test_api_translate.py Task 4.2 test, live Task 7.1 check.
+  [x] POST /api/translate: 400 INVALID_INPUT on malformed input, service
+      never reached
+      -> verified: test_api_translate.py Task 4.1 tests (mock_translator
+         assert_not_called).
+  [x] POST /api/translate: 500 TRANSLATION_FAILED on simulated service
+      failure, no raw traceback exposed
+      -> verified: test_api_translate.py Task 4.2 failure test.
+  [x] Frontend request body matches TranslationRequest field names exactly
+      -> verified: Task 7.1 (this report) — captured real fetch() body,
+         keys == {text, targetLanguage} exactly.
+
+Requirement 3 — Display & Read-Aloud (Tasks 6.1, 6.2, 7.2)
+  [x] Successful response renders sourceText, detectedLanguage, translatedText
+      -> verified: Phase 3 live check + Task 7.1 (this report).
+  [x] Error condition renders a message, never a stale/partial result
+      -> verified: Task 7.2 scenario 4 (this report) — result section
+         stayed hidden when the network-failure error was shown.
+  [x] Read-aloud control appears only when window.speechSynthesis exists
+      -> verified: Phase 3 live check (supporting) + simulated
+         non-supporting-browser check (button stays hidden).
+  [x] Activating read-aloud speaks the translated text
+      -> verified: Task 7.2 scenario 1 (this report) — speechSynthesis.speak()
+         spied and confirmed called with the exact rendered translatedText.
+
+Performance NFR (Tasks 2, 4.4, 7.3)
+  [x] 5,000-char input limit enforced
+      -> verified: test_validation.py boundary tests (5000 ok, 5001 rejected).
+  [x] Sampled response times comfortably under the 3-second target
+      -> verified: Task 7.3 Part B (this report) — max 1500ms across 5
+         live requests, all real googletrans network calls.
+  NOTE: formal load/stress testing is explicitly out of scope per
+  design_app.md's stated Performance Considerations (per tasks_app.md
+  Task 7.3 scope) — not silently skipped.
+
+Security NFR (Tasks 4.3, 7.5)
+  [x] Request/response text content (text, translatedText) never appears
+      in log output, success or error path
+      -> verified: backend/test-results/phase2_backend_test_results.log
+         Task 4.3 — automated caplog tests + manual canary-string
+         inspection, both passed.
+  [x] Error responses never expose a raw stack trace
+      -> verified: test_api_translate.py Task 4.2 failure test asserts
+         no "Traceback" / raw exception text in the ErrorResponse message.
+  [x] No debug code or content-logging left in source
+      -> verified: Task 7.5 (this report) — repo-wide grep for
+         console.log/print/debugger across app/, frontend/, tests/,
+         wsgi.py returned zero matches.
+
+Usability NFR (Tasks 6.2, 6.3)
+  [x] Read-aloud degrades gracefully (hidden, not broken) without browser support
+      -> verified: Phase 3 simulated non-supporting-browser check.
+  [x] All controls usable at a mobile viewport (375px) without horizontal scroll
+      -> verified: Phase 3 live check, body.scrollWidth <= window.innerWidth.
+
+Reliability NFR (Tasks 5.3, 6.1, 7.2)
+  [x] Error response (4xx/5xx) is distinguished from network-level failure
+      in how the frontend handles it
+      -> verified: showError() paths differ in message text; Task 7.2
+         scenario 4 (this report) shows the distinct network-failure copy
+         vs. the ErrorResponse.message copy used for 400/500 (Phase 3).
+  [x] No stale/partial result ever shown alongside or after an error
+      -> verified: Task 7.2 scenario 4 (this report) — hideResult() is
+         called unconditionally inside showError().
+
+RESULT: every requirement/NFR line item above traces to at least one
+passing automated test or a manually/programmatically verified live
+behavior recorded in this report or in
+backend/test-results/phase2_backend_test_results.log. No gaps found.
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+TASK 7.5 — Final cleanup
+Method: repo-wide grep for console.log/console.debug/console.warn,
+print(, and debugger across backend/app, backend/tests, backend/*.py,
+and frontend/, excluding .venv (third-party packages).
+----------------------------------------------------------------------
+  PASS - zero matches. No debug console.log/print/debugger statements
+  in app/, tests/, wsgi.py, or frontend/. No text/translatedText
+  content is ever passed to logger.info() (see app/routes.py:
+  only status/error_code/duration_ms are logged).
+
+======================================================================
+SUMMARY
+  Task 7.1: PASS (4/4 checks)
+  Task 7.2: PASS (4/4 scenarios, 8/8 checks)
+  Task 7.3: PASS (23/23 automated tests; performance samples max 1500ms)
+  Task 7.4: PASS (all requirement/NFR line items traced, no gaps)
+  Task 7.5: PASS (zero debug/content-logging artifacts found)
+======================================================================
+END OF REPORT
+======================================================================
