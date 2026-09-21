@@ -1,0 +1,4 @@
+# L11 AI Voice Agent lab - Python 3.12
+livekit-agents[groq,silero,turn-detector]~=1.5
+python-dotenv>=1.2.3
+chromadb>=1.5.9
